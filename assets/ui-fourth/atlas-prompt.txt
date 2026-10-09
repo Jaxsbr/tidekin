@@ -1,0 +1,17 @@
+Use case: stylized-concept.
+Create an original production sprite atlas for Tidekin, a warm handmade ocean workshop adventure. One transparent PNG, 1536 x 1024 pixels, exactly FOUR columns and THREE rows of equal 384 x 341.333 cells. Twelve separate full-color hand-painted dimensional inventory illustrations, each centered within its cell with generous empty transparent padding, no overlap. No cell borders, no backgrounds, no captions, no lettering, no text, no numbers. This is finished game art, not a UI mockup or icon font.
+Unified art direction: lovingly painted storybook objects with convincing volume, golden afternoon rim light, rich blue-green shadows, honey driftwood grain, aged turquoise metal and brass rivets, rope lashings, creamy canvas, coral-orange accent flags. Crisp readable silhouettes, soft brushed shading, tiny highlights, beautifully crafted charming miniatures. Isometric three-quarter views, not flat symbols. Saturated turquoise coastal palette balanced with warm amber. Every object occupies roughly 75% cell width and 75% cell height and is completely isolated on actual transparent alpha. Shadows only directly under objects.
+Cell positions in reading order MUST be:
+row 1 col 1: WATERWHEEL module, broad heavy wooden paddle wheel mounted on a tiny timber dock base with brass axle, wet paddle highlights, a few turquoise water droplets.
+row 1 col 2: CRANE module, wooden articulated salvage derrick with thick rope pulley, suspended substantial iron hook, brass winch on a small dock platform.
+row 1 col 3: GREENHOUSE module, miniature timber glasshouse with sparkling sea-green glass panes, lush potted seedlings inside, dock foundation.
+row 1 col 4: SAIL module, timber mast with billowing cream triangular sail, seams and rope rigging, small coral pennant, tiny wooden deck foundation.
+row 2 col 1: BEACON module, squat handmade timber and brass lighthouse lantern tower with a glowing amber lantern and teal metal roof, dock foundation.
+row 2 col 2: WOOD resource, attractive tied bundle of three chunky pale driftwood logs with end grain visible and one short plank.
+row 2 col 3: SCRAP resource, compact cluster of a turquoise salvaged gear, warm copper bent plate, two iron bolts and brass washer, visibly metal and charming rather than rubbish.
+row 2 col 4: PEARL resource, one large luminous ivory pearl nestled in an open pink-cream oyster shell with lilac iridescence and a tiny teal seaweed curl.
+row 3 col 1: VOYAGE stamp illustration, small cream-sailed wooden boat cresting a sculpted turquoise wave on a thick irregular cream paper medallion.
+row 3 col 2: MAP stamp illustration, unfurled thick parchment chart with painted turquoise coves, little green island and brass compass, subtle curled corners, no text.
+row 3 col 3: JOURNAL stamp illustration, thick teal cloth travel journal with cream page edges, coral ribbon bookmark, leather binding strap and a small embossed gold shell on cover.
+row 3 col 4: SETTINGS stamp illustration, chunky brass adjustment cog with turquoise enamel center and a small beautifully carved wooden-handled wrench, on a thick irregular cream paper medallion.
+Avoid generic emoji, flat vector art, thin line icons, UI text panels, giant atmospheric scenery, repeated items, incomplete objects. All twelve illustrations must feel from exactly the same premium game.

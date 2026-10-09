@@ -1,0 +1,30 @@
+// Historical superseded comparison contracts, excluded from production tests.
+test('all four action/input variants complete continuously with equal air and no instant or distant pickup',()=>{
+ for(const scheme of ['directional','pointer'])for(const action of ['pull','clean'])for(const tuning of ['current','quick']) {
+  const s=createGame();enter(s,CLEANUP_SITES[0]);const a=s.cleanup.attempt,t=getCleanupSite(s).trash[0];
+  steerGame(s,.05,{interact:true,targetId:t.id,scheme,action,tuning});assert.equal(a.actionProgress,0);assert.equal(a.air,24);
+  a.x=t.x;a.y=t.y;assert.equal(act(s,'collect-trash',{trashId:t.id}).code,'action_required');assert.equal(a.collected.length,0);
+  steerGame(s,.05,{interact:true,targetId:t.id,scheme,action,tuning});assert.ok(a.actionProgress>0&&a.actionProgress<1);
+  finish(s,{scheme,action,tuning});assert.equal(s.inventory.scrap,1);
+ }
+});
+test('cleaning requires coverage of all three strips; pointer holding one spot cannot finish',()=>{
+ const s=createGame();enter(s,CLEANUP_SITES[0]);const a=s.cleanup.attempt,t=getCleanupSite(s).trash[0];a.x=t.x;a.y=t.y;
+ const frame=aim=>steerGame(s,.05,{interact:true,targetId:t.id,action:'clean',scheme:'pointer',aim});
+ for(let i=0;i<60;i++)frame({x:t.x-.3,y:t.y});assert.deepEqual(a.cleaning[t.id],[1,0,0]);assert.equal(a.collected.length,0);
+ steerGame(s,.05,{});assert.deepEqual(a.cleaning[t.id],[1,0,0]);
+ for(let i=0;i<60;i++)frame({x:t.x+2,y:t.y});assert.deepEqual(a.cleaning[t.id],[1,0,0]);
+ for(const x of [t.x,t.x+.3])for(let i=0;i<6;i++)frame({x,y:t.y});
+ assert.deepEqual(a.cleaning[t.id],[1,1,1]);assert.deepEqual(a.collected,[t.id]);
+ hold(s,getCleanupSite(s).trash[1],{action:'clean'});assert.equal(a.collected.length,2,'E fallback sweeps');
+ updateGame(s,24);assert.equal(a.status,'failed');assert.deepEqual(a.cleaning,{});assert.deepEqual(a.collected,[]);
+});
+test('facing includes vertical travel, tuning changes speed only and variant changes clear unfinished work',()=>{
+ const current=createGame(),quick=createGame();for(const s of [current,quick])enter(s,CLEANUP_SITES[0]);
+ steerGame(current,.05,{z:1});steerGame(quick,.05,{z:1,tuning:'quick'});
+ assert.deepEqual(current.cleanup.attempt.facing,{x:0,y:-1});assert.ok(quick.cleanup.attempt.y<current.cleanup.attempt.y);
+ assert.equal(current.cleanup.attempt.air,quick.cleanup.attempt.air);
+ const a=current.cleanup.attempt,t=getCleanupSite(current).trash[0];a.x=t.x;a.y=t.y;
+ steerGame(current,.05,{interact:true,targetId:t.id});const air=a.air;
+ act(current,'cleanup-variant',{scheme:'pointer',action:'clean'});assert.equal(a.actionProgress,0);assert.equal(a.selectedId,null);assert.equal(a.air,air);
+});

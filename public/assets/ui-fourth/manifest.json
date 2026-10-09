@@ -1,0 +1,153 @@
+{
+  "atlas": {
+    "url": "./ocean-kit-atlas.png",
+    "width": 1536,
+    "height": 1024
+  },
+  "assets": {
+    "module-waterwheel": {
+      "label": "Waterwheel",
+      "url": "./module-waterwheel.svg",
+      "rect": [
+        0,
+        0,
+        384,
+        337
+      ],
+      "width": 384,
+      "height": 337
+    },
+    "module-crane": {
+      "label": "Salvage crane",
+      "url": "./module-crane.svg",
+      "rect": [
+        384,
+        0,
+        384,
+        345
+      ],
+      "width": 384,
+      "height": 345
+    },
+    "module-greenhouse": {
+      "label": "Greenhouse",
+      "url": "./module-greenhouse.svg",
+      "rect": [
+        768,
+        0,
+        384,
+        342
+      ],
+      "width": 384,
+      "height": 342
+    },
+    "module-sail": {
+      "label": "Sail",
+      "url": "./module-sail.svg",
+      "rect": [
+        1152,
+        0,
+        384,
+        347
+      ],
+      "width": 384,
+      "height": 347
+    },
+    "module-beacon": {
+      "label": "Beacon",
+      "url": "./module-beacon.svg",
+      "rect": [
+        0,
+        337,
+        384,
+        327
+      ],
+      "width": 384,
+      "height": 327
+    },
+    "resource-wood": {
+      "label": "Driftwood",
+      "url": "./resource-wood.svg",
+      "rect": [
+        384,
+        345,
+        384,
+        313
+      ],
+      "width": 384,
+      "height": 313
+    },
+    "resource-scrap": {
+      "label": "Salvaged metal",
+      "url": "./resource-scrap.svg",
+      "rect": [
+        768,
+        342,
+        384,
+        316
+      ],
+      "width": 384,
+      "height": 316
+    },
+    "resource-pearl": {
+      "label": "Pearl",
+      "url": "./resource-pearl.svg",
+      "rect": [
+        1152,
+        347,
+        384,
+        314
+      ],
+      "width": 384,
+      "height": 314
+    },
+    "stamp-voyage": {
+      "label": "Voyage",
+      "url": "./stamp-voyage.svg",
+      "rect": [
+        0,
+        664,
+        384,
+        360
+      ],
+      "width": 384,
+      "height": 360
+    },
+    "stamp-map": {
+      "label": "Ocean chart",
+      "url": "./stamp-map.svg",
+      "rect": [
+        384,
+        658,
+        384,
+        366
+      ],
+      "width": 384,
+      "height": 366
+    },
+    "stamp-journal": {
+      "label": "Tide journal",
+      "url": "./stamp-journal.svg",
+      "rect": [
+        768,
+        658,
+        384,
+        366
+      ],
+      "width": 384,
+      "height": 366
+    },
+    "stamp-settings": {
+      "label": "Settings",
+      "url": "./stamp-settings.svg",
+      "rect": [
+        1152,
+        661,
+        384,
+        363
+      ],
+      "width": 384,
+      "height": 363
+    }
+  }
+}

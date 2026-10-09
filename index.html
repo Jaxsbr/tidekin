@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#102f3b" />
+    <meta name="description" content="Build a little ocean home. Gather, dive, and follow the tide in Tidekin, a cozy single-player island adventure." />
+    <title>Tidekin</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23173e47'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-size='48' fill='%23ffe1a2'%3E≈%3C/text%3E%3C/svg%3E" />
+    <link rel="preload" href="/assets/menu-art.png" as="image" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="main-menu" class="menu" aria-labelledby="game-title">
+        <div class="menu-backdrop" aria-hidden="true">
+          <div class="menu-art"></div>
+          <div class="menu-shade"></div>
+        </div>
+
+        <div class="menu-content">
+
+
+          <h1 id="game-title">TIDEKIN</h1>
+
+
+          <div class="menu-actions">
+            <button id="new-voyage" class="button button-primary button-voyage" type="button"><span>New voyage</span></button>
+            <button id="continue-voyage" class="button button-glass" type="button" hidden><span>Continue</span></button>
+            <button id="menu-settings" class="button button-menu-link" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M9 4v6M15 14v6" /></svg> Settings </button>
+          </div>
+          <p id="menu-notice" class="menu-notice" role="status"></p>
+        </div>
+
+      </section>
+
+      <section id="game-view" class="game-view" aria-label="Your ocean voyage" hidden>
+        <canvas id="game-canvas" tabindex="0" aria-label="Ocean world. W/S sail and A/D steer. E gathers. Space dives. Underwater, WASD swims and holding a nearby object pulls it free."></canvas>
+        <div id="hud" class="hud">
+          <div id="bearing" hidden aria-label="Tracked destination"><svg id="bearing-arrow" class="bearing-arrow" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 33 33 20 26 7 33Z" fill="currentColor"/></svg><span id="bearing-label" class="bearing-label"></span><button id="clear-track" aria-label="Clear tracked destination">×</button></div>
+          <aside id="voyage-guide" aria-label="Your next action"><span id="guide-icon" class="guide-icon" aria-hidden="true">☸</span><div class="guide-copy"><h3 id="guide-title"></h3><p id="guide-text"></p><button id="guide-action" class="guide-action"></button></div><button id="guide-skip" class="guide-skip" aria-label="Skip guidance">×</button></aside>
+
+          <header class="hud-top">
+            <div class="location-card glass-card">
+              <span class="game-art art-voyage location-compass" aria-hidden="true"></span>
+              <div><h2 id="region-name">Home Waters</h2><p class="location-meta"><span id="day-label">Day 1</span><span class="meta-dot">·</span><span id="tide-label">Low tide</span><span id="tide-arrow" aria-hidden="true">↗</span></p><p id="tide-forecast" class="tide-forecast">Shallows open</p></div>
+            </div>
+            <div class="hud-top-right">
+              <div class="resources glass-card" aria-label="Supplies">
+                <div class="resource" title="Wood"><span class="game-art art-wood resource-icon" aria-hidden="true"></span><span class="resource-copy"><span class="resource-name">Wood</span><strong id="wood-count">0</strong></span></div>
+                <div class="resource" title="Scrap"><span class="game-art art-scrap resource-icon" aria-hidden="true"></span><span class="resource-copy"><span class="resource-name">Scrap</span><strong id="scrap-count">0</strong></span></div>
+                <div class="resource" title="Pearls"><span class="game-art art-pearls resource-icon" aria-hidden="true"></span><span class="resource-copy"><span class="resource-name">Pearls</span><strong id="pearls-count">0</strong></span></div>
+              </div>
+          <div id="dive-overlay" class="dive-overlay" hidden aria-label="Diving oxygen">
+            <span class="dive-bubble" aria-hidden="true">◌</span><div><div class="oxygen-heading"><span id="oxygen-label">Air</span><strong id="oxygen-seconds">24s</strong></div><progress id="oxygen-progress" max="24" value="24" aria-label="Oxygen remaining"></progress><p id="oxygen-hint">Space to surface · Your supplies are safe</p></div>
+          </div>
+              <button id="pause-button" class="icon-button glass-card" type="button" aria-label="Pause voyage (Escape)" title="Pause (Esc)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" /></svg></button>
+            </div>
+          </header>
+          <aside hidden class="objective-card glass-card" aria-label="Current objective">
+            <div class="objective-heading"><span class="eyebrow">A LITTLE SOMETHING TO DO</span><button id="objective-journal" class="text-button" type="button" aria-label="Open journal (J)">Journal <span aria-hidden="true">↗</span></button></div>
+            <h3 id="objective-name">Your first little home</h3><p id="objective-description">Gather supplies around the workshop.</p>
+            <div class="objective-progress-row"><progress id="objective-progress" max="1" value="0" aria-label="Objective progress"></progress><span id="objective-fraction">0 / 1</span></div>
+          </aside>
+          <aside hidden id="navigation-card" class="navigation-card glass-card" aria-label="Ocean navigation">
+            <div class="navigation-heading"><span class="eyebrow">YOUR BEARINGS</span><span class="map-scale">50 m</span></div>
+            <canvas id="navigation-map" width="360" height="300" role="img" aria-label="Map showing your raft, home, destinations, and remaining salvage"></canvas>
+            <div class="navigation-target"><span id="navigation-bearing" aria-hidden="true">↗</span><div><strong id="navigation-name">Nearby salvage</strong><p id="navigation-distance">Follow the little golden marker.</p></div></div>
+            <div class="navigation-options"><button id="track-nearest" type="button" aria-pressed="true">Nearest salvage</button><button id="nav-track-home" type="button" aria-pressed="false">Home anchorage</button></div>
+            <button id="track-expedition" class="expedition-track" type="button" hidden>Follow expedition</button>
+            <div id="route-options" class="route-options" hidden><p id="route-summary"></p><div><button id="route-direct" type="button" aria-pressed="true">Direct</button><button id="route-bypass" type="button" aria-pressed="false">Around shoal</button></div><small>Estimated at the current tide.</small></div>
+          </aside>
+          <div class="hud-bottom">
+            <div class="context-card glass-card"><span class="context-pip" aria-hidden="true"></span><div><span id="context-title">A home, afloat.</span><p id="context-hint">Wander toward floating supplies to gather.</p></div><div class="context-actions"><button id="gather-button" class="button button-context" type="button"><kbd>E</kbd><span id="gather-label">Gather</span></button><button id="dive-button" class="button button-context button-subtle" type="button"><kbd>Space</kbd><span id="dive-label">Dive</span></button></div></div>
+            <div class="bottom-toolbar glass-card">
+              <nav class="game-nav" aria-label="Voyage controls"><button type="button" data-panel="workshop" aria-keyshortcuts="B" aria-label="Build (B)"><span class="game-art art-waterwheel" aria-hidden="true"></span><span>Build</span><kbd>B</kbd></button><button type="button" data-panel="chart" aria-keyshortcuts="M" aria-label="Map (M)"><span class="game-art art-map" aria-hidden="true"></span><span>Map</span><kbd>M</kbd></button><button type="button" data-panel="journal" aria-keyshortcuts="J" aria-label="Journal (J)"><span class="game-art art-journal" aria-hidden="true"></span><span>Journal</span><kbd>J</kbd></button><button type="button" data-panel="cabin" aria-keyshortcuts="C" aria-label="Cabin (C)"><span class="game-art art-cabin cabin-nav-art" aria-hidden="true"></span><span>Cabin</span><kbd>C</kbd></button><button type="button" data-panel="inspect" aria-keyshortcuts="I" aria-label="Look (I)"><span class="look-eye" aria-hidden="true"></span><span>Look</span><kbd>I</kbd></button></nav><span id="energy-label" class="energy-label" hidden></span>
+            </div>
+          </div>
+          <div class="touch-movement" aria-label="Touch movement controls"><button type="button" data-move="up" aria-label="Move forward">↑</button><button type="button" data-move="left" aria-label="Move left">←</button><button type="button" data-move="down" aria-label="Move backward">↓</button><button type="button" data-move="right" aria-label="Move right">→</button></div>
+        </div>
+      </section>
+      <div id="save-banner" class="save-banner" role="status" hidden><span aria-hidden="true">✓</span><span id="save-banner-text">Voyage saved</span></div>
+      <div id="toast" class="toast" role="status" aria-live="polite" hidden><span class="toast-icon" aria-hidden="true">✦</span><span id="toast-text"></span></div>
+      <dialog id="panel-dialog" class="panel-dialog" aria-labelledby="panel-title"><div class="panel-top"><div><p id="panel-eyebrow" class="eyebrow" hidden></p><h2 id="panel-title">The workshop</h2></div><button id="close-panel" class="icon-button" type="button" aria-label="Close panel (Escape)">×</button></div><div id="panel-body" class="panel-body"></div><footer class="panel-footer"><span><kbd>Esc</kbd> Close</span></footer></dialog>
+      <dialog id="modal-dialog" class="modal-dialog" aria-labelledby="modal-title"><div id="modal-body"></div></dialog>
+    </main>
+    <noscript><div class="noscript">Tidekin needs JavaScript to set sail. Enable it in your browser, then reload.</div></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

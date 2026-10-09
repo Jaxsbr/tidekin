@@ -1,0 +1,13 @@
+node_modules
+dist/
+.DS_Store
+playwright-report/
+test-results/
+*.blend1
+
+dist-beta/
+
+dist-beta3/
+captures/
+output/
+.scratch/

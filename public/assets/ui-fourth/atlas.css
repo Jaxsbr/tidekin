@@ -1,0 +1,14 @@
+/* Asset helper: import this file from application CSS. */
+.ui-fourth-art, .game-art { display:inline-block; width:var(--art-size, 64px); flex-shrink:0; background-image:url("./ocean-kit-atlas.png"); background-repeat:no-repeat; }
+.ui-fourth-module-waterwheel, .game-art.art-module-waterwheel, .game-art.art-waterwheel { aspect-ratio:384/337; background-size:400% 303.85756676557867%; background-position:0% 0%; }
+.ui-fourth-module-crane, .game-art.art-module-crane, .game-art.art-crane { aspect-ratio:384/345; background-size:400% 296.81159420289856%; background-position:33.33333333333333% 0%; }
+.ui-fourth-module-greenhouse, .game-art.art-module-greenhouse, .game-art.art-greenhouse { aspect-ratio:384/342; background-size:400% 299.41520467836256%; background-position:66.66666666666666% 0%; }
+.ui-fourth-module-sail, .game-art.art-module-sail, .game-art.art-sail { aspect-ratio:384/347; background-size:400% 295.1008645533141%; background-position:100% 0%; }
+.ui-fourth-module-beacon, .game-art.art-module-beacon, .game-art.art-beacon { aspect-ratio:384/327; background-size:400% 313.1498470948012%; background-position:0% 48.35007173601148%; }
+.ui-fourth-resource-wood, .game-art.art-resource-wood, .game-art.art-wood { aspect-ratio:384/313; background-size:400% 327.15654952076676%; background-position:33.33333333333333% 48.52320675105485%; }
+.ui-fourth-resource-scrap, .game-art.art-resource-scrap, .game-art.art-scrap { aspect-ratio:384/316; background-size:400% 324.0506329113924%; background-position:66.66666666666666% 48.30508474576271%; }
+.ui-fourth-resource-pearl, .game-art.art-resource-pearl, .game-art.art-pearl, .game-art.art-pearls { aspect-ratio:384/314; background-size:400% 326.1146496815287%; background-position:100% 48.87323943661972%; }
+.ui-fourth-stamp-voyage, .game-art.art-stamp-voyage, .game-art.art-voyage { aspect-ratio:384/360; background-size:400% 284.44444444444446%; background-position:0% 100%; }
+.ui-fourth-stamp-map, .game-art.art-stamp-map, .game-art.art-map, .game-art.art-chart { aspect-ratio:384/366; background-size:400% 279.78142076502735%; background-position:33.33333333333333% 100%; }
+.ui-fourth-stamp-journal, .game-art.art-stamp-journal, .game-art.art-journal { aspect-ratio:384/366; background-size:400% 279.78142076502735%; background-position:66.66666666666666% 100%; }
+.ui-fourth-stamp-settings, .game-art.art-stamp-settings, .game-art.art-settings { aspect-ratio:384/363; background-size:400% 282.09366391184574%; background-position:100% 100%; }

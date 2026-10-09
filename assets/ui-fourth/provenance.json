@@ -1,0 +1,30 @@
+{
+  "generator": "native image_gen.imagegen",
+  "date": "2026-10-09",
+  "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33",
+  "bytes": 2961160,
+  "width": 1536,
+  "height": 1024,
+  "mode": "RGBA",
+  "transparentPixels": 646254,
+  "alphaRange": [
+    0,
+    254
+  ],
+  "prompt": "atlas-prompt.txt",
+  "editablePackaging": "package-kit.mjs",
+  "editableLayout": "atlas-layout.svg",
+  "pixelEdits": false,
+  "referenceRoles": {
+    "assets/reference/ocean-workshop.png": "visually inspected materials and dimensionality",
+    "supplied image-1.png": "rejected workshop UI",
+    "supplied image-3.png": "gameplay HUD context"
+  },
+  "validation": {
+    "svgCount": 12,
+    "embeddedPngByteEquality": true,
+    "allRectanglesInBounds": true,
+    "browserPreview": "local file protocol blocked"
+  },
+  "generatedArtifact": "exec-6a5af4e0-7db5-4f90-9073-3ebb6edd336d.png"
+}

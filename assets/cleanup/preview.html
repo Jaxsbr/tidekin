@@ -1,0 +1,12 @@
+<!doctype html><html><head><style>body{margin:0}canvas{display:block}</style></head><body><script type="module">
+import * as THREE from '/node_modules/three/build/three.module.js';
+import {GLTFLoader} from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import {createCleanupScene} from '/src/cleanup-scene.js';
+const gltf=await new GLTFLoader().loadAsync('/assets/workshop.glb');
+const view=createCleanupScene({THREE,explorerTemplate:gltf.scene.getObjectByName('Explorer')});
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;document.body.append(renderer.domElement);
+const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,150);
+window.state={cleanup:{completed:[],attempt:{siteId:'home-reef',status:'active',x:0,y:-3,air:24,collected:[]}}};window.view=view;window.renderer=renderer;
+window.draw=(variant='side')=>{const p=view.cameraPose(innerWidth/innerHeight,variant);camera.position.set(...p.position);camera.lookAt(...p.target);view.update(state,1/60,{reducedMotion:false});renderer.render(view.scene,camera)};
+window.draw();window.ready=true;
+</script></body></html>
