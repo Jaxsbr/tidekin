@@ -1,10 +1,8 @@
 # Tidekin
 
-[Play Tidekin](https://jaxsbr.github.io/tidekin/) — desktop browser. Published from the completed 0.5.0-beta.1 (fourth improvement) snapshot.
-
 A little workshop. An endless ocean.
 
-A single-player 3D ocean workshop prototype: sail between limestone islands, restore reefs, gather supplies and grow a floating home. Progress stays in this browser. Current candidate: **0.5.0-beta.1**.
+A single-player 3D ocean workshop prototype: sail between limestone islands, restore reefs, gather supplies and grow a floating home. Progress stays in this browser. Current candidate: **0.6.0-beta.1**.
 
 ## Run locally
 
@@ -12,15 +10,15 @@ Requires Node.js 20.19+ (or 22.12+) and a WebGL-capable desktop browser.
 
 ```sh
 npm install
-npm run dev -- --port 5181
+npm run dev -- --base / --port 5181
 ```
 
 Open http://127.0.0.1:5181. Keep the same origin/browser/profile to retain your save.
 
 ```sh
 npm test
-npm run build
-npm run preview -- --port 5181
+npm run build -- --base /
+npm run preview -- --base / --port 5181
 ```
 
 ## Play
@@ -48,6 +46,7 @@ Settings: sound, world detail, reduced motion and larger text. Reduced motion sh
 - `src/cleanup-scene.js`, `src/character-art.js`, `assets/cleanup/reef-art.js`: articulated character and scrolling reef.
 - `src/main.js`, `src/style.css`, `src/chart-art.js`: illustrated menus, input, map and persistence.
 - `assets/ui-fourth/`, `public/assets/ui-fourth/`: original image-generation provenance and shipped painted artwork.
+- [Fifth improvement review](docs/reviews/fifth-improvement/report.md): deeper procedural dives, reactive fish, keepsakes, carousel, oxygen and save fixes.
 - [Fourth improvement review](docs/reviews/fourth-improvement/report.md): changes, independent scores, acceptance and hardware evidence.
 - [Performance protocol](docs/performance-budget.md): hardware gates and measurement limits.
 - [Research](docs/research/cozy-systems.md): earlier game research and design context.

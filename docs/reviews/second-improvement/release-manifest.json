@@ -1,0 +1,116 @@
+{
+  "project": "Tidekin",
+  "version": "0.3.0-beta.1",
+  "createdAt": "2026-10-09T00:42:41.955720+00:00",
+  "timezone": "Pacific/Auckland",
+  "preview": "http://127.0.0.1:5181",
+  "repository": "Local directory without Git metadata",
+  "files": {
+    "package.json": {
+      "bytes": 398,
+      "sha256": "261565c11b124f02da0ddc90bd1788ba9a72b49af81bdcc1b020be7c3571ad34"
+    },
+    "package-lock.json": {
+      "bytes": 36588,
+      "sha256": "466cc97479e3a9d1e703efe33a9ccd850e2c9f51d03fc419aae134468ef485a0"
+    },
+    "index.html": {
+      "bytes": 9691,
+      "sha256": "bcb933655a4cefea48412ca63a1dfc76c57621cf65b6a2a1babc3f38dd0660f3"
+    },
+    "src/cleanup-scene.js": {
+      "bytes": 10478,
+      "sha256": "f70b69387a6b347edb93d9eb916a1da1192c3ee71b1c8a27b3a73c5072440cad"
+    },
+    "src/cleanup.js": {
+      "bytes": 6828,
+      "sha256": "07af7c144c24d65aae35dbbcdff48b11e3955406bb9e5135c4844508a2793002"
+    },
+    "src/game.js": {
+      "bytes": 50985,
+      "sha256": "77c763311667652c7c31716d43df4acee636f17618b55fb5141637664a56c37a"
+    },
+    "src/main.js": {
+      "bytes": 71488,
+      "sha256": "08bd0f990b3d83923199ee7afb382d98701a6124922539bffaa39317076872dc"
+    },
+    "src/navigation.js": {
+      "bytes": 4308,
+      "sha256": "d6ec27e1986273ae1850f85f1219fb4650349ab182d6af51c1f9ed2b19b03410"
+    },
+    "src/scene.js": {
+      "bytes": 32791,
+      "sha256": "a18687e43a36cf0ea035313dcd96150ed75cb744082ba8232900595f7e8976e7"
+    },
+    "src/style.css": {
+      "bytes": 38652,
+      "sha256": "4a8c51a6820a3b1a1f2cd3e43204ecb581644e49b0613fb8a5f1bf4e0c531698"
+    },
+    "assets/cleanup/reef-art.js": {
+      "bytes": 8388,
+      "sha256": "dc59e71b3244bacc16ce7f463daed26e239736033c537c8f9ec8b6fd608459e9"
+    },
+    "assets/cleanup/preview.html": {
+      "bytes": 1301,
+      "sha256": "0303c97a1f0cd716349a53abf099f091eaae19db9b3edae8e4f295f83e13f33b"
+    },
+    "public/assets/island.glb": {
+      "bytes": 782572,
+      "sha256": "8715786f8500b90514d4fce6e747d1103b26c9bc4fbbdc368190040ba8d131bc"
+    },
+    "public/assets/landmarks.glb": {
+      "bytes": 848304,
+      "sha256": "cf211aa82042686a9966e84029c7bf045f5342f247a6be4a175a406015cb5d67"
+    },
+    "public/assets/menu-art.png": {
+      "bytes": 2855110,
+      "sha256": "74125146d18e8b798bfe984148472c927b51f31ca25aabe3b93ec91e2a147d1a"
+    },
+    "public/assets/workshop.glb": {
+      "bytes": 1427024,
+      "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+    },
+    "dist/index.html": {
+      "bytes": 9738,
+      "sha256": "24119202b8a3e5438074f122715b1f1e73e5f0ac0928adc04ef099e2367b74fc"
+    },
+    "dist/assets/index-CLQfBj9P.js": {
+      "bytes": 85342,
+      "sha256": "dc44634105660831834c3d9b7613b0732b42afcf6073f39971fb9b6a1117309b"
+    },
+    "dist/assets/scene-DZDgiK7l.js": {
+      "bytes": 638390,
+      "sha256": "ba96e6246e6952b311c9cfe582c089bd26172673d125bba670a07b61e24cb426"
+    },
+    "dist/assets/menu-art.png": {
+      "bytes": 2855110,
+      "sha256": "74125146d18e8b798bfe984148472c927b51f31ca25aabe3b93ec91e2a147d1a"
+    },
+    "dist/assets/index-0PpeFtuh.css": {
+      "bytes": 33599,
+      "sha256": "a77de6115ae25480e3b3b18f2656841d5bbae2bb816b0871d21f96ec1399ed39"
+    },
+    "dist/assets/island.glb": {
+      "bytes": 782572,
+      "sha256": "8715786f8500b90514d4fce6e747d1103b26c9bc4fbbdc368190040ba8d131bc"
+    },
+    "dist/assets/landmarks.glb": {
+      "bytes": 848304,
+      "sha256": "cf211aa82042686a9966e84029c7bf045f5342f247a6be4a175a406015cb5d67"
+    },
+    "dist/assets/workshop.glb": {
+      "bytes": 1427024,
+      "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+    }
+  },
+  "validation": "See qa.md, technical-review.md, art-review.md and scorecard.md in this directory for exact tested-build attribution and final disposition.",
+  "preservedAssets": [
+    "menu-art.png",
+    "workshop.glb",
+    "island.glb",
+    "landmarks.glb"
+  ],
+  "saveKey": "tidekin.save.v2",
+  "unfinishedCleanupPolicy": "No partial attempt is persisted; successful completion IDs and unrelated voyage state remain.",
+  "acceptance": "Numeric rubric provisional75.2; exact historical tide incident remains open. See scorecard."
+}

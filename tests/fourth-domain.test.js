@@ -2,9 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createGame,act,steerGame,updateGame,CLEANUP_SITES,CLEANUP_SWIM_SPEED,CLEANUP_AIR,serializeGame,deserializeGame} from '../src/game.js';
 const enter=s=>assert.equal(act(s,'enter-cleanup',{siteId:'home-reef',practice:true,variant:{action:'clean',tuning:'quick'}}).ok,true);
-test('chosen contract has wide worlds, original pace and fixed air',()=>{
+test('chosen contract has seeded wide worlds, original pace and fixed air',()=>{
  assert.equal(CLEANUP_SWIM_SPEED,2.2);assert.equal(CLEANUP_AIR,24);
- assert.ok(CLEANUP_SITES[0].trash.every(t=>t.y<0&&t.y>=-18));
+ assert.ok(CLEANUP_SITES[0].trash.every(t=>t.y<=-10&&t.y>=-15));
+ assert.equal(typeof CLEANUP_SITES[0].seed,'number');
  assert.notDeepEqual(CLEANUP_SITES[1].trash.map(t=>[t.x,t.y]),CLEANUP_SITES[0].trash.map(t=>[t.x,t.y]));
  for(const site of CLEANUP_SITES)assert.deepEqual(site.bounds,{minX:-28,maxX:28,minY:-18,maxY:0});
  const s=createGame();enter(s);const a=s.cleanup.attempt;

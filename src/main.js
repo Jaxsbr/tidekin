@@ -1,4 +1,5 @@
 import * as Game from './game.js';
+import { diveIcon } from './dive-icons.js';
 import { drawOceanChart } from './chart-art.js';
 
 const { createGame, updateGame, act, getObjectives, getContext, serializeGame, deserializeGame,
@@ -42,6 +43,8 @@ let trackedTarget = null;
 let divePointer = {targetId:null,held:false};
 let waterAudio = null;
 let lastEventKey = null;
+let knownTrophies = new Set();
+let keepsakeTimer;
 let toastTimer;
 let saveBannerTimer;
 let audioContext = null;
@@ -109,10 +112,10 @@ function saveGame({ announce = false } = {}) {
     $('save-banner').classList.add('save-error');
     $('save-banner').setAttribute('role', 'alert');
     $('save-banner').firstElementChild.textContent = '!';
-    $('save-banner-text').textContent = 'Not saved — retry Save in the pause menu';
+    $('save-banner-text').textContent = 'Autosave paused — check browser storage';
     $('save-banner').hidden = false;
     if (!saveWarningShown) {
-      showToast('Your voyage is running, but saving failed. Free browser storage, then try Save again in the pause menu.', true, 7000);
+      showToast('Your voyage is running, but saving failed. Free browser storage; autosave will try again automatically.', true, 7000);
       saveWarningShown = true;
     }
     return false;
@@ -242,6 +245,8 @@ async function startGame(continueSave) {
     }));
     scene = await scenePromise;
     state = nextState;
+    knownTrophies=new Set(state.trophies??[]);
+    $('dive-keepsake').hidden=true;clearTimeout(keepsakeTimer);
     lastCleanupStatus = null;
     fatalError = false;
     lastEventKey = state.lastEvent ? `${state.lastEvent.code}:${state.lastEvent.at}:${state.lastEvent.message}` : null;
@@ -277,7 +282,7 @@ function refreshGuide() {
   const g=state.guidance ?? (state.guidance={stage:0,skipped:true});
   const a=state.cleanup.attempt;
   const done=Object.keys(RECIPES).every(id=>state.upgrades[id]);
-  $('voyage-guide').hidden=g.skipped || done;
+  $('voyage-guide').hidden=Boolean(a) || g.skipped || done;
   const context=getContext(state);
   const next=context.recipes.find(r=>!r.built&&(!r.requires||state.upgrades[r.requires]));
   const canBuild=Boolean(next?.available);
@@ -286,10 +291,6 @@ function refreshGuide() {
   else if(state.collected.length&&!state.upgrades.waterwheel){title='Explore a reef';cue='W/S · Sail   Space · Dive';g.stage=Math.max(g.stage,2);}
   else if(state.upgrades.waterwheel){title='Explore beyond the shelter';cue='W/S · Sail   A/D · Turn   M · Map';}
   if(canBuild){title=`Make a ${next.name.toLowerCase()}`;cue='B · Open workshop';g.stage=Math.max(g.stage,3);}
-  if(a){
-    title=a.status==='complete'?'Reef restored':a.air<7?'Catch a breath':'Pull it free';
-    cue=a.status==='complete'?'Space · Return to raft':a.air<7?'W · Rise to breathe':'WASD · Swim   Hold object to pull';
-  }
   $('guide-icon').innerHTML=art(a?'reef':canBuild?next.id:'compass');
   setText('guide-title',title);setText('guide-text',cue);
   $('guide-action').hidden=Boolean(a)||(!canBuild&&!state.upgrades.waterwheel);
@@ -301,7 +302,7 @@ function showPause() {
   if (!isPlaying() || loading || modalDialog.open) return;
   if (panelDialog.open) closePanel({focus:false});
   saveGame();
-  showModal('pause', `<div class="modal-content">${art('settings')}<h2 id="modal-title">Paused</h2><div class="modal-actions"><button class="button button-primary" data-modal-action="play" autofocus>Resume</button><button class="button" data-modal-action="save">Save</button><button class="button" data-modal-action="settings">Settings</button><button class="button" data-modal-action="tutorial">Controls</button><button class="button" data-modal-action="menu">Save & quit</button></div></div>`);
+  showModal('pause', `<div class="modal-content">${art('settings')}<h2 id="modal-title">Paused</h2><div class="modal-actions"><button class="button button-primary" data-modal-action="play" autofocus>Resume</button><button class="button" data-modal-action="settings">Settings</button><button class="button" data-modal-action="tutorial">Controls</button><button class="button" data-modal-action="menu">Return to title</button></div></div>`);
 }
 
 function showSettings(origin = 'menu') {
@@ -402,7 +403,7 @@ function gatherNearest() {
 }
 
 function contextualDiveChoice(context = getContext(state), cleanup = Game.getCleanupContext(state)) {
-  if (state.cleanup.attempt) return {action:'leave-cleanup', label:'Return to raft', disabled:!cleanup.atSurface && state.cleanup.attempt.status==='active'};
+  if (state.cleanup.attempt) return {action:'leave-cleanup', label:'Return to raft', disabled:!cleanup.atSurface && state.cleanup.attempt.status!=='failed'};
   const target=contextNode(context);
   const resourceDive=target?.inReach && ['dive_required','high_tide'].includes(target.reason);
   if (!resourceDive && cleanup.canEnter) return {action:'enter-cleanup', payload:{siteId:cleanup.site.id}, label:cleanup.completed?'Visit reef':'Dive · '+cleanup.site.name,disabled:false};
@@ -423,7 +424,7 @@ function checkCleanupOutcome() {
     resetInput(); saveGame();
     // The modal pauses frames; publish the reset before HUD throttling can defer it.
     refreshHud(true);
-    showModal('cleanup-failed', modalTemplate('', 'Out of breath.', 'This cleanup starts over. All trash has reset.', '<button class="button button-primary" data-modal-action="retry-cleanup">Retry cleanup</button><button class="button button-secondary" data-modal-action="leave-cleanup">Return to raft</button>', ''));
+    showModal('cleanup-failed', modalTemplate('', 'Out of breath.', 'Catch your breath aboard. Collected supplies and keepsakes are safe.', '<button class="button button-primary" data-modal-action="retry-cleanup">Retry cleanup</button><button class="button button-secondary" data-modal-action="leave-cleanup">Return to raft</button>', ''));
   }
 }
 
@@ -446,14 +447,24 @@ function refreshHud(force = false) {
   $('gather-button').disabled=!available;
   $('gather-button').title=a?'Hold to pull (E)':'Gather (E)';setText('gather-label',a?'Hold · Pull':'Gather');
   const choice=contextualDiveChoice(context,cleanup);$('dive-button').disabled=choice.disabled;
-  setText('dive-label',a?'Return':'Dive');$('dive-button').title=a?'Return to raft':'Dive';
+  $('dive-button').hidden=Boolean(a&&!cleanup.atSurface);
+  setText('dive-label',a?'Board raft':'Dive');$('dive-button').title=a?'Return to raft':'Dive';
   gameView.classList.toggle('cleanup-mode',Boolean(a));
   document.querySelectorAll('.game-nav [data-panel]').forEach(b=>{b.disabled=Boolean(a);});
   document.querySelector('.touch-movement').hidden=false;
   $('dive-overlay').hidden=!a;
   $('dive-overlay').classList.toggle('low-oxygen',Boolean(a&&a.air<7));
   $('oxygen-progress').max=Game.CLEANUP_AIR;$('oxygen-progress').value=a?.air??Game.CLEANUP_AIR;
-  setText('oxygen-label',a?`${cleanup.count}/${cleanup.total}`:'Air');
+  setText('oxygen-label',cleanup.atSurface?'Breathing':'Air');
+  $('air-ring').style.strokeDashoffset=String(100-100*(a?.air??Game.CLEANUP_AIR)/Game.CLEANUP_AIR);
+  $('dive-overlay').classList.toggle('at-surface',Boolean(a&&cleanup.atSurface));
+  $('dive-objectives').hidden=!a;
+  if(!a)$('dive-keepsake').hidden=true;
+  if(a){
+    canvas.title='';
+    const pictures=cleanup.site.trash.map(item=>{const done=a.collected.includes(item.id)||a.status==='complete';return `<span class="dive-object ${done?'collected':''}" role="img" aria-label="${escapeHTML(item.name)}${done?': collected':''}">${diveIcon(item,cleanup.site)}${done?'<span class="find-check" aria-hidden="true">✓</span>':''}</span>`;}).join('');
+    if($('dive-objectives').innerHTML!==pictures)$('dive-objectives').innerHTML=pictures;
+  }
   setText('oxygen-seconds',`${Math.ceil(a?.air??Game.CLEANUP_AIR)}s`);
   updateNavigation();refreshGuide();
 }
@@ -510,7 +521,14 @@ function updateNavigation() {
 }
 
 
+const panelPages=[{id:'workshop',name:'Build'},{id:'chart',name:'Map'},{id:'journal',name:'Journal'},{id:'cabin',name:'Cabin'}];
+function turnPanel(direction){
+  const index=panelPages.findIndex(p=>p.id===activePanel);
+  openPanel(panelPages[(index+direction+panelPages.length)%panelPages.length].id);
+  $(direction<0?'panel-previous':'panel-next').focus({preventScroll:true});
+}
 function openPanel(name) {
+  if(!panelPages.some(p=>p.id===name))return;
   if (!isPlaying() || loading || modalDialog.open) return;
   if (activePanel === name) { closePanel(); return; }
   if (state.cleanup.attempt || scene.getBuildPresentation?.().active) return;
@@ -524,6 +542,9 @@ function openPanel(name) {
 
 function refreshPanel() {
   if (!activePanel || !state) return;
+  const pageIndex=panelPages.findIndex(p=>p.id===activePanel);
+  for(const [id,offset] of [['panel-previous',-1],['panel-next',1]]){const page=panelPages[(pageIndex+offset+panelPages.length)%panelPages.length];$(id).querySelector('.carousel-name').textContent=page.name;$(id).setAttribute('aria-label',`${offset<0?'Previous':'Next'} page: ${page.name}`);}
+  $('panel-pages').innerHTML=panelPages.map(p=>`<button type="button" data-open="${p.id}" aria-label="${p.name}" ${p.id===activePanel?'aria-current="page"':''}></button>`).join('');
   const body = $('panel-body');
   $('hud').append($('navigation-card')); $('navigation-card').hidden = true;
   const focusedId = body.contains(document.activeElement) ? document.activeElement.id : null;
@@ -532,8 +553,7 @@ function refreshPanel() {
   const context = getContext(state);
   if (activePanel === 'cabin') {
     setText('panel-title', 'Cabin'); setText('panel-eyebrow', ''); body.innerHTML = renderCabin();
-  } else if (activePanel === 'inspect') {
-    setText('panel-title', 'Look around'); setText('panel-eyebrow', ''); body.innerHTML = renderInspection();
+
   } else if (activePanel === 'workshop') {
     setText('panel-title', 'The workshop'); setText('panel-eyebrow', '');
     body.innerHTML = renderWorkshop(context);
@@ -561,11 +581,9 @@ function renderWorkshop(context) {
   const recipe=RECIPES[id],permission=context.recipes.find(r=>r.id===id);
   return `<article class="workshop-plan">${art(id,'plan-art')}<h3>${escapeHTML(recipe.name)}</h3><div class="cost-list">${Object.entries(recipe.cost).filter(([,n])=>n>0).map(([type,n])=>`<span class="material-cost ${state.inventory[type]<n?'missing':''}" aria-label="${n} ${resourceNames[type]}; ${state.inventory[type]} aboard">${art(type)}<span>${Math.floor(state.inventory[type])}/${n}</span></span>`).join('')}</div><button id="craft-${id}" class="button button-primary" data-game-action="build" data-id="${id}" ${permission?.available?'':'disabled'}>Build</button></article>`;
 }
-function renderInspection() {
-  return `<div class="inspection-controls">${art('compass')}<button data-orbit="-80" aria-label="Rotate left">↶</button><button data-orbit="80" aria-label="Rotate right">↷</button><button data-zoom="-150" aria-label="Zoom in">+</button><button data-zoom="150" aria-label="Zoom out">−</button><button data-camera="follow">Follow</button></div>`;
-}
 function renderCabin() {
-  return `<div class="cabin-scene">${art('cabin')}</div><div class="supply-row">${Object.entries(resourceNames).map(([id,name])=>`<span aria-label="${state.inventory[id]} ${name}">${art(id)}<strong>${state.inventory[id]}</strong></span>`).join('')}</div><div class="inspection-controls"><button data-open="chart" aria-label="Map">${art('map')}<span>Map</span></button><button data-open="journal" aria-label="Journal">${art('journal')}<span>Journal</span></button><button data-open="workshop" aria-label="Build">${art('waterwheel')}<span>Build</span></button></div>`;
+  const trophies=Game.DIVE_TROPHIES??[],earned=state.trophies??[];
+  return `<div class="cabin-display"><div class="cabin-home"><div class="cabin-scene">${art('cabin')}</div><div class="supply-row" aria-label="Materials aboard">${Object.entries(resourceNames).map(([id,name])=>`<span aria-label="${state.inventory[id]} ${name}">${art(id)}<strong>${state.inventory[id]}</strong></span>`).join('')}</div></div><section class="keepsake-cabinet" aria-labelledby="keepsake-title"><div class="keepsake-heading"><h3 id="keepsake-title">Treasures from the tide</h3><span>${earned.length} / ${trophies.length}</span></div><div class="keepsake-shelves">${trophies.map(t=>{const found=earned.includes(t.id);return `<button type="button" class="keepsake ${found?'found':'undiscovered'}" data-keepsake="${t.id}" aria-label="${escapeHTML(t.name)}${found?'':', not yet found'}" aria-expanded="false"><span class="keepsake-art keepsake-${t.art}" aria-hidden="true"></span><span class="keepsake-name">${found?escapeHTML(t.name):'Unfound'}</span></button>`;}).join('')}</div><p id="keepsake-detail" class="keepsake-detail" aria-live="polite">Every find has a story. Explore the reefs to fill these shelves.</p></section></div>`;
 }
 function renderChart(context) {
   return `<div class="chart-destinations">${destinations.filter(d=>!d.requires||state.upgrades[d.requires]).map(d=>{
@@ -639,7 +657,15 @@ function frame(timestamp) {
       if (key && key !== lastEventKey) {
         lastEventKey = key;
         if(['trash_collected','cleanup_complete'].includes(state.lastEvent.code))chime('gather');
-        if (['rescued','cleanup_complete','salvage_complete','current_pushback','first_departure'].includes(state.lastEvent.code) || state.lastEvent.code.startsWith('expedition_')) { showToast(state.lastEvent.message, false, 6000); saveGame(); }
+        if (['rescued','cleanup_complete','salvage_complete','current_pushback','first_departure'].includes(state.lastEvent.code) || state.lastEvent.code.startsWith('expedition_')) { if(!state.cleanup.attempt)showToast(state.lastEvent.message, false, 6000); saveGame(); }
+      }
+      for(const id of state.trophies??[]){
+        if(!knownTrophies.has(id)){
+          knownTrophies.add(id);const trophy=Game.DIVE_TROPHIES.find(t=>t.id===id);
+          $('dive-keepsake').innerHTML=`<span class="keepsake-art keepsake-${trophy.art}" aria-hidden="true"></span><span class="find-check" aria-hidden="true">✓</span>`;
+          $('dive-keepsake').setAttribute('aria-label',`Found ${trophy.name}. Displayed in your cabin.`);
+          $('dive-keepsake').hidden=false;clearTimeout(keepsakeTimer);keepsakeTimer=setTimeout(()=>{$('dive-keepsake').hidden=true;},6500);
+        }
       }
       checkCleanupOutcome();
       refreshHud();
@@ -693,12 +719,13 @@ document.querySelectorAll('[data-panel]').forEach(button => button.addEventListe
 panelDialog.addEventListener('click', event => {
   const button = event.target.closest('button');
   if (!button || button.disabled) return;
-  if (button.dataset.camera) {
-    closePanel(); scene.setView('follow');
+  if(button.dataset.keepsake){
+    const trophy=Game.DIVE_TROPHIES.find(t=>t.id===button.dataset.keepsake);
+    panelDialog.querySelectorAll('[data-keepsake]').forEach(b=>b.setAttribute('aria-expanded',String(b===button)));
+    $('keepsake-detail').textContent=(state.trophies??[]).includes(trophy.id)?trophy.description:`${trophy.name} — ${trophy.hint}`;
   }
-  else if (button.dataset.zoom) { scene.zoom(Number(button.dataset.zoom)); scene.update(state,0,{x:0,z:0}); }
-  else if (button.dataset.orbit) { scene.orbit(Number(button.dataset.orbit),0); scene.update(state,0,{x:0,z:0}); }
-  else if (button.dataset.open) openPanel(button.dataset.open);
+  else if(button.dataset.carousel)turnPanel(Number(button.dataset.carousel));
+  else if (button.dataset.open && button.dataset.open!==activePanel) openPanel(button.dataset.open);
   else if (button.hasAttribute('data-follow-expedition')) {
     trackedTarget = 'expedition'; closePanel(); refreshHud(true);
   } else if (button.dataset.track) {
@@ -729,9 +756,6 @@ modalDialog.addEventListener('click', event => {
   else if (action === 'settings-done') {
     closeModal({ focus: settingsOrigin !== 'pause' });
     if (settingsOrigin === 'pause') showPause();
-  } else if (action === 'save') {
-    if (saveGame({ announce: true })) { button.textContent = '✓ Voyage saved'; showToast('Your voyage is safely saved.'); }
-    else button.textContent = 'Try saving again';
   } else if (action === 'menu-anyway') enterMenu();
   else if (action === 'menu') returnToMenu();
   else if (action === 'reload') location.reload();
@@ -762,9 +786,12 @@ document.addEventListener('keydown', event => {
     event.preventDefault(); showPause(); return;
   }
   if (!isPlaying() || modalDialog.open) return;
-  const panels = { KeyB: 'workshop', KeyJ: 'journal', KeyM: 'chart', KeyI: 'inspect', KeyC: 'cabin' };
+  const panels = { KeyB: 'workshop', KeyJ: 'journal', KeyM: 'chart', KeyC: 'cabin' };
   if (panels[event.code]) { event.preventDefault(); if (!event.repeat) openPanel(panels[event.code]); return; }
-  if (panelDialog.open) return;
+  if (panelDialog.open) {
+    if(['ArrowLeft','ArrowRight'].includes(event.code)){event.preventDefault();if(!event.repeat)turnPanel(event.code==='ArrowLeft'?-1:1);}
+    return;
+  }
   if (['Equal','Minus','NumpadAdd','NumpadSubtract','KeyQ','KeyR'].includes(event.code)) { event.preventDefault(); if (!state.cleanup.attempt) { if (event.code === 'KeyQ' || event.code === 'KeyR') scene.orbit(event.code === 'KeyQ' ? -40 : 40,0); else scene.zoom(['Equal','NumpadAdd'].includes(event.code) ? -100 : 100); } return; }
   if (['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.code)) {
     event.preventDefault(); keys.add(event.code); return;
@@ -793,7 +820,7 @@ canvas.addEventListener('pointermove', event => {
     divePointer.targetId=pick?.trashId??null;
     canvas.style.cursor=pick?.trashId?'pointer':'default'; return;
   }
-  if (!drag) { const station = state.cleanup.attempt ? null : scene.pickInteraction(event.clientX,event.clientY); canvas.style.cursor = station ? 'pointer' : 'grab'; canvas.title = station ? ({cabin:'Open cabin · C', workshop:'Open workbench · B', cleanup:'Snorkel · Space'}[station]) : 'Drag to orbit · Scroll to zoom'; return; }
+  if (!drag) { const station = state.cleanup.attempt ? null : scene.pickInteraction(event.clientX,event.clientY); canvas.style.cursor = station ? 'pointer' : 'grab'; canvas.title = state.cleanup.attempt ? '' : station ? ({cabin:'Open cabin · C', workshop:'Open workbench · B', cleanup:'Snorkel · Space'}[station]) : 'Drag to orbit · Scroll to zoom'; return; }
   if (Math.hypot(event.clientX-drag.startX,event.clientY-drag.startY)>5) drag.moved=true;
   if (drag.moved && !state.cleanup.attempt) scene.orbit(event.clientX-drag.x,event.clientY-drag.y);
   drag.x=event.clientX; drag.y=event.clientY;

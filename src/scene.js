@@ -246,7 +246,6 @@ export async function createScene(canvas, options = {}) {
   const deckGreeting=deckCharacter.arms.find(arm=>arm.side===1);
   const diveRing=new THREE.Mesh(new THREE.TorusGeometry(.8,.035,6,40),new THREE.MeshBasicMaterial({color:'#fff1b4',transparent:true,opacity:.75}));diveRing.rotation.x=Math.PI/2;swimmer.add(diveRing);
   const boatAnchor=new THREE.Vector2();let wasDiving=false;
-  const visitor=raft.clone(true);visitor.scale.setScalar(.48);scene.add(visitor);
   const beaconGlow=new THREE.PointLight('#ffc970',0,13,1.5);beaconGlow.position.set(3.2,3.8,3.9);boat.add(beaconGlow);
   const tails=[];raft.traverse(o=>{if(o.name==='Dog_Tail')tails.push({object:o,rotation:o.rotation.y});});
   const upgradeParts=[];raft.traverse(o=>{const match=o.name.match(/^Upgrade_(waterwheel|crane|greenhouse|sail|beacon)$/i);if(match)upgradeParts.push({object:o,id:match[1].toLowerCase()});});
@@ -376,8 +375,7 @@ export async function createScene(canvas, options = {}) {
       marker.group.visible=Boolean(waypoint&&!activeExpedition.ready&&marker.index>=activeExpedition.index);
       if(waypoint){marker.group.position.set(waypoint.x,tide*1.15+.12,waypoint.z);marker.group.scale.setScalar(marker.index===activeExpedition.index?1:.72);marker.material.opacity=marker.index===activeExpedition.index?.9:.4;marker.flag.rotation.y=reducedMotion?0:Math.sin(elapsed*2+marker.index)*.1;}
     }
-    visitor.visible=Boolean(state.upgrades?.beacon);beaconGlow.intensity=state.upgrades?.beacon?9:0;
-    const visitAngle=motionTime*.045;visitor.position.set(Math.cos(visitAngle)*16,tide*1.15+.08,Math.sin(visitAngle)*16);visitor.rotation.y=-visitAngle;
+    beaconGlow.intensity=state.upgrades?.beacon?9:0;
 
     for(let i=0;i<fish.length;i++){const a=motionTime*.35+i*.7;fish[i].position.set(6+Math.cos(a)*(3+i%4),-.55+Math.sin(a*2)*.2,-9+Math.sin(a)*(2+i%3));fish[i].rotation.y=-a;}
     water.position.y=tide*1.15;waterUniforms.uTide.value=water.position.y;waterUniforms.uTime.value=reducedMotion?0:elapsed;waterUniforms.uDive.value=THREE.MathUtils.lerp(waterUniforms.uDive.value,state.diving?1:0,dt*3);

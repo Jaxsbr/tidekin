@@ -1,12 +1,12 @@
 {
   "generator": "native image_gen.imagegen",
   "prompt": "cabin-prompt.txt",
+  "source": "/Users/jacobusbrink/.codex/generated_images/01a11ece-3558-75a0-b960-f7bea7c2ed89/exec-c7e15765-e58d-4d4d-9ff8-fa27ab01961a.png",
   "persistedOriginal": "../../public/assets/ui-fourth/cabin-interior.png",
   "width": 1536,
   "height": 1024,
   "opaque": true,
   "sha256": "fb38821b1a22ddaba0df881209c37f67e5a6007c264782a850fdda124923776d",
   "pixelEdits": false,
-  "visualReview": "Chart table, supply chest, snorkel shelf, round ocean window, warm lantern light; no captions/UI.",
-  "generatedArtifact": "exec-c7e15765-e58d-4d4d-9ff8-fa27ab01961a.png"
+  "visualReview": "Chart table, supply chest, snorkel shelf, round ocean window, warm lantern light; no captions/UI."
 }

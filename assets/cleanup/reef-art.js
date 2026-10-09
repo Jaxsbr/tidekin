@@ -1,182 +1,203 @@
-/** Original editable procedural art. Units are metres; Y up, player in XY at Z=0. */
-import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+/** Original modeled reef. World metres, Y up, interaction plane Z=0. */
+import { reefRandom, createReefSculptor } from './underwater-models.js';
+import { createReefFish } from './underwater-fish.js';
+import { sculptWreck, sculptArch } from './underwater-landmarks.js';
 
-export function createReefArt(THREE) {
-  const root = new THREE.Group(); root.name = 'Cleanup_Reef';
-  const mats = {};
-  const material = (name, color, extra = {}) => mats[name] ||= new THREE.MeshStandardMaterial({color, roughness:.86, ...extra});
-  const sand=material('sand',0xefd29c), chalk=material('chalk',0xded9b8), rock=material('rock',0x729e99), shadow=material('shadow',0x377f84);
-  const coral=[material('salmon',0xe88669),material('rose',0xbd7894),material('gold',0xe1b95c),material('lavender',0x9d9cc1)];
-  const grass=material('grass',0x438f79), tips=material('tips',0x9bc9a0);
-  const sphere = new THREE.SphereGeometry(1,12,8), stone=new THREE.IcosahedronGeometry(1,1);
-  function mesh(geo,mat,pos,scale=[1,1,1],parent=root) {const o=new THREE.Mesh(geo,mat);o.position.set(...pos);o.scale.set(...scale);parent.add(o);return o;}
-  function tube(points,r,mat,parent=root) {return mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p))),12,r,6,false),mat,[0,0,0],[1,1,1],parent);}
-  // Clear warm sand shelf; back and foreground gardens leave the entire swim plane open.
-  mesh(sphere,sand,[0,-10.6,-.8],[28,1.8,14]);
-  const seabed=mesh(new THREE.PlaneGeometry(100,80),sand,[0,-9.6,0]);seabed.rotation.x=-Math.PI/2;
-  for(let i=0;i<24;i++) {
-    const x=-14+i*1.22+Math.sin(i*4)*.4, z=-4.5-(i%3)*.7, h=.5+(Math.sin(i*7.1)+1)*.8;
-    const o=mesh(stone,i%3?rock:chalk,[x,-9+h*.25,z],[.9+(i%4)*.22,h,1.2]);o.rotation.set(i*.2,i*.8,i*.11);
-    if(i%3===0) mesh(stone,shadow,[x,-9.1,2.6],[1.1,.45,.8]);
-  }
-  // Plate colonies with irregular layered shelves, broad lit lips and readable negative space.
-  for(const [x,z,s] of [[-10,-2,1.1],[8,-3,1.25],[-6,-4,.8],[3,-4,1], [11,1,.8]]) {
-    for(let k=0;k<4;k++) {
-      const p=mesh(sphere,coral[(k+2)%4],[x+Math.sin(k*2)*.42,-8.7+k*.44,z],[s*(1.1-k*.13),.12,s*(.65-k*.07)]);
-      p.rotation.z=Math.sin(k*3)*.12;
-      mesh(sphere,tips,[p.position.x,-8.63+k*.44,z],[s*(1.05-k*.13),.035,s*(.62-k*.07)]);
-    }
-  }
-  // Hand-shaped branching fans. None cross the central player plane.
-  for(let n=0;n<12;n++) {
-    const x=-12+n*2.2+Math.sin(n*4.3)*.5,z=n%2?-4.7:-2.7,base=-8.8, h=.9+(n%4)*.45,mat=coral[n%4];
-    tube([[x,base,z],[x-.12,base+h*.5,z],[x+.18,base+h,z]],.11,mat);
-    for(let j=0;j<5;j++) {
-      const side=j%2?1:-1, y=base+.35+j*.18, end=x+side*(.55+(j%3)*.23);
-      tube([[x,y,z],[end,y+.35,z+.03],[end+side*.14,y+.9,z-.1]],.065,mat);
-      tube([[end,y+.4,z],[end-side*.23,y+.65,z+.04],[end-side*.3,y+.92,z]],.042,mat);
-    }
-  }
-  for(let n=0;n<36;n++) {
-    const x=-13+(n*3.731%26),z=n%2?-5.1:2.9,y=-9+(n%3)*.06;
-    for(let k=0;k<3;k++) tube([[x,y,z],[x+(k-1)*.15,y+.45,z],[x+(k-1)*.3+.12,y+.8+(n%4)*.12,z+.13]],.045,k===1?tips:grass);
-  }
-  // Sponge gardens and rounded coral heads anchor the framing in asymmetric masses.
-  for(const [x,z,s] of [[-9,-1,1.1],[9,-2,1.25],[-4,-4,.65],[6,-4,.8]]) {
-    for(let k=0;k<5;k++) {
-      const px=x+Math.sin(k*2.4)*s*.6,py=-8.8+(k%3)*.14,pz=z+Math.cos(k*2.4)*.35;
-      mesh(new THREE.CylinderGeometry(.13,.21,.65+k*.1,10),coral[2],[px,py+.28,pz]);
-      const lip=mesh(new THREE.TorusGeometry(.135,.048,6,12),coral[2],[px,py+.605+k*.05,pz]);lip.rotation.x=Math.PI/2;
-      mesh(new THREE.CylinderGeometry(.10,.10,.012,10),shadow,[px,py+.60+k*.05,pz]);
-    }
-    for(let k=0;k<7;k++) mesh(sphere,coral[1],[x+Math.sin(k*2.4)*s,-8.65+Math.sin(k)*.2,z-.6+Math.cos(k*2.4)*.4],[.34,.38,.29]);
-  }
-  // Sand ripples are actual shallow ivory ridges, not screen-space noise.
-  for(let i=0;i<26;i++) {
-    const x=-12+(i*2.713%24),z=-1.5+(i%5)*.63;
-    const o=mesh(sphere,chalk,[x,-8.91,z],[.35+(i%3)*.2,.025,.055]);o.rotation.y=.2;
-  }
-  // Landscape spans the enlarged domain. Preserve coral proportions while
-  // distributing authored clusters across the shelf at eighteen metres.
-  for(const child of root.children){child.position.x*=2.15;child.position.y-=9;}
-  // Batch all static sculpted geometry by material for economical rendering.
-  root.updateMatrixWorld(true);
-  const batches=new Map(),oldGeometries=new Set();
-  root.traverse(o=>{if(!o.isMesh)return;const g=o.geometry.index?o.geometry.toNonIndexed():o.geometry.clone();g.applyMatrix4(o.matrixWorld);const a=batches.get(o.material)||[];a.push(g);batches.set(o.material,a);oldGeometries.add(o.geometry);});
-  root.clear();
-  for(const [mat,geos] of batches){const g=mergeGeometries(geos);root.add(new THREE.Mesh(g,mat));geos.forEach(g=>g.dispose());}
-  oldGeometries.forEach(g=>g.dispose());sphere.dispose();stone.dispose();
-  // A vertex-painted backdrop keeps turquoise luminous without fog over the diver.
-  const bg=new THREE.PlaneGeometry(150,64,1,16),colors=[];
-  const top=new THREE.Color(0x79ded7),bottom=new THREE.Color(0x103e61),c=new THREE.Color();
-  for(let i=0;i<bg.attributes.position.count;i++){const y=bg.attributes.position.getY(i);c.copy(bottom).lerp(top,Math.max(0,Math.min(1,(y+14)/25)));colors.push(c.r,c.g,c.b);}
-  bg.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
-  mesh(bg,new THREE.MeshBasicMaterial({vertexColors:true}),[0,-9,-18]);
-  const distant=new THREE.MeshBasicMaterial({color:0x398f99});
-  for(let i=0;i<19;i++){
-    const h=2+(i*1.731%5),x=-45+i*5.1;
-    mesh(new THREE.IcosahedronGeometry(1,1),distant,[x,-19+h*.35,-12],[2.8,h,1]);
-  }
-  // Hazy contour bands stay behind the interaction plane. Different depth and
-  // summit heights make long horizontal swims reveal shelves, coves and valleys.
-  const detailGeometries=[[],[]];
-  for(let layer=0;layer<3;layer++){
-    const ridge=new THREE.Shape();ridge.moveTo(-65,-27);
-    const contour=x=>-7.5-layer*3.3+Math.sin(x*.22+layer*1.7)*2.4+Math.sin(x*.53+layer)*.8;
-    for(let k=0;k<=160;k++){const x=-65+k*.82;ridge.lineTo(x,contour(x));}
-    ridge.lineTo(67,-27);ridge.closePath();
-    const geometry=new THREE.ShapeGeometry(ridge),rgb=[];
-    const upper=new THREE.Color([0x4da3aa,0x358c99,0x28798b][layer]),lower=new THREE.Color(0x174d6b),shade=new THREE.Color();
-    for(let i=0;i<geometry.attributes.position.count;i++){const y=geometry.attributes.position.getY(i);shade.copy(lower).lerp(upper,Math.max(0,Math.min(1,(y+25)/18)));rgb.push(shade.r,shade.g,shade.b);}
-    geometry.setAttribute('color',new THREE.Float32BufferAttribute(rgb,3));
-    mesh(geometry,new THREE.MeshBasicMaterial({vertexColors:true}),[0,0,-16+layer*2]);
-    // Sparse rooted kelp silhouettes follow each contour, never float in open water.
-    for(let i=0;i<24;i++){
-      const x=-48+i*4.2+Math.sin(i*3),y=contour(x)-.15,h=.8+(i%4)*.35;
-      for(let k=0;k<3;k++){
-        const blade=new THREE.Shape();blade.moveTo(x,y);blade.bezierCurveTo(x-.3,y+h*.4,x+.35+k*.15,y+h*.8,x+(k-1)*.24,y+h);blade.quadraticCurveTo(x+.65,y+h*.45,x+.12,y);blade.closePath();
-        const g=new THREE.ShapeGeometry(blade,6);g.translate(0,0,-15.9+layer*2);detailGeometries[layer%2].push(g);
+export function createReefArt(THREE,site={}) {
+  const root=new THREE.Group();root.name='Cleanup_Reef';
+  const random=reefRandom(site.seed??site.id??'home-reef');
+  const biomes=['coral-garden','kelp-forest','sand-gullies','basalt-arches','shell-shelves','wreck-garden'];
+  const biome=site.biome??biomes[Math.floor(random()*biomes.length)];
+  const palettes={
+    'coral-garden':{rock:0x719e9c,sand:0xb9cfb5,coral:[0xe88c91,0xbe8ed1,0x83cbb9]},
+    'kelp-forest':{rock:0x558b85,sand:0xa9c6aa,coral:[0xc1b879,0x6dbba2,0xd89a83]},
+    'sand-gullies':{rock:0x99b5ad,sand:0xd7d6b2,coral:[0xbfa2ce,0xdba67f,0x79c4bd]},
+    'basalt-arches':{rock:0x527b8c,sand:0x9cb4b9,coral:[0xbf97bc,0x8fbfd0,0xde9f85]},
+    'shell-shelves':{rock:0x97b5b4,sand:0xd3cfb4,coral:[0xe4bb9d,0xbaa1cb,0x92cebf]},
+    'wreck-garden':{rock:0x648e8b,sand:0xb6c5ad,coral:[0xd49f7b,0x87b8b7,0xc794ac]}
+  };
+  const palette=palettes[biome]??palettes['coral-garden'],floor=site.bounds?.minY??-18;
+  const terrain=site.terrain??Array.from({length:15},(_,i)=>({x:-28+i*4,y:floor+1+random()*1.4}));
+  const height=x=>{
+    const i=Math.max(0,Math.min(terrain.length-2,Math.floor((x-terrain[0].x)/4))),a=terrain[i],b=terrain[i+1];
+    const t=Math.max(0,Math.min(1,(x-a.x)/(b.x-a.x)));return a.y+(b.y-a.y)*t;
+  };
+  const sculptors=[],anchors=[],layers=[];
+  const canyonOffset=(random()-.5)*5;
+  // Four genuinely separated habitats: distant massif, middle reef slope,
+  // detailed seabed gardens and sparse close framing. The XY swim lane is clear.
+  for(let layer=0;layer<4;layer++){
+    const group=new THREE.Group();group.name=['Far_Reef','Middle_Reef','Habitat_Reef','Near_Reef'][layer];root.add(group);layers.push(group);
+    const s=createReefSculptor(THREE,group,random);sculptors.push(s);
+    const z=[-29,-15,-4.5,2.6][layer],phase=random()*6.28;
+    const riseAt=x=>{
+      if(layer>=2)return 0;
+      const u=x-canyonOffset,far=layer===0?1.3:1;
+      if(biome==='coral-garden')return far*(1.0+4.4*(1-Math.exp(-u*u/65)))+Math.sin(x*.52+phase)*.45;
+      if(biome==='kelp-forest')return far*(1.2+Math.sin(x*.18+phase)*.6);
+      if(biome==='wreck-garden')return far*(.6+Math.sin(x*.13+phase)*.4);
+      if(biome==='basalt-arches')return far*(.9+Math.max(0,u)*.25)+Math.sin(x*.45+phase)*.5;
+      if(biome==='sand-gullies')return far*(.6+Math.sin(x*.35+phase)*.55);
+      return far*(2+Math.sin(x*.23+phase)*1.4);
+    };
+    const tint=new THREE.Color(palette.rock).lerp(new THREE.Color(0x348f9a),[.85,.48,0,.08][layer]);
+    if(layer<2){
+      // One continuous sculpted surface per depth layer. The front rolls down
+      // into the seabed; broad gullies replace the old isolated rock stacks.
+      const g=new THREE.PlaneGeometry(120,22,140,30);g.rotateX(-Math.PI/2);
+      const p=g.attributes.position;
+      for(let i=0;i<p.count;i++){
+        const x=p.getX(i),localZ=p.getZ(i),front=Math.max(0,Math.min(1,(localZ+2)/13));
+        const ridge=height(x)+riseAt(x),erosion=Math.sin(x*1.4+Math.sin(localZ*.8))*Math.sin(localZ*.6)*.17;
+        p.setXYZ(i,x,ridge-front*front*(riseAt(x)+4)+erosion,z+localZ);
       }
-      if(i%3===0)for(let k=0;k<3;k++){
-        const g=new THREE.SphereGeometry(1,8,5);g.scale(.5-k*.08,.06,.18);g.translate(x+.5,y+.12+k*.17,-15.8+layer*2);detailGeometries[layer%2].push(g.toNonIndexed());g.dispose();
+      g.computeVertexNormals();s.add(g,s.material(tint.getHex()));
+    }
+    const count=layer===0?13:layer===1?15:layer===2?17:8;
+    for(let i=0;i<count;i++){
+      const x=-40+i*80/(count-1)+(random()-.5)*3.8,zz=z+(random()-.5)*1.4;
+      const y=height(x)+riseAt(x)-.04;
+      const sparse=biome==='sand-gullies'&&random()<.58;
+      if(sparse)continue;
+      if(layer===0){
+        s.coral([x,y,zz],.9+random()*1.3,tint.getHex(),i%3===0?3:0);continue;
+      }
+      // Colonies occur in irregular mixed patches, with open sand between them.
+      const size=layer===1?1.0+random()*.7:.65+random()*.55;
+      if(layer>=2)s.stone([x,y-.23,zz],[size*.7,size*.34,size*.55],palette.rock);
+      const dominant=biome==='shell-shelves'?1:biome==='kelp-forest'?4:biome==='basalt-arches'?3:Math.floor(random()*6);
+      const speciesColor=layer===1?new THREE.Color(palette.coral[i%3]).lerp(tint,.4).getHex():palette.coral[i%3];
+      s.coral([x,y,zz],size,speciesColor,dominant);
+      if(layer<3){
+        s.coral([x+size*.75,y-.10,zz+.3],size*.65,palette.coral[(i+1)%3],(dominant+2)%6);
+        s.coral([x-size*.55,y-.13,zz+.4],size*.43,palette.coral[(i+2)%3],(dominant+4)%6);
+      }
+      if(biome==='kelp-forest'||random()<.24)s.kelp([x+size*.6,y-.10,zz],biome==='kelp-forest'?2.8+random()*2.7:.8+random(),0x519d88);
+      if(layer===2&&i%3===0)anchors.push({x,y:y+1,z:zz+1});
+    }
+    if(layer===2){
+      const g=new THREE.PlaneGeometry(100,25,120,22);g.rotateX(-Math.PI/2);
+      const p=g.attributes.position;
+      for(let i=0;i<p.count;i++){const x=p.getX(i),z0=p.getZ(i);p.setY(i,height(x)-.3+Math.sin(x*5+z0*.7)*.023+Math.sin(z0*.55)*.10);}
+      g.computeVertexNormals();s.add(g,s.material(palette.sand));
+    }
+    if(layer===3&&biome!=='kelp-forest'){
+      for(const x of [-8,-3.8,4.2,9]){
+        const y=height(x)-.08;
+        const targetAbove=(site.trash??[]).filter(t=>Math.abs(t.x-x)<2.5).reduce((v,t)=>Math.min(v,t.y),0);
+        const size=Math.min(1.7,Math.max(.7,(targetAbove-y-.7)/1.4));
+        s.stone([x,y-.22,2.7],[1.3,.35,1],palette.rock);
+        s.coral([x,y,2.7],size,palette.coral[x<0?0:1],x<0?3:0);
+        s.coral([x+.75,y-.03,2.9],size*.65,palette.coral[2],1);
+        s.coral([x-.6,y-.05,3],size*.5,palette.coral[1],5);
       }
     }
+    if(layer===2&&site.id==='home-reef'){
+      // A single coral shoulder introduces the habitat during descent, before
+      // the deep seabed appears. Its whole mass stays behind the swim plane.
+      const cx=6.7+canyonOffset*.25;
+      const shoulderHeight=(x,z)=>{
+        const edge=Math.max(0,Math.min(1,(z+16)/2,(-z-2)/3,(11-Math.abs(x-cx))/2));
+        const ridge=6.5*Math.exp(-Math.pow((x-cx)/3.4,2)-Math.pow((z+10)/3.8,2))
+          +2.6*Math.exp(-Math.pow((x-cx+3.5)/3,2)-Math.pow((z+9)/3,2));
+        const relief=(Math.sin(x*2.1+z*.8)*Math.sin(z*1.6)*.28+Math.sin(x*4+z)*.1)*Math.min(1,ridge);
+        return height(x)-.4+edge*(ridge+relief);
+      };
+      const g=new THREE.PlaneGeometry(22,14,72,44);g.rotateX(-Math.PI/2);
+      const p=g.attributes.position;
+      for(let i=0;i<p.count;i++){
+        const x=p.getX(i)+cx,z0=p.getZ(i)-9;
+        p.setXYZ(i,x,shoulderHeight(x,z0),z0);
+      }
+      g.computeVertexNormals();s.add(g,s.material(palette.rock));
+      const colonies=[[cx-4,-9,1.4,1],[cx-2.5,-8.4,1.5,3],[cx-.7,-9,1.9,2],[cx+1,-10,1.6,0],[cx+2.6,-8.5,1.4,5],[cx,-7,1.1,1],[cx-3,-6.8,1.1,0]];
+      for(const [i,c] of colonies.entries()){
+        const [x,z0,size,type]=c,y=shoulderHeight(x,z0);
+        s.coral([x,y,z0],size,palette.coral[i%3],type);
+        const xx=x+.55,zz=z0+.5;
+        s.coral([xx,shoulderHeight(xx,zz),zz],size*.6,palette.coral[(i+1)%3],0);
+      }
+      anchors.push({x:cx-1,y:shoulderHeight(cx-1,-9)+1,z:-8.5});
+    }
+
+    if(layer===2&&biome==='basalt-arches'){
+      const x=6+canyonOffset*.3;sculptArch(THREE,s,x,height(x)-.2,-6.8,palette.rock);
+    }
+    if(layer===2&&biome==='wreck-garden')sculptWreck(THREE,s,-1.5,height(-1.5),-5);
+    if((layer===1||layer===2)&&biome==='kelp-forest'){
+      for(const x of [-12,-8,-4.2,3.4,7.5,12])s.kelp([x+canyonOffset,height(x),z+.4],5.5+random()*3.7,layer===1?0x498e83:0x559f84);
+    }
+    s.batch();
+    for(const mesh of group.children){mesh.castShadow=layer>=2;mesh.receiveShadow=layer>=1;}
+    if(layer===0){
+      // Far silhouettes use diffuse water-colored shading, no hard caustic edges.
+      for(const mesh of group.children){mesh.material.onBeforeCompile=()=>{};mesh.material.customProgramCacheKey=()=> 'far-reef-haze';}
+    }
   }
-  for(let i=0;i<2;i++){
-    const source=detailGeometries[i],geos=source.map(g=>g.index?g.toNonIndexed():g);
-    mesh(mergeGeometries(geos),new THREE.MeshBasicMaterial({color:i?0x438e91:0x599e9d}),[0,0,0]);
-    new Set([...source,...geos]).forEach(g=>g.dispose());
+  // Targets sit in small side-wall outcrops, with schools and ascending aeration
+  // trails leading into their habitat. Their precise objects still require diving.
+  for(const item of site.trash??[])anchors.push({x:item.x+(random()-.5)*2,y:item.y+.5,z:-1.5});
+  const fish=createReefFish(THREE,anchors.slice(-9),random);root.add(fish.root);
+  const immersion={value:0};
+  const water=new THREE.Mesh(new THREE.PlaneGeometry(220,130),new THREE.ShaderMaterial({depthWrite:false,uniforms:{immersion},
+    vertexShader:'varying vec3 world;void main(){world=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(world,1.);}',
+    fragmentShader:'varying vec3 world;uniform float immersion;void main(){float depth=clamp(-world.y/42.,0.,1.);vec3 c=mix(vec3(.30,.73,.73),vec3(.025,.17,.27),pow(depth,.65));c=mix(c,vec3(.065,.31,.40),immersion*.42);gl_FragColor=vec4(c,1.);}'
+  }));water.position.set(0,-22,-45);root.add(water);
+  const clock={value:0};
+  // A translucent curved surface shows a sky reflection and a soft submerged lip.
+  // Sky has a warm horizon and clouds; it no longer reads as an empty gray panel.
+  const sky=new THREE.Mesh(new THREE.PlaneGeometry(180,55),new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{time:clock},
+    vertexShader:'varying vec3 world;void main(){world=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(world,1.);}',
+    fragmentShader:`varying vec3 world;uniform float time;void main(){
+      float wave=.035*sin(world.x*.75+time*.6)+.017*sin(world.x*2.3-time*.8);
+      float h=world.y-wave;
+      float cloud=pow(max(0.,sin(world.x*.26+sin(world.x*.61)*.4+time*.008)),10.)*exp(-pow((h-1.0)*2.0,2.));
+      vec3 c=mix(vec3(.68,.83,.82),vec3(.23,.53,.74),smoothstep(0.,2.2,h));
+      float sun=exp(-pow((world.x+6.)*.065,2.)-pow((h-1.6)*.38,2.));
+      c+=cloud*.17+sun*vec3(.07,.045,.01);
+      float coast=.16+.65*exp(-pow((world.x+8.)*.22,2.))+.45*exp(-pow((world.x-14.)*.19,2.))+.025*sin(world.x*4.);
+      float island=(1.-smoothstep(coast-.025,coast+.025,h))*smoothstep(.1,.20,h);
+      c=mix(c,vec3(.40,.65,.65),island*.55);
+      gl_FragColor=vec4(c,smoothstep(-.10,.045,h));}`
+  }));sky.position.set(0,26.9,.28);root.add(sky);
+  const surfaceGeometry=new THREE.PlaneGeometry(160,.44,160,3);
+  const surface=new THREE.Mesh(surfaceGeometry,new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{time:clock},
+    vertexShader:'varying vec2 v;varying vec3 world;uniform float time;void main(){v=uv;vec3 p=position;p.y+=sin(p.x*.75+time*.6)*.035+sin(p.x*2.3-time*.8)*.017;world=(modelMatrix*vec4(p,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(world,1.);}',
+    fragmentShader:`varying vec2 v;varying vec3 world;uniform float time;void main(){
+      float lip=exp(-pow((v.y-.61)*22.,2.));
+      float reflection=pow(max(0.,sin(world.x*4.5+sin(world.x*1.7-time*.45)*2.)),8.);
+      float foam=lip*(.16+.48*reflection);
+      float submerged=exp(-pow((v.y-.35)*6.,2.))*.15;
+      gl_FragColor=vec4(mix(vec3(.37,.80,.78),vec3(.87,.98,.89),lip),foam+submerged);
+    }`
+  }));surface.position.set(0,0,.40);root.add(surface);
+  const rayMat=new THREE.ShaderMaterial({transparent:true,depthWrite:false,side:THREE.DoubleSide,uniforms:{time:clock},
+    vertexShader:'varying vec2 v;void main(){v=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+    fragmentShader:'varying vec2 v;uniform float time;void main(){float edge=pow(sin(v.x*3.14159),3.);float a=edge*sin(v.y*3.14159)*.08;gl_FragColor=vec4(.72,.96,.84,a);}'
+  });
+  for(let i=0;i<10;i++){const ray=new THREE.Mesh(new THREE.PlaneGeometry(1.1+random()*2,30),rayMat);ray.position.set(-40+i*9,-12,-8);ray.rotation.z=-.18-random()*.1;root.add(ray);}
+  const particleGeo=new THREE.SphereGeometry(.025,5,4),particleMat=new THREE.MeshBasicMaterial({color:0xc6e9db,transparent:true,opacity:.30,depthWrite:false});
+  const particles=new THREE.InstancedMesh(particleGeo,particleMat,100);root.add(particles);const dummy=new THREE.Object3D();
+  const trails=new THREE.InstancedMesh(new THREE.SphereGeometry(.032,7,5),new THREE.MeshBasicMaterial({color:0xd4f6e0,transparent:true,opacity:.46,depthWrite:false}),Math.max(1,(site.trash?.length??0)*18));root.add(trails);
+  trails.visible=!!site.trash?.length;
+  function update(time,reduced,focus={x:0,y:-4},interaction={}){
+    const t=reduced?0:time;clock.value=t;immersion.value=Math.max(0,Math.min(1,(-focus.y-4)/12));sculptors.forEach(s=>s.time.value=t);
+    fish.update(t,interaction.dt??0,interaction.player??null,reduced,interaction.reset??false);
+    for(let i=0;i<100;i++){
+      dummy.position.set(-44+(i*5.713%88)+Math.sin(t*.15+i)*.1,floor+((i*.917+t*.06)%-floor),-12+(i%7)*2);
+      dummy.scale.setScalar(.45+(i%4)*.18);dummy.updateMatrix();particles.setMatrixAt(i,dummy.matrix);
+    }particles.instanceMatrix.needsUpdate=true;
+    (site.trash??[]).forEach((item,index)=>{
+      for(let j=0;j<18;j++){
+        const progress=((j/18+t*.045)%1),y=item.y+(Math.min(-.65,item.y+10)-item.y)*progress;
+        dummy.position.set(item.x+Math.sin(j*2.4+t*.6)*.09,y,-.55);
+        const known=interaction.collected?.includes(item.id);
+        dummy.scale.setScalar(known?0:(.4+(j%3)*.18)*Math.sin(progress*Math.PI));dummy.updateMatrix();trails.setMatrixAt(index*18+j,dummy.matrix);
+      }
+    });trails.instanceMatrix.needsUpdate=true;
   }
-  // Thin luminous caustic contours on the back ledge suggest moving surface light.
-  const caustics=new THREE.Group();root.add(caustics);
-  const causticMat=new THREE.MeshBasicMaterial({color:0xc3ead0,transparent:true,opacity:.15,depthWrite:false});
-  for(let i=0;i<12;i++){
-    const loop=mesh(new THREE.TorusGeometry(.5+(i%3)*.13,.013,3,24),causticMat,[-26+i*4.7,-17.82,-1-(i%3)*.4],[1,.24,1],caustics);loop.rotation.x=-1.1;
-  }
-  // Air begins exactly at world Y=0. This opaque gradient masks the painted
-  // reef above the waterline while remaining behind swimmer/foreground objects.
-  const airGeometry=new THREE.PlaneGeometry(160,60,1,6),airColors=[];
-  const horizon=new THREE.Color(0xd6eee6),sky=new THREE.Color(0x8ecbdc),airColor=new THREE.Color();
-  for(let i=0;i<airGeometry.attributes.position.count;i++){
-    const elevation=airGeometry.attributes.position.getY(i)+30;
-    airColor.copy(horizon).lerp(sky,Math.min(1,elevation/10));airColors.push(airColor.r,airColor.g,airColor.b);
-  }
-  airGeometry.setAttribute('color',new THREE.Float32BufferAttribute(airColors,3));
-  const air=mesh(airGeometry,new THREE.MeshBasicMaterial({vertexColors:true}),[0,30,-1.2]);air.name='Surface_Air';
-  const surface=mesh(new THREE.PlaneGeometry(130,.07),new THREE.MeshBasicMaterial({color:0xc6fff0}),[0,0,-1]);surface.name='Waterline';
-  const rays=new THREE.Group();root.add(rays);
-  const raymat=new THREE.ShaderMaterial({transparent:true,depthWrite:false,side:THREE.DoubleSide,uniforms:{},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',fragmentShader:'varying vec2 vUv;void main(){float edge=sin(vUv.x*3.14159);float fade=smoothstep(0.,.85,vUv.y);gl_FragColor=vec4(.75,1.,.91,edge*edge*fade*.075);}'});
-  for(let i=0;i<13;i++) {const o=mesh(new THREE.PlaneGeometry(.8+i%3*.5,24),raymat,[-32+i*5.5,-8,-9],[1,1,1],rays);o.rotation.z=-.28;o.name='Sunshaft';}
-  // Unbatched rooted ribbons animate at their base; all other sculpture stays batched.
-  const plants=[];
-  for(let i=0;i<18;i++){
-    const plant=new THREE.Group();plant.position.set(-28+i*3.3,-17.8,i%2?-3.3:2.3);root.add(plant);
-    const h=.7+(i%4)*.32;
-    for(let k=0;k<3;k++){
-      const blade=new THREE.Shape();blade.moveTo(0,0);blade.quadraticCurveTo(-.18,h*.6,.16,h);blade.quadraticCurveTo(.32,h*.6,.1,0);
-      const leaf=new THREE.Mesh(new THREE.ShapeGeometry(blade,8),k===1?tips:grass);leaf.material.side=THREE.DoubleSide;leaf.rotation.z=(k-1)*.25;leaf.position.x=(k-1)*.12;plant.add(leaf);
-    }plants.push(plant);
-  }
-  const bubbles=new THREE.InstancedMesh(new THREE.SphereGeometry(.045,6,4),new THREE.MeshBasicMaterial({color:0xc4f5e5,transparent:true,opacity:.42,depthWrite:false}),36);root.add(bubbles);
-  const dummy=new THREE.Object3D();
-  const shafts=rays.children.filter(o=>o.name==='Sunshaft');
-  function update(time,reduced){
-    caustics.position.x=reduced?0:Math.sin(time*.32)*.2;
-    plants.forEach((p,i)=>p.rotation.z=reduced?0:Math.sin(time*.8+i*.41)*.085);
-    shafts.forEach((p,i)=>{p.rotation.z=-.28+(reduced?0:Math.sin(time*.18+i)*.035);});
-    for(let i=0;i<36;i++){dummy.position.set(-28+(i*3.731%56)+(reduced?0:Math.sin(time*.6+i)*.12),-17.8+((i*.71+(reduced?0:time*.28))%17.7),-2-(i%4));dummy.scale.setScalar(.5+(i%4)*.25);dummy.updateMatrix();bubbles.setMatrixAt(i,dummy.matrix);}bubbles.instanceMatrix.needsUpdate=true;
-  }
-  const fish=[];
-  const fishMat=new THREE.MeshStandardMaterial({color:0xe2bf75,roughness:.65});
-  for(let i=0;i<20;i++){
-    const school=new THREE.Group();root.add(school);
-    mesh(new THREE.SphereGeometry(1,10,6),fishMat,[0,0,0],[.19,.085,.045],school);
-    const tail=mesh(new THREE.ConeGeometry(.095,.14,3),fishMat,[-.2,0,0],[1,1,.5],school);tail.rotation.z=Math.PI/2;
-    fish.push(school);
-  }
-  // Original generated panorama: one world-space draw behind all interaction
-  // geometry. The procedural reef remains the loading/error fallback.
-  const panoramaGeometry=new THREE.PlaneGeometry(1,1);
-  const panoramaMaterial=new THREE.MeshBasicMaterial({color:0xc3e4e0,transparent:true,opacity:.84,depthWrite:false,toneMapped:false});
-  const panorama=mesh(panoramaGeometry,panoramaMaterial,[0,-11,-10],[100,40,1]);
-  panorama.name='Painted_Reef_Panorama';panorama.visible=false;
-  let panoramaDisposed=false;
-  panoramaGeometry.addEventListener('dispose',()=>{panoramaDisposed=true;});
-  // Node-side contract checks do not have an image loader environment.
-  if(typeof document!=='undefined'){
-    const texture=new THREE.TextureLoader().load(`${import.meta.env.BASE_URL}assets/ui-fourth/reef-panorama.png`,loaded=>{
-      if(panoramaDisposed){loaded.dispose();return;}
-      loaded.colorSpace=THREE.SRGBColorSpace;
-      const ratio=loaded.image.width/loaded.image.height;
-      panorama.scale.set(Math.max(100,40*ratio),Math.max(40,100/ratio),1);
-      panorama.visible=true;
-    },undefined,()=>{panorama.visible=false;});
-    texture.colorSpace=THREE.SRGBColorSpace;panoramaMaterial.map=texture;
-  }
-  const updateWater=update;
-  const animate=(time,reduced,focus={x:0,y:-4})=>{updateWater(time,reduced);panorama.position.x=focus.x*.08;panorama.position.y=-11+(focus.y+4)*.025;fish.forEach((f,i)=>{f.position.set(-30+(i*4.731+(reduced?0:time*.24))%60,-4-(i*1.73%12)+(reduced?0:Math.sin(time+i)*.1),-3-(i%3));f.rotation.y=reduced?0:Math.sin(time*3+i)*.18;});};
   update(0,true);
-  return {root,update:animate};
+  return {root,update,get metadata(){return {biome,seed:site.seed??site.id,reefLayers:layers.length,fishCount:fish.root.children.length,fishAnchors:anchors.length,fishBehaviors:fish.getStats()};}};
 }
 
 export function createTrashArt(THREE,kind) {
@@ -219,58 +240,29 @@ export function createTrashArt(THREE,kind) {
   return g;
 }
 
-/** Anchored limestone habitat with a small pull-responsive snag. */
+/** Small encrusted ledges preserve target readability without screen-height pillars. */
 export function createCleanupPatch(THREE,item,index) {
   const root=new THREE.Group();root.name=`Habitat_${item.id}`;root.position.set(item.x,item.y,0);
-  const stone=new THREE.MeshStandardMaterial({color:0xabbba7,roughness:.92});
-  const shade=new THREE.MeshStandardMaterial({color:0x567f82,roughness:1});
-  const sand=new THREE.MeshStandardMaterial({color:0xd8cca3,roughness:1});
-  const height=Math.max(.7,item.y+18.4),side=index%2?-1:1;
-  function mesh(geo,mat,pos,scale){const m=new THREE.Mesh(geo,mat);m.position.set(...pos);if(scale)m.scale.set(...scale);root.add(m);return m;}
-  // Broad stepped buttress meets the continuous seabed; its top supports the
-  // authoritative item rather than moving that item to match decorative art.
-  const shape=new THREE.Shape();
-  [[-2.8,-height],[5.5,-height],[4.3,-height*.7],[3.2,-height*.65],[2.5,-height*.35],[1.1,-.7],[.55,-.42],[-.6,-.42],[-1.2,-height*.4],[-2.8,-height]].forEach(([x,y],i)=>i?shape.lineTo(x*side,y):shape.moveTo(x*side,y));shape.closePath();
-  // Eroded windows reveal painted reef through the support instead of
-  // presenting a solid screen-height wall.
-  if(height>5)for(const fraction of [.38,.68]){
-    const opening=new THREE.Path();
-    opening.absellipse(side*(fraction>.5?1.0:.45),-height*fraction,.43,height*.07,.0,Math.PI*2,true);
-    shape.holes.push(opening);
+  const random=reefRandom(item.id),s=createReefSculptor(THREE,root,random),side=index%2?-1:1;
+  const color=index%2?0x719b97:0x7fa5a3;
+  // A single sloping limestone outcrop runs back down to the authoritative
+  // seabed. The small crest supports the target without a foreground column.
+  const height=Math.max(.7,item.y-(item.floorY??-18)+.1),g=new THREE.PlaneGeometry(2,1,22,20),p=g.attributes.position;
+  for(let i=0;i<p.count;i++){
+    const u=p.getX(i),t=p.getY(i)+.5,width=.72+(1-t)*2.2,px=side*(1-t)*1.0+u*width;
+    p.setXYZ(i,px,-.52-height*(1-t)+Math.sin(px*4+t*13)*.055*Math.sin(t*Math.PI),-.78+(1-t)*.66-u*u*.20+Math.sin(t*24+Math.sin(u*3))*Math.sin(t*Math.PI)*.09);
   }
-  const wallGeometry=new THREE.ExtrudeGeometry(shape,{depth:2.2,bevelEnabled:true,bevelThickness:.16,bevelSize:.18,bevelSegments:2});
-  const wallColors=[],tint=new THREE.Color();
-  for(let i=0;i<wallGeometry.attributes.position.count;i++){
-    const y=wallGeometry.attributes.position.getY(i),x=wallGeometry.attributes.position.getX(i);
-    const band=.76+.14*Math.sin(y*4.2+Math.sin(x*.7)*.6)+.08*Math.sin(y*11+x*.4);
-    tint.setRGB(band,band,band);wallColors.push(tint.r,tint.g,tint.b);
-  }
-  wallGeometry.setAttribute('color',new THREE.Float32BufferAttribute(wallColors,3));
-  wallGeometry.scale(.6,1,1);
-  const wallMaterial=stone.clone();wallMaterial.vertexColors=true;
-  mesh(wallGeometry,wallMaterial,[0,0,-2.6]);
-  for(let k=0;k<6;k++){
-    const y=-height+(k+.4)*height/6;
-    const rock=mesh(new THREE.IcosahedronGeometry(1,1),k%2?stone:shade,[side*(2.6-k*.32)*.6,y,-1.2],[(2.3-k*.22)*.6,height/13,.8]);rock.rotation.z=side*.09;
-  }
-  mesh(new THREE.SphereGeometry(1,16,10),sand,[0,-.55,-.35],[.95,.16,.7]);
-  // Small reef shelves soften the escarpment without obscuring the target.
-  const coral=new THREE.MeshStandardMaterial({color:index%2?0xc98690:0xdfa568,roughness:.8});
-  for(let k=0;k<5;k++)mesh(new THREE.SphereGeometry(1,12,8),coral,[side*(1.1+k*.18),-1.15-k*.22,-.4],[.45+k*.09,.075,.34]);
-  // One static batch of encrusted seams and branching growth per support.
-  const growth=[];
-  for(let k=0;k<8;k++){
-    const y=-.9-k*(height-1.3)/8,x=side*(.45+Math.sin(k*2.1)*.35),z=-.32;
-    const crust=new THREE.SphereGeometry(1,10,6);crust.scale(.4+(k%3)*.09,.065,.12);crust.translate(x,y,z);growth.push(crust.toNonIndexed());crust.dispose();
-    if(k%2===0)for(const direction of [-1,1]){
-      const curve=new THREE.CatmullRomCurve3([[x,y,z],[x+direction*.22,y+.22,z+.04],[x+direction*.30,y+.48,z]].map(p=>new THREE.Vector3(...p)));
-      const branch=new THREE.TubeGeometry(curve,6,.025,4,false);growth.push(branch.toNonIndexed());branch.dispose();
-    }
-  }
-  const growthGeometry=mergeGeometries(growth);growth.forEach(g=>g.dispose());
-  mesh(growthGeometry,new THREE.MeshStandardMaterial({color:0x6e9b7d,roughness:1}),[0,0,0]);
+  g.computeVertexNormals();s.add(g,s.material(color));
+  s.stone([0,-.57,-.66],[.72,.17,.45],color);
+  s.coral([-side*.66,-.58,-.7],.5,index%2?0xd49bba:0xdc9b87,0);
+  s.coral([side*.85,-.9,-1.25],.55,0x84bfae,1);
+  s.kelp([side*1.1,-1.1,-1.55],.8,0x559c89);s.batch();
+  root.traverse(o=>{if(o.isMesh){o.castShadow=o.material.userData.reefKind!=='stone';o.receiveShadow=true;}});
   const snag=new THREE.Group();root.add(snag);
-  const weed=new THREE.MeshStandardMaterial({color:0x4b846e,roughness:1});
-  for(let i=0;i<3;i++){const curve=new THREE.CatmullRomCurve3([[-.4+i*.3,-.48,-.1],[-.3+i*.3,-.15,.24],[-.36+i*.3,.23,.05]].map(p=>new THREE.Vector3(...p)));snag.add(new THREE.Mesh(new THREE.TubeGeometry(curve,10,.025,5,false),weed));}
-  return {root,update(progress,time,reduced){snag.visible=progress<1;snag.scale.y=1-progress*.5;snag.rotation.z=reduced?0:Math.sin(time*.8+index)*.025;}};
+  const weed=new THREE.MeshStandardMaterial({color:0x558e7f,roughness:.9});
+  for(let i=0;i<3;i++){
+    const curve=new THREE.CatmullRomCurve3([[-.4+i*.3,-.48,-.1],[-.3+i*.3,-.15,.20],[-.36+i*.3,.23,.05]].map(p=>new THREE.Vector3(...p)));
+    snag.add(new THREE.Mesh(new THREE.TubeGeometry(curve,10,.022,5,false),weed));
+  }
+  return {root,update(progress,time,reduced){s.time.value=reduced?0:time;snag.visible=progress<1;snag.scale.y=1-progress*.5;snag.rotation.z=reduced?0:Math.sin(time*.8+index)*.025;}};
 }

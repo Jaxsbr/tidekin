@@ -36,6 +36,7 @@ test('review: confirmed new voyage saves a fresh always-controllable raft',async
     menu:{},gameView:{},applySettings:noop,closeModal:noop,refreshHud:noop,canvas:node,
     lastCleanupStatus:null,fatalError:false,lastEventKey:null,trackedTarget:null,guideStart:null,
     chosenDetour:null,rafIntervals:[],renderedFrames:0,saves:0,
+    knownTrophies:new Set(),keepsakeTimer:null,clearTimeout:noop,$:()=>node,escapeHTML:String,
     saveGame(){context.saves++;return true;},console});
   await vm.runInContext(start+'\nstartGame(false)',context);
   assert.equal('helm' in context.state,false);

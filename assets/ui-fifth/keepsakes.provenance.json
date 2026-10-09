@@ -1,0 +1,125 @@
+{
+  "generator": "native image_gen",
+  "date": "2026-10-09",
+  "style_reference": "public/assets/ui-fourth/ocean-kit-atlas.png (visually inspected; not passed as generation input)",
+  "output": "public/assets/ui-fifth/keepsakes.png",
+  "source": "/Users/jacobusbrink/.codex/generated_images/01a11f20-48da-7af2-8f12-1d27eedce240/exec-ee6d6e76-d382-4fe6-b89f-c08a367c6643.png",
+  "dimensions": {
+    "width": 1536,
+    "height": 1024,
+    "columns": 3,
+    "rows": 2,
+    "cellWidth": 512,
+    "cellHeight": 512
+  },
+  "mapping": [
+    {
+      "id": "nautilus-shell",
+      "column": 0,
+      "row": 0,
+      "x": 0,
+      "y": 0,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "brass-compass",
+      "column": 1,
+      "row": 0,
+      "x": 512,
+      "y": 0,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "glass-float",
+      "column": 2,
+      "row": 0,
+      "x": 1024,
+      "y": 0,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "coral-fossil",
+      "column": 0,
+      "row": 1,
+      "x": 0,
+      "y": 512,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "captains-bell",
+      "column": 1,
+      "row": 1,
+      "x": 512,
+      "y": 512,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "pearl-crown",
+      "column": 2,
+      "row": 1,
+      "x": 1024,
+      "y": 512,
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "prompts": [
+    {
+      "kind": "generation",
+      "transparent_background": true,
+      "prompt": "Use case: illustration-story\nAsset type: Tidekin cabin keepsake trophy sprite atlas.\nCreate an original beautiful 1536x1024 transparent PNG atlas, exactly THREE columns and TWO rows of equal 512x512 cells. Six separate objects only, each centered in its own cell with generous fully transparent padding of at least 64 pixels on all sides. No visible grid.\nStyle: warm illustrated storybook nautical menu art, richly hand-painted sculptural forms, delicate brush texture, crisp expressive silhouettes, warm honey-gold highlights, aged brass and sea-green patina, creamy ivory, turquoise glass, subtle painterly material detail. Three-quarter view, coherent soft upper-left lighting. Charming treasured seafaring heirlooms, polished premium game illustration, neither flat icons nor photorealism.\nExact row-major mapping:\nTop left: one beautiful cream-and-russet striped nautilus shell, prominent curled spiral and pearly opening.\nTop center: one aged brass pocket compass, round ornate housing, sea-green patina, ivory dial and elegant compass rose, no letters or numerals.\nTop right: one translucent teal glass fishing float enclosed in weathered tan knotted rope netting, short rope loop integrated into the object.\nBottom left: one coral fossil, a warm limestone fragment with clearly visible intricate fossilized coral rosettes and branching impressions; an ancient mineral specimen, not living coral.\nBottom center: one old captain's bell, richly aged golden brass with sea-green patina, flared lip, small top hanging loop and visible clapper, short rope pull; no stand.\nBottom right: one luminous large pearl nestled in an open ornate scalloped shell, iridescent cream and blush interior, aged gold edging and subtle teal ornamental curls integral to the shell.\nEach is a SINGLE standalone keepsake with a distinct silhouette, similar apparent visual size, entirely contained within its assigned equal cell. Object centers at (256,256), (768,256), (1280,256), (256,768), (768,768), (1280,768). Keep all alpha content within central 384x384 of each cell.\nBackground: genuine clean transparent alpha across the entire canvas outside the six objects. No painted backdrop, checkerboard, floor, cast shadow outside object silhouette, glow cloud, scenery, pedestal, plaque, frame, border, words, labels, lettering, watermark, extra objects. Do not crop any object."
+    },
+    {
+      "kind": "spacing revision",
+      "transparent_background": true,
+      "prompt": "Edit this six-object atlas only to correct spacing and transparency. Preserve the exact six beautiful painted object designs and their row-major order: nautilus shell, brass compass, glass rope float / coral fossil, captain's bell, ornate pearl shell. Keep 1536x1024 canvas, exact 3 columns by 2 rows of 512x512 cells. Shrink every object substantially to fit entirely inside the central 340x340 region of its assigned cell, centered at x=256,768,1280 and y=256,768. This must leave at least 86 pixels fully transparent padding on every cell edge, including all ropes and loops. The bell must be entirely inside bottom middle cell, including top loop and bottom rope. Remove all residual background pixels, halos and shadows: outside the six crisp object silhouettes alpha must be exactly zero. True transparent PNG, no backdrop or checkerboard, no text, labels or frames. Do not add objects.",
+      "referenced_image_paths": [
+        "/Users/jacobusbrink/.codex/generated_images/01a11f20-48da-7af2-8f12-1d27eedce240/exec-110ce435-eb24-4522-b06d-b7cdda32befd.png"
+      ]
+    }
+  ],
+  "validation": "Full final image visually inspected. PNG RGBA, alpha range 0–254. Six complete distinct objects remain within their equal cells; alpha>128 silhouette cell-local bounds recorded below. Native output copied byte-for-byte without image processing. Very low-alpha residual pixels extend into padding; not all padding is mathematically alpha zero.",
+  "silhouetteBoundsAlphaOver128": [
+    [
+      115,
+      127,
+      426,
+      418
+    ],
+    [
+      116,
+      72,
+      392,
+      423
+    ],
+    [
+      94,
+      82,
+      396,
+      440
+    ],
+    [
+      97,
+      83,
+      437,
+      411
+    ],
+    [
+      122,
+      45,
+      387,
+      439
+    ],
+    [
+      78,
+      72,
+      414,
+      408
+    ]
+  ]
+}

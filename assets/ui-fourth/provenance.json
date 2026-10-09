@@ -1,6 +1,7 @@
 {
   "generator": "native image_gen.imagegen",
   "date": "2026-10-09",
+  "originalToolPath": "/Users/jacobusbrink/.codex/generated_images/01a11ece-3558-75a0-b960-f7bea7c2ed89/exec-6a5af4e0-7db5-4f90-9073-3ebb6edd336d.png",
   "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33",
   "bytes": 2961160,
   "width": 1536,
@@ -25,6 +26,5 @@
     "embeddedPngByteEquality": true,
     "allRectanglesInBounds": true,
     "browserPreview": "local file protocol blocked"
-  },
-  "generatedArtifact": "exec-6a5af4e0-7db5-4f90-9073-3ebb6edd336d.png"
+  }
 }

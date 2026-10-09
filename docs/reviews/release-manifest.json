@@ -1,0 +1,64 @@
+{
+  "project": "Tidekin",
+  "version": "0.2.0-beta.3",
+  "createdAt": "2026-10-08T10:45:20.015901+00:00",
+  "preview": "http://127.0.0.1:5181",
+  "sourceAndBuild": {
+    "dist/assets/index-CF5Vdp0c.css": {
+      "bytes": 29052,
+      "sha256": "3e69da3c8a56ffaddd757a20bac2e43b7707bea2624e914b8867ab17e8fb5438"
+    },
+    "dist/assets/index-DUFqV722.js": {
+      "bytes": 71229,
+      "sha256": "bf4b6f342f34343c383b4c978b0413896ebf13dc92ae7fd6396f344ce0d48c4b"
+    },
+    "dist/assets/scene-BP71JcR4.js": {
+      "bytes": 596018,
+      "sha256": "48a2c414f258b7e5a1de1eb31d8b34579a4a6114b09b523176ec76653e24193f"
+    },
+    "index.html": {
+      "bytes": 10776,
+      "sha256": "d583f4b7cf24b767986f5e68bc486ad5eb1529011e446f5d0454807419277c55"
+    },
+    "package-lock.json": {
+      "bytes": 36588,
+      "sha256": "3596bef2b9dad89824630045357f792f40b4057835aa51f62ea1e5e7cf881242"
+    },
+    "package.json": {
+      "bytes": 317,
+      "sha256": "01e0dea3228e63a3246d05bcb801f31ed241eeecb138212338117613b3e5bf39"
+    },
+    "public/assets/island.glb": {
+      "bytes": 782572,
+      "sha256": "8715786f8500b90514d4fce6e747d1103b26c9bc4fbbdc368190040ba8d131bc"
+    },
+    "public/assets/landmarks.glb": {
+      "bytes": 848304,
+      "sha256": "cf211aa82042686a9966e84029c7bf045f5342f247a6be4a175a406015cb5d67"
+    },
+    "public/assets/workshop.glb": {
+      "bytes": 1427024,
+      "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+    },
+    "src/game.js": {
+      "bytes": 46157,
+      "sha256": "0db79df454f20daafd84483e255a800959aebb8a407fd0edcf156d602ba1c543"
+    },
+    "src/main.js": {
+      "bytes": 60132,
+      "sha256": "69e1a7b17a1f224900b3764ac116529958313321772fe8f06549b5e4d1062cdc"
+    },
+    "src/navigation.js": {
+      "bytes": 4308,
+      "sha256": "d6ec27e1986273ae1850f85f1219fb4650349ab182d6af51c1f9ed2b19b03410"
+    },
+    "src/scene.js": {
+      "bytes": 25329,
+      "sha256": "fdd52ae1a0f10a557ee819e09f4c6f4db62333823e356959439c56d4603f298f"
+    },
+    "src/style.css": {
+      "bytes": 33309,
+      "sha256": "e6f0ae0b7940896db8b6b31337f0711a7288f60a089091a31e48596b301eb03b"
+    }
+  }
+}

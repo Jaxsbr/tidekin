@@ -71,8 +71,9 @@ test('last pickup completes immediately, persists, and reentry shows clean site 
   }}
   assert.equal(state.cleanup.attempt.status,'complete');assert.deepEqual(state.cleanup.completed,[site.id]);
   assert.equal(getCleanupContext(state).count,3);assert.equal(getCleanupContext(state).target,null);
-  updateGame(state,100);assert.equal(state.cleanup.attempt.status,'complete');
-  assert.equal(act(state,'retry-cleanup').ok,false);assert.equal(state.cleanup.attempt.status,'complete');assert.equal(act(state,'collect-trash').ok,false);
+  updateGame(state,100);assert.equal(state.cleanup.attempt.status,'failed');
+  assert.equal(state.cleanup.attempt.y,0,'exhaustion rescues to surface');
+  assert.equal(act(state,'retry-cleanup').ok,true);assert.equal(state.cleanup.attempt.status,'complete');assert.equal(act(state,'collect-trash').ok,false);
   assert.deepEqual(state.inventory,{wood:supplies.wood+1,scrap:supplies.scrap+1,pearls:supplies.pearls});assert.deepEqual(state.stats,stats);
   const loaded=deserializeGame(serializeGame(state));assert.deepEqual(loaded.cleanup,{revision:3,completed:[site.id],attempt:null});
   enter(loaded);assert.equal(loaded.cleanup.attempt.status,'complete');assert.equal(getCleanupContext(loaded).count,3);

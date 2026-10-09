@@ -34,3 +34,16 @@ Both valid samples meet the unchanged 20ms/33.4ms thresholds. These are rAF inte
 Raw samples: `captures/fourth-improvement/qa/2026-10-09T04-34-51.522Z-performance/results.json`. That run's overall status is **fail** because its separate initial eight-cycle resource check grew during warmup; the frame-time pass does not overwrite that status. Resource diagnosis and extended plateau evidence are recorded in the fourth improvement report.
 
 The subsequent memory-only 16-cycle diagnostic (`captures/fourth-improvement/qa/2026-10-09T04-40-12.680Z-memory-diagnostic/results.json`) records a stable final-three matching-site plateau: Home263 / Cove262 geometries,3 textures throughout. Initial registration growth remains visible. The previous strict eight-cycle failure is preserved. A separate CPU ownership check observes all1,810 geometry/material resources disposed, with no detached resource after16 alternating site fixtures. These bounded observations support resource-lifecycle correctness without asserting universal memory safety.
+
+## Fifth improvement — 0.6.0-beta.1
+
+Final entry `index-BqHxL0Q5.js`, scene `scene-6sbYOEGm.js`, Chrome 154.0.8037.98 headed, ANGLE Metal Apple M4 Pro (Mac16,8, 48 GiB), 1440×900 DPR1 High. All other agent browser sessions were closed. Each sample used five seconds of warmup and twenty seconds of recording without screenshots/video. The fresh save is a labelled performance fixture, not earned progression.
+
+| View | Median frame interval | p95 | Frames >50ms |
+|---|---:|---:|---:|
+| Following |16.7ms|17.4ms|0|
+| Moving dive, depth 0–12m, surface breathing |16.7ms|17.4ms|0|
+
+Both valid samples meet the unchanged 20ms median / 33.4ms p95 limits. The moving sample records 20.008 game seconds, maximum depth 12.107m, 17.991 seconds moving and 2.351 seconds near the surface; air remained live and positive. These are rAF intervals on this hardware/display, not GPU execution timings or a universal performance claim. The earlier frozen completed-dive scenario is not used for this pass.
+
+Raw evidence: `captures/fifth-improvement/qa/2026-10-09T06-03-36.979Z-performance/results.json`. The same run passed sixteen alternating actual-input site entry/exit cycles. Final-three matching-site counts plateaued at Home279 / Cove288 geometries and3 textures. Initial registration growth remains in the evidence; the stable suffix starts at cycles5 and4 respectively. Overall status pass, served build unchanged, zero browser errors and browser closed. A separate CPU ownership diagnostic disposed all2,572 observed resources with zero remaining. These are bounded lifetime observations, not universal memory-safety certification.

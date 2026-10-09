@@ -1,0 +1,204 @@
+{
+  "title": "Tidekin cross-genre Steam evidence",
+  "snapshot_date": "2026-10-08",
+  "retrieved_at_utc": "2026-10-08T09:03:41Z",
+  "method": "Review figures are literal observations from official Steam store-page results or opened Steam pages retrieved for this research. Counts are Steam user reviews, not unit sales or player counts. Steam results may be cached and counts change. Variants are preserved where the retrieved official snippets disagreed; the Markdown rounds counts and omits an uncertain rating rather than choosing one.",
+  "games": [
+    {
+      "title": "Hollow Knight: Silksong",
+      "release_date": "2025-09-04",
+      "steam_store_url": "https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 146338,
+          "positive_percent": 93,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "English Reviews: Very Positive (146,338) - 93% of the 146,338 user reviews for this game are positive."
+        }
+      ],
+      "first_party_success_source": "https://www.teamcherry.com.au/blog/holiday2025",
+      "first_party_success_observation": "Team Cherry reported over seven million purchases by 2025-12-15; Game Pass players were counted separately."
+    },
+    {
+      "title": "Path of Exile 2",
+      "release_date": "2024-12-06",
+      "steam_early_access": true,
+      "steam_store_url": "https://store.steampowered.com/app/2694490/Path_of_Exile_2/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 97431,
+          "positive_percent": 77,
+          "steam_rating_label": "Mostly Positive",
+          "observed_text": "English Reviews: Mostly Positive (97,431) - 77% of the 97,431 user reviews for this game are positive."
+        }
+      ],
+      "first_party_success_source": "https://www.youtube.com/watch?v=-iFva8e6PhA",
+      "first_party_success_observation": "Grinding Gear Games announced one million Early Access redemptions before launch. This is a redemption/access count, not a sales count."
+    },
+    {
+      "title": "DOOM: The Dark Ages",
+      "release_date_steam": "2025-05-14",
+      "release_date_developer_coverage": "2025-05-15",
+      "steam_store_url": "https://store.steampowered.com/app/3017860/DOOM_The_Dark_Ages/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 19854,
+          "positive_percent": 86,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "English Reviews: Very Positive (19,854) - 86% of the 19,854 user reviews for this game are positive."
+        }
+      ],
+      "date_note": "Steam lists May 14; Bethesda/id Software launch coverage gives May 15. Both dates are inside the requested inclusive window."
+    },
+    {
+      "title": "Amanda the Adventurer 2",
+      "release_date": "2024-10-22",
+      "steam_store_url": "https://store.steampowered.com/app/2826800/Amanda_the_Adventurer_2/",
+      "review_observations": [
+        {
+          "scope": "All languages",
+          "count": 1434,
+          "positive_percent": 83,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "All Reviews: Very Positive (1,434) - 83% of the 1,434 user reviews for this game are positive."
+        }
+      ],
+      "mechanics_update_source": "https://steamcommunity.com/ogg/2826800/announcements/detail/4447961335474421841"
+    },
+    {
+      "title": "Blue Prince",
+      "release_date": "2025-04-10",
+      "steam_store_url": "https://store.steampowered.com/app/1569580/Blue_Prince/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 14768,
+          "positive_percent": 85,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "English Reviews: Very Positive (14,768) - 85% of the 14,768 user reviews for this game are positive."
+        }
+      ],
+      "developer_publisher_mechanics_source": "https://rawfury.com/games/blue-prince/"
+    },
+    {
+      "title": "The Roottrees are Dead",
+      "release_date": "2025-01-15",
+      "steam_store_url": "https://store.steampowered.com/app/2754380/The_Roottrees_are_Dead/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 5147,
+          "positive_percent": 96,
+          "steam_rating_label": "Overwhelmingly Positive",
+          "observed_text": "English Reviews: Overwhelmingly Positive (5,147) - 96% of the 5,147 user reviews for this game are positive."
+        }
+      ]
+    },
+    {
+      "title": "Mewgenics",
+      "release_date": "2026-02-10",
+      "steam_store_url": "https://store.steampowered.com/app/686060/Mewgenics/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 28806,
+          "positive_percent": 90,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "English Reviews: Very Positive (28,806) - 90% of the 28,806 user reviews for this game are positive."
+        },
+        {
+          "scope": "English",
+          "count": 28772,
+          "positive_percent": 91,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "English Reviews: Very Positive (28,772) - 91% of the 28,772 user reviews for this game are positive."
+        }
+      ],
+      "markdown_claim": "About 28,800 English reviews; positive percentage unavailable because the retrieved Steam variants disagreed between 90% and 91%."
+    },
+    {
+      "title": "Slay the Spire 2",
+      "release_date": "2026-03-05",
+      "steam_early_access": true,
+      "steam_store_url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 68986,
+          "positive_percent": 91,
+          "steam_rating_label": "Very Positive",
+          "score_qualification": "Steam says one or more periods of off-topic review activity were excluded from the adjusted review score.",
+          "observed_text": "English Reviews: Very Positive (68,986) - 91% of the 68,986 user reviews for this game are positive. This product has experienced one or more periods of off-topic review activity. Based on your preferences, the reviews within these periods have been excluded from this product's Review Score."
+        },
+        {
+          "scope": "English",
+          "count": 69869,
+          "positive_percent": 91,
+          "steam_rating_label": "Very Positive",
+          "score_qualification": "Steam says one or more periods of off-topic review activity were excluded from the adjusted review score.",
+          "observed_text": "English Very Positive (69,869 reviews); Steam flags one or more periods of off-topic review activity."
+        },
+        {
+          "scope": "Recent, all languages",
+          "count": 4594,
+          "positive_percent": 70,
+          "steam_rating_label": "Mostly Positive",
+          "observed_text": "Recent Reviews: Mostly Positive (4,594) - 70% of the 4,594 user reviews in the last 30 days are positive."
+        }
+      ],
+      "steam_count_variant_note": "Official Steam results returned 68,986 and 69,869 English reviews at the same 91% adjusted score; the profile rounds volume to about 69,000.",
+      "first_party_success_source": "https://store.steampowered.com/news/app/2868840/view/502852451136700526",
+      "first_party_success_observation": "Mega Crit reported 3,000,000 units sold and over 25,000,000 runs attempted after roughly one week."
+    },
+    {
+      "title": "Tempest Rising",
+      "release_date_steam_store": "2025-04-24",
+      "public_availability_announcement_date": "2025-04-17",
+      "steam_store_url": "https://store.steampowered.com/app/1486920/Tempest_Rising/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 5301,
+          "positive_percent": 87,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "English Reviews: Very Positive (5,301) - 87% of the 5,301 user reviews for this game are positive."
+        },
+        {
+          "scope": "Recent, all languages",
+          "count": 166,
+          "positive_percent": 69,
+          "steam_rating_label": "Mixed",
+          "observed_text": "Recent Reviews: Mixed (166) - 69% of the 166 user reviews in the last 30 days are positive."
+        }
+      ],
+      "developer_publisher_announcement": "https://store.steampowered.com/news/app/1486920/view/505074444233867634"
+    },
+    {
+      "title": "Jurassic World Evolution 3",
+      "release_date": "2025-10-21",
+      "steam_store_url": "https://store.steampowered.com/app/2958130/Jurassic_World_Evolution_3/",
+      "review_observations": [
+        {
+          "scope": "English",
+          "count": 7396,
+          "positive_percent": 93,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "English Reviews: Very Positive (7,396) - 93% of the 7,396 user reviews for this game are positive."
+        },
+        {
+          "scope": "English",
+          "count": 7384,
+          "positive_percent": 93,
+          "steam_rating_label": "Very Positive",
+          "observed_text": "English Reviews: Very Positive (7,384) - 93% of the 7,384 user reviews for this game are positive."
+        }
+      ],
+      "markdown_claim": "About 7,400 English reviews, 93% positive.",
+      "exact_first_party_launch_announcement": "https://store.steampowered.com/news/app/648350/view/527609017446434568",
+      "official_game_mode_overview": "https://www.jurassicworldevolution.com/en-US/3/game-modes"
+    }
+  ]
+}

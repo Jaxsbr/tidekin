@@ -23,7 +23,7 @@ test('successful completion is once-only across retry exit reload and old comple
  let s=createGame();enter(s,CLEANUP_SITES[0]);finish(s);const earned={...s.inventory};
  for(let i=0;i<3;i++){s=deserializeGame(serializeGame(s));enter(s,CLEANUP_SITES[0]);assert.equal(s.cleanup.attempt.status,'complete');assert.equal(act(s,'retry-cleanup').ok,false);(s.cleanup.attempt.y=0,act(s,'leave-cleanup'));assert.deepEqual(s.inventory,earned);}
  const old=createGame();old.cleanup={completed:['home-reef']};delete old.guidance;delete old.departed;
- s=deserializeGame(JSON.stringify(old));assert.deepEqual(s.cleanup.completed,['home-reef','sheltered-cove']);enter(s,CLEANUP_SITES[0]);assert.equal(s.cleanup.attempt.status,'complete');assert.deepEqual(s.inventory,old.inventory);assert.equal(s.guidance.skipped,true);
+ s=deserializeGame(JSON.stringify(old));assert.deepEqual(s.cleanup.completed,['home-reef','sheltered-cove']);enter(s,CLEANUP_SITES[0]);assert.equal(s.cleanup.attempt.status,'active','legacy completion permits a fresh relic dive');assert.deepEqual(s.inventory,old.inventory);assert.equal(s.guidance.skipped,true);
 });
 test('failure retry voluntary exit and reload never bank unfinished rewards',()=>{
  const s=createGame();enter(s,CLEANUP_SITES[0]);const before=permanent(s);hold(s,getCleanupSite(s).trash[0]);
@@ -94,7 +94,7 @@ test('a real outer-region edge permits nearby salvage before geographic arrival 
 test('fresh voyage public salvage entries fund every upgrade without quests or resource grants',()=>{
  const s=createGame();
  function sail(p) {
-
+  
   for(let frame=0;frame<20000;frame++) {
    const dx=p.x-s.position.x,dz=p.z-s.position.z;if(Math.hypot(dx,dz)<.3){return;}
    const error=Math.atan2(Math.sin(Math.atan2(dx,dz)-s.heading),Math.cos(Math.atan2(dx,dz)-s.heading));

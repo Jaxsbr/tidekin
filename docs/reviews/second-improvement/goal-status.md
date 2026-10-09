@@ -1,0 +1,17 @@
+# Goal continuation status
+
+The delivered candidate is ready for hands-on review at http://127.0.0.1:5181. Main-chat preview session47858 owns this listener; review workers are closed. Final source/build manifest matches disk. Build succeeds, domain tests remain64/64 on unchanged domain sources, and the latest actual-input F7/accessibility/fresh-informed checks pass. The scorecard records provisional PM75.2/100 with attribution and caveats; it is not an overall Goal completion claim.
+
+The remaining acceptance item is the exact historical human tide/pickup incident. The brief explicitly requires reproducing that interaction before claiming a fix. Controlled original/current browser phase and targeting checks pass, but neither the retained interview/artifacts nor local memory search supplied the specific item/location/input trace. A focused asynchronous question asks which item/location and whether Jaco stayed beside it as the tide fell. No answer has arrived as of this handoff.
+
+Do not manufacture a reproduction, silently waive the requirement, rerun the already-passing broad suite or inflate scores to close the Goal. When the user supplies details, reproduce that specific sequence in isolated storage, diagnose/fix only if evidence identifies a defect, then recheck affected behavior. If the user explicitly changes the historical-reproduction requirement, record that decision. Human enjoyment/comfort testing remains appropriately unvalidated rather than a new universal approval gate.
+
+The Goal is blocked, not complete. Do not mark it paused without a user pause request. A blocked status requires the tool's consecutive-goal-turn threshold; the newly focused missing-information condition must be counted accurately rather than treating within-turn updates or compactions as separate turns.
+
+## Historical interview recheck
+
+The first automatic continuation reread all eight user turns in parent chat `01a11d67-8117-71d3-a5e2-805d874b8ddf`; the older-page cursor returned no additional turns. The original report confirms collecting floating materials, moving to another area at high tide, being unable to collect objects that appeared to float, and continued failure after the tide fell. It names no item or location and does not establish whether the player remained beside the same object. This adds no reproducible input trace beyond the already-tested hypotheses. The focused user question remains unanswered. No runtime changes or redundant broad test runs were made. This is the second consecutive goal turn encountering the missing-information condition (original turn plus first automatic continuation), below the three-turn blocked-status threshold.
+
+## Blocked audit — second automatic continuation
+
+Previous continuation classification: no progress toward the remaining acceptance item; rereading the interview did not change the next action. Current files still explicitly require actual browser reproduction, and no human incident details or changed scope have arrived. The same missing-information condition has now recurred for three consecutive goal turns. Existing baseline/current phase, overlap and continuous-tide evidence does not reproduce the reported failure. Further identical passing runs cannot supply the missing historical observation. Mark the goal blocked pending item/location or a usable reproduction sequence; preserve the full objective and delivered beta.

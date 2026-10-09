@@ -1,0 +1,30 @@
+# Fifth improvement browser acceptance
+
+Owned sidecar: `scripts/qa-fifth-improvement.mjs`. Default/--help prepares only and launches no browser. No script builds, restarts servers, or modifies runtime files. Output stays under `captures/fifth-improvement/qa/`.
+
+Candidate execution is pending explicit parent readiness and the exact entry filename:
+
+```sh
+node scripts/qa-fifth-improvement.mjs --mode=acceptance --build-ready --expected-entry=index-HASH.js --earned
+```
+
+Use the parent's actual entry in place of HASH. Existing fourth baseline is already captured; do not recapture it against the fifth build. Production-only fingerprints reject Vite HMR and entry mismatches and require assets unchanged through the run. Fresh installed Chrome nonpersistent contexts, DPR 1, run at 1440×900 and 900×900. Headless screenshots are functional evidence, not hardware performance measurements.
+
+Acceptance cases:
+
+- Labelled home-save fixture: no Look navigation or I panel, no pause manual-save action; exactly four pages. From every panel, left/right pointer cycles and left/right keyboard cycles wrap through all four pages. Verify labelled dialog, named carousel buttons, single current-page marker, and retained dialog focus. Capture each panel. Verify cabin exact wood/scrap/pearl counts and every fixture trophy. Every earned `.keepsake.found` must have visible `.keepsake-art` whose computed CSS atlas `/assets/ui-fifth/keepsakes.png` loads with nonzero intrinsic dimensions. Repeat artwork checks after Continue and in the earned cabin. The atlas is pending generation; missing artwork is an acceptance failure once readiness is declared. Then verify timer persistence and automatic Continue persistence.
+- Procedural catalogue: derive every fixed restoration, nonshore salvage, and survey site via getCleanupSite. Require stable repeated generation, integer seeds, terrain, and distinct terrain and target-coordinate signatures across the complete catalogue. This is source-domain evidence within a browser case, not independent certification that every distant world was visually entered.
+- Labelled travel fixture at the home pearl node: actually swim/pull the generated objective. Underwater check hidden location/guidance, no Space-return copy, no canvas title or visible drag/orbit/zoom tooltip (pause accessibility title is allowed), a separate visible air dial and image-objective strip, image count equals generated targets, and no objective text beyond collected checks. Check exact payout, continuing air depletion after completion, rejected submerged Space exit, hidden submerged board button, then visible surface pointer exit. Continue retains actual earnings within this explicitly synthetic travel case.
+- Optional --earned, wide viewport only: empty storage, sail from fresh spawn to home pearl bed, earn it through directional keyboard swim and held pointer action, surface and board. Then sail to Home Reef and restore each generated target, replenishing at the surface between objectives. Capture earned progression and Continue into the cabin. Square retains panels and single-object fixture tests; it is not claimed to repeat the fresh earned arc.
+
+All play actions are DOM/keyboard/pointer inputs. getState/getMetrics are read-only; no runtime action, position, camera, clock, or save hook is invoked. Fixtures seed localStorage only before navigation, do not overwrite an existing automatic save on reload, and are recorded separately from empty-storage earned cases. Targets use getCleanupSite, not historical coordinates. Real diagonal swim inputs keep deep roundtrips feasible at the shared swim speed.
+
+Limits: screen-reader interpretation, visual quality and full-motion camera clipping require human review of retained evidence. DOM names/focus are checked but do not claim spoken screen-reader certification. Candidate source is changing; selectors follow the current carousel/air/objective APIs and can be adapted only in this sidecar after readiness. No candidate pass has been claimed.
+
+Timer persistence is checked in both panel fixtures and the fresh earned arc: focus the canvas, move with W for 700ms, then wait 10.5 seconds without pause, action, navigation, reload, or pagehide. Read localStorage before reload and require changed serialized save, the moved position, matching materials/trophies, and later voyage time. Retain both raw saves and movement/state evidence. This specifically establishes the periodic save independently of the subsequent event-triggered Continue check. Candidate execution remains pending parent readiness.
+
+New-trophy earning gate: immediately after an actual held pull completes a site whose trophy was absent before the pull, require that trophy in state, visible #dive-keepsake, an accessible label beginning with Found and containing the trophy name, and only the trophy picture plus collected check as visible content. Verify the expected keepsake-art class and read localStorage immediately to confirm the new trophy was saved. Retain a reveal screenshot and metadata. Source duration is 6500ms; this check records immediate visibility without waiting underwater for expiry, so it does not claim measured 6.5-second timing. Candidate remains gated while final art/build readiness is pending.
+
+Screenshot settling: wait 650ms when #panel-dialog is open so the 500ms cabin/panel art animation has finished. Otherwise wait 200ms, especially underwater to preserve air. Stage cabin partial fade is a capture-timing artifact. Final-art capture remains pending readiness.
+
+After the full 658-check final functional pass, an art-only coral shoulder rebuild is pending. The prepared `--suite=earned-only` flag runs the fresh wide pearl/reef arc and cabin selection evidence without repeating unchanged menus. Require newly declared --expected-entry and --expected-scene; optional --expected-css and --expected-version assert remaining build identity. This flag is not authorization to rerun before readiness. Source SHA-256 values are recorded separately from served asset hashes for attribution; source hashes are not proof of served bundle equivalence.

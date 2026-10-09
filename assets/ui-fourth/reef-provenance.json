@@ -1,6 +1,7 @@
 {
   "generator": "native image_gen.imagegen",
   "prompt": "reef-prompt.txt",
+  "source": "/Users/jacobusbrink/.codex/generated_images/01a11ece-3558-75a0-b960-f7bea7c2ed89/exec-1298cab2-c07d-430f-99b8-fe126cc5bc46.png",
   "persistedOriginal": "../../public/assets/ui-fourth/reef-panorama.png",
   "width": 1536,
   "height": 1024,
@@ -10,6 +11,5 @@
   "pixelEdits": false,
   "referenceImageCopied": false,
   "visualReview": "Entirely underwater; limestone towers and arches, coral fans, kelp, caustics; atmospheric central corridor; no characters, targets, trash, text or UI.",
-  "integration": "Single distant backdrop plane; preserve 3:2 aspect and avoid visible edges during parallax. Scene integration delegated to Hume.",
-  "generatedArtifact": "exec-1298cab2-c07d-430f-99b8-fe126cc5bc46.png"
+  "integration": "Single distant backdrop plane; preserve 3:2 aspect and avoid visible edges during parallax. Scene integration delegated to Hume."
 }

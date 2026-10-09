@@ -1,3 +1,5 @@
+import { DIVE_TROPHIES, hasMissingDiveTrophy } from './dive-world.js';
+export { DIVE_TROPHIES, diveSeed, generateDiveWorld } from './dive-world.js';
 import { CLEANUP_SITES, getCleanupContext, freshCleanup, cleanupAction, steerCleanup, updateCleanup, getCleanupSite, getDiveSite as getCircularDiveSite } from './cleanup.js';
 export { CLEANUP_SITES, getCleanupContext, getCleanupSite, CLEANUP_ACTION_SECONDS, CLEANUP_AIR, CLEANUP_SWIM_SPEED,
   CLEANUP_SURFACE, CLEANUP_REFILL, CLEANUP_COLLECT_RANGE } from './cleanup.js';
@@ -90,7 +92,7 @@ export function getDiveSite(state) {
   // Survey buoy entry keeps its existing radius and priority.
   const original=getCircularDiveSite(state);
   if (original?.kind==='survey') return original;
-  const node=SALVAGE_NODES.filter(n=>n.access!=='shore' && !state.collected.includes(n.id)
+  const node=SALVAGE_NODES.filter(n=>n.access!=='shore' && (!state.collected.includes(n.id)||hasMissingDiveTrophy(state,`salvage:${n.id}`))
     && (n.region==='home' || state.upgrades[ISLANDS.find(i=>i.id===n.region).requires])
     && salvageReach(state,n.position))
     .sort((a,b)=>distance(state.position,a.position)-distance(state.position,b.position))[0];
@@ -195,7 +197,7 @@ export const RECIPES = freeze({
     description: 'Reach Beacon Shoal and its wreck.' },
   beacon: { id: 'beacon', name: 'Beacon', requires: 'sail',
     cost: { wood: 12, scrap: 10, pearls: 5 },
-    description: 'Light the way for other tidekin. A friendly workshop will sail over to greet you.' },
+    description: 'Raise a guiding light above your raft to mark your position across the water.' },
 });
 
 const NODE_BY_ID = new Map(SALVAGE_NODES.map(node => [node.id, node]));
@@ -460,7 +462,7 @@ const OBJECTIVES = freeze([
     kind: 'build', upgrade: 'sail', target: 1, reward: { scrap: 4 } },
   { id: 'charted-waters', title: 'Every horizon', description: 'Visit home and all three destinations.',
     kind: 'explore', target: 4, reward: { wood: 4, scrap: 4, pearls: 2 } },
-  { id: 'guiding-light', title: 'A light for others', description: 'Build the beacon and welcome another tidekin to your waters.',
+  { id: 'guiding-light', title: 'A light for others', description: 'Build the beacon and raise a guiding light above your raft.',
     kind: 'build', upgrade: 'beacon', target: 1, reward: { pearls: 3, energy: 20 } },
 ]);
 const OBJECTIVE_IDS = OBJECTIVES.map(goal => goal.id);
@@ -585,6 +587,7 @@ export function createGame() {
     departed: false,
     guidance: {stage:0,skipped:false},
     cleanup: freshCleanup(),
+    trophies: [],
     speed: 5,
     rig: 'balanced',
     region: 'home',
@@ -788,6 +791,7 @@ function validateSave(raw) {
     checkSave(stage<=9,'guidance.stage');
     state.guidance={stage,skipped:boolean(raw.guidance.skipped,'guidance.skipped')};
   }
+  state.trophies = raw.trophies === undefined ? [] : idList(raw.trophies,DIVE_TROPHIES.map(t=>t.id),'trophies');
   state.heading = raw.heading === undefined ? 0 : number(raw.heading, 'heading', 0, 2 * Math.PI);
   if (raw.helm !== undefined) boolean(raw.helm, 'helm');
   if (raw.cleanup !== undefined) {

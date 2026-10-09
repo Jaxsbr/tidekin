@@ -17,13 +17,13 @@
           <div class="menu-art"></div>
           <div class="menu-shade"></div>
         </div>
-
+        
         <div class="menu-content">
-
-
+          
+          
           <h1 id="game-title">TIDEKIN</h1>
-
-
+          
+          
           <div class="menu-actions">
             <button id="new-voyage" class="button button-primary button-voyage" type="button"><span>New voyage</span></button>
             <button id="continue-voyage" class="button button-glass" type="button" hidden><span>Continue</span></button>
@@ -31,7 +31,7 @@
           </div>
           <p id="menu-notice" class="menu-notice" role="status"></p>
         </div>
-
+        
       </section>
 
       <section id="game-view" class="game-view" aria-label="Your ocean voyage" hidden>
@@ -51,8 +51,10 @@
                 <div class="resource" title="Scrap"><span class="game-art art-scrap resource-icon" aria-hidden="true"></span><span class="resource-copy"><span class="resource-name">Scrap</span><strong id="scrap-count">0</strong></span></div>
                 <div class="resource" title="Pearls"><span class="game-art art-pearls resource-icon" aria-hidden="true"></span><span class="resource-copy"><span class="resource-name">Pearls</span><strong id="pearls-count">0</strong></span></div>
               </div>
-          <div id="dive-overlay" class="dive-overlay" hidden aria-label="Diving oxygen">
-            <span class="dive-bubble" aria-hidden="true">◌</span><div><div class="oxygen-heading"><span id="oxygen-label">Air</span><strong id="oxygen-seconds">24s</strong></div><progress id="oxygen-progress" max="24" value="24" aria-label="Oxygen remaining"></progress><p id="oxygen-hint">Space to surface · Your supplies are safe</p></div>
+          <div id="dive-overlay" class="dive-overlay" hidden aria-label="Breathing air">
+            <svg class="air-dial" viewBox="0 0 100 100" aria-hidden="true"><circle class="air-track" cx="50" cy="50" r="42"/><circle id="air-ring" cx="50" cy="50" r="42" pathLength="100"/><path class="lung-icon" d="M49 29v17l-9 7m11-24v17l9 7M44 38c-6-7-16 5-16 18s13 10 16 4Zm12 0c6-7 16 5 16 18s-13 10-16 4Z"/></svg>
+            <div class="air-copy"><span id="oxygen-label">Air</span><strong id="oxygen-seconds">24s</strong></div>
+            <progress id="oxygen-progress" class="sr-only" max="24" value="24" aria-label="Oxygen remaining"></progress><p id="oxygen-hint" class="sr-only"></p>
           </div>
               <button id="pause-button" class="icon-button glass-card" type="button" aria-label="Pause voyage (Escape)" title="Pause (Esc)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" /></svg></button>
             </div>
@@ -70,10 +72,12 @@
             <button id="track-expedition" class="expedition-track" type="button" hidden>Follow expedition</button>
             <div id="route-options" class="route-options" hidden><p id="route-summary"></p><div><button id="route-direct" type="button" aria-pressed="true">Direct</button><button id="route-bypass" type="button" aria-pressed="false">Around shoal</button></div><small>Estimated at the current tide.</small></div>
           </aside>
+          <div id="dive-keepsake" class="dive-keepsake" hidden role="status" aria-live="polite"></div>
+          <div id="dive-objectives" class="dive-objectives" hidden role="group" aria-label="Dive finds"></div>
           <div class="hud-bottom">
             <div class="context-card glass-card"><span class="context-pip" aria-hidden="true"></span><div><span id="context-title">A home, afloat.</span><p id="context-hint">Wander toward floating supplies to gather.</p></div><div class="context-actions"><button id="gather-button" class="button button-context" type="button"><kbd>E</kbd><span id="gather-label">Gather</span></button><button id="dive-button" class="button button-context button-subtle" type="button"><kbd>Space</kbd><span id="dive-label">Dive</span></button></div></div>
             <div class="bottom-toolbar glass-card">
-              <nav class="game-nav" aria-label="Voyage controls"><button type="button" data-panel="workshop" aria-keyshortcuts="B" aria-label="Build (B)"><span class="game-art art-waterwheel" aria-hidden="true"></span><span>Build</span><kbd>B</kbd></button><button type="button" data-panel="chart" aria-keyshortcuts="M" aria-label="Map (M)"><span class="game-art art-map" aria-hidden="true"></span><span>Map</span><kbd>M</kbd></button><button type="button" data-panel="journal" aria-keyshortcuts="J" aria-label="Journal (J)"><span class="game-art art-journal" aria-hidden="true"></span><span>Journal</span><kbd>J</kbd></button><button type="button" data-panel="cabin" aria-keyshortcuts="C" aria-label="Cabin (C)"><span class="game-art art-cabin cabin-nav-art" aria-hidden="true"></span><span>Cabin</span><kbd>C</kbd></button><button type="button" data-panel="inspect" aria-keyshortcuts="I" aria-label="Look (I)"><span class="look-eye" aria-hidden="true"></span><span>Look</span><kbd>I</kbd></button></nav><span id="energy-label" class="energy-label" hidden></span>
+              <nav class="game-nav" aria-label="Voyage controls"><button type="button" data-panel="workshop" aria-keyshortcuts="B" aria-label="Build (B)"><span class="game-art art-waterwheel" aria-hidden="true"></span><span>Build</span><kbd>B</kbd></button><button type="button" data-panel="chart" aria-keyshortcuts="M" aria-label="Map (M)"><span class="game-art art-map" aria-hidden="true"></span><span>Map</span><kbd>M</kbd></button><button type="button" data-panel="journal" aria-keyshortcuts="J" aria-label="Journal (J)"><span class="game-art art-journal" aria-hidden="true"></span><span>Journal</span><kbd>J</kbd></button><button type="button" data-panel="cabin" aria-keyshortcuts="C" aria-label="Cabin (C)"><span class="game-art art-cabin cabin-nav-art" aria-hidden="true"></span><span>Cabin</span><kbd>C</kbd></button></nav><span id="energy-label" class="energy-label" hidden></span>
             </div>
           </div>
           <div class="touch-movement" aria-label="Touch movement controls"><button type="button" data-move="up" aria-label="Move forward">↑</button><button type="button" data-move="left" aria-label="Move left">←</button><button type="button" data-move="down" aria-label="Move backward">↓</button><button type="button" data-move="right" aria-label="Move right">→</button></div>
@@ -81,7 +85,7 @@
       </section>
       <div id="save-banner" class="save-banner" role="status" hidden><span aria-hidden="true">✓</span><span id="save-banner-text">Voyage saved</span></div>
       <div id="toast" class="toast" role="status" aria-live="polite" hidden><span class="toast-icon" aria-hidden="true">✦</span><span id="toast-text"></span></div>
-      <dialog id="panel-dialog" class="panel-dialog" aria-labelledby="panel-title"><div class="panel-top"><div><p id="panel-eyebrow" class="eyebrow" hidden></p><h2 id="panel-title">The workshop</h2></div><button id="close-panel" class="icon-button" type="button" aria-label="Close panel (Escape)">×</button></div><div id="panel-body" class="panel-body"></div><footer class="panel-footer"><span><kbd>Esc</kbd> Close</span></footer></dialog>
+      <dialog id="panel-dialog" class="panel-dialog" aria-labelledby="panel-title"><div class="panel-top"><div><p id="panel-eyebrow" class="eyebrow" hidden></p><h2 id="panel-title">The workshop</h2></div><button id="close-panel" class="icon-button" type="button" aria-label="Close panel (Escape)">×</button></div><div id="panel-body" class="panel-body"></div><footer class="panel-footer panel-carousel" aria-label="Voyage pages"><button id="panel-previous" type="button" data-carousel="-1"><span aria-hidden="true">←</span><span class="carousel-name"></span></button><div id="panel-pages" class="panel-pages"></div><button id="panel-next" type="button" data-carousel="1"><span class="carousel-name"></span><span aria-hidden="true">→</span></button></footer></dialog>
       <dialog id="modal-dialog" class="modal-dialog" aria-labelledby="modal-title"><div id="modal-body"></div></dialog>
     </main>
     <noscript><div class="noscript">Tidekin needs JavaScript to set sail. Enable it in your browser, then reload.</div></noscript>
