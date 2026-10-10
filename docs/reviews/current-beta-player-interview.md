@@ -8,7 +8,7 @@ Interview chat: `01a11e41-fa08-7ac0-8e7c-50b92ae06d5a`. Implementation chat: `01
 
 Collect Jaco's experience of the current game, one focused question at a time, to develop a player-grounded improvement brief. This record authorizes no implementation or changes to runtime, saves or settings. Preserve what he tried, expected, observed and wanted separately. Periodic summaries remain open to correction.
 
-Subsequent authorization: Jaco explicitly requested a new implementation/Goal chat using the full review evidence and findings, with all discussed prototype alternatives built and toggleable. [Third improvement execution brief](../third-improvement-goal.md) records the authorized scope. The research-only statements above describe this interview's earlier mode; implementation belongs to the new execution chat, not this parent.
+Subsequent authorization: Jaco explicitly requested a new implementation/Goal chat using the full review evidence and findings, with all discussed prototype alternatives built and toggleable. Third improvement execution brief (historical source: `git show 79da54b:docs/third-improvement-goal.md`) records the authorized scope. The research-only statements above describe this interview's earlier mode; implementation belongs to the new execution chat, not this parent.
 
 Candidate documented as 0.3.0-beta.1, entry `index-CLQfBj9P.js`, at http://127.0.0.1:5181. Accessibility could not be verified by the initial local HTTP probe; no browser/profile or save was changed. Record the build and play circumstances when established. The documented 75.2/100 is a provisional agent judgment, not Jaco's endorsement.
 

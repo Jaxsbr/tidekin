@@ -12,3 +12,7 @@ captures/
 output/
 
 .scratch/
+
+# Unsettled collection/pilot diagnostics. Promote verified compressed raw
+# records and their compact identities into benchmarks/accepted/ explicitly.
+benchmarks/records/

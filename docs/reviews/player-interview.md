@@ -1,6 +1,6 @@
 # Tidekin player interview
 
-Interview with Jaco, begun 9 October 2026, Pacific/Auckland. At Round 7 he stopped further questions and requested a consolidated scope. In the execution instruction following that review, he requested a new Goal chat in jaxs-tidekin using the full brief. The [improvement scope](../second-improvement-brief.md) is the current synthesis. This record retains earlier proposals as history; the latest explicit decisions supersede them. Implementation is delegated to the new execution chat rather than begun in this interview chat.
+Interview with Jaco, begun 9 October 2026, Pacific/Auckland. At Round 7 he stopped further questions and requested a consolidated scope. In the execution instruction following that review, he requested a new Goal chat in jaxs-tidekin using the full brief. The improvement scope (historical source: `git show 79da54b:docs/second-improvement-brief.md`) records the historical second-iteration synthesis; the current contract is `docs/governance/current-contract.md`. This record retains earlier proposals as history; the latest explicit decisions supersede them. Implementation is delegated to the new execution chat rather than begun in this interview chat.
 
 ## Evidence and baseline
 
@@ -8,7 +8,7 @@ Jaco described his first experience of the local candidate at `http://127.0.0.1:
 
 - [Gameplay annotations](../../captures/player-interview-2026-10-09/jaco-gameplay-annotations.png): location/objective panels, resources/map, and bottom action/navigation bars compete with the world. Jaco described his window as nearly square. Image pixel dimensions include browser chrome and do not establish the CSS viewport or browser zoom.
 - [Title annotations](../../captures/player-interview-2026-10-09/jaco-title-annotations.png): repeated slogans, description, secondary labels, and decorations marked as unwanted visual/textual load. The background art itself is strongly liked.
-- [Earlier agent scorecard](beta-scorecard.md): 72.7/100 overall, including onboarding 4/5; these are historical judgments with their original evidence limits. Jaco's difficulty understanding purpose and rewards challenges the adequacy of the onboarding evidence. Do not silently replace the old scores or treat task completion as comprehension.
+- Earlier agent scorecard (historical source: `git show 79da54b:docs/reviews/beta-scorecard.md`): 72.7/100 overall, including onboarding 4/5; these are historical judgments with their original evidence limits. Jaco's difficulty understanding purpose and rewards challenges the adequacy of the onboarding evidence. Do not silently replace the old scores or treat task completion as comprehension.
 - Existing research: [cozy systems](../research/cozy-systems.md) and [cross-genre choices](../research/cross-genre.md). Their proposed mechanisms and numeric playtest criteria are not newly agreed targets.
 
 ## Round 1 observations
@@ -60,7 +60,7 @@ In actual play, he collected floating materials, moved to another area as the ti
 
 A read-only source check found that both `shore` wood and `tidal` wood are named Driftwood and use the same basic log geometry. The renderer moves shore pickups with the water, keeps tidal pickups near a fixed elevation, and leaves both locators at the surface. The domain blocks surface gathering of tidal nodes above normalized water height 0.35. These are implementation facts; they do not establish which node Jaco encountered.
 
-An isolated [rule probe](../../captures/player-interview-2026-10-09/salvage-rule-probe.json) called the real `act` path using disposable states at each home node's exact position, surfaced, with times 0, 90, 135 and 179 seconds. `home-driftwood` succeeded at all four times. `home-timber` succeeded at low water, returned `high_tide` at 90/135, and succeeded again at 179. A high-water failure followed by low water in the same state also recovered. This did not reproduce the user's exact runtime symptom; no browser, save or gameplay implementation was changed. Further diagnosis and fixes are deferred to the later work, not claimed complete from this domain probe.
+An isolated rule probe (temporary diagnostic discarded in the authorized cleanup; outcome and limits recorded here) called the real `act` path using disposable states at each home node's exact position, surfaced, with times 0, 90, 135 and 179 seconds. `home-driftwood` succeeded at all four times. `home-timber` succeeded at low water, returned `high_tide` at 90/135, and succeeded again at 179. A high-water failure followed by low water in the same state also recovered. This did not reproduce the user's exact runtime symptom; no browser, save or gameplay implementation was changed. Further diagnosis and fixes are deferred to the later work, not claimed complete from this domain probe.
 
 The experience requirement is to distinguish floating debris, stranded/anchored wreckage and underwater finds through world presentation and consistent access rules. A falling tide is not itself proof that a particular access threshold was crossed. That distinction must be legible in play without requiring the player to learn hidden categories.
 

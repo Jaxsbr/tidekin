@@ -1,0 +1,7 @@
+# Tidekin working instructions
+
+- Current contract: read `docs/governance/current-contract.md` when changing gameplay, controls, persistence, or rendering ownership. Numbered improvement plans/reviews describe historical work; current user instructions and integrated architecture take precedence.
+- Assets: read `docs/governance/asset-contract.md` before adding, editing, approving, shipping or removing artwork. Maintain `assets/catalogue.json` with stable IDs, exact bytes, sources and actual consumers. Preserve the original splash, user reference and required editable sources. Baseline/generation/agent review is not human production approval.
+- Cleanup: read `docs/governance/retention-policy.md` before disposal. Use an exact authorized ledger, verify unchanged files, preserve current measurement evidence and human-reference purpose, and keep a compact outcome. Tracked history stays in Git; avoid duplicate source archives.
+- Shared work: respect coordinator/specialist file ownership. Route unowned runtime integration changes through the coordinator. Keep frozen measured `dist/` unchanged until its measurement owner finishes; source changes do not inherit its measurements.
+- Architecture: deterministic domain modules own rewards, save validation and world coordinates. Presentation consumes state. Keep shared resource disposal behind its owned module interface; consult coordinator-owned `docs/architecture.md` for the integrated contract.

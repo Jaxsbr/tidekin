@@ -17,6 +17,7 @@ Open http://127.0.0.1:5181. Keep the same origin/browser/profile to retain your 
 
 ```sh
 npm test
+npm run assets:check
 npm run build -- --base /
 npm run preview -- --base / --port 5181
 ```
@@ -41,17 +42,22 @@ Settings: sound, world detail, reduced motion and larger text. Reduced motion sh
 
 ## Implementation and evidence
 
+[Current contract](docs/governance/current-contract.md) defines preserved gameplay. [Project governance](docs/governance/README.md) routes asset approval, references and output retention; [architecture](docs/architecture.md) describes integrated module ownership.
+
 - `src/game.js`, `src/cleanup.js`: deterministic rules, progress and save validation.
 - `src/scene.js`, `src/build-cinematic.js`: ocean world, third-person cameras and upgrade assembly.
 - `src/cleanup-scene.js`, `src/character-art.js`, `assets/cleanup/reef-art.js`: articulated character and scrolling reef.
-- `src/main.js`, `src/style.css`, `src/chart-art.js`: illustrated menus, input, map and persistence.
+- `src/main.js`, `src/style.css`, `src/chart-art.js`: illustrated menus, input and map.
+- `src/persistence.js`: validated storage, replacement transactions and save recovery.
+- `src/render-resources.js`: shared ownership and renderer/resource disposal.
+- `assets/catalogue.json`: editable sources, production assets, references, provenance and exact approval status.
 - `assets/ui-fourth/`, `public/assets/ui-fourth/`: original image-generation provenance and shipped painted artwork.
 - [Fifth improvement review](docs/reviews/fifth-improvement/report.md): deeper procedural dives, reactive fish, keepsakes, carousel, oxygen and save fixes.
 - [Fourth improvement review](docs/reviews/fourth-improvement/report.md): changes, independent scores, acceptance and hardware evidence.
 - [Performance protocol](docs/performance-budget.md): hardware gates and measurement limits.
 - [Research](docs/research/cozy-systems.md): earlier game research and design context.
 
-Browser checks use isolated storage; fixtures are explicitly distinguished from earned play. Run hardware benchmarks alone. Historical comparison code in archived tests/reports is evidence, not available gameplay.
+Browser checks use isolated storage; fixtures are explicitly distinguished from earned play. `npm run perf:collect -- --help` describes the maintained collector; an explicit browser release is required before it runs. Run hardware benchmarks alone. Historical comparison code in archived tests/reports is evidence, not available gameplay.
 
 ## Prototype limits
 

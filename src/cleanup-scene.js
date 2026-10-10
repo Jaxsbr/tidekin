@@ -1,6 +1,7 @@
 import { getCleanupContext, CLEANUP_SURFACE } from './cleanup.js';
 import { createReefArt, createTrashArt, createCleanupPatch } from '../assets/cleanup/reef-art.js';
 import { createCharacterArt } from './character-art.js';
+import { releaseObjectTree } from './render-resources.js';
 
 /** Owns presentation resources. State stays authoritative; camera uses 42° vertical FOV.
  * Call dispose OR the host scene resource releaser, never both. */
@@ -18,19 +19,20 @@ export function createCleanupScene({THREE}) {
   const shallowFog=new THREE.Color(0x368c9a),deepFog=new THREE.Color(0x20546a);
   const character=createCharacterArt(THREE),swimmer=character.root;root.add(swimmer);
   const characterMaterials=new Set();
-  swimmer.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;characterMaterials.add(o.material);}});
-  // A world-height tint crosses the articulated body gradually at the meniscus.
+  swimmer.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;for(const material of Array.isArray(o.material)?o.material:[o.material])characterMaterials.add(material);}});
+  // A mild world-height cool tint crosses the articulated body at the meniscus,
+  // preserving warm skin and cream planes instead of suppressing their red light.
   for(const material of characterMaterials){
     material.onBeforeCompile=shader=>{
       shader.vertexShader='varying float submergedY;\n'+shader.vertexShader.replace('#include <worldpos_vertex>','#include <worldpos_vertex>\nsubmergedY=(modelMatrix*vec4(transformed,1.)).y;');
-      shader.fragmentShader='varying float submergedY;\n'+shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\nfloat immersion=1.-smoothstep(-.35,.04,submergedY);diffuseColor.rgb*=mix(vec3(1.),vec3(.46,.85,1.0),immersion*.65);');
+      shader.fragmentShader='varying float submergedY;\n'+shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\nfloat immersion=1.-smoothstep(-.35,.04,submergedY);diffuseColor.rgb*=mix(vec3(1.),vec3(.70,.94,1.0),immersion*.45);');
     };
-    material.customProgramCacheKey=()=> 'cleanup-submerged-character-v1';
+    material.customProgramCacheKey=()=> 'cleanup-submerged-character-v2';
   }
   const siteRoot=new THREE.Group();root.add(siteRoot);
   let site=null,trash=[],clock=0,initialized=false,disposed=false,lastX=0,lastY=0,facing=1,attempt=null;
   const follow={x:0,y:-2.4},velocity={x:0,y:0};
-  function releaseTree(tree){const geos=new Set(),mats=new Set(),textures=new Set();tree.traverse(o=>{if(o.shadow)o.shadow.dispose();if(o.isInstancedMesh)o.dispose();if(o.geometry)geos.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material])if(m){mats.add(m);for(const value of Object.values(m))if(value?.isTexture)textures.add(value);}});geos.forEach(g=>g.dispose());mats.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());tree.clear();}
+  const releaseTree = releaseObjectTree;
   function loadSite(next){
     if(site?.id===next?.id&&site?.seed===next?.seed)return;releaseTree(siteRoot);site=next;
     root.remove(art.root);releaseTree(art.root);art=createReefArt(THREE,site??{});root.add(art.root);

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "completed-QA-retirement",
+  "status": "complete",
+  "totalBytes": 49682,
+  "historyRevision": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+  "history": "All four original source byte identities were verified in this Git baseline; no duplicate archive required.",
+  "completedAssetSubset": "docs/governance/asset-report-retirement.json (parent approved and executed; outside this pending ledger)",
+  "files": [
+    {"path":"scripts/qa-fifth-art.mjs","type":"regular-file","bytes":5263,"sha256":"4bea5be345843a496b2e626b0816f4ff2b8126117df05dee824c4cafa89f5e9d","supersededBy":["scripts/qa/character.mjs","scripts/qa/gameplay.mjs","scripts/performance/browser.mjs","scripts/performance/resources.mjs"],"neededDependencies":["Retained: three, Playwright, src/game.js, src/cleanup-scene.js and assets/cleanup renderer inputs"],"deletionAuthorized":true,"outcome":"removed","removedAt":"2026-10-10T03:34:56.123Z"},
+    {"path":"scripts/qa-fifth-improvement.mjs","type":"regular-file","bytes":24863,"sha256":"79f5762814919329afc0873fcd511600fe0851ccca54498cc1fdd37936bd5ad6","supersededBy":["scripts/qa/gameplay.mjs","scripts/qa/runtime.mjs","scripts/qa/input.mjs"],"neededDependencies":["Retained: Playwright and src/game.js; historical captures/fifth-improvement/baseline branch no longer operational"],"deletionAuthorized":true,"outcome":"removed","removedAt":"2026-10-10T03:34:56.123Z"},
+    {"path":"scripts/qa-fifth-performance.mjs","type":"regular-file","bytes":15098,"sha256":"44b2ad14e4a632139550d4de96ec0502e78f658e409e1bc67fedebc422650101","supersededBy":["scripts/performance/collect.mjs","scripts/performance/pair.mjs","scripts/performance/compare.mjs","scripts/performance/policy.mjs","scripts/performance/browser.mjs","scripts/performance/cpu.mjs","scripts/performance/resources.mjs","scripts/performance/evidence.mjs","scripts/performance/server.mjs","scripts/performance/fixtures.mjs"],"neededDependencies":["Retained: Playwright, production serving and maintained performance protocol"],"deletionAuthorized":true,"outcome":"removed","removedAt":"2026-10-10T03:34:56.123Z"},
+    {"path":"scripts/qa-fifth-resource-lifetime.mjs","type":"regular-file","bytes":4458,"sha256":"df63412b81b7c01cfb400181309af456e42dfd464d0b48be32bf3dc8d4012910","supersededBy":["scripts/performance/resources.mjs","scripts/performance/collect.mjs","scripts/performance/compare.mjs","tests/performance-collection.test.js","tests/render-resources.test.js","tests/startup-lifecycle.test.js"],"neededDependencies":["Retained: three, src/cleanup-scene.js, src/game.js and maintained CPU resource tests"],"deletionAuthorized":true,"outcome":"removed","removedAt":"2026-10-10T03:34:56.123Z"}
+  ],
+  "gates": [
+    {"id":"maintained-gameplay-positive","status":"passed","evidence":"docs/qa-final.json: final13 all six fixture/earned cases complete, unchanged, zero errors, browser closed"},
+    {"id":"replacement-controls-and-teardown","status":"passed","evidence":"Coordinator validated maintained runtime/CPU teardown/enforcement and 88 performance controls; 21 QA routing/timing/Low guards pass; full CPU suite 301/301, maintained Low/path final13 four cases independently complete/unchanged/zero errors/browser closed"},
+    {"id":"seven-view-parallax-purpose","status":"closed-historical","authority":"Coordinator explicitly resolved seven static habitat views/parallax as completed historical diagnostics, not an ongoing requirement; home character evidence is not claimed equivalent"},
+    {"id":"formal-positive-precaution","status":"removed-by-explicit-authority","rationale":"The positive formal gate was an agent precaution, not a human requirement. Legacy source retirement is authorized even if performance fails or is inconclusive; no formal-positive result is inferred"},
+    {"id":"exact-ledger-and-consumers","status":"passed","evidence":"No active consumers; regular-file type, size and SHA256 reverified immediately before unlink; exact bytes also reverified in Git baseline"}
+  ],
+  "preserve": "Maintained QA/performance modules, operational domain/render dependencies and tests, current measurements/captures, human originals and references. Keep original failed-record status; compact retirement outcome only.",
+  "authorization": "Explicit coordinator wrapup authorization after final13 QA and CPU guard checks; only these four unchanged regular files. No production dependency, asset, human reference, capture or failed report is authorized by this ledger.",
+  "consumerAudit": {
+    "scope": "Repository scripts/tests/package and durable docs; ignored transient captures/scratch excluded from executable-consumer audit",
+    "activeConsumers": [],
+    "testRepairsRequired": false,
+    "note": "Only self references and this historical identity ledger named the old scripts; current commands use maintained modules."
+  },
+  "outcome": {
+    "removedFiles": 4,
+    "removedBytes": 49682,
+    "skips": [],
+    "removedAt": "2026-10-10T03:34:56.123Z"
+  }
+}

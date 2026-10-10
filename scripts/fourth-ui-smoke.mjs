@@ -1,6 +1,0 @@
-import {chromium} from '@playwright/test';
-import {mkdir,writeFile} from 'node:fs/promises';
-const out='captures/fourth-improvement/integration';await mkdir(out,{recursive:true});
-const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist']});
-const c=await browser.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1});const p=await c.newPage();const errors=[];p.on('pageerror',e=>errors.push(String(e)));
-try{await p.goto('http://127.0.0.1:5190/?qa=1');await p.locator('#new-voyage').click();await p.waitForFunction(()=>window.__tidekin?.getState());await p.waitForTimeout(1000);await p.screenshot({path:out+'/hud.png'});for(const [name,k] of [['workshop','b'],['chart','m'],['journal','j'],['cabin','c'],['inspect','i']]){await p.keyboard.press(k);await p.waitForTimeout(300);await p.screenshot({path:out+'/'+name+'.png'});await p.locator('#close-panel').click();}await p.keyboard.press('Escape');await p.screenshot({path:out+'/pause.png'});await p.locator('[data-modal-action=settings]').click();await p.screenshot({path:out+'/settings.png'});console.log(JSON.stringify({errors}));}finally{await c.close();await browser.close()}

@@ -1,11 +1,11 @@
 import * as Game from './game.js';
 import { diveIcon } from './dive-icons.js';
 import { drawOceanChart } from './chart-art.js';
+import { createLoadProfile } from './load-profile.js';
+import { createPersistence } from './persistence.js';
 
-const { createGame, updateGame, act, getObjectives, getContext, serializeGame, deserializeGame,
+const { updateGame, act, getObjectives, getContext,
   RECIPES, ISLANDS, SALVAGE_NODES, tideHeight } = Game;
-const SAVE_KEY = 'tidekin.save.v2';
-const SETTINGS_KEY = 'tidekin.settings.v1';
 const HOME = Game.HOME ?? { x: 0, z: 0 };
 const $ = id => document.getElementById(id);
 const menu = $('main-menu');
@@ -26,15 +26,13 @@ const destinations = [{ id: 'home', name: 'Home anchorage', position: HOME,
 let state = null;
 let scene = null;
 let scenePromise = null;
+const loadProfile = createLoadProfile();
 let loading = false;
 let fatalError = false;
 let modalKind = null;
 let activePanel = null;
 let settingsOrigin = 'menu';
 let returnFocus = null;
-let savedCandidate = null;
-let hasStoredSave = false;
-let saveWarningShown = false;
 let lastTimestamp = null;
 let lastHudUpdate = -Infinity;
 let rafIntervals = [];
@@ -51,72 +49,52 @@ let audioContext = null;
 const keys = new Set();
 const touchKeys = new Set();
 const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-let settings = readSettings();
+const persistence = createPersistence({ storage: () => window.localStorage,
+  reducedMotion: reducedMotionQuery.matches });
+let settings = persistence.readSettings().settings;
 
-function readSettings() {
-  const defaults = { quality: 'high', sound: true, reducedMotion: reducedMotionQuery.matches, largeText: false };
-  try {
-    const saved = JSON.parse(localStorage.getItem(SETTINGS_KEY) || 'null');
-    if (!saved || typeof saved !== 'object') return defaults;
-    return {
-      quality: ['low', 'medium', 'high'].includes(saved.quality) ? saved.quality : defaults.quality,
-      sound: typeof saved.sound === 'boolean' ? saved.sound : defaults.sound,
-      largeText: typeof saved.largeText === 'boolean' ? saved.largeText : false,
-      reducedMotion: typeof saved.reducedMotion === 'boolean' ? saved.reducedMotion : defaults.reducedMotion };
-  } catch { return defaults; }
-}
-
-function applySettings() {
+function applySettings(targetScene = scene) {
   document.documentElement.classList.toggle('reduced-motion', settings.reducedMotion);
   document.documentElement.classList.toggle('large-text', settings.largeText);
-  scene?.setQuality?.(settings.quality);
-  scene?.setReducedMotion?.(settings.reducedMotion);
+  targetScene?.setQuality?.(settings.quality);
+  targetScene?.setReducedMotion?.(settings.reducedMotion);
   if (!settings.sound && audioContext?.state === 'running') audioContext.suspend().catch(() => {});
 }
 
 function storeSettings() {
   applySettings();
-  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
-  catch { showToast('Settings apply now, but this browser could not save them.', true); }
+  if (!persistence.storeSettings(settings).ok) showToast('Settings apply now, but this browser could not save them.', true);
 }
 
 function inspectSave() {
-  savedCandidate = null;
-  try {
-    const raw = localStorage.getItem(SAVE_KEY);
-    hasStoredSave = Boolean(raw);
-    if (raw) savedCandidate = deserializeGame(raw);
-    $('menu-notice').textContent = '';
-  } catch (error) {
-    $('menu-notice').textContent = error?.code === 'INVALID_SAVE' || error?.message?.match(/save/i)
-      ? 'The saved voyage could not be read. You can start fresh; it stays untouched until you confirm.'
-      : 'This browser cannot access local saves. You can still set sail for this session.';
-  }
-  $('continue-voyage').hidden = !savedCandidate;
-  $('continue-voyage').classList.toggle('button-primary', Boolean(savedCandidate));
-  return savedCandidate;
+  const result = persistence.inspectSave();
+  $('menu-notice').textContent = result.status === 'corrupt'
+    ? 'The saved voyage could not be read. You can start fresh; it stays untouched until you confirm.'
+    : ['unavailable','read-failed'].includes(result.status)
+      ? 'This browser cannot access local saves. You can still set sail for this session.' : '';
+  $('continue-voyage').hidden = !result.candidate;
+  $('continue-voyage').classList.toggle('button-primary', Boolean(result.candidate));
+  return result.candidate;
 }
 
 function saveGame({ announce = false } = {}) {
   if (!state || loading || fatalError) return false;
-  try {
-    const text = serializeGame(state);
-    localStorage.setItem(SAVE_KEY, text);
-    savedCandidate = deserializeGame(text);
-    const recovered = saveWarningShown;
-    saveWarningShown = false;
-    if (announce || recovered) savedBanner();
+  const result = persistence.saveGame(state, { announce });
+  if (result.ok) {
+    if (result.announce) savedBanner();
     return true;
-  } catch {
+  } else {
     clearTimeout(saveBannerTimer);
     $('save-banner').classList.add('save-error');
     $('save-banner').setAttribute('role', 'alert');
     $('save-banner').firstElementChild.textContent = '!';
-    $('save-banner-text').textContent = 'Autosave paused — check browser storage';
+    const changed = ['save-changed','confirmation-required'].includes(result.status);
+    $('save-banner-text').textContent = changed ? 'Saved voyage changed — reopen it to continue' : 'Autosave paused — check browser storage';
     $('save-banner').hidden = false;
-    if (!saveWarningShown) {
-      showToast('Your voyage is running, but saving failed. Free browser storage; autosave will try again automatically.', true, 7000);
-      saveWarningShown = true;
+    if (result.notify) {
+      showToast(changed
+        ? 'The saved voyage changed in another session. Your current voyage is still here; reload to continue the stored voyage, or confirm a new beginning.'
+        : 'Your voyage is running, but saving failed. Free browser storage; autosave will try again automatically.', true, 7000);
     }
     return false;
   }
@@ -214,62 +192,98 @@ function modalTemplate(eyebrow, title, description, actions, ornament = '✦') {
 
 function requestNewVoyage() {
   if (loading) return;
-  if (state || savedCandidate || hasStoredSave) {
+  startGame(false);
+}
+
+function confirmNewVoyage() {
     showModal('confirm-new', modalTemplate('A FRESH PAGE IN YOUR JOURNAL', 'A new beginning?',
       'Starting a new voyage will replace your saved progress, including upgrades, discoveries, and journal rewards. Your existing voyage stays safe until you choose to begin.',
       '<button class="button button-primary" data-modal-action="confirm-new" type="button">Begin a new voyage</button><button class="button button-secondary" data-modal-action="cancel-new" type="button" autofocus>Keep my voyage</button>'));
-  } else { startGame(false); }
 }
 
-async function startGame(continueSave) {
+async function startGame(continueSave, { confirmed = false } = {}) {
   if (loading) return;
-  let nextState;
-  try {
-    nextState = continueSave ? deserializeGame(localStorage.getItem(SAVE_KEY)) : createGame();
-  } catch {
+  const previous = { state, scene, scenePromise, fatalError, menuHidden: menu.hidden,
+    viewHidden: gameView.hidden, trackedTarget };
+  const prepared = persistence.prepareVoyage({ continueSave, confirmed, hasLiveVoyage: Boolean(state) });
+  if (!prepared.ok) {
+    if (prepared.status === 'confirmation-required') { confirmNewVoyage(); return; }
     inspectSave();
     showModal('invalid-save', modalTemplate('A NOTE FROM THE HARBOUR', 'That voyage needs a hand.',
       'This save could not be safely loaded. It has been kept in your browser. You can return to the menu or choose a new voyage.',
       '<button class="button button-primary" data-modal-action="menu" type="button">Back to the menu</button>'));
     return;
   }
+  const nextState = prepared.state;
+  let candidateScene;
   loading = true;
   resetInput();
-  if (panelDialog.open) closePanel({ focus: false });
-  showModal('loading', `<div class="modal-content"><div class="loading-wheel" aria-hidden="true"></div><p class="eyebrow">PACKING YOUR LITTLE WORKSHOP</p><h2 id="modal-title">The ocean is calling.</h2><p class="modal-description">Loading the workshop and islands. Your voyage will begin when everything is ready.</p><p class="loading-text" role="status">Preparing the 3D world…</p></div>`);
   try {
-    // Keep one renderer for the whole app. createScene resolves after all GLBs load;
-    // no update/render is called, and no save is replaced, before that promise resolves.
-    scenePromise ||= import('./scene.js').then(module => module.createScene(canvas, {
-      onReady: () => { const label = modalDialog.querySelector('.loading-text'); if (label) label.textContent = 'All aboard. Your workshop is ready.'; },
-    }));
-    scene = await scenePromise;
+    if (panelDialog.open) closePanel({ focus: false });
+    showModal('loading', `<div class="modal-content"><div class="loading-wheel" aria-hidden="true"></div><p class="eyebrow">PACKING YOUR LITTLE WORKSHOP</p><h2 id="modal-title">The ocean is calling.</h2><p class="modal-description">Loading the workshop and islands. Your voyage will begin when everything is ready.</p><p class="loading-text" role="status">Preparing the 3D world…</p></div>`);
+    // Stage world and voyage. Nothing may save a replacement until first render
+    // and UI setup succeed; the former live attempt remains recoverable.
+    scenePromise ||= loadProfile.run('scene-module', () => import('./scene.js')).then(module =>
+      loadProfile.run('scene-create', () => module.createScene(canvas, {
+        measure: loadProfile.run,
+        onReady: () => { const label = modalDialog.querySelector('.loading-text'); if (label) label.textContent = 'All aboard. Your workshop is ready.'; },
+      })));
+    candidateScene = await scenePromise;
+    menu.hidden = true;
+    gameView.hidden = false;
+    applySettings(candidateScene);
+    candidateScene.resize();
+    candidateScene.setView('follow');
+    await loadProfile.run('first-render', () => candidateScene.update(nextState, 0, { x: 0, z: 0 }));
+    scene = candidateScene;
     state = nextState;
-    knownTrophies=new Set(state.trophies??[]);
-    $('dive-keepsake').hidden=true;clearTimeout(keepsakeTimer);
+    knownTrophies = new Set(state.trophies ?? []);
+    $('dive-keepsake').hidden = true;
+    clearTimeout(keepsakeTimer);
     lastCleanupStatus = null;
     fatalError = false;
     lastEventKey = state.lastEvent ? `${state.lastEvent.code}:${state.lastEvent.at}:${state.lastEvent.message}` : null;
     trackedTarget = null;
     rafIntervals = [];
     renderedFrames = 0;
-    menu.hidden = true;
-    gameView.hidden = false;
-    loading = false;
-    applySettings();
-    scene.resize();
-    scene.update(state, 0, { x: 0, z: 0 });
     closeModal({ focus: false });
     refreshHud(true);
     canvas.focus({ preventScroll: true });
-    saveGame({ announce: false });
-    scene.setView('follow');
+    if (!prepared.commit()) throw new Error('Voyage preparation was cancelled.');
   } catch (error) {
+    prepared.cancel();
+    state = previous.state;
+    scene = previous.scene;
+    scenePromise = previous.scenePromise;
+    fatalError = previous.fatalError;
+    trackedTarget = previous.trackedTarget;
+    knownTrophies = new Set(state?.trophies ?? []);
+    menu.hidden = previous.menuHidden;
+    gameView.hidden = previous.viewHidden;
+    if (candidateScene && candidateScene === previous.scene) {
+      try {
+        applySettings(candidateScene);
+        candidateScene.resize();
+        candidateScene.update(previous.state, 0, { x: 0, z: 0 });
+      } catch {
+        // A renderer which cannot restore the old voyage cannot be resumed.
+        try { candidateScene.dispose?.(); } catch (releaseError) { console.error('World release failed:', releaseError); }
+        scene = null;
+        scenePromise = null;
+        fatalError = true;
+      }
+    } else {
+      try { candidateScene?.dispose?.(); } catch (releaseError) { console.error('World release failed:', releaseError); }
+      if (!previous.scene) scenePromise = null;
+    }
     loading = false;
-    scenePromise = null;
+    resetInput();
     console.error('Tidekin world loading failed:', error);
-    showModal('load-error', `<div class="modal-content"><div class="modal-ornament" aria-hidden="true">☸</div><p class="eyebrow">A NOTE FROM THE HARBOUR</p><h2 id="modal-title">The ocean couldn’t open.</h2><p class="modal-description">Tidekin needs WebGL and its workshop and island models. Check that hardware acceleration is enabled and the game assets have finished loading, then reload. Your previous save is still safe.</p><p class="error-detail">${escapeHTML(error?.message || 'The 3D world is unavailable.')}</p><div class="modal-actions"><button class="button button-primary" data-modal-action="reload" type="button">Reload Tidekin</button><button class="button button-secondary" data-modal-action="menu" type="button">Back to the menu</button></div></div>`);
+    showModal('load-error', `<div class="modal-content"><div class="modal-ornament" aria-hidden="true">☸</div><p class="eyebrow">A NOTE FROM THE HARBOUR</p><h2 id="modal-title">The ocean couldn’t open.</h2><p class="modal-description">Reload to restore your saved voyage, or return to the menu. Your previous save is still safe.</p><p class="error-detail">${escapeHTML(error?.message || 'The 3D world is unavailable.')}</p><div class="modal-actions"><button class="button button-primary" data-modal-action="reload" type="button">Reload Tidekin</button><button class="button button-secondary" data-modal-action="menu" type="button">Back to the menu</button></div></div>`);
+    return;
   }
+  loading = false;
+  saveGame({ announce: false });
 }
 
 function showTutorial() {
@@ -685,7 +699,7 @@ function getMetrics() {
   const sorted = [...rafIntervals].sort((a, b) => a - b);
   const percentile = p => sorted.length ? sorted[Math.min(sorted.length - 1, Math.floor((sorted.length - 1) * p))] : null;
   const median = percentile(.5), p95 = percentile(.95);
-  return { ...scene?.getStats(), frameIntervalMsMedian: median, frameIntervalMsP95: p95,
+  return { ...scene?.getStats(), loadingPhases: loadProfile.snapshot(), frameIntervalMsMedian: median, frameIntervalMsP95: p95,
     rafIntervalMsMedian: median, rafIntervalMsP95: p95, fpsFromMedianInterval: median ? 1000 / median : null,
     frameIntervalSamples: sorted.length, frameIntervalWindow: 600, activeRenderedFrames: renderedFrames,
     measurement: 'Actual requestAnimationFrame intervals during active play; renderer CPU timings are separate.',
@@ -746,7 +760,7 @@ modalDialog.addEventListener('click', event => {
   if (!button || button.disabled) return;
   const action = button.dataset.modalAction;
   if (action === 'retry-cleanup' || action === 'leave-cleanup') { closeModal(); performAction(action); }
-  else if (action === 'confirm-new') startGame(false);
+  else if (action === 'confirm-new') startGame(false, { confirmed: true });
   else if (action === 'cancel-new') {
     closeModal();
     if (!gameView.hidden) showPause();

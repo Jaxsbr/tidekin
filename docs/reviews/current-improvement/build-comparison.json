@@ -1,0 +1,192 @@
+{
+  "schema": 2,
+  "kind": "frozen-production-size-comparison",
+  "recordedAt": "2026-10-10T02:57:14.783Z",
+  "baseline": {
+    "commit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+    "build": {
+      "hash": "17c974dc30535f00582c4d26e725137f8711fa65c7f960869584a3f982153e0a",
+      "files": 28,
+      "totals": {
+        "totalBytes": 71235044,
+        "jsBytes": 774327,
+        "jsGzipBytes": 215814,
+        "cssBytes": 32763,
+        "cssGzipBytes": 8619,
+        "assetBytes": 70417148
+      },
+      "atlas": [
+        {
+          "path": "assets/ocean-kit-atlas-5RvKcnPn.png",
+          "bytes": 2961160,
+          "gzipBytes": 2948519,
+          "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33"
+        },
+        {
+          "path": "assets/ui-fourth/ocean-kit-atlas.png",
+          "bytes": 2961160,
+          "gzipBytes": 2948519,
+          "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33"
+        }
+      ],
+      "chunks": [
+        {
+          "path": "assets/index-BqHxL0Q5.js",
+          "bytes": 83753,
+          "gzipBytes": 28676,
+          "sha256": "6d520361d610874ce61670a346063075070572c5b22684d507f6084789b5ad8e"
+        },
+        {
+          "path": "assets/index-XQSqB-rG.css",
+          "bytes": 30260,
+          "gzipBytes": 7951,
+          "sha256": "4d79903d89b522a3ecca4d4eb6673cbd00f5e7b71349707640d4a69cdb1ad42f"
+        },
+        {
+          "path": "assets/scene-6sbYOEGm.js",
+          "bytes": 690574,
+          "gzipBytes": 187138,
+          "sha256": "9e037e94baa75c68a760a3b139223c44e5b2e153dde09b6759607421fa1eafbf"
+        },
+        {
+          "path": "assets/ui-fourth/atlas.css",
+          "bytes": 2503,
+          "gzipBytes": 668,
+          "sha256": "02c164258add9e4a19b47188660fe28db41e492843db3129da9fde0189bd5d6d"
+        }
+      ]
+    }
+  },
+  "candidate": {
+    "label": "Candidate13 three-quarter hip/chest/face turn; shared undeformed reef spheres and direct typed buffers; single atlas and named panorama reference",
+    "sourceHash": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+    "commit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+    "dirty": true,
+    "matchesCommit": false,
+    "build": {
+      "hash": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+      "files": 13,
+      "totals": {
+        "totalBytes": 14543442,
+        "jsBytes": 784278,
+        "jsGzipBytes": 219674,
+        "cssBytes": 32780,
+        "cssGzipBytes": 8611,
+        "assetBytes": 13715578
+      },
+      "atlas": [
+        {
+          "path": "assets/ui-fourth/ocean-kit-atlas.png",
+          "bytes": 2961160,
+          "gzipBytes": 2948519,
+          "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33"
+        }
+      ],
+      "chunks": [
+        {
+          "path": "assets/index-1DdwmcFP.css",
+          "bytes": 30261,
+          "gzipBytes": 7936,
+          "sha256": "4b85ae1a9a4840bfad4659b5067710f80d3e579016a820582035be75d6378656"
+        },
+        {
+          "path": "assets/index-CdjYE9Z1.js",
+          "bytes": 87799,
+          "gzipBytes": 30055,
+          "sha256": "08af30207b28a98d0174bce0a915179adced7bb3a82cc75de7448c89e6902dac"
+        },
+        {
+          "path": "assets/scene-3RrrFS3Q.js",
+          "bytes": 696479,
+          "gzipBytes": 189619,
+          "sha256": "7e33c05659eaa3db0cadffa09eaf5530460d63c82c5ac4d93137aa44bd910fe9"
+        },
+        {
+          "path": "assets/ui-fourth/atlas.css",
+          "bytes": 2519,
+          "gzipBytes": 675,
+          "sha256": "395b70a909865405f39e0e268a1c86cc665cdd16c3ca9cef7ebb3aa05e7cda5a"
+        }
+      ]
+    },
+    "published": {
+      "hash": "5d42418649c64c362b3e7ea1466b644e4562b0d13861ca78712c977abd1e871e",
+      "files": 13,
+      "totals": {
+        "totalBytes": 14543538,
+        "jsBytes": 784302,
+        "jsGzipBytes": 219686,
+        "cssBytes": 32828,
+        "cssGzipBytes": 8618,
+        "assetBytes": 13715578
+      },
+      "atlas": [
+        {
+          "path": "assets/ui-fourth/ocean-kit-atlas.png",
+          "bytes": 2961160,
+          "gzipBytes": 2948519,
+          "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33"
+        }
+      ],
+      "chunks": [
+        {
+          "path": "assets/index-6aZaE4Qu.css",
+          "bytes": 30309,
+          "gzipBytes": 7943,
+          "sha256": "1f1e525518b6a0875b14889532bf1af1d8a1fa25c835f222e0d80e2c54f5ed78"
+        },
+        {
+          "path": "assets/index-CaGbAwpC.js",
+          "bytes": 87807,
+          "gzipBytes": 30062,
+          "sha256": "0e722d0b64c7a2b935530d57e8d11b756824650ca238c832d4c19e0dbf4e1f7b"
+        },
+        {
+          "path": "assets/scene-BsFjW98V.js",
+          "bytes": 696495,
+          "gzipBytes": 189624,
+          "sha256": "8d149a78dfb281b4182e590c614825bbbe5d470e68e2fff7c96b224523049495"
+        },
+        {
+          "path": "assets/ui-fourth/atlas.css",
+          "bytes": 2519,
+          "gzipBytes": 675,
+          "sha256": "395b70a909865405f39e0e268a1c86cc665cdd16c3ca9cef7ebb3aa05e7cda5a"
+        }
+      ]
+    },
+    "commands": [
+      "node node_modules/vite/bin/vite.js build --base / --outDir .scratch/current-candidate13-dist",
+      "node node_modules/vite/bin/vite.js build --base /tidekin/ --outDir .scratch/current-candidate13-published"
+    ],
+    "sourceUnchangedDuringBuild": true,
+    "packagingChange": {
+      "sourceMove": "public/assets/ui-fourth/reef-panorama.png -> assets/reference/reef-panorama.png",
+      "unchangedOriginal": true,
+      "removedUnusedShippingBytes": 3293910,
+      "scope": "Original panorama moved unchanged to its named reference location; previous byte-identical Candidate05 move check does not imply that newer character chunks are identical."
+    }
+  },
+  "reductionPercent": {
+    "totalBytes": 79.58386605334307,
+    "jsBytes": -1.2851159781332777,
+    "jsGzipBytes": -1.7885772007376621,
+    "cssBytes": -0.05188780026248452,
+    "cssGzipBytes": 0.09281819236570676,
+    "assetBytes": 80.52238923394057
+  },
+  "limits": [
+    "Production byte counts are deterministic observations of these frozen builds, not loading, heap, physical VRAM or frame-time measurements.",
+    "Candidate is uncommitted source, bound to the coordinator build inventories; formal acceptance requires a clean commit and paired measurements.",
+    "The smaller distribution removes unused wrappers/placeholder and one duplicate atlas; shipped bytes are not all requested at startup."
+  ],
+  "sizeGate": {
+    "policy": "Each increase must exceed both relative and absolute allowances to fail.",
+    "rawJsCeiling": 789813.54,
+    "gzipJsCeiling": 220130.28,
+    "rawJs": "pass",
+    "gzipJs": "pass",
+    "scope": "Deterministic frozen production bytes only; formal frame/load/memory checks remain pending.",
+    "compression": "gzipSync level9 on each retained production file, same policy method for base and candidate"
+  }
+}

@@ -1,41 +1,84 @@
 import * as THREE from 'three';
 import { createCharacterArt } from './character-art.js';
-import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+import { releaseScene } from './render-resources.js';
 import { createBuildCinematic } from './build-cinematic.js';
 import { createCleanupScene } from './cleanup-scene.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { ISLANDS, SALVAGE_NODES, SHOALS, EXPEDITIONS, tideHeight, getContext, CLEANUP_SITES, SHELTER_RADIUS, SHELTER_BAND } from './game.js';
 
+// Explicit factory capabilities keep Rollup from retaining the entire engine
+// namespace when calls occur inside the exception-safe construction scope.
+const characterThree = {
+  BufferGeometry: THREE.BufferGeometry,
+  CatmullRomCurve3: THREE.CatmullRomCurve3,
+  Color: THREE.Color,
+  Float32BufferAttribute: THREE.Float32BufferAttribute,
+  Group: THREE.Group,
+  MathUtils: THREE.MathUtils,
+  Mesh: THREE.Mesh,
+  MeshStandardMaterial: THREE.MeshStandardMaterial,
+  Shape: THREE.Shape,
+  SphereGeometry: THREE.SphereGeometry,
+  TorusGeometry: THREE.TorusGeometry,
+  TubeGeometry: THREE.TubeGeometry,
+  Vector3: THREE.Vector3,
+};
+const cleanupThree = {
+  BoxGeometry: THREE.BoxGeometry,
+  BufferGeometry: THREE.BufferGeometry,
+  CatmullRomCurve3: THREE.CatmullRomCurve3,
+  CircleGeometry: THREE.CircleGeometry,
+  Color: THREE.Color,
+  CylinderGeometry: THREE.CylinderGeometry,
+  DirectionalLight: THREE.DirectionalLight,
+  DoubleSide: THREE.DoubleSide,
+  Float32BufferAttribute: THREE.Float32BufferAttribute,
+  Fog: THREE.Fog,
+  Group: THREE.Group,
+  HemisphereLight: THREE.HemisphereLight,
+  IcosahedronGeometry: THREE.IcosahedronGeometry,
+  InstancedMesh: THREE.InstancedMesh,
+  MathUtils: THREE.MathUtils,
+  Mesh: THREE.Mesh,
+  MeshBasicMaterial: THREE.MeshBasicMaterial,
+  MeshStandardMaterial: THREE.MeshStandardMaterial,
+  Object3D: THREE.Object3D,
+  Plane: THREE.Plane,
+  PlaneGeometry: THREE.PlaneGeometry,
+  Raycaster: THREE.Raycaster,
+  Scene: THREE.Scene,
+  ShaderMaterial: THREE.ShaderMaterial,
+  Shape: THREE.Shape,
+  SphereGeometry: THREE.SphereGeometry,
+  TorusGeometry: THREE.TorusGeometry,
+  TubeGeometry: THREE.TubeGeometry,
+  Vector3: THREE.Vector3,
+};
+
 // Rendering consumes state; authoritative steering and rules live in game.js.
-function releaseScene(scene, renderer) {
-  const geometries=new Set(), materials=new Set(), textures=new Set();
-  scene.traverse(object=>{
-    if(object.isInstancedMesh)object.dispose();
-    if(object.geometry)geometries.add(object.geometry);
-    if(object.material)for(const material of Array.isArray(object.material)?object.material:[object.material])materials.add(material);
-    object.shadow?.dispose();
-  });
-  for(const material of materials)for(const value of Object.values(material))if(value?.isTexture)textures.add(value);
-  for(const geometry of geometries)geometry.dispose();
-  for(const texture of textures)texture.dispose();
-  for(const material of materials)material.dispose();
-  renderer.dispose();
-}
 export async function createScene(canvas, options = {}) {
+  const measure = options.measure ?? (async (_name, operation) => operation());
   // Decode the inventory atlas once before allocating scene resources or reporting ready.
   const manifestUrl=new URL(`${import.meta.env.BASE_URL}assets/ui-fourth/manifest.json`,location.href);
-  const atlasResponse=await fetch(manifestUrl);
-  if(!atlasResponse.ok)throw new Error('Could not load pickup art manifest.');
-  const pickupArt=await atlasResponse.json();
-  const pickupAtlas=new Image();pickupAtlas.src=new URL(pickupArt.atlas.url,manifestUrl).href;await pickupAtlas.decode();
+  const pickupArt=await measure('asset-manifest', async () => {
+    const response=await fetch(manifestUrl);
+    if(!response.ok)throw new Error('Could not load pickup art manifest.');
+    return response.json();
+  });
+  const pickupAtlas=new Image();pickupAtlas.src=new URL(pickupArt.atlas.url,manifestUrl).href;
+  await measure('atlas-decode', () => pickupAtlas.decode());
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+  const scene = new THREE.Scene();
+  const templateRoots = [];
+  const detachedTextures = new Set();
+  let constructionCleanup = null;
+  try {
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.18;
-  const scene = new THREE.Scene();
   scene.background = new THREE.Color('#84cee6');
   scene.fog = new THREE.FogExp2('#8fd5e1', 0.006);
   const camera = new THREE.PerspectiveCamera(43, 1, 0.2, 650);
@@ -92,10 +135,9 @@ export async function createScene(canvas, options = {}) {
 
   const loader = new GLTFLoader();
   const load = async path => (await loader.loadAsync(path)).scene;
-  const loaded = await Promise.allSettled(['workshop','island','landmarks'].map(name=>load(`${import.meta.env.BASE_URL}assets/${name}.glb`)));
+  const loaded = await measure('model-load', () => Promise.allSettled(['workshop','island','landmarks'].map(name=>load(`${import.meta.env.BASE_URL}assets/${name}.glb`))));
+  for (const result of loaded) if (result.status === 'fulfilled') templateRoots.push(result.value);
   if(loaded.some(result=>result.status==='rejected')) {
-    for(const result of loaded)if(result.status==='fulfilled')scene.add(result.value);
-    releaseScene(scene,renderer);
     throw loaded.find(result=>result.status==='rejected').reason;
   }
   const [raft,islandTemplate,landmarkTemplate]=loaded.map(result=>result.value);
@@ -112,35 +154,18 @@ export async function createScene(canvas, options = {}) {
   const earnedPennants=['#eab350','#d77c58','#66aaa0'].map((color,i)=>{const mesh=new THREE.Mesh(pennantGeometry,new THREE.MeshStandardMaterial({color,roughness:.85,side:THREE.DoubleSide}));mesh.position.set(-2.75+i*.75,3.97,2.7);pennantRack.add(mesh);return mesh;});
   const originalExplorer=raft.getObjectByName('Explorer');
   if(originalExplorer)originalExplorer.visible=false;
-  // Merge only rigid siblings: all shoulder/elbow/hip/knee pivots stay articulated.
-  function characterArt(){
-    const art=createCharacterArt(THREE),originals=new Set();
-    art.root.traverse(parent=>{
-      const batches=new Map();
-      for(const child of parent.children){
-        if(!child.isMesh||Array.isArray(child.material))continue;
-        originals.add(child.geometry);
-        const batch=batches.get(child.material)??[];batch.push(child);batches.set(child.material,batch);
-      }
-      for(const [material,meshes] of batches){
-        if(meshes.length<2)continue;
-        const geometries=meshes.map(mesh=>{mesh.updateMatrix();return mesh.geometry.clone().applyMatrix4(mesh.matrix);});
-        const merged=mergeGeometries(geometries);geometries.forEach(geometry=>geometry.dispose());
-        if(!merged)continue;
-        meshes.forEach(mesh=>parent.remove(mesh));const mesh=new THREE.Mesh(merged,material);parent.add(mesh);
-      }
-    });
-    const retained=new Set();art.root.traverse(object=>{if(object.isMesh){retained.add(object.geometry);object.castShadow=true;object.receiveShadow=true;}});
-    for(const geometry of originals)if(!retained.has(geometry))geometry.dispose();
+  function characterArt() {
+    const art = createCharacterArt(characterThree);
+    art.root.traverse(object => { if (object.isMesh) { object.castShadow = true; object.receiveShadow = true; } });
     return art;
   }
   const deckCharacter=characterArt(),explorer=deckCharacter.root;
-  explorer.position.copy(originalExplorer?.position??new THREE.Vector3(-.9,.77,1.75));
-  explorer.position.y+=.98;explorer.rotation.set(0,0,0);deckCharacter.body.rotation.y=0;
-  deckCharacter.arms.forEach(({shoulder,elbow,side})=>{shoulder.rotation.set(0,0,side*.12);elbow.rotation.x=-.12;});
-  deckCharacter.legs.forEach(({hip,knee})=>{hip.rotation.set(0,0,0);knee.rotation.set(0,0,0);});
+  // The forward explorer was hidden behind the cabin from the following view.
+  // This open aft deck position keeps the navigator visible during normal play.
+  explorer.position.set(2.6,1.725,-4.02);
+  explorer.rotation.set(0,0,0);deckCharacter.body.rotation.y=Math.PI+.25;
   (originalExplorer?.parent??raft).add(explorer);
-  const cleanupView=createCleanupScene({THREE});
+  const cleanupView=constructionCleanup=createCleanupScene({THREE: cleanupThree});
   let viewMode='follow', orbitYaw=0, orbitPitch=0, zoomScale=1;
   const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
   const interactionGroup=new THREE.Group();boat.add(interactionGroup);
@@ -243,7 +268,6 @@ export async function createScene(canvas, options = {}) {
 
   const swimmer=new THREE.Group();swimmer.rotation.order='YXZ';scene.add(swimmer);
   const surfaceCharacter=characterArt();swimmer.add(surfaceCharacter.root);
-  const deckGreeting=deckCharacter.arms.find(arm=>arm.side===1);
   const diveRing=new THREE.Mesh(new THREE.TorusGeometry(.8,.035,6,40),new THREE.MeshBasicMaterial({color:'#fff1b4',transparent:true,opacity:.75}));diveRing.rotation.x=Math.PI/2;swimmer.add(diveRing);
   const boatAnchor=new THREE.Vector2();let wasDiving=false;
   const beaconGlow=new THREE.PointLight('#ffc970',0,13,1.5);beaconGlow.position.set(3.2,3.8,3.9);boat.add(beaconGlow);
@@ -317,7 +341,7 @@ export async function createScene(canvas, options = {}) {
     const width=124,height=width*sh/sw;
     g.drawImage(pickupAtlas,sx,sy,sw,sh,(160-width)/2,10+(100-height)/2,width,height);
     g.fillStyle='#fff0cc';g.textAlign='center';g.font='bold 24px sans-serif';g.fillText(covered?'Covered':{wood:'Timber',scrap:'Scrap',pearls:'Pearls'}[type],80,132);
-    const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;return texture;
+    const texture=new THREE.CanvasTexture(c);detachedTextures.add(texture);texture.colorSpace=THREE.SRGBColorSpace;return texture;
   }
   const popupTextures=Object.fromEntries(['wood','scrap','pearls'].flatMap(type=>[[type,paintPickup(type)],[type+'-covered',paintPickup(type,true)]]));
   const pickupPopup=new THREE.Sprite(new THREE.SpriteMaterial({map:popupTextures.wood,transparent:true,depthTest:false,depthWrite:false,opacity:0}));
@@ -389,11 +413,8 @@ export async function createScene(canvas, options = {}) {
     surfaceCharacter.animate({dt,moving,surface:true,facing:1,reducedMotion});
     surfaceCharacter.body.rotation.y=Math.PI/2;
     diveRing.rotation.z=motionTime;
-    if(deckGreeting){
-      const wave=reducedMotion?0:Math.pow(Math.max(0,Math.sin(elapsed*.45)),6);
-      deckGreeting.shoulder.rotation.z=.12+wave*2.1;
-      deckGreeting.elbow.rotation.x=-.12+wave*Math.sin(elapsed*4)*.25;
-    }
+    deckCharacter.animate({ dt, time: elapsed, deck: true, reducedMotion });
+    deckCharacter.body.rotation.y = Math.PI + .25;
     boat.position.set(state.diving?boatAnchor.x:state.position.x,tide*1.15+(reducedMotion?0:Math.sin(elapsed*1.35)*.10),state.diving?boatAnchor.y:state.position.z);
     for(const tail of tails)tail.object.rotation.y=tail.rotation+(reducedMotion?0:Math.sin(elapsed*6)*.2*Math.max(0,Math.sin(elapsed*.4)));
     if(!state.diving)boat.rotation.y=heading;
@@ -448,9 +469,9 @@ export async function createScene(canvas, options = {}) {
     const presentation=buildPresentation.getStatus();
     const mode=presentation.active?'follow':viewMode;
     if(mode==='follow'){
-      const angle=heading+Math.PI+.32+orbitYaw;const radius=25*framing*zoomScale;
-      camera.position.set(follow.x+Math.sin(angle)*radius,water.position.y+(18+orbitPitch*15)*zoomScale,follow.z+Math.cos(angle)*radius);
-      look.set(follow.x+Math.sin(heading)*8,water.position.y+1.5,follow.z+Math.cos(heading)*8);
+      const angle=heading+Math.PI+.32+orbitYaw;const radius=23*framing*zoomScale;
+      camera.position.set(follow.x+Math.sin(angle)*radius,water.position.y+(13.5+orbitPitch*15)*zoomScale,follow.z+Math.cos(angle)*radius);
+      look.set(follow.x+Math.sin(heading)*6,water.position.y+1.5,follow.z+Math.cos(heading)*6);
     }else{
       const angle=.665+orbitYaw, radius=(mode==='cabin'||mode==='workshop'?13:29)*framing*zoomScale;
       camera.position.set(follow.x+Math.sin(angle)*radius,water.position.y+(11+orbitPitch*20)*zoomScale,follow.z+Math.cos(angle)*radius);
@@ -510,7 +531,26 @@ export async function createScene(canvas, options = {}) {
       renderCpuMsMedian:a[Math.floor(a.length*.5)]||0,renderCpuMsP95:a[Math.floor(a.length*.95)]||0,
       drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,width:canvas.width,height:canvas.height};
   }
-  function dispose(){if(disposed)return;disposed=true;cleanupView.dispose?.();pickupPopup.material.map=null;releaseScene(scene,renderer);for(const texture of Object.values(popupTextures))texture.dispose();}
+  function dispose(){
+    if(disposed)return;
+    disposed=true;
+    try { cleanupView.dispose?.(); }
+    finally {
+      for (const template of templateRoots) scene.add(template);
+      releaseScene(scene,renderer,{textures:[...detachedTextures]});
+    }
+  }
   options.onReady?.();
   return {update,resize,dispose,getStats,getBuildPresentation:buildPresentation.getStatus,setQuality,pickInteraction,pickCleanup,setView,orbit,zoom,onAction,setReducedMotion:v=>{reducedMotion=Boolean(v);}};
+  } catch (error) {
+    // Constructors do not return a disposal handle on failure. Release every
+    // acquired world, template and detached texture before propagating it.
+    try { constructionCleanup?.dispose?.(); }
+    catch (releaseError) { console.error('Underwater construction release failed:', releaseError); }
+    for (const template of templateRoots) scene.add(template);
+    try { releaseScene(scene,renderer,{textures:[...detachedTextures]}); }
+    catch (releaseError) { console.error('World construction release failed:', releaseError); }
+    throw error;
+  }
+
 }

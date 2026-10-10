@@ -1,12 +1,41 @@
 /** Seeded sculpting primitives shared by the reef and its small target habitats. */
-import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+import { BufferAttribute } from 'three';
+import { mergeAttributes } from 'three/addons/utils/BufferGeometryUtils.js';
+
+/** Reef batches have only position/normal/color and no morphs or groups.
+ * Fill the final typed index directly: the general merge utility first boxes
+ * every triangle index in a growing number array, raising construction peaks. */
+function mergeReefGeometry(THREE, geometries) {
+  let count = 0, offset = 0, maximum = 0;
+  for (const geometry of geometries) {
+    count += geometry.index.count;
+    for (let i = 0; i < geometry.index.count; i++) maximum = Math.max(maximum, offset + geometry.index.getX(i));
+    offset += geometry.attributes.position.count;
+  }
+  const indices = maximum >= 65535 ? new Uint32Array(count) : new Uint16Array(count);
+  let cursor = 0; offset = 0;
+  for (const geometry of geometries) {
+    for (let i = 0; i < geometry.index.count; i++) indices[cursor++] = offset + geometry.index.getX(i);
+    offset += geometry.attributes.position.count;
+  }
+  const merged = new THREE.BufferGeometry();
+  try {
+    merged.setIndex(new BufferAttribute(indices, 1));
+    for (const name of ['position', 'normal', 'color']) {
+      const attribute = mergeAttributes(geometries.map(geometry => geometry.attributes[name]));
+      if (!attribute) throw new Error(`Incompatible reef ${name} attributes`);
+      merged.setAttribute(name, attribute);
+    }
+    return merged;
+  } catch (error) { merged.dispose(); throw error; }
+}
 export function reefRandom(seed='reef') {
   let n=2166136261;
   for(const c of String(seed)){n^=c.charCodeAt(0);n=Math.imul(n,16777619);}
   return ()=>{n+=0x6D2B79F5;let t=n;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};
 }
 export function createReefSculptor(THREE,root,random) {
-  const materials=new Map(),time={value:0};
+  const materials=new Map(),spheres=new Map(),time={value:0};
   function material(color,kind='stone') {
     const key=`${color}:${kind}`;
     if(materials.has(key))return materials.get(key);
@@ -34,16 +63,27 @@ export function createReefSculptor(THREE,root,random) {
   }
   function paint(g,variation=.15) {
     g.computeBoundingBox();
-    const p=g.attributes.position,colors=[],c=new THREE.Color(),low=g.boundingBox.min.y,range=Math.max(.01,g.boundingBox.max.y-low);
+    const p=g.attributes.position,colors=new Float32Array(p.count*3),c=new THREE.Color(),low=g.boundingBox.min.y,range=Math.max(.01,g.boundingBox.max.y-low);
     for(let i=0;i<p.count;i++){
       const x=p.getX(i),y=p.getY(i),z=p.getZ(i),v=.80+Math.sin(x*3.1+y*5.3+Math.sin(z*4.2))*.055+(y-low)/range*variation;
-      c.setRGB(Math.max(.55,v),Math.max(.55,v),Math.max(.55,v));colors.push(c.r,c.g,c.b);
+      c.setRGB(Math.max(.55,v),Math.max(.55,v),Math.max(.55,v));colors[i*3]=c.r;colors[i*3+1]=c.g;colors[i*3+2]=c.b;
     }
-    g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));return g;
+    g.setAttribute('color',new BufferAttribute(colors,3));return g;
   }
   function add(g,mat,pos=[0,0,0],scale=[1,1,1],parent=root) {
     if(!g.attributes.color)paint(g);
     const mesh=new THREE.Mesh(g,mat);mesh.position.set(...pos);mesh.scale.set(...scale);parent.add(mesh);return mesh;
+  }
+  // Only undeformed unit spheres share deterministic local paint. Sculpted
+  // stone and scalloped coral keep individual vertices and ownership.
+  function sphere(width,height,mat,pos,scale) {
+    const key=`${width}/${height}`,cached=spheres.get(key),g=cached||new THREE.SphereGeometry(1,width,height);
+    try {
+      const mesh=add(g,mat,pos,scale);spheres.set(key,g);return mesh;
+    } catch(error) {
+      if(!cached&&!root.children.some(child=>child.geometry===g))g.dispose();
+      throw error;
+    }
   }
   function stone(pos,scale,color,phase=random()*20) {
     const g=new THREE.SphereGeometry(1,20,14),p=g.attributes.position;
@@ -65,12 +105,12 @@ export function createReefSculptor(THREE,root,random) {
     const [x,y,z]=pos,mat=material(color,'coral');
     if(type===0){
       // Rounded cauliflower heads, with polyp-scale detail rather than fingers.
-      add(new THREE.SphereGeometry(1,16,10),mat,[x,y+size*.21,z],[size*.65,size*.30,size*.48]);
+      sphere(16,10,mat,[x,y+size*.21,z],[size*.65,size*.30,size*.48]);
       for(let i=0;i<26;i++){
         const a=i*2.39996,r=Math.sqrt(i/26)*size*.64,h=size*(.18+.27*Math.sqrt(1-i/28));
         const px=x+Math.cos(a)*r,pz=z+Math.sin(a)*r*.7;
-        add(new THREE.SphereGeometry(1,9,6),mat,[px,y+h,pz],[size*.17,size*.15,size*.16]);
-        for(let j=0;j<3;j++)add(new THREE.SphereGeometry(1,6,4),mat,[px+Math.cos(j*2.1)*size*.07,y+h+size*.13,pz+Math.sin(j*2.1)*size*.07],[size*.045,size*.035,size*.04]);
+        sphere(9,6,mat,[px,y+h,pz],[size*.17,size*.15,size*.16]);
+        for(let j=0;j<3;j++)sphere(6,4,mat,[px+Math.cos(j*2.1)*size*.07,y+h+size*.13,pz+Math.sin(j*2.1)*size*.07],[size*.045,size*.035,size*.04]);
       }
     }else if(type===1){
       for(let k=0;k<3;k++){
@@ -110,7 +150,7 @@ export function createReefSculptor(THREE,root,random) {
       if(fan){grow(x,y,z,-.52,size*.47,size*.028,3);grow(x,y,z,.48,size*.5,size*.028,3);}
     }else if(type===4){
       // Brain coral: a solid dome with meandering raised limestone ridges.
-      add(new THREE.SphereGeometry(1,20,12),mat,[x,y+size*.18,z],[size*.65,size*.48,size*.53]);
+      sphere(20,12,mat,[x,y+size*.18,z],[size*.65,size*.48,size*.53]);
       const ridgeColor=new THREE.Color(color).lerp(new THREE.Color(0xffddad),.30).getHex();
       for(let row=0;row<7;row++){
         const points=[];
@@ -122,11 +162,11 @@ export function createReefSculptor(THREE,root,random) {
       }
     }else{
       // Anemone crowns have bent, soft tentacles and a low attached foot.
-      add(new THREE.SphereGeometry(1,12,8),mat,[x,y+.07*size,z],[size*.44,size*.14,size*.34]);
+      sphere(12,8,mat,[x,y+.07*size,z],[size*.44,size*.14,size*.34]);
       for(let k=0;k<27;k++){
         const a=k*2.39996,r=Math.sqrt(k/27)*size*.42,h=size*(.30+random()*.28),px=x+Math.cos(a)*r,pz=z+Math.sin(a)*r*.75;
         branch([[px,y,pz],[px+Math.cos(a)*size*.07,y+h*.6,pz],[px+Math.cos(a)*size*.14,y+h,pz+Math.sin(a)*size*.09]],size*.032,color);
-        add(new THREE.SphereGeometry(1,7,5),mat,[px+Math.cos(a)*size*.14,y+h,pz+Math.sin(a)*size*.09],[size*.042,size*.044,size*.04]);
+        sphere(7,5,mat,[px+Math.cos(a)*size*.14,y+h,pz+Math.sin(a)*size*.09],[size*.042,size*.044,size*.04]);
       }
     }
   }
@@ -149,7 +189,7 @@ export function createReefSculptor(THREE,root,random) {
             }
             g.computeVertexNormals();add(g,mat);
           }
-          add(new THREE.SphereGeometry(1,7,5),mat,[px,py,z],[.045,.065,.04]);
+          sphere(7,5,mat,[px,py,z],[.045,.065,.04]);
         }
       }
       return;
@@ -164,14 +204,28 @@ export function createReefSculptor(THREE,root,random) {
     }
   }
   function batch() {
-    const batches=new Map(),sources=new Set();
-    for(const child of [...root.children])if(child.isMesh){
-      const g=child.geometry.index?child.geometry.toNonIndexed():child.geometry.clone();child.updateMatrix();g.applyMatrix4(child.matrix);
-      for(const name of Object.keys(g.attributes))if(!['position','normal','color'].includes(name))g.deleteAttribute(name);
-      if(!batches.has(child.material))batches.set(child.material,[]);batches.get(child.material).push(g);sources.add(child.geometry);root.remove(child);
+    const batches=new Map(),sources=new Set(),clones=[],staged=[],children=root.children.filter(child=>child.isMesh);
+    let committed=false;
+    try {
+      for(const child of children){
+        // Preserve seams and triangle-corner attributes without expansion.
+        // Primitive clone() reconstructs default sphere/tube topology before
+        // overwriting it. Copy populated buffers without that allocation work.
+        const g=new THREE.BufferGeometry();clones.push(g);g.copy(child.geometry);
+        if(!g.index){const n=g.attributes.position.count,indices=n>65535?new Uint32Array(n):new Uint16Array(n);for(let i=0;i<n;i++)indices[i]=i;g.setIndex(new BufferAttribute(indices,1));}
+        child.updateMatrix();g.applyMatrix4(child.matrix);
+        for(const name of Object.keys(g.attributes))if(!['position','normal','color'].includes(name))g.deleteAttribute(name);
+        if(!batches.has(child.material))batches.set(child.material,[]);batches.get(child.material).push(g);sources.add(child.geometry);
+      }
+      for(const [mat,geos] of batches)staged.push({geometry:mergeReefGeometry(THREE,geos),material:mat});
+      const meshes=staged.map(({geometry,material})=>new THREE.Mesh(geometry,material));
+      // Keep original ownership intact if any staged merge fails.
+      children.forEach(child=>root.remove(child));meshes.forEach(mesh=>root.add(mesh));committed=true;spheres.clear();
+      sources.forEach(g=>g.dispose());
+    } finally {
+      clones.forEach(g=>g.dispose());
+      if(!committed)staged.forEach(({geometry})=>geometry.dispose());
     }
-    for(const [mat,geos] of batches){root.add(new THREE.Mesh(mergeGeometries(geos),mat));geos.forEach(g=>g.dispose());}
-    sources.forEach(g=>g.dispose());
   }
   return {stone,coral,kelp,branch,add,material,paint,batch,time};
 }

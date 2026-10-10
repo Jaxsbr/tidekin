@@ -1,0 +1,9 @@
+# Route changes to measured budgets and their enforcement to the project owner.
+# Required build/performance checks are enforced separately by branch protection.
+/.github/workflows/ @Jaxsbr
+/scripts/performance/ @Jaxsbr
+/tests/performance*.test.js @Jaxsbr
+/docs/performance/ @Jaxsbr
+/docs/performance-budget.md @Jaxsbr
+/assets/catalogue.json @Jaxsbr
+/docs/governance/ @Jaxsbr
