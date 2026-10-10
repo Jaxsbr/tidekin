@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "recordedAt": "2026-10-10T05:21:15.646Z",
+  "purpose": "Canonical raw failed formal evidence; lossless compact storage, not performance acceptance",
+  "status": "compacted-failed-evidence",
+  "formalStatus": "fail",
+  "collectorExitCode": 1,
+  "finishedAt": "2026-10-10T05:13:42.268Z",
+  "counts": {
+    "pass": 319,
+    "fail": 1,
+    "inconclusive": 6
+  },
+  "independentAudit": "Coordinator reported Gibbs reproduced all gates and validated all ten coverage/identity/closure/RSS/resource-plateau records before this disposition",
+  "compression": {
+    "method": "Node zlib gzipSync level 9, mtime 0; deterministic double-encode checked",
+    "node": "v24.3.0",
+    "rawByteIdentityVerified": true,
+    "canonicalComparatorDependenciesMatchCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+    "comparisonAllFieldsReproduced": true
+  },
+  "aggregates": [
+    {
+      "side": "base",
+      "canonicalPath": "benchmarks/accepted/formal-hardware-base79da-final-01/base.json.gz",
+      "rawBytes": 43542163,
+      "rawSha256": "211a4c320a765eed0ee66a73b5443e9a4b8aaacb9316ef885005ff278ff52a24",
+      "gzipBytes": 2157074,
+      "gzipSha256": "c2a1b2ae5ca2bca46bc4c71427e500c9cc8e24bb72f1db1cbb2c92c9b4e9d432",
+      "decompressionVerified": true,
+      "sourceCommit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+      "sourceHash": "03da6b4709db3f6326e1917d2b68849b3ed44d1a4bea43a3e0f3805a321eb742",
+      "buildHash": "17c974dc30535f00582c4d26e725137f8711fa65c7f960869584a3f982153e0a",
+      "harnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5"
+    },
+    {
+      "side": "head",
+      "canonicalPath": "benchmarks/accepted/formal-hardware-base79da-final-01/head.json.gz",
+      "rawBytes": 43365482,
+      "rawSha256": "eb82085a8356c29199261a79121a0a72a6c822d35d8cb2ad0a336c79abf67bda",
+      "gzipBytes": 2155840,
+      "gzipSha256": "73c9c90f9f38734eda3fd94ae6129f57b22215e705fe7b57d3cc3eb0da3dc7dc",
+      "decompressionVerified": true,
+      "sourceCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+      "sourceHash": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf",
+      "buildHash": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+      "harnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5"
+    }
+  ],
+  "retained": [
+    {
+      "path": "benchmarks/accepted/formal-hardware-base79da-final-01/manifest-start.json",
+      "bytes": 330,
+      "sha256": "e3827384f0e2f900773df862196f71b22dc9142708ad8bbc238005c4e8f67b76"
+    },
+    {
+      "path": "benchmarks/accepted/formal-hardware-base79da-final-01/manifest.json",
+      "bytes": 2431,
+      "sha256": "63088c491f6809d33afa0bcb4341cc5a7724dd05f61e93944104179d9f942436"
+    },
+    {
+      "path": "benchmarks/accepted/formal-hardware-base79da-final-01/comparison.json",
+      "bytes": 94385,
+      "sha256": "c2abf9d138375dd7bbc03fe4953575dc9a6b9fe53e5e582a6ee1c420d62d91bc"
+    },
+    {
+      "path": "benchmarks/accepted/formal-hardware-base79da-final-01/summary.md",
+      "bytes": 1112,
+      "sha256": "1a5658bc9348af99578db0ec25445e7c12ecb4b7b6f6126a912729e87de0befc"
+    },
+    {
+      "path": "benchmarks/accepted/formal-hardware-base79da-final-01/retention.json",
+      "bytes": 139,
+      "sha256": "08e04ebbb23ca39ac1ddf7116fc6de9050dae9dc219fc562540845ad9c93ab22"
+    }
+  ],
+  "controls": [
+    {
+      "path": "scripts/performance/compare.mjs",
+      "sha256": "03debe324733e2c68d8f09db1fbd1ae1386cbc567b5725124ab1e5d2918a202b"
+    },
+    {
+      "path": "scripts/performance/memory.mjs",
+      "sha256": "68f120fc1db637ac267e6cb5d3afc9278380ba889632bf1afdba6402537dd4bb"
+    },
+    {
+      "path": "scripts/performance/rss.mjs",
+      "sha256": "f6dd076d378b62cd5be456c50c28c2a013b848fe74481defcd084b2ae2e9cb42"
+    },
+    {
+      "path": "scripts/performance/evidence.mjs",
+      "sha256": "fa1f68ed26c4c3b01fff8d5b7b4b67a278b78318cafd54bbf4006b6375bb91d8"
+    },
+    {
+      "path": "scripts/performance/policy.mjs",
+      "sha256": "4de058e40c073c05b189ab309d7af425e7ce912e5965e6b8b918aa6fddb6d93a"
+    },
+    {
+      "path": "scripts/performance/cpu.mjs",
+      "sha256": "ddbfbf8551515441c736bc64a06a746a7a7a4ee4c29ac4aa7d5929c3b0889846"
+    }
+  ],
+  "retired": [
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/base.json",
+      "bytes": 43542163,
+      "sha256": "211a4c320a765eed0ee66a73b5443e9a4b8aaacb9316ef885005ff278ff52a24"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/base-repeat-1.json",
+      "bytes": 7672655,
+      "sha256": "0d8653c6d7cde4e17164e02d5b90f95d34fadcd8431b060980582054d7b0ef43"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/base-repeat-2.json",
+      "bytes": 7684870,
+      "sha256": "ef7ac5622f1cb2604b15062ac789c18b6e8369d974a2e8e272f9a481e6164059"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/base-repeat-3.json",
+      "bytes": 7719707,
+      "sha256": "c309efaf944400eb1693d1b05fa864b1f2c8b680fae4bc8b76cb646c37c0fa9f"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/base-repeat-4.json",
+      "bytes": 7755488,
+      "sha256": "78485377ab77debea79e66c534e7ec1f94d995d28c0b22e7d135e2275ece2268"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/base-repeat-5.json",
+      "bytes": 7742550,
+      "sha256": "d8b7d50b0d15f4e64ccc5d3c88f6cb78a4834e3b24ace549e43d9795d7e3794a"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/head.json",
+      "bytes": 43365482,
+      "sha256": "eb82085a8356c29199261a79121a0a72a6c822d35d8cb2ad0a336c79abf67bda"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/head-repeat-1.json",
+      "bytes": 7666746,
+      "sha256": "30187e3100db157d229b59ce3b2e5650a616dd3ec432bb4761d5a5757e357e99"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/head-repeat-2.json",
+      "bytes": 7676479,
+      "sha256": "2c9c90769e17d99bcd6de51d9d4fe89f83cb98268044719e6c1ce87e5ffed3c1"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/head-repeat-3.json",
+      "bytes": 7673205,
+      "sha256": "613a336125fef6ff9d6dfc6fae270158cdf8f1ea308435bef6a5a4580f1ea2e4"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/head-repeat-4.json",
+      "bytes": 7687811,
+      "sha256": "117ea6e3ffe0ae09d61bf5c03fae0a786ab98f49fbfffc8363bfc1a31cf01acf"
+    },
+    {
+      "path": "benchmarks/records/formal-hardware-base79da-final-01/head-repeat-5.json",
+      "bytes": 7725935,
+      "sha256": "1ec7512c4b1636882cc4b8e7d59ea8354f07a0af7da1746f8fdc49dbfae4ab8b"
+    }
+  ],
+  "skipped": [],
+  "removedLogicalBytes": 163913091,
+  "scope": "Only the twelve listed regular aggregate/duplicate-repeat JSON files in this completed formal invocation. All raw samples remain in two verified canonical gzip records. Prior pilots and failed setup diagnostics remain pending named-purpose audit; no previews/builds/source/helpers/captures touched.",
+  "disposedAt": "2026-10-10T05:21:15.863Z",
+  "coordinatorVerification": {
+    "recordedAt": "2026-10-10T05:29:14.970Z",
+    "decompressionBothRawExact": true,
+    "unchangedComparatorAllFieldsExact": true,
+    "pairWrapperMetadata": "localDirtyHeadAllowed false reproduced from both raw records; standalone compareRecords does not add this coordinator field",
+    "status": "fail",
+    "promotion": "benchmarks/accepted/formal-hardware-base79da-final-01",
+    "scope": "Canonical retained failed evidence; accepted directory means retention verified, not performance acceptance. Original collector retention.json is an immutable historical settlement snapshot superseded by this storage disposition."
+  }
+}

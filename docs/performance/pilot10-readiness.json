@@ -1,1 +1,283 @@
-{"scope":"Final-art candidate13 readiness from immutable exploratory raw/audit. Single repetitions, nonexclusive hardware and variable baseline02 do not establish formal acceptance or source-causal benefit.","formalAcceptance":false,"harness":"becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5","latestMeasured":{"raw":{"path":"benchmarks/records/candidate13-memory-pilot-01.json","sha256":"5e8c60be16aa069285b76176c28358616a03f6f859dd0a5aeaf137632519c237","bytes":8765864},"audit":{"path":"benchmarks/records/candidate13-memory-pilot-01.json.audit.json","sha256":"4cefef17f2d9e74efc8449bce395070ec2ea29d983adbb60fbf462d6fa55a91e","bytes":10333},"startedAt":"2026-10-10T03:05:56.077Z","finishedAt":"2026-10-10T03:13:38.090Z","elapsedSeconds":462.013,"processSession":15326,"source":"4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb","dirty":true,"build":"b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b","harness":"becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5","chrome":"ccffd5c5fe77ba3212e07c2c69091f8048b73c396b4647ecaa150e1e01a04954","chromeFileSha256After":"ccffd5c5fe77ba3212e07c2c69091f8048b73c396b4647ecaa150e1e01a04954","unchanged":true,"timingBrowserClosed":true,"memoryBrowserClosed":true,"browserClosed":true,"closureTimeScope":"Closed flags before final settlement; no separate close timestamps retained by frozen collector","scenarios":7,"windows":35,"transitions":24,"builds":5,"menus":4,"errors":[],"coordinatorCpuVerification":{"integrationTests":297,"catalogue":36},"sampling":{"heapSamples":2057,"rssSamples":838,"maxGapMs":397.8611670000246,"maxRequestLatencyMs":296.51162500004284,"verifiedTurnoverAttempts":0},"ownership":{"observed":297922,"remaining":0,"doubleDisposed":0,"idempotent":true,"strictCountAndBytePlateausValidated":true},"display":{"recordedAt":"2026-10-10T02:35:09.877Z","observedAt":null,"setting":"60 Hertz","original":"ProMotion","restoration":"pending after physical work","scope":"Coordinator CUA full accessibility verification of selected Built-in Display; Dell untouched. Not an OS probe performed by collector."}},"diagnostics":{"allowancesUnchanged":true,"coverageValidationMethod":"Original formal validator rejects exploratory records. Full coverage revalidated on disposable in-memory copies with repeats=1 and matching policy digest only; other checks unchanged. No modified raw persisted. Formal variance/agreement require full clean paired repetitions.","deterministicWarnings":[],"peakWarningCounts":{"base02":{"heapBytes":5,"backingStorageBytes":0,"processRssBytes":0},"head12":{"heapBytes":3,"backingStorageBytes":9,"processRssBytes":0}},"heapComparisonRows":[{"id":"transition/1/home-reef","baselineMiB":37.911685943603516,"head12MiB":51.23796463012695,"head13MiB":61.29236602783203,"ceilingMiB":45.911685943603516,"head13ExceedsBoth":true},{"id":"transition/9/home-reef","baselineMiB":66.5142936706543,"head12MiB":77.15127944946289,"head13MiB":61.47496795654297,"ceilingMiB":76.49143772125244,"head13ExceedsBoth":false},{"id":"transition/11/salvage:home-pearls","baselineMiB":40.8081169128418,"head12MiB":70.20003509521484,"head13MiB":71.17523193359375,"ceilingMiB":48.8081169128418,"head13ExceedsBoth":true},{"id":"transition/20/salvage:horizon-wreck","baselineMiB":40.227325439453125,"head12MiB":71.45399475097656,"head13MiB":64.12384033203125,"ceilingMiB":48.227325439453125,"head13ExceedsBoth":true},{"id":"entry/home-reef","baselineMiB":45.54301452636719,"head12MiB":60.72068405151367,"head13MiB":59.316524505615234,"ceilingMiB":53.54301452636719,"head13ExceedsBoth":true},{"id":"entry/sheltered-cove","baselineMiB":42.15487289428711,"head12MiB":82.3117446899414,"head13MiB":60.59518051147461,"ceilingMiB":50.15487289428711,"head13ExceedsBoth":true}],"previousSixComparison":{"previousWarnings":6,"previousCleared":1,"previousStillWarn":5,"newWarnings":0,"totalHead13Warnings":5},"postGcWarnings":{"base02":[],"head12":[]},"cpuFirstThree":[{"id":"follow-stationary","head13MsPerSecond":133.4377889996788,"freshFixed60BaselineMsPerSecond":140.68724097999126,"exceedsBothAllowances":false},{"id":"sailing-circuit","head13MsPerSecond":130.61338708391472,"freshFixed60BaselineMsPerSecond":139.40161615457245,"exceedsBothAllowances":false},{"id":"moving-dive-home-reef","head13MsPerSecond":109.86416335898409,"freshFixed60BaselineMsPerSecond":136.87651321210916,"exceedsBothAllowances":false}],"geometryHome":{"base02":296,"head12":319,"head13":319},"frameMedianMs":16.7,"frameP95RangeMs":[17.4,17.6],"groupPeakMiB":{"transition":[[52.08,64.12,77.15],[79.5,88.18,96.46],[1205.09,1292.33,1318.16]],"startup":[[19.38,19.38,19.48],[13.41,13.41,14.68],[1183.83,1183.83,1220.83]],"build":[[17.16,17.95,18.31],[6.3,6.3,6.31],[1192.63,1195.06,1222.13]],"entry":[[59.32,60.6,72.48],[51.65,71.81,119.75],[1405.66,1450,1478.25]]},"groupColumns":"heap/backing/RSS; each min/median/max window peak MiB","interpretation":"Five heap windows warn versus variable baseline02; versus fixed60 head12 three heap/nine backing peaks warn. No RSS peak or post-GC warning. Strict count/byte plateaus/disposal validate with297922 observed resources. These checks do not establish universal absence of leaks, physicalVRAM use or formal acceptance.","mechanismLimit":"Runtime usedSize maxima cover retained plus transient JS heap under natural GC. No allocation stacks or GC-reason trace was collected; bracketing timestamps cannot identify an allocating function or prove cache causality. Forced GC checkpoints are after sampled windows; no overlap or ownership growth found. Five clean matched repetitions, finite variance/allowances and actual base must decide formal disposition. No more exploratory/art cycles."},"nextMeasurement":{"status":"Candidate13 final art; no further exploratory or art cycles","requirement":"Final QA and301/301 full suite are complete. Clean feature commit/build provenance precede one full hardware cycle with unchanged five alternating pairs and first hosted CI. If matched formal evidence fails, choose a bounded demonstrated allocation fix or measured revert; do not widen budgets or change GC/sampling to pass.","scope":"Candidate13 final art is84.5/95 assessed;5 resolution points pending;maximum possible89.5/100. Target95 is unmet. Current source is unchanged from pilot13; no inherited formal pass."},"historicalReferences":[{"label":"base02","path":"benchmarks/records/baseline-79da54b-memory-pilot-02.json","rawSha256":"4e3e3d532dae3b29efb89911ba7f3d4f83eba9f6553521542e120e53f6762e79"},{"label":"head12","path":"benchmarks/records/candidate12-memory-pilot-01.json","rawSha256":"06450c91227ba04180dfb9128af70c583d36383b88a26788813addcf3e65485a"}],"fixed60CpuReference":{"path":"benchmarks/records/baseline-first-three-60hz-01/result.json","rawSha256":"0570d49476a34023793e3e02d0a184d7cd41eb785b524e77a896e0bb43305f73","scope":"Validated92.0s unprofiled first-three-only baseline,5+20s originalwindows; fixed60 coordinator/UI verified. No Profiler/requestedGC/memory/menu rounds; no formal comparison."},"boundedCPUProbe":{"source":"assets/cleanup/underwater-models.js","postPilotParentSourceSha256":"03cda1186c62c6cec04a84e0e99401510f2513c19ec9cad3518cf94075e8e2d5","pilot10SourceSha256":"d059baf9f5100f0c728ebcdd9f81191ab2f2e4393372bc24af11ad420d4ae898","method":"One real type0 colony; original clone call substituted only in an in-memory module; no source writes or heap/timing measurements. Source unchanged during probe.","primitiveConstructorsCloneCopy":[210,105],"discardedDefaultSpheresCloneCopy":[105,0],"avoidedNumberArraySlots":773640,"discardedDefaultVertices":58905,"discardedDefaultIndices":302400,"mergedAttributeIndexSha256Both":"c86537b2b85f11199694ae3314b5e10550b3d9fc1c5b8e8bc971a20efbe19698","sourceGeometryDisposalExactlyOnce":true,"paintExactTopologies":3},"gcModifier":{"status":"Plausible scheduling modifier, not measured cause","scope":"Sampled heap falls do not identify GC events or reasons. Both legacy and old head clone paths reconstructed primitives; allocation proof alone cannot identify relative peak cause.","sources":["https://v8.github.io/api/head/classv8_1_1ArrayBuffer_1_1Allocator.html","https://chromium.googlesource.com/v8/v8/+/1186fc5008cc0dbf187c06e0d54bbbf724e5fd71/src/heap/heap.cc"]},"finalPrecommitVerification":{"source":"Coordinator-reported final wrapup; no new performance measurement","fullSuite":{"passed":301,"total":301,"cpuJobsExited":true},"catalogueValidated":36,"qa":{"characterCases":4,"gameplayCases":6,"lowCases":4,"errors":0,"guardsUnchanged":true,"ownedBrowsersClosed":true},"art":{"independentMotionReview":"complete","assessedScore":84.5,"assessedMaximum":95,"pendingResolutionPoints":5,"maximumPossibleOverall":89.5,"overallMaximum":100,"target95Met":false,"allViewsClosed":true},"coordinatorCleanup":{"retiredQaCaptures":875,"retiredQaCaptureBytes":365886000,"aggregateRetiredLogicalBytes":6257565696,"retainedCanonicalPngs":4,"retainedCanonicalClips":3,"canonicalEvidencePath":"docs/art/evidence"},"display":{"setting":"60 Hertz","original":"ProMotion","restoration":"pending"},"next":"Clean feature commit and matching build provenance, then explicit release for the unchanged full five-alternating-pair hardware cycle; hosted CI remains required."}}
+{
+  "schema": 2,
+  "purpose": "Current final disposition plus one compact historical diagnostic ledger; original filename retained for existing links",
+  "formal": {
+    "status": "fail",
+    "accepted": false,
+    "collectorExitCode": 1,
+    "session": "formal-hardware-base79da-final-01",
+    "startedAt": "2026-10-10T03:57:52.671Z",
+    "finishedAt": "2026-10-10T05:13:42.268Z",
+    "elapsedSeconds": 4549.597,
+    "baseCommit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+    "headCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+    "measuredHarnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5",
+    "repetitionsPerSide": 5,
+    "order": "AB/BA/AB/BA/AB",
+    "counts": {
+      "pass": 319,
+      "fail": 1,
+      "inconclusive": 6
+    },
+    "collectionErrors": 0,
+    "all20OwnedBrowserSessionsClosed": true,
+    "sourceBuildControlsUnchanged": true,
+    "independentAudit": "Gibbs validated raw coverage/identity/closure/RSS/resource plateaus and reproduced all326 gate outcomes",
+    "nonpassingGates": [
+      {
+        "name": "cold/menuReadyMs",
+        "verdict": "inconclusive",
+        "baseMedian": 54.09999990463257,
+        "candidateMedian": 58.89999961853027,
+        "delta": 4.799999713897705,
+        "absoluteAllowance": 75,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.15600000381469725,
+        "noiseC": 0.050666669209798176,
+        "agreement": 0,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/transition/1/home-reef/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 41404192,
+        "candidateMedian": 62362856,
+        "delta": 20958664,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.038730281223698315,
+        "noiseC": 0.03629628508354396,
+        "agreement": 3,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/transition/8/salvage:horizon-wreck/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 65427744,
+        "candidateMedian": 66176456,
+        "delta": 748712,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.12002700261222518,
+        "noiseC": 0.02043911206124426,
+        "agreement": 1,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/transition/20/salvage:horizon-wreck/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 61250940,
+        "candidateMedian": 68813628,
+        "delta": 7562688,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.1811340038210026,
+        "noiseC": 0.013509707699178424,
+        "agreement": 1,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/entry/home-reef/heapBytes",
+        "verdict": "fail",
+        "baseMedian": 42574900,
+        "candidateMedian": 69358920,
+        "delta": 26784020,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.012592395989186116,
+        "noiseC": 0.012154341503587426,
+        "agreement": 5,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/entry/sheltered-cove/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 103537016,
+        "candidateMedian": 95373424,
+        "delta": -8163592,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.015610996554121282,
+        "noiseC": 0.008250390590988954,
+        "agreement": 2,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/entry/salvage:home-pearls/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 83037560,
+        "candidateMedian": 61133544,
+        "delta": -21904016,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.0014850629040641368,
+        "noiseC": 0.2438918312996871,
+        "agreement": 1,
+        "repetitions": 5
+      }
+    ],
+    "interpretation": "Home-entry heap regression exceeds both finite allowances in5/5 pairs with low variance. Combined-source comparison has no allocation-stack/GC-reason attribution or demonstrated selective revert. No passing overall-improvement claim. No additional hardware/art/optimization cycles authorized."
+  },
+  "retention": {
+    "status": "compacted-failed-evidence",
+    "ledger": "docs/performance/formal-retention.json",
+    "canonical": [
+      {
+        "side": "base",
+        "canonicalPath": "benchmarks/accepted/formal-hardware-base79da-final-01/base.json.gz",
+        "rawBytes": 43542163,
+        "rawSha256": "211a4c320a765eed0ee66a73b5443e9a4b8aaacb9316ef885005ff278ff52a24",
+        "gzipBytes": 2157074,
+        "gzipSha256": "c2a1b2ae5ca2bca46bc4c71427e500c9cc8e24bb72f1db1cbb2c92c9b4e9d432",
+        "decompressionVerified": true,
+        "sourceCommit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+        "sourceHash": "03da6b4709db3f6326e1917d2b68849b3ed44d1a4bea43a3e0f3805a321eb742",
+        "buildHash": "17c974dc30535f00582c4d26e725137f8711fa65c7f960869584a3f982153e0a",
+        "harnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5"
+      },
+      {
+        "side": "head",
+        "canonicalPath": "benchmarks/accepted/formal-hardware-base79da-final-01/head.json.gz",
+        "rawBytes": 43365482,
+        "rawSha256": "eb82085a8356c29199261a79121a0a72a6c822d35d8cb2ad0a336c79abf67bda",
+        "gzipBytes": 2155840,
+        "gzipSha256": "73c9c90f9f38734eda3fd94ae6129f57b22215e705fe7b57d3cc3eb0da3dc7dc",
+        "decompressionVerified": true,
+        "sourceCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+        "sourceHash": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf",
+        "buildHash": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "harnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5"
+      }
+    ],
+    "totalGzipBytes": 4312914,
+    "allRawSamplesLosslesslyRetained": true,
+    "unchangedComparatorReproduced": true,
+    "retiredFiles": 12,
+    "removedLogicalBytes": 163913091,
+    "skips": 0,
+    "priorPilots": {
+      "status": "13 superseded groups retired",
+      "ledger": "docs/performance/pilot-retirement.json",
+      "removedFiles": 43,
+      "removedLogicalBytes": 114784522,
+      "skips": 0,
+      "retainedCpuDirectories": 0
+    },
+    "coordinatorPromotion": "Parent independently verified and promoted seven final artifacts; accepted storage is failed evidence, not a passing result"
+  },
+  "softwareFixture": {
+    "status": "P2 accepted by Gibbs; CPU validation complete; one actual hosted software-browser cycle pending",
+    "harnessSha256": "367ba2b5386a8dc9c4c29ebbf1f8eb7e79e27540c3d1671c64441fdd2951d590",
+    "targetedTests": {
+      "passed": 14,
+      "total": 14
+    },
+    "mechanism": "ci-software only: normal bounded A/D steering at rest to face the buoy, then fresh metrics and unchanged actual DOM/raycast/click checks. Both down and wait guarded by finally up. Hardware path/policies/comparator unchanged.",
+    "legacyCpuValidation": {
+      "scope": "CPU-only immutable legacy domain, scene camera/projection/raycaster and main pointer handlers; software-facing tests plus unchanged hardware entry control. Rendering/network/DOM delivery adapted; no browser launched.",
+      "passed": 7,
+      "sourceHash": "03da6b4709db3f6326e1917d2b68849b3ed44d1a4bea43a3e0f3805a321eb742",
+      "sourceUnchanged": true,
+      "adapterSha256": "725542b5ef062a8f92ba5bf22fc78b5d713149cc70814ff4526d882542748709",
+      "harnessSha256": "367ba2b5386a8dc9c4c29ebbf1f8eb7e79e27540c3d1671c64441fdd2951d590",
+      "temporaryAdapterRemoved": true,
+      "limitation": "Hosted browser validation remains pending. Earlier broad adapter run passed12/13; the current-scene centre/cabin assertion differs on legacy geometry and is not a legacy input contract. Initial adapter preparation lacked legacy mergeGeometries injection; corrected before targeted validation."
+    },
+    "hosted": {
+      "firstRun": "38022325442",
+      "job": "114125781631",
+      "status": "failed before complete coverage: Low960x600 home buoy behind camera projected under gather-button",
+      "artifact": {
+        "id": "11658478991",
+        "name": "performance-38022325442-1",
+        "bytes": 179795,
+        "sha256": "5079fc83e86478da184c1ee5cd3f1b5253994d31c1fa27984b8f06337fde99a3",
+        "expiresAt": "2026-11-09T04:01:09Z",
+        "source": "Parent GH API verification; not downloaded or duplicated"
+      },
+      "next": "One final hosted cycle after coordinator clean commit/push; a software pass cannot erase formal hardware failure",
+      "timeoutMinutes": 90,
+      "completeSwiftShaderCostMeasured": false
+    }
+  },
+  "wrapup": {
+    "draftBlocked": true,
+    "art": {
+      "score": 88.5,
+      "maximum": 100,
+      "target": 95,
+      "targetMet": false,
+      "historicalVisualMotionAssessment": "84.5/95; final resource assessment4/5"
+    },
+    "finalQa": {
+      "character": 4,
+      "gameplay": 6,
+      "low": 4,
+      "errors": 0,
+      "browsersClosed": true
+    },
+    "display": {
+      "recordedAt": "2026-10-10T02:35:09.877Z",
+      "observedAt": null,
+      "method": "CUA System Settings Displays full accessibility state",
+      "display": "Built-in Display",
+      "refreshRate": "60 Hertz",
+      "selectedDisplay": true,
+      "original": "ProMotion",
+      "restoration": {
+        "status": "restored",
+        "value": "ProMotion",
+        "observedAt": null,
+        "recordedAt": "2026-10-10T05:15:45.428Z",
+        "method": "CUA fresh System Settings accessibility tree showed Refresh rate Value ProMotion; observation tool supplies no timestamp"
+      },
+      "secondaryDisplay": "DELL U3415W; untouched"
+    },
+    "buildProvenance": "docs/reviews/current-improvement/committed-build-provenance.json",
+    "closureRecord": "docs/governance/final-session-closure.json",
+    "ownRetirementLedgerSeparate": true,
+    "parentFinalVerification": {
+      "fullSuitePassed": 308,
+      "fullSuiteTotal": 308,
+      "elapsedSeconds": 10.752,
+      "catalogueValidated": 36,
+      "GibbsTargetedTestsPassed": 14,
+      "openReviewerFindings": 0,
+      "sourceInputsMatchMeasuredProductionCommit": true,
+      "sourceHash": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf"
+    },
+    "cleanupLogicalBytesBeforeFinalCpuRetirement": 6760734160,
+    "finalCpuRetirementLogicalBytes": 6108098,
+    "combinedReportedCleanupLogicalBytes": 6766842258
+  },
+  "remainingDependencies": {
+    "activeMeasurement": "none; no owned Chrome/process/session remains",
+    "heldByCoordinator": [],
+    "requirement": "All local work/dependencies ended. Final hosted software cycle uses independent checkouts/builds after coordinator commit/push; no local preview or temporary source is required.",
+    "retainedProof": "Parent-promoted failed canonical raw, saved comparison/manifest/summary, durable build inventories and Git79da54b/6acc82a are self-contained. CPU raw directories/helper retired; compact diagnostic outcomes/hashes retained.",
+    "coordinatorFinalDisposal": {
+      "source": "Coordinator report; no new scan/measurement",
+      "finishedAt": "2026-10-10T05:39:02.817Z",
+      "regularFiles": 271,
+      "logicalBytes": 194904084,
+      "symlinksUnlinkedWithoutTraversal": 1,
+      "emptyDirectoriesRemoved": 43,
+      "skips": 0,
+      "previewSessionsClosed": [
+        27119,
+        21949
+      ],
+      "scope": "Final root/published builds, baseline dist/source snapshot and parent-owned temporaries retired; current dependencies never traversed"
+    }
+  },
+  "historicalDiagnosticLedger": "docs/performance/pilot-retirement.json",
+  "closedCpuDiagnosticPurposes": {
+    "ledger": "docs/performance/pilot-retirement.json",
+    "removedFiles": 24,
+    "removedDirectories": 4,
+    "removedLogicalBytes": 6108098,
+    "skips": 0,
+    "inventorySha256": "00f17f9254a632ea0d28121bed29c7ab7794bee1757489f80b5bb21239d25bed",
+    "scope": "Both historical CPU proof directories and exact679996 fairness helper retired after explicit purpose closure. Numerical diagnostics/raw hashes remain; perturbed CPU profiles are not causal heap evidence."
+  }
+}

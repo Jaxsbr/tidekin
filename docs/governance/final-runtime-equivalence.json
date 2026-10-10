@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-10T05:30:57.866Z",
+  "productionSourceHash": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf",
+  "sourceMatchesMeasuredCommit": true,
+  "measuredCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+  "workingTreeDirty": true,
+  "rootBuildHash": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+  "publishedBuildHash": "5d42418649c64c362b3e7ea1466b644e4562b0d13861ca78712c977abd1e871e",
+  "harnessHash": "367ba2b5386a8dc9c4c29ebbf1f8eb7e79e27540c3d1671c64441fdd2951d590",
+  "measuredHardwareHarness": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5",
+  "scope": "Production source and both distribution inventories remain exactly identical to measured6acc82a. Subsequent edits are documentation, retention and software-only fixture steering; hardware collection was not repeated with the later control hash."
+}

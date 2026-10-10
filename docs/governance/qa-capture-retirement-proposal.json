@@ -41,7 +41,7 @@
   },
   "durableFinalEvidence": {
     "path": "docs/qa-final.json",
-    "sha256": "91dc9fa14cde14f3776d885f61bc2ada16e32b2583abacad6a5a66f41294167a",
+    "sha256": "e0000dd5328f338c13bac8a3e09fd45909b4665768c30374ac83b91173cffe50",
     "purpose": "Final13 source/build/controllers, original report hashes, case outcomes, earned coverage, closure/errors and all36 clip PTS/frame records. Historical originalLocation values are identities, not promises of live transient files."
   },
   "historicalArtReview": {
@@ -187,5 +187,27 @@
     "authority": "Parent accepted exact875-file applied outcome with0 skips and authorized only this giant ledger removal.",
     "verification": "All ancestors O_DIRECTORY|O_NOFOLLOW; ledger O_NOFOLLOW/fstat regular, SHA256 and named identity immediately verified before dir_fd unlink."
   },
-  "ledgerRetired": true
+  "ledgerRetired": true,
+  "followupTemporaryCleanup": {
+    "status": "COMPLETE",
+    "recordedAt": "2026-10-10T05:17:59.170Z",
+    "entries": [
+      {
+        "path": ".scratch/qa-low-path-diagnostic.mjs",
+        "type": "regular-file",
+        "bytes": 21623,
+        "sha256": "4444046b91dd0ed829950a10f89fec824af39400d092283f4115140394358d41"
+      }
+    ],
+    "totalBytes": 21623,
+    "purposeClosed": "Ten-native/art-rest-waterline and earlier temporaryLow captures completed; selected evidence/durable hashes retained. Maintained scripts/qa/low-path.mjs supplies reusableLow/path coverage.",
+    "consumers": "No operational path references found in docs/scripts/tests/package or sibling scratch modules; historical helper SHA remains in durable evidence.",
+    "verification": "Every ancestor O_DIRECTORY|O_NOFOLLOW; file O_NOFOLLOW/fstat regular; exact size/SHA and descriptor/named identity immediately verified before dir_fd unlink. No directory or other file removed.",
+    "scope": "Only listed QA-owned helper; no general build/provenance/log, performance, baseline or other-owner file is proposed. No other attributable QA temporary log found in scratch root.",
+    "deletedFiles": 1,
+    "authority": "Explicit parent authorization of only listed regular21623-byte helper with SHA4444046b91dd0ed829950a10f89fec824af39400d092283f4115140394358d41.",
+    "appliedAt": "2026-10-10T05:19:53.899Z",
+    "deletedBytes": 21623,
+    "skips": []
+  }
 }

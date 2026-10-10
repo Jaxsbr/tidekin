@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "recordedAt": "2026-10-10T05:16:18.745Z",
+  "buildProvenance": {
+    "path": "docs/reviews/current-improvement/committed-build-provenance.json",
+    "bytes": 25330,
+    "sha256": "86f5ffc77f0833f2c62837aa0891a3fdeb64c7f893e7682c82837bd81636d931",
+    "scope": "Fresh committed production build at 6acc82a; source and build guards preserved exactly. Display field is historical build-time state."
+  },
+  "display": {
+    "recordedAt": "2026-10-10T02:35:09.877Z",
+    "observedAt": null,
+    "method": "CUA System Settings Displays full accessibility state",
+    "display": "Built-in Display",
+    "refreshRate": "60 Hertz",
+    "selectedDisplay": true,
+    "original": "ProMotion",
+    "restoration": {
+      "status": "restored",
+      "value": "ProMotion",
+      "observedAt": null,
+      "recordedAt": "2026-10-10T05:15:45.428Z",
+      "method": "CUA fresh System Settings accessibility tree showed Refresh rate Value ProMotion; observation tool supplies no timestamp"
+    },
+    "secondaryDisplay": "DELL U3415W; untouched"
+  },
+  "formalHardware": {
+    "session": "formal-hardware-base79da-final-01",
+    "finishedAt": "2026-10-10T05:13:42.268Z",
+    "status": "fail",
+    "collectorRecords": 10,
+    "allRecordsComplete": true,
+    "allRecordsBrowserClosed": true,
+    "collectionErrors": 0,
+    "materialFailure": "memory-peak/entry/home-reef/heapBytes",
+    "baseline": 42574900,
+    "candidate": 69358920,
+    "independentAudit": "Gibbs validated all ten coverage/identity/closure/RSS/plateau records and reproduced319pass/1fail/6inconclusive; home-entryheapfails5/5pairs.",
+    "limits": "Combined-source comparison does not identify causal contribution. No threshold changes or further art/hardware cycles authorized in the wrap-up."
+  },
+  "art": {
+    "score": 88.5,
+    "maximum": 100,
+    "target": 95,
+    "targetMet": false,
+    "scope": "Independent agent judgment; 84.5 visual/motion points plus4/5resource discipline; no exact human asset approval inferred."
+  },
+  "finalCpuVerification": {
+    "tests": 308,
+    "passed": 308,
+    "failed": 0,
+    "catalogueAssets": 36,
+    "catalogueErrors": 0,
+    "scope": "After final software-only buoy fixture correction, including post-registration key-down failure; independent focused review14/14; no production runtime changes."
+  },
+  "runtimeEquivalence": "final-runtime-equivalence.json",
+  "previewServers": {
+    "sessions": [
+      27119,
+      21949
+    ],
+    "exitCodes": [
+      130,
+      130
+    ],
+    "status": "closed after owner release; no operational dependency remains"
+  },
+  "temporaryBuildsAndSnapshot": {
+    "status": "retired",
+    "ledgerSha256": "13366cb484d22797fca7eeb48999428947b1b66da44b0fa3e01cd4d324397b64",
+    "appliedAt": "2026-10-10T05:39:02.817237+00:00",
+    "files": 271,
+    "symlinks": 1,
+    "logicalBytes": 194904084,
+    "emptyDirectories": 43,
+    "skips": 0,
+    "limits": "Current repo dependencies, original skill and human references untouched; baseline node_modules symlink unlinked without traversal."
+  },
+  "cleanup": {
+    "logicalBytes": 6766842258,
+    "limits": "Aggregate of applied and owner-reported distinct scopes; no filesystem free-space claim. Compact ledger/outcomes in cleanup-summary.json; protected human/source/reference purposes retained."
+  },
+  "hostedStatusAuthority": "../performance/hosted-ci.json and exact-head GitHub PR1 checks; local closeout does not predict its own commit check result."
+}

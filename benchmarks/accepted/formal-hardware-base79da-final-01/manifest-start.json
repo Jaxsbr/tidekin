@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "status": "running",
+  "startedAt": "2026-10-10T03:57:52.671Z",
+  "expectedBase": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+  "expectedHead": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+  "profile": "hardware",
+  "session": "formal-hardware-base79da-final-01",
+  "stages": [],
+  "errors": [],
+  "order": []
+}

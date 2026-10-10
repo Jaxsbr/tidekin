@@ -272,5 +272,40 @@
     "productionSourceChanged": false,
     "allBrowserAndDecodeProcessesExited": true,
     "finalGPUReturnedAt": "2026-10-10T03:36:30.139Z"
+  },
+  "settlement": {
+    "recordedAt": "2026-10-10T05:17:59.170Z",
+    "cleanCandidateCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+    "captureScope": "Original Candidate13 character4/gameplay6/maintainedLow4 outcomes remain capture-time evidence; no later collection or performance acceptance inferred.",
+    "productionByteEquivalence": {
+      "rootInventorySha256": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+      "publishedInventorySha256": "5d42418649c64c362b3e7ea1466b644e4562b0d13861ca78712c977abd1e871e",
+      "filesVerifiedPerBuild": 13,
+      "capturedSourceSha256": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+      "cleanSourceSha256": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf",
+      "sourceInventoryDifference": "32 already-missing tracked paths disappear from clean committed inventory; all remaining actual input file bytes agree. Do not assert equal source inventory digests.",
+      "historicalFinalProvenanceSha256": "86f5ffc77f0833f2c62837aa0891a3fdeb64c7f893e7682c82837bd81636d931"
+    },
+    "formalPerformance": {
+      "status": "fail",
+      "candidateCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+      "originalComparisonLocation": "benchmarks/records/formal-hardware-base79da-final-01/comparison.json",
+      "comparisonSha256": "c2abf9d138375dd7bbc03fe4953575dc9a6b9fe53e5e582a6ee1c420d62d91bc",
+      "checks": {
+        "pass": 319,
+        "inconclusive": 6,
+        "fail": 1
+      },
+      "failedCheck": "memory-peak/entry/home-reef/heapBytes",
+      "deltaBytes": 26784020,
+      "ownerDisposition": "docs/performance/README.md",
+      "scope": "Separate hardware outcome; QA pass does not imply formal benefit. Raw performance cleanup remains performance-owner scope."
+    },
+    "displayRestoration": {
+      "status": "ProMotion restored",
+      "authority": "Coordinator reports fresh accessibility verification after all ten hardware runs closed.",
+      "observedAt": null,
+      "captureDisplayUnchanged": "Original captured60Hz context/provenance remains historical; no restored observation timestamp invented."
+    }
   }
 }

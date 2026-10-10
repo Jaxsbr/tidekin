@@ -1,6 +1,6 @@
 # Independent character review
 
-Candidate13 is final at the user's direction. **84.5/95 assessed; resource discipline remains pending. Maximum 89.5/100;95 is unmet.** Further art iterations are closed. This is agent judgment of actual outputs, not human production approval.
+Candidate13 is final at the user's direction. **88.5/100 final: the unchanged84.5/95 visual/motion assessment plus4/5 resource points.95 is unmet. Formal hardware acceptance is FAIL.** Further art iterations are closed. This is agent judgment of actual outputs, not human production approval.
 
 The fixed [rubric](character-evidence-rubric.md), [original splash](../../public/assets/menu-art.png) and [user reference](../../assets/reference/ocean-workshop.png) remain the anchors. All five still ratings stay 4.5: **67.5/75**. Temporal ratings are fresh; source counts/tests earn no visual points.
 
@@ -13,9 +13,9 @@ The fixed [rubric](character-evidence-rubric.md), [original splash](../../public
 | Animation and pose appeal | 10 | 4 | 8 | Planted-looking deck point, restrained rest/tread, alternating asymmetric limbs, directional tilt, reach and return are deliberate/readable. Swim repeats a limited stroke vocabulary while expression changes little; convincing appeal, not exceptional timing. |
 | Cross-scene continuity | 10 | 4.5 | 9 | Same child, face, goggles and costume survive reversal, descent/ascent and work. Scarf retains breadth in both headings but compresses behind chest/head during turns. Surface transition retains identity; sampling cannot exclude brief defects. |
 | Composition at normal scale | 5 | 4.5 | 4.5 | Open aft body/feet and water-backed pointing hand read wide/square; waterline face clear of HUD. Timber approaches crown/shoulder and right-facing crown meets reef detail. |
-| Resource discipline | 5 | Pending | — | Low/reduced presentation and construction/disposal evidence available; formal integrated paired frame/memory acceptance pending. No completed100-point score or technical acceptance claimed. |
+| Resource discipline | 5 | 4 | 4 | Actual batching, counts, Low/reduced presentation, once-only release and strict plateaus support convincing resource discipline. Formal size/count/backing/frame gates pass; the integrated fresh-home-entry heap regression and six inconclusive gates prevent technical acceptance or exceptional integrated resource claims. |
 
-These explain the final result, not requests for another iteration. Even perfect resources cannot reach95.
+These explain the final result, not requests for another iteration. The previously reported84.5/95 remains intact; its89.5 maximum is now resolved to88.5/100. Even perfect resources could not reach95.
 
 ## Evidence and method
 
@@ -29,7 +29,26 @@ This is agent frame-sequence judgment, **not continuous human playback or every-
 
 Final character 4/4, gameplay 6/6 and Low 4/4 reports complete/unchanged/zeroerrors. Owned Chrome closure 03:21:51.701Z,03:27:40.887Z,03:28:53.312Z on 2026-10-10; character decode finished 03:22:26.095Z. Reviewer launched no browser/GPU, changed no source/build/rubric and closed all decoding/views before handback. Fixtures are staged; character QA does not certify earned progression. Baseline02-wide repairs only Baseline01's failed wide case; three other passing01 cases remain scoped history. AnchorBaseline03 validates one reach anchor only.
 
-[Construction proof](character-cpu-proof.json): 22 meshes/geometries, 37 groups, 8 materials, 15340 triangles, 441924 attached bytes; 216 intermediate geometries disposed; 22 retained geometries/8 materials released once. Source-bound13 exploratory pilot observes 297922 resources, zero remaining/double-disposed and strict plateaus. [Performance status](../performance/implementation-status.md) records 35 memory windows/seven timed scenarios, peak warnings and pending formal pairing/CI. Useful observations, not formal acceptance or automatic points.
+[Construction proof](character-cpu-proof.json):22 meshes/geometries,37 material draw groups,8 materials,15340 triangles,441924 attached bytes;216 intermediate geometries disposed;22 retained geometries/8 materials released once. Gibbs's [independent technical audit](../reviews/current-improvement/technical-review.md#settled-formal-hardware-comparison--independently-reproduced-fail) reproduces these counts, batching/ownership evidence and the settled formal comparison. Test counts earn no visual points.
+
+## Final resource disposition
+
+The retained [formal comparison](../../benchmarks/accepted/formal-hardware-base79da-final-01/comparison.json) covers five alternating repetitions per side, completed `2026-10-10T05:13:42.268Z`, clean baseline79da versus candidate `6acc82a545a59d643b7649957bc39bf9cb02bb63`. Final root build SHA256 `b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b` matches the reviewed13 build; formal source inventory `d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf` is the later clean integration identity, not the earlier capture source inventory. Gibbs independently validates all ten raw runs, unchanged guards, recorded closures and every comparison gate. Comparison SHA256 `c2abf9d138375dd7bbc03fe4953575dc9a6b9fe53e5e582a6ee1c420d62d91bc`; technical-audit snapshot read for this disposition SHA256 `6f587b27ec6cb15937d730a83a8ef0ae8f6df8f1f9f10f177a95a339b155f72b`.
+
+| Relevant measured evidence | Baseline → final | Disposition |
+| --- | --- | --- |
+| Root JS raw /level9 gzip |774327→784278 B /215814→219674 B|Pass unchanged size limits; gzip ceiling220130.28 B|
+| Total build /assets |71235044→14543442 B /70417148→13715578 B|Pass; CSS32763→32780 B, gzip8619→8611 B also pass|
+| Home dive observed geometries |296→319|Pass unchanged maximum allowance32; these whole-scene counts differ from character-only22|
+| Home inside CPU geometry backing |90529700→27832880 B|Pass; deduplicated ArrayBuffer storage, not physical VRAM|
+| CPU ownership /plateaus |Candidate297922 observed;0 remaining;0 double disposed|Strict count/backing plateaus and idempotence validate|
+| Final post-GC heap |12648768→13087232 B|Pass; does not waive transient peak gate|
+| Candidate timed frame maxima |Median16.7ms /p9518.5ms|Pass20/33.4ms absolute limits; renderer CPU gates also pass|
+| Fresh home-entry peak heap |42574900→69358920 B|**FAIL:**+26784020 B/+62.91%; stable5/5 paired regression|
+
+**Resource rating4/5** rests on actual counts, batching, intact Low/reduced presentation, ownership and finite-budget evidence, with the integrated memory limitation explicit. Lower backing, successful disposal or passing frames do not compensate for the failed heap gate. The audit finds no allocation-stack or isolated-feature evidence attributing that peak to the character; no such cause is claimed. The aggregate remains **319 pass /1 fail /6 inconclusive**, not a resource or hardware acceptance pass. Hosted software CI is a separate disposition and cannot override hardware failure. Under the unchanged rubric, both88.5/100 and failed technical gates exclude95 acceptance. The user ends the cycle here; no further art, capture, decode, optimization or hardware cycle is requested.
+
+The canonical manifest retains its original84.5/95 assessment with resources pending as capture-time provenance. This review and the final disposition appended to the frozen rubric are the current scoring authority; retained original identities, source proofs and historical ratings are unchanged. This closing review used existing text/records only: no new browser, image view, decode, build or tests.
 
 ## Bounded historical outcomes
 

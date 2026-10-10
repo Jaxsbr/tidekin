@@ -41,7 +41,7 @@ export async function observeActiveHabitat(page,site) {
   return {...after,evidence};
 }
 
-export async function enterSurfaceBuoy({Game,site,state,metrics,sail,page,inputLog}) {
+export async function enterSurfaceBuoy({Game,site,state,metrics,sail,page,inputLog,profile='hardware'}) {
   if(!['home-reef','sheltered-cove'].includes(site))throw Error(`Not a surface buoy: ${site}`);
   const targetSite=Game.getCleanupSite(await state(),site);
   // Approach on each habitat's outward side, where it remains the nearest
@@ -58,6 +58,26 @@ export async function enterSurfaceBuoy({Game,site,state,metrics,sail,page,inputL
   },point);
   try {
     await sail(approach,.75);await page.waitForTimeout(500);
+    // At Low 960x600, a buoy behind the follow camera falls under the HUD.
+    // Only software fixtures turn at rest, through the game's normal keys.
+    // Hardware retains the measured stand-off, heading and input sequence.
+    if(profile==='ci-software') {
+      entry.stage='facing';entry.facing={method:'normal A/D steering at rest',holds:[]};
+      const deadline=Date.now()+10000;let heldMs=0,aligned=false;
+      for(let turn=0;turn<60&&Date.now()<deadline&&heldMs<6000;turn++) {
+        const current=await state(),dx=targetSite.position.x-current.position.x,dz=targetSite.position.z-current.position.z;
+        const angle=Math.atan2(Math.sin(Math.atan2(dx,dz)-current.heading),Math.cos(Math.atan2(dx,dz)-current.heading));
+        if(!Number.isFinite(angle))throw Error('Invalid buoy facing angle');
+        if(turn===0)entry.facing.before={position:current.position,heading:current.heading,angle};
+        if(Math.abs(angle)<=.07){aligned=true;entry.facing.after={position:current.position,heading:current.heading,angle};break;}
+        const key=angle>0?'a':'d',ms=Math.min(180,Math.max(25,Math.abs(angle)/1.6*800),6000-heldMs);
+        entry.facing.holds.push({key,ms,angle});heldMs+=ms;
+        try {await page.keyboard.down(key);await page.waitForTimeout(ms);}
+        finally {await page.keyboard.up(key);}
+      }
+      if(!aligned)throw Error('Buoy facing deadline exceeded');
+      await page.waitForTimeout(500);
+    }
     const s=await state(),m=await metrics(),distance=Math.hypot(s.position.x-targetSite.position.x,s.position.z-targetSite.position.z);
     const outcome=Game.act(structuredClone(s),'enter-cleanup',{siteId:site});
     entry.before={position:s.position,heading:s.heading,region:s.region,distance,entryRange:targetSite.entryRange,
@@ -216,7 +236,7 @@ export async function measureBrowserRun({ root, url, policy, profile, repeat, br
         await page.waitForFunction(site => window.__tidekin.getState().cleanup.attempt?.siteId === site, site);
         return;
       }
-      await enterSurfaceBuoy({Game,site,state,metrics,sail,page,inputLog});
+      await enterSurfaceBuoy({Game,site,state,metrics,sail,page,inputLog,profile});
     }
     async function exit() {
       const deadline = Date.now() + 15000;

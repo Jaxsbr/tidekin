@@ -1,0 +1,3543 @@
+{
+  "schema": 1,
+  "status": "fail",
+  "checks": [
+    {
+      "name": "size/totalBytes",
+      "verdict": "pass",
+      "base": 71235044,
+      "candidate": 14543442,
+      "delta": -56691602,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "size/jsBytes",
+      "verdict": "pass",
+      "base": 774327,
+      "candidate": 784278,
+      "delta": 9951,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 8192
+      }
+    },
+    {
+      "name": "size/jsGzipBytes",
+      "verdict": "pass",
+      "base": 215814,
+      "candidate": 219674,
+      "delta": 3860,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2048
+      }
+    },
+    {
+      "name": "size/cssBytes",
+      "verdict": "pass",
+      "base": 32763,
+      "candidate": 32780,
+      "delta": 17,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2048
+      }
+    },
+    {
+      "name": "size/cssGzipBytes",
+      "verdict": "pass",
+      "base": 8619,
+      "candidate": 8611,
+      "delta": -8,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 1024
+      }
+    },
+    {
+      "name": "size/assetBytes",
+      "verdict": "pass",
+      "base": 70417148,
+      "candidate": 13715578,
+      "delta": -56701570,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "asset/assets/island.glb",
+      "verdict": "pass",
+      "base": 782572,
+      "candidate": 782572,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "asset/assets/landmarks.glb",
+      "verdict": "pass",
+      "base": 848304,
+      "candidate": 848304,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "asset/assets/menu-art.png",
+      "verdict": "pass",
+      "base": 2855110,
+      "candidate": 2855110,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "asset/assets/ui-fifth/keepsakes.png",
+      "verdict": "pass",
+      "base": 2100716,
+      "candidate": 2100716,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "asset/assets/ui-fourth/cabin-interior.png",
+      "verdict": "pass",
+      "base": 2738499,
+      "candidate": 2738499,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "asset/assets/ui-fourth/manifest.json",
+      "verdict": "pass",
+      "base": 2628,
+      "candidate": 2193,
+      "delta": -435,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "asset/assets/ui-fourth/ocean-kit-atlas.png",
+      "verdict": "pass",
+      "base": 2961160,
+      "candidate": 2961160,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "asset/assets/workshop.glb",
+      "verdict": "pass",
+      "base": 1427024,
+      "candidate": 1427024,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "cold/menuReadyMs",
+      "verdict": "inconclusive",
+      "baseMedian": 54.09999990463257,
+      "candidateMedian": 58.89999961853027,
+      "delta": 4.799999713897705,
+      "absoluteAllowance": 75,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.15600000381469725,
+      "noiseC": 0.050666669209798176,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "cold/playReadyMs",
+      "verdict": "pass",
+      "baseMedian": 243,
+      "candidateMedian": 250.09999990463257,
+      "delta": 7.099999904632568,
+      "absoluteAllowance": 150,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.016872427591080527,
+      "noiseC": 0.0015993606378247043,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "cold/encodedBodySize",
+      "verdict": "pass",
+      "base": 14801950,
+      "candidate": 11844604,
+      "delta": -2957346,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "cold/decodedBodySize",
+      "verdict": "pass",
+      "base": 15391850,
+      "candidate": 12440207,
+      "delta": -2951643,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "cold/transferSize",
+      "verdict": "pass",
+      "base": 14805550,
+      "candidate": 11847904,
+      "delta": -2957646,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "warm/menuReadyMs",
+      "verdict": "pass",
+      "baseMedian": 33,
+      "candidateMedian": 34.299999713897705,
+      "delta": 1.299999713897705,
+      "absoluteAllowance": 75,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.06400000254313151,
+      "noiseC": 0.08000000635782878,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "warm/playReadyMs",
+      "verdict": "pass",
+      "baseMedian": 229.59999990463257,
+      "candidateMedian": 243.5,
+      "delta": 13.900000095367432,
+      "absoluteAllowance": 150,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.03310104489455283,
+      "noiseC": 0.019301847265975922,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "warm/encodedBodySize",
+      "verdict": "pass",
+      "base": 14801950,
+      "candidate": 11844604,
+      "delta": -2957346,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "warm/decodedBodySize",
+      "verdict": "pass",
+      "base": 15391850,
+      "candidate": 12440207,
+      "delta": -2951643,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "warm/transferSize",
+      "verdict": "pass",
+      "base": 3600,
+      "candidate": 3300,
+      "delta": -300,
+      "allowance": {
+        "relative": 0.01,
+        "absolute": 65536
+      }
+    },
+    {
+      "name": "follow-stationary/frameMedianMs",
+      "verdict": "pass",
+      "baseMedian": 16.699999999999818,
+      "candidateMedian": 16.699999999999818,
+      "delta": 0,
+      "absoluteAllowance": 2,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "follow-stationary/frameP95Ms",
+      "verdict": "pass",
+      "baseMedian": 18.200000000000728,
+      "candidateMedian": 18.200000000000728,
+      "delta": 0,
+      "absoluteAllowance": 4,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.010989010988850639,
+      "noiseC": 0.016483516483475846,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "follow-stationary/frameOver50Ratio",
+      "verdict": "pass",
+      "baseMedian": 0,
+      "candidateMedian": 0,
+      "delta": 0,
+      "absoluteAllowance": 0.02,
+      "relativeAllowance": 0.25,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "follow-stationary/rendererThreadCpuMsPerSecond",
+      "verdict": "pass",
+      "baseMedian": 123.22882020308974,
+      "candidateMedian": 129.09072390598828,
+      "delta": 5.861903702898545,
+      "absoluteAllowance": 20,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.013819452502559261,
+      "noiseC": 0.03797811229263601,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "follow-stationary/geometries",
+      "verdict": "pass",
+      "base": 151,
+      "candidate": 160,
+      "delta": 9,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "follow-stationary/textures",
+      "verdict": "pass",
+      "base": 2,
+      "candidate": 2,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "follow-stationary/drawCalls",
+      "verdict": "pass",
+      "base": 203,
+      "candidate": 200,
+      "delta": -3,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "follow-stationary/triangles",
+      "verdict": "pass",
+      "base": 167890,
+      "candidate": 143840,
+      "delta": -24050,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 1000
+      }
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameMedianMs/repeat-1",
+      "verdict": "pass",
+      "candidate": 16.699999999999818,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameMedianMs/repeat-2",
+      "verdict": "pass",
+      "candidate": 16.699999999999818,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameMedianMs/repeat-3",
+      "verdict": "pass",
+      "candidate": 16.699999999999818,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameMedianMs/repeat-4",
+      "verdict": "pass",
+      "candidate": 16.699999999999818,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameMedianMs/repeat-5",
+      "verdict": "pass",
+      "candidate": 16.69999999999891,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameP95Ms/repeat-1",
+      "verdict": "pass",
+      "candidate": 18.5,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameP95Ms/repeat-2",
+      "verdict": "pass",
+      "candidate": 18.200000000000728,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameP95Ms/repeat-3",
+      "verdict": "pass",
+      "candidate": 18.200000000000728,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameP95Ms/repeat-4",
+      "verdict": "pass",
+      "candidate": 18.5,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/follow-stationary/frameP95Ms/repeat-5",
+      "verdict": "pass",
+      "candidate": 17.5,
+      "maximum": 33.4
+    },
+    {
+      "name": "sailing-circuit/frameMedianMs",
+      "verdict": "pass",
+      "baseMedian": 16.69999999999709,
+      "candidateMedian": 16.69999999999709,
+      "delta": 0,
+      "absoluteAllowance": 2,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "sailing-circuit/frameP95Ms",
+      "verdict": "pass",
+      "baseMedian": 18.200000000004366,
+      "candidateMedian": 18.30000000000291,
+      "delta": 0.09999999999854481,
+      "absoluteAllowance": 4,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.005494505494424221,
+      "noiseC": 0.005464480874236552,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "sailing-circuit/frameOver50Ratio",
+      "verdict": "pass",
+      "baseMedian": 0,
+      "candidateMedian": 0,
+      "delta": 0,
+      "absoluteAllowance": 0.02,
+      "relativeAllowance": 0.25,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "sailing-circuit/rendererThreadCpuMsPerSecond",
+      "verdict": "pass",
+      "baseMedian": 124.43007717930674,
+      "candidateMedian": 125.79721038788593,
+      "delta": 1.3671332085791903,
+      "absoluteAllowance": 20,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.034920483555258994,
+      "noiseC": 0.026578554197530753,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "sailing-circuit/geometries",
+      "verdict": "pass",
+      "base": 216,
+      "candidate": 226,
+      "delta": 10,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "sailing-circuit/textures",
+      "verdict": "pass",
+      "base": 3,
+      "candidate": 3,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "sailing-circuit/drawCalls",
+      "verdict": "pass",
+      "base": 249,
+      "candidate": 246,
+      "delta": -3,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "sailing-circuit/triangles",
+      "verdict": "pass",
+      "base": 194050,
+      "candidate": 170830,
+      "delta": -23220,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 1000
+      }
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameMedianMs/repeat-1",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameMedianMs/repeat-2",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameMedianMs/repeat-3",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameMedianMs/repeat-4",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameMedianMs/repeat-5",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameP95Ms/repeat-1",
+      "verdict": "pass",
+      "candidate": 18.400000000001455,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameP95Ms/repeat-2",
+      "verdict": "pass",
+      "candidate": 18.5,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameP95Ms/repeat-3",
+      "verdict": "pass",
+      "candidate": 18.299999999995634,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameP95Ms/repeat-4",
+      "verdict": "pass",
+      "candidate": 18.30000000000291,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/sailing-circuit/frameP95Ms/repeat-5",
+      "verdict": "pass",
+      "candidate": 17.400000000001455,
+      "maximum": 33.4
+    },
+    {
+      "name": "moving-dive-home-reef/frameMedianMs",
+      "verdict": "pass",
+      "baseMedian": 16.69999999999709,
+      "candidateMedian": 16.69999999999709,
+      "delta": 0,
+      "absoluteAllowance": 2,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-home-reef/frameP95Ms",
+      "verdict": "pass",
+      "baseMedian": 18.30000000000291,
+      "candidateMedian": 18.29999999998836,
+      "delta": -1.4551915228366852e-11,
+      "absoluteAllowance": 4,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.005464480874634145,
+      "noiseC": 0.005464480873843304,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-home-reef/frameOver50Ratio",
+      "verdict": "pass",
+      "baseMedian": 0,
+      "candidateMedian": 0,
+      "delta": 0,
+      "absoluteAllowance": 0.02,
+      "relativeAllowance": 0.25,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-home-reef/rendererThreadCpuMsPerSecond",
+      "verdict": "pass",
+      "baseMedian": 129.1704618211744,
+      "candidateMedian": 123.86923554864413,
+      "delta": -5.301226272530272,
+      "absoluteAllowance": 20,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.01442281187145231,
+      "noiseC": 0.01694121385684503,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-home-reef/geometries",
+      "verdict": "pass",
+      "base": 296,
+      "candidate": 319,
+      "delta": 23,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "moving-dive-home-reef/textures",
+      "verdict": "pass",
+      "base": 5,
+      "candidate": 5,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "moving-dive-home-reef/drawCalls",
+      "verdict": "pass",
+      "base": 330,
+      "candidate": 286,
+      "delta": -44,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "moving-dive-home-reef/triangles",
+      "verdict": "pass",
+      "base": 874652,
+      "candidate": 849920,
+      "delta": -24732,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 1000
+      }
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameMedianMs/repeat-1",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameMedianMs/repeat-2",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameMedianMs/repeat-3",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameMedianMs/repeat-4",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameMedianMs/repeat-5",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameP95Ms/repeat-1",
+      "verdict": "pass",
+      "candidate": 18.29999999998836,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameP95Ms/repeat-2",
+      "verdict": "pass",
+      "candidate": 18.5,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameP95Ms/repeat-3",
+      "verdict": "pass",
+      "candidate": 18.19999999999709,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameP95Ms/repeat-4",
+      "verdict": "pass",
+      "candidate": 18.29999999998836,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-home-reef/frameP95Ms/repeat-5",
+      "verdict": "pass",
+      "candidate": 17.40000000000873,
+      "maximum": 33.4
+    },
+    {
+      "name": "moving-dive-sheltered-cove/frameMedianMs",
+      "verdict": "pass",
+      "baseMedian": 16.69999999999709,
+      "candidateMedian": 16.69999999999709,
+      "delta": 0,
+      "absoluteAllowance": 2,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-sheltered-cove/frameP95Ms",
+      "verdict": "pass",
+      "baseMedian": 18.19999999999709,
+      "candidateMedian": 18.29999999998836,
+      "delta": 0.09999999999126885,
+      "absoluteAllowance": 4,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.005494505494826196,
+      "noiseC": 7.951866245014267e-13,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-sheltered-cove/frameOver50Ratio",
+      "verdict": "pass",
+      "baseMedian": 0,
+      "candidateMedian": 0,
+      "delta": 0,
+      "absoluteAllowance": 0.02,
+      "relativeAllowance": 0.25,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-sheltered-cove/rendererThreadCpuMsPerSecond",
+      "verdict": "pass",
+      "baseMedian": 125.90089724661448,
+      "candidateMedian": 118.96732331751907,
+      "delta": -6.933573929095402,
+      "absoluteAllowance": 20,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.01761433428970863,
+      "noiseC": 0.030435539601242862,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-sheltered-cove/geometries",
+      "verdict": "pass",
+      "base": 300,
+      "candidate": 323,
+      "delta": 23,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "moving-dive-sheltered-cove/textures",
+      "verdict": "pass",
+      "base": 5,
+      "candidate": 5,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "moving-dive-sheltered-cove/drawCalls",
+      "verdict": "pass",
+      "base": 255,
+      "candidate": 211,
+      "delta": -44,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "moving-dive-sheltered-cove/triangles",
+      "verdict": "pass",
+      "base": 965740,
+      "candidate": 941008,
+      "delta": -24732,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 1000
+      }
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameMedianMs/repeat-1",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameMedianMs/repeat-2",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameMedianMs/repeat-3",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameMedianMs/repeat-4",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameMedianMs/repeat-5",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameP95Ms/repeat-1",
+      "verdict": "pass",
+      "candidate": 18.30000000000291,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameP95Ms/repeat-2",
+      "verdict": "pass",
+      "candidate": 18.30000000000291,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameP95Ms/repeat-3",
+      "verdict": "pass",
+      "candidate": 18.29999999998836,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameP95Ms/repeat-4",
+      "verdict": "pass",
+      "candidate": 17.39999999999418,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-sheltered-cove/frameP95Ms/repeat-5",
+      "verdict": "pass",
+      "candidate": 17.39999999999418,
+      "maximum": 33.4
+    },
+    {
+      "name": "moving-dive-salvage:home-pearls/frameMedianMs",
+      "verdict": "pass",
+      "baseMedian": 16.69999999999709,
+      "candidateMedian": 16.69999999999709,
+      "delta": 0,
+      "absoluteAllowance": 2,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-salvage:home-pearls/frameP95Ms",
+      "verdict": "pass",
+      "baseMedian": 18.200000000000728,
+      "candidateMedian": 18.299999999999272,
+      "delta": 0.09999999999854481,
+      "absoluteAllowance": 4,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.01098901098865075,
+      "noiseC": 0.005464480874038842,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-salvage:home-pearls/frameOver50Ratio",
+      "verdict": "pass",
+      "baseMedian": 0,
+      "candidateMedian": 0,
+      "delta": 0,
+      "absoluteAllowance": 0.02,
+      "relativeAllowance": 0.25,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-salvage:home-pearls/rendererThreadCpuMsPerSecond",
+      "verdict": "pass",
+      "baseMedian": 121.2174539855624,
+      "candidateMedian": 112.8411367373049,
+      "delta": -8.376317248257507,
+      "absoluteAllowance": 20,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.024758667877157022,
+      "noiseC": 0.017644711968548377,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-salvage:home-pearls/geometries",
+      "verdict": "pass",
+      "base": 298,
+      "candidate": 318,
+      "delta": 20,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "moving-dive-salvage:home-pearls/textures",
+      "verdict": "pass",
+      "base": 4,
+      "candidate": 4,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "moving-dive-salvage:home-pearls/drawCalls",
+      "verdict": "pass",
+      "base": 239,
+      "candidate": 195,
+      "delta": -44,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "moving-dive-salvage:home-pearls/triangles",
+      "verdict": "pass",
+      "base": 915596,
+      "candidate": 890864,
+      "delta": -24732,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 1000
+      }
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameMedianMs/repeat-1",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameMedianMs/repeat-2",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameMedianMs/repeat-3",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameMedianMs/repeat-4",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameMedianMs/repeat-5",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameP95Ms/repeat-1",
+      "verdict": "pass",
+      "candidate": 18.39999999999418,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameP95Ms/repeat-2",
+      "verdict": "pass",
+      "candidate": 18.299999999999272,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameP95Ms/repeat-3",
+      "verdict": "pass",
+      "candidate": 18.299999999999272,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameP95Ms/repeat-4",
+      "verdict": "pass",
+      "candidate": 17.400000000001455,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:home-pearls/frameP95Ms/repeat-5",
+      "verdict": "pass",
+      "candidate": 17.599999999998545,
+      "maximum": 33.4
+    },
+    {
+      "name": "moving-dive-salvage:horizon-wreck/frameMedianMs",
+      "verdict": "pass",
+      "baseMedian": 16.69999999999709,
+      "candidateMedian": 16.69999999999709,
+      "delta": 0,
+      "absoluteAllowance": 2,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-salvage:horizon-wreck/frameP95Ms",
+      "verdict": "pass",
+      "baseMedian": 18.20000000001164,
+      "candidateMedian": 18.19999999999709,
+      "delta": -1.4551915228366852e-11,
+      "absoluteAllowance": 4,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.005494505494022246,
+      "noiseC": 0.010989010988852835,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-salvage:horizon-wreck/frameOver50Ratio",
+      "verdict": "pass",
+      "baseMedian": 0,
+      "candidateMedian": 0,
+      "delta": 0,
+      "absoluteAllowance": 0.02,
+      "relativeAllowance": 0.25,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-salvage:horizon-wreck/rendererThreadCpuMsPerSecond",
+      "verdict": "pass",
+      "baseMedian": 122.80184350708882,
+      "candidateMedian": 118.623079035258,
+      "delta": -4.178764471830817,
+      "absoluteAllowance": 20,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.07531602813282327,
+      "noiseC": 0.021878510534150696,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "moving-dive-salvage:horizon-wreck/geometries",
+      "verdict": "pass",
+      "base": 332,
+      "candidate": 349,
+      "delta": 17,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "moving-dive-salvage:horizon-wreck/textures",
+      "verdict": "pass",
+      "base": 5,
+      "candidate": 5,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "moving-dive-salvage:horizon-wreck/drawCalls",
+      "verdict": "pass",
+      "base": 235,
+      "candidate": 191,
+      "delta": -44,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "moving-dive-salvage:horizon-wreck/triangles",
+      "verdict": "pass",
+      "base": 829262,
+      "candidate": 804530,
+      "delta": -24732,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 1000
+      }
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameMedianMs/repeat-1",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameMedianMs/repeat-2",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameMedianMs/repeat-3",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameMedianMs/repeat-4",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameMedianMs/repeat-5",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameP95Ms/repeat-1",
+      "verdict": "pass",
+      "candidate": 18.30000000000291,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameP95Ms/repeat-2",
+      "verdict": "pass",
+      "candidate": 18.19999999999709,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameP95Ms/repeat-3",
+      "verdict": "pass",
+      "candidate": 18.39999999999418,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameP95Ms/repeat-4",
+      "verdict": "pass",
+      "candidate": 17.39999999999418,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/moving-dive-salvage:horizon-wreck/frameP95Ms/repeat-5",
+      "verdict": "pass",
+      "candidate": 17.59999999999127,
+      "maximum": 33.4
+    },
+    {
+      "name": "developed-raft/frameMedianMs",
+      "verdict": "pass",
+      "baseMedian": 16.69999999999709,
+      "candidateMedian": 16.69999999999709,
+      "delta": 0,
+      "absoluteAllowance": 2,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "developed-raft/frameP95Ms",
+      "verdict": "pass",
+      "baseMedian": 18.10000000000582,
+      "candidateMedian": 18.10000000000582,
+      "delta": 0,
+      "absoluteAllowance": 4,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.02209944751348346,
+      "noiseC": 0.016574585634710606,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "developed-raft/frameOver50Ratio",
+      "verdict": "pass",
+      "baseMedian": 0,
+      "candidateMedian": 0,
+      "delta": 0,
+      "absoluteAllowance": 0.02,
+      "relativeAllowance": 0.25,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "developed-raft/rendererThreadCpuMsPerSecond",
+      "verdict": "pass",
+      "baseMedian": 146.00031231848942,
+      "candidateMedian": 146.38045201111342,
+      "delta": 0.3801396926239988,
+      "absoluteAllowance": 20,
+      "relativeAllowance": 0.2,
+      "noiseB": 0.02629411841151775,
+      "noiseC": 0.03994759432447,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "developed-raft/geometries",
+      "verdict": "pass",
+      "base": 333,
+      "candidate": 355,
+      "delta": 22,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "developed-raft/textures",
+      "verdict": "pass",
+      "base": 5,
+      "candidate": 5,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "developed-raft/drawCalls",
+      "verdict": "pass",
+      "base": 270,
+      "candidate": 271,
+      "delta": 1,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "developed-raft/triangles",
+      "verdict": "pass",
+      "base": 183530,
+      "candidate": 159622,
+      "delta": -23908,
+      "allowance": {
+        "relative": 0.02,
+        "absolute": 1000
+      }
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameMedianMs/repeat-1",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameMedianMs/repeat-2",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameMedianMs/repeat-3",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameMedianMs/repeat-4",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameMedianMs/repeat-5",
+      "verdict": "pass",
+      "candidate": 16.69999999999709,
+      "maximum": 20
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameP95Ms/repeat-1",
+      "verdict": "pass",
+      "candidate": 18.39999999999418,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameP95Ms/repeat-2",
+      "verdict": "pass",
+      "candidate": 18.10000000000582,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameP95Ms/repeat-3",
+      "verdict": "pass",
+      "candidate": 18.39999999999418,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameP95Ms/repeat-4",
+      "verdict": "pass",
+      "candidate": 17.60000000000582,
+      "maximum": 33.4
+    },
+    {
+      "name": "hardware-budget/developed-raft/frameP95Ms/repeat-5",
+      "verdict": "pass",
+      "candidate": 17.60000000000582,
+      "maximum": 33.4
+    },
+    {
+      "name": "renderer/home-reef/inside/geometries",
+      "verdict": "pass",
+      "base": 321,
+      "candidate": 342,
+      "delta": 21,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "renderer/home-reef/inside/textures",
+      "verdict": "pass",
+      "base": 7,
+      "candidate": 7,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "renderer/home-reef/outside/geometries",
+      "verdict": "pass",
+      "base": 321,
+      "candidate": 342,
+      "delta": 21,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "renderer/home-reef/outside/textures",
+      "verdict": "pass",
+      "base": 7,
+      "candidate": 7,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "renderer/sheltered-cove/inside/geometries",
+      "verdict": "pass",
+      "base": 330,
+      "candidate": 351,
+      "delta": 21,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "renderer/sheltered-cove/inside/textures",
+      "verdict": "pass",
+      "base": 7,
+      "candidate": 7,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "renderer/sheltered-cove/outside/geometries",
+      "verdict": "pass",
+      "base": 330,
+      "candidate": 351,
+      "delta": 21,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "renderer/sheltered-cove/outside/textures",
+      "verdict": "pass",
+      "base": 7,
+      "candidate": 7,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "renderer/salvage:home-pearls/inside/geometries",
+      "verdict": "pass",
+      "base": 311,
+      "candidate": 332,
+      "delta": 21,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "renderer/salvage:home-pearls/inside/textures",
+      "verdict": "pass",
+      "base": 7,
+      "candidate": 7,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "renderer/salvage:home-pearls/outside/geometries",
+      "verdict": "pass",
+      "base": 311,
+      "candidate": 332,
+      "delta": 21,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "renderer/salvage:home-pearls/outside/textures",
+      "verdict": "pass",
+      "base": 7,
+      "candidate": 7,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "renderer/salvage:horizon-wreck/inside/geometries",
+      "verdict": "pass",
+      "base": 322,
+      "candidate": 343,
+      "delta": 21,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "renderer/salvage:horizon-wreck/inside/textures",
+      "verdict": "pass",
+      "base": 7,
+      "candidate": 7,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "renderer/salvage:horizon-wreck/outside/geometries",
+      "verdict": "pass",
+      "base": 322,
+      "candidate": 343,
+      "delta": 21,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "renderer/salvage:horizon-wreck/outside/textures",
+      "verdict": "pass",
+      "base": 7,
+      "candidate": 7,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu/home-reef/inside/live",
+      "verdict": "pass",
+      "base": 175,
+      "candidate": 183,
+      "delta": 8,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/home-reef/inside/geometries",
+      "verdict": "pass",
+      "base": 96,
+      "candidate": 109,
+      "delta": 13,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/home-reef/inside/materials",
+      "verdict": "pass",
+      "base": 79,
+      "candidate": 74,
+      "delta": -5,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 4
+      }
+    },
+    {
+      "name": "cpu/home-reef/inside/textures",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu/home-reef/outside/live",
+      "verdict": "pass",
+      "base": 175,
+      "candidate": 183,
+      "delta": 8,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/home-reef/outside/geometries",
+      "verdict": "pass",
+      "base": 96,
+      "candidate": 109,
+      "delta": 13,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/home-reef/outside/materials",
+      "verdict": "pass",
+      "base": 79,
+      "candidate": 74,
+      "delta": -5,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 4
+      }
+    },
+    {
+      "name": "cpu/home-reef/outside/textures",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu/sheltered-cove/inside/live",
+      "verdict": "pass",
+      "base": 199,
+      "candidate": 207,
+      "delta": 8,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/sheltered-cove/inside/geometries",
+      "verdict": "pass",
+      "base": 113,
+      "candidate": 126,
+      "delta": 13,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/sheltered-cove/inside/materials",
+      "verdict": "pass",
+      "base": 86,
+      "candidate": 81,
+      "delta": -5,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 4
+      }
+    },
+    {
+      "name": "cpu/sheltered-cove/inside/textures",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu/sheltered-cove/outside/live",
+      "verdict": "pass",
+      "base": 199,
+      "candidate": 207,
+      "delta": 8,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/sheltered-cove/outside/geometries",
+      "verdict": "pass",
+      "base": 113,
+      "candidate": 126,
+      "delta": 13,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/sheltered-cove/outside/materials",
+      "verdict": "pass",
+      "base": 86,
+      "candidate": 81,
+      "delta": -5,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 4
+      }
+    },
+    {
+      "name": "cpu/sheltered-cove/outside/textures",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu/salvage:home-pearls/inside/live",
+      "verdict": "pass",
+      "base": 132,
+      "candidate": 140,
+      "delta": 8,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/salvage:home-pearls/inside/geometries",
+      "verdict": "pass",
+      "base": 74,
+      "candidate": 87,
+      "delta": 13,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/salvage:home-pearls/inside/materials",
+      "verdict": "pass",
+      "base": 58,
+      "candidate": 53,
+      "delta": -5,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 4
+      }
+    },
+    {
+      "name": "cpu/salvage:home-pearls/inside/textures",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu/salvage:home-pearls/outside/live",
+      "verdict": "pass",
+      "base": 175,
+      "candidate": 183,
+      "delta": 8,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/salvage:home-pearls/outside/geometries",
+      "verdict": "pass",
+      "base": 96,
+      "candidate": 109,
+      "delta": 13,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/salvage:home-pearls/outside/materials",
+      "verdict": "pass",
+      "base": 79,
+      "candidate": 74,
+      "delta": -5,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 4
+      }
+    },
+    {
+      "name": "cpu/salvage:home-pearls/outside/textures",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu/salvage:horizon-wreck/inside/live",
+      "verdict": "pass",
+      "base": 153,
+      "candidate": 161,
+      "delta": 8,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/salvage:horizon-wreck/inside/geometries",
+      "verdict": "pass",
+      "base": 82,
+      "candidate": 95,
+      "delta": 13,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/salvage:horizon-wreck/inside/materials",
+      "verdict": "pass",
+      "base": 71,
+      "candidate": 66,
+      "delta": -5,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 4
+      }
+    },
+    {
+      "name": "cpu/salvage:horizon-wreck/inside/textures",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu/salvage:horizon-wreck/outside/live",
+      "verdict": "pass",
+      "base": 175,
+      "candidate": 183,
+      "delta": 8,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/salvage:horizon-wreck/outside/geometries",
+      "verdict": "pass",
+      "base": 96,
+      "candidate": 109,
+      "delta": 13,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 32
+      }
+    },
+    {
+      "name": "cpu/salvage:horizon-wreck/outside/materials",
+      "verdict": "pass",
+      "base": 79,
+      "candidate": 74,
+      "delta": -5,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 4
+      }
+    },
+    {
+      "name": "cpu/salvage:horizon-wreck/outside/textures",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.05,
+        "absolute": 2
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/home-reef/inside/geometryBackingBytes",
+      "verdict": "pass",
+      "base": 90529700,
+      "candidate": 27832880,
+      "delta": -62696820,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/home-reef/inside/textureRgbaBytesEstimate",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/home-reef/outside/geometryBackingBytes",
+      "verdict": "pass",
+      "base": 90529700,
+      "candidate": 27832880,
+      "delta": -62696820,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/home-reef/outside/textureRgbaBytesEstimate",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/sheltered-cove/inside/geometryBackingBytes",
+      "verdict": "pass",
+      "base": 100375668,
+      "candidate": 30616248,
+      "delta": -69759420,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/sheltered-cove/inside/textureRgbaBytesEstimate",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/sheltered-cove/outside/geometryBackingBytes",
+      "verdict": "pass",
+      "base": 100375668,
+      "candidate": 30616248,
+      "delta": -69759420,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/sheltered-cove/outside/textureRgbaBytesEstimate",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/salvage:home-pearls/inside/geometryBackingBytes",
+      "verdict": "pass",
+      "base": 92941716,
+      "candidate": 25560084,
+      "delta": -67381632,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/salvage:home-pearls/inside/textureRgbaBytesEstimate",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/salvage:home-pearls/outside/geometryBackingBytes",
+      "verdict": "pass",
+      "base": 90529700,
+      "candidate": 27832880,
+      "delta": -62696820,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/salvage:home-pearls/outside/textureRgbaBytesEstimate",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/salvage:horizon-wreck/inside/geometryBackingBytes",
+      "verdict": "pass",
+      "base": 84309300,
+      "candidate": 24062016,
+      "delta": -60247284,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/salvage:horizon-wreck/inside/textureRgbaBytesEstimate",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/salvage:horizon-wreck/outside/geometryBackingBytes",
+      "verdict": "pass",
+      "base": 90529700,
+      "candidate": 27832880,
+      "delta": -62696820,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "cpu-storage-estimate/salvage:horizon-wreck/outside/textureRgbaBytesEstimate",
+      "verdict": "pass",
+      "base": 0,
+      "candidate": 0,
+      "delta": 0,
+      "allowance": {
+        "relative": 0.1,
+        "absolute": 1048576
+      }
+    },
+    {
+      "name": "panel/workshop/openMs",
+      "verdict": "pass",
+      "baseMedian": 28,
+      "candidateMedian": 29.100000381469727,
+      "delta": 1.1000003814697266,
+      "absoluteAllowance": 25,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0999999897820609,
+      "noiseC": 0.08934709097548166,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "panel/chart/openMs",
+      "verdict": "pass",
+      "baseMedian": 12.400000095367432,
+      "candidateMedian": 14.099999904632568,
+      "delta": 1.6999998092651367,
+      "absoluteAllowance": 25,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.09599998474121094,
+      "noiseC": 0.1,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "panel/journal/openMs",
+      "verdict": "pass",
+      "baseMedian": 9,
+      "candidateMedian": 9.400000095367432,
+      "delta": 0.40000009536743164,
+      "absoluteAllowance": 25,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.04799999237060547,
+      "noiseC": 0.06399999618530273,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "panel/cabin/openMs",
+      "verdict": "pass",
+      "baseMedian": 8.399999618530273,
+      "candidateMedian": 9.400000095367432,
+      "delta": 1.0000004768371582,
+      "absoluteAllowance": 25,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.05999998092651367,
+      "noiseC": 0.0880000114440918,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "heapBytes",
+      "verdict": "pass",
+      "baseMedian": 12648768,
+      "candidateMedian": 13087232,
+      "delta": 438464,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00039339799733855503,
+      "noiseC": 0.001726262665779899,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 90929629,
+      "candidateMedian": 30202574,
+      "delta": -60727055,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1547337728,
+      "candidateMedian": 1381548032,
+      "delta": -165789696,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.05024247686410707,
+      "noiseC": 0.06823761014195415,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/1/home-reef/heapBytes",
+      "verdict": "inconclusive",
+      "baseMedian": 41404192,
+      "candidateMedian": 62362856,
+      "delta": 20958664,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.038730281223698315,
+      "noiseC": 0.03629628508354396,
+      "agreement": 3,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/1/home-reef/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 190865470,
+      "candidateMedian": 97785320,
+      "delta": -93080150,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.026596251275833184,
+      "noiseC": 0.02217901419149623,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/1/home-reef/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1732640768,
+      "candidateMedian": 1513701376,
+      "delta": -218939392,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0344863454119071,
+      "noiseC": 0.007728192750219182,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/2/sheltered-cove/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 77572936,
+      "candidateMedian": 77905088,
+      "delta": 332152,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.012097415005666409,
+      "noiseC": 0.003303352920928605,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/2/sheltered-cove/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 328396096,
+      "candidateMedian": 96493964,
+      "delta": -231902132,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00007162082706366888,
+      "noiseC": 0.0038071915047453125,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/2/sheltered-cove/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1783316480,
+      "candidateMedian": 1563410432,
+      "delta": -219906048,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.03489365611649593,
+      "noiseC": 0.006057239868794735,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/3/salvage:home-pearls/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 75392884,
+      "candidateMedian": 71551228,
+      "delta": -3841656,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.011827270064373714,
+      "noiseC": 0.0008402930554874614,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/3/salvage:home-pearls/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 315393778,
+      "candidateMedian": 91379997,
+      "delta": -224013781,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 4.3773255978548566e-8,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/3/salvage:home-pearls/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1819033600,
+      "candidateMedian": 1558380544,
+      "delta": -260653056,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.045746453501463634,
+      "noiseC": 0.006634004794146095,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/4/salvage:horizon-wreck/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 68833336,
+      "candidateMedian": 64566892,
+      "delta": -4266444,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.005404474366896877,
+      "noiseC": 0.028384949983344405,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/4/salvage:horizon-wreck/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 282345560,
+      "candidateMedian": 90129103,
+      "delta": -192216457,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0009873858119107664,
+      "noiseC": 0.026900700431912655,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/4/salvage:horizon-wreck/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1811775488,
+      "candidateMedian": 1544552448,
+      "delta": -267223040,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.031207610641876618,
+      "noiseC": 0.008369399185336048,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/5/home-reef/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 73784612,
+      "candidateMedian": 65406528,
+      "delta": -8378084,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.004869579039054919,
+      "noiseC": 0.0003287745223229094,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/5/home-reef/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 275981801,
+      "candidateMedian": 97572874,
+      "delta": -178408927,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0002076658670692565,
+      "noiseC": 0.00011239804210338213,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/5/home-reef/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1741733888,
+      "candidateMedian": 1484455936,
+      "delta": -257277952,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.04537800897400924,
+      "noiseC": 0.007571409650788044,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/6/sheltered-cove/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 79110068,
+      "candidateMedian": 79389356,
+      "delta": 279288,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.011781863213668328,
+      "noiseC": 0.003158206750033342,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/6/sheltered-cove/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 328332638,
+      "candidateMedian": 100026348,
+      "delta": -228306290,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00004473512011924931,
+      "noiseC": 0.0008250826072346458,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/6/sheltered-cove/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1806090240,
+      "candidateMedian": 1501331456,
+      "delta": -304758784,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.022134530775162153,
+      "noiseC": 0.006809699456533601,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/7/salvage:home-pearls/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 78042784,
+      "candidateMedian": 71717048,
+      "delta": -6325736,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.012415190109056078,
+      "noiseC": 0.01745074616010408,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/7/salvage:home-pearls/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 315311216,
+      "candidateMedian": 90885613,
+      "delta": -224425603,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00037345325514839914,
+      "noiseC": 0.000047598292592249997,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/7/salvage:home-pearls/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1848885248,
+      "candidateMedian": 1490812928,
+      "delta": -358072320,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.015950800641576647,
+      "noiseC": 0.007462194478635485,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/8/salvage:horizon-wreck/heapBytes",
+      "verdict": "inconclusive",
+      "baseMedian": 65427744,
+      "candidateMedian": 66176456,
+      "delta": 748712,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.12002700261222518,
+      "noiseC": 0.02043911206124426,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/8/salvage:horizon-wreck/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 246158240,
+      "candidateMedian": 91296620,
+      "delta": -154861620,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0009463140457942826,
+      "noiseC": 0.012582382567941726,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/8/salvage:horizon-wreck/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1829306368,
+      "candidateMedian": 1482014720,
+      "delta": -347291648,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.015476659620965142,
+      "noiseC": 0.012459233873196618,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/9/home-reef/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 73853868,
+      "candidateMedian": 65590052,
+      "delta": -8263816,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.07899437305030524,
+      "noiseC": 0.01328975924580758,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/9/home-reef/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 275900877,
+      "candidateMedian": 97805028,
+      "delta": -178095849,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0001765380397830341,
+      "noiseC": 0.008816458802097577,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/9/home-reef/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1751187456,
+      "candidateMedian": 1484324864,
+      "delta": -266862592,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.04395419333108791,
+      "noiseC": 0.005982604088480728,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/10/sheltered-cove/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 79801016,
+      "candidateMedian": 77842096,
+      "delta": -1958920,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.004907656814795441,
+      "noiseC": 0.006473926395815447,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/10/sheltered-cove/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 328323048,
+      "candidateMedian": 100011999,
+      "delta": -228311049,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00007397592142236691,
+      "noiseC": 0.003184787857305002,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/10/sheltered-cove/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1821687808,
+      "candidateMedian": 1502281728,
+      "delta": -319406080,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.006772374468238193,
+      "noiseC": 0.0416066832439035,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/11/salvage:home-pearls/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 77857676,
+      "candidateMedian": 71224620,
+      "delta": -6633056,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.022066469078784217,
+      "noiseC": 0.001649261168399354,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/11/salvage:home-pearls/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 315393784,
+      "candidateMedian": 90884632,
+      "delta": -224509152,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00010957730225907053,
+      "noiseC": 1.430384842181019e-7,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/11/salvage:home-pearls/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1838727168,
+      "candidateMedian": 1488027648,
+      "delta": -350699520,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.004196851025154375,
+      "noiseC": 0.044273413930545465,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/12/salvage:horizon-wreck/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 72160676,
+      "candidateMedian": 66930276,
+      "delta": -5230400,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.03718507293362939,
+      "noiseC": 0.00947654840090604,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/12/salvage:horizon-wreck/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 282567819,
+      "candidateMedian": 90397206,
+      "delta": -192170613,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.000598946478048868,
+      "noiseC": 0.016276498634260887,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/12/salvage:horizon-wreck/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1817346048,
+      "candidateMedian": 1481080832,
+      "delta": -336265216,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.02592812967670976,
+      "noiseC": 0.043253169317905266,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/13/home-reef/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 73934052,
+      "candidateMedian": 68721216,
+      "delta": -5212836,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.07379403471623604,
+      "noiseC": 0.01825311123714691,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/13/home-reef/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 271117470,
+      "candidateMedian": 92785287,
+      "delta": -178332183,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0007239408069129592,
+      "noiseC": 0.013871035393790396,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/13/home-reef/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1778253824,
+      "candidateMedian": 1485815808,
+      "delta": -292438016,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.01606840126778212,
+      "noiseC": 0.04652265484578826,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/14/sheltered-cove/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 78876496,
+      "candidateMedian": 78692124,
+      "delta": -184372,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.008306200620270961,
+      "noiseC": 0.007212665907963038,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/14/sheltered-cove/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 328347336,
+      "candidateMedian": 100052340,
+      "delta": -228294996,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00007309332943697158,
+      "noiseC": 0.0030371203711977153,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/14/sheltered-cove/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1825161216,
+      "candidateMedian": 1507606528,
+      "delta": -317554688,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.002872557204283701,
+      "noiseC": 0.04448091113598574,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/15/salvage:home-pearls/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 75068760,
+      "candidateMedian": 70933916,
+      "delta": -4134844,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.026366493865091153,
+      "noiseC": 0.012121141034988115,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/15/salvage:home-pearls/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 315311227,
+      "candidateMedian": 90884616,
+      "delta": -224426611,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00014918593431498714,
+      "noiseC": 0.0672787790620142,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/15/salvage:home-pearls/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1810284544,
+      "candidateMedian": 1491664896,
+      "delta": -318619648,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.012933180078015404,
+      "noiseC": 0.04358332234963314,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/16/salvage:horizon-wreck/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 61169068,
+      "candidateMedian": 67234224,
+      "delta": 6065156,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.012175500205430628,
+      "noiseC": 0.018401104770689403,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/16/salvage:horizon-wreck/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 282511318,
+      "candidateMedian": 88056711,
+      "delta": -194454607,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0003219694015940275,
+      "noiseC": 0.023129617003296885,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/16/salvage:horizon-wreck/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1807564800,
+      "candidateMedian": 1481129984,
+      "delta": -326434816,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.001287106276909132,
+      "noiseC": 0.044811451200761056,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/17/home-reef/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 73683128,
+      "candidateMedian": 69330240,
+      "delta": -4352888,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0327855788098464,
+      "noiseC": 0.0014563919005617175,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/17/home-reef/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 271049270,
+      "candidateMedian": 92547892,
+      "delta": -178501378,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0000035897532577748688,
+      "noiseC": 0.008045142724590637,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/17/home-reef/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1786724352,
+      "candidateMedian": 1488306176,
+      "delta": -298418176,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.004291491293224396,
+      "noiseC": 0.045641189356994245,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/18/sheltered-cove/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 79474236,
+      "candidateMedian": 77193468,
+      "delta": -2280768,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.007088636875980789,
+      "noiseC": 0.0037941552256727214,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/18/sheltered-cove/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 328299048,
+      "candidateMedian": 100241521,
+      "delta": -228057527,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00022018949016263975,
+      "noiseC": 0.0007800859286642308,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/18/sheltered-cove/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1804877824,
+      "candidateMedian": 1497907200,
+      "delta": -306970624,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.013389493559426657,
+      "noiseC": 0.045086136177194425,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/19/salvage:home-pearls/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 77535372,
+      "candidateMedian": 71234924,
+      "delta": -6300448,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.012883874472157043,
+      "noiseC": 0.08622748021742818,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/19/salvage:home-pearls/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 315393787,
+      "candidateMedian": 96052168,
+      "delta": -219341619,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0000020038441657698223,
+      "noiseC": 0.05379921252792545,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/19/salvage:home-pearls/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1782530048,
+      "candidateMedian": 1484242944,
+      "delta": -298287104,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.04101216026177192,
+      "noiseC": 0.05603205616451965,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/20/salvage:horizon-wreck/heapBytes",
+      "verdict": "inconclusive",
+      "baseMedian": 61250940,
+      "candidateMedian": 68813628,
+      "delta": 7562688,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.1811340038210026,
+      "noiseC": 0.013509707699178424,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/20/salvage:horizon-wreck/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 246391143,
+      "candidateMedian": 86761370,
+      "delta": -159629773,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.12296327551027271,
+      "noiseC": 0.03811591495155044,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/20/salvage:horizon-wreck/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1728544768,
+      "candidateMedian": 1474740224,
+      "delta": -253804544,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.04326932190858941,
+      "noiseC": 0.06330337403206275,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/21/home-reef/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 70115264,
+      "candidateMedian": 69973296,
+      "delta": -141968,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.05729457140744703,
+      "noiseC": 0.0117783218329461,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/21/home-reef/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 271117440,
+      "candidateMedian": 88864277,
+      "delta": -182253163,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0011755237877725609,
+      "noiseC": 0.0010206463503889195,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/21/home-reef/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1657061376,
+      "candidateMedian": 1484505088,
+      "delta": -172556288,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.030492688280485274,
+      "noiseC": 0.0609886653349079,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/22/sheltered-cove/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 79324624,
+      "candidateMedian": 77966916,
+      "delta": -1357708,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.009996744516557684,
+      "noiseC": 0.004011855490090181,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/22/sheltered-cove/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 328299049,
+      "candidateMedian": 95468013,
+      "delta": -232831036,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0001459157440325086,
+      "noiseC": 0.0000987451158117222,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/22/sheltered-cove/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1729331200,
+      "candidateMedian": 1495744512,
+      "delta": -233586688,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.04972998578872572,
+      "noiseC": 0.0628963885511485,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/23/salvage:home-pearls/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 76774624,
+      "candidateMedian": 71854680,
+      "delta": -4919944,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.018492620686751914,
+      "noiseC": 0.00428386849680494,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/23/salvage:home-pearls/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 315358943,
+      "candidateMedian": 90884337,
+      "delta": -224474606,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0001124972060805011,
+      "noiseC": 0.0029734276435333406,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/23/salvage:home-pearls/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1751302144,
+      "candidateMedian": 1482014720,
+      "delta": -269287424,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.029151191400585644,
+      "noiseC": 0.063191642253054,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/24/salvage:horizon-wreck/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 68504248,
+      "candidateMedian": 67400040,
+      "delta": -1104208,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.084822885728196,
+      "noiseC": 0.026781705174062212,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/24/salvage:horizon-wreck/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 282736208,
+      "candidateMedian": 90154131,
+      "delta": -192582077,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00028242580094304723,
+      "noiseC": 0.005084237349035065,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/transition/24/salvage:horizon-wreck/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1731837952,
+      "candidateMedian": 1476771840,
+      "delta": -255066112,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.03556190458170534,
+      "noiseC": 0.06200698951572641,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/startup-cold/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 15907776,
+      "candidateMedian": 20343552,
+      "delta": 4435776,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0004136341874564993,
+      "noiseC": 0.008995872500534813,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/startup-cold/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 13016396,
+      "candidateMedian": 13981110,
+      "delta": 964714,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0.005106890654604677,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/startup-cold/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1254981632,
+      "candidateMedian": 1252671488,
+      "delta": -2310144,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.005430951199770229,
+      "noiseC": 0.0013079247158533556,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/startup-warm/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 16136512,
+      "candidateMedian": 20554128,
+      "delta": 4417616,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.014598941828320767,
+      "noiseC": 0.003582346086391989,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/startup-warm/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 14387724,
+      "candidateMedian": 15377386,
+      "delta": 989662,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0.001622382373701226,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/startup-warm/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1286160384,
+      "candidateMedian": 1277788160,
+      "delta": -8372224,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0007133667087043477,
+      "noiseC": 0.0017566354660853956,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/waterwheel/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 17582272,
+      "candidateMedian": 17893264,
+      "delta": 310992,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.005608831441124332,
+      "noiseC": 0.015359299454811598,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/waterwheel/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 6710750,
+      "candidateMedian": 6607205,
+      "delta": -103545,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/waterwheel/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1287340032,
+      "candidateMedian": 1279082496,
+      "delta": -8257536,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0004708996729156326,
+      "noiseC": 0.0017676670637512969,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/crane/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 17937216,
+      "candidateMedian": 18334028,
+      "delta": 396812,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.007778687617967024,
+      "noiseC": 0.004614152438296702,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/crane/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 6710782,
+      "candidateMedian": 6608974,
+      "delta": -101808,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/crane/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1256603648,
+      "candidateMedian": 1248018432,
+      "delta": -8585216,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0008735674146316023,
+      "noiseC": 0.0019429456631614877,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/greenhouse/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 18395264,
+      "candidateMedian": 18871816,
+      "delta": 476552,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.005603181340588534,
+      "noiseC": 0.002956366255372562,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/greenhouse/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 6711398,
+      "candidateMedian": 6610483,
+      "delta": -100915,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 2.384185791015625e-7,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/greenhouse/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1258520576,
+      "candidateMedian": 1249509376,
+      "delta": -9011200,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0012497721769469108,
+      "noiseC": 0.0017832791356341131,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/sail/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 18783888,
+      "candidateMedian": 19255752,
+      "delta": 471864,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0009393156517969016,
+      "noiseC": 0.004274670758119444,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/sail/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 6711425,
+      "candidateMedian": 6611399,
+      "delta": -100026,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 2.384185791015625e-7,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/sail/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1258536960,
+      "candidateMedian": 1249394688,
+      "delta": -9142272,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.00140597539543058,
+      "noiseC": 0.0017178750803204953,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/beacon/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 19005164,
+      "candidateMedian": 19395980,
+      "delta": 390816,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.001446554210213603,
+      "noiseC": 0.0034048292481225493,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/beacon/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 6711527,
+      "candidateMedian": 6613297,
+      "delta": -98230,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 2.384185791015625e-7,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/build/beacon/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1259520000,
+      "candidateMedian": 1250525184,
+      "delta": -8994816,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0015349593495934959,
+      "noiseC": 0.0016508136152818176,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/home-reef/heapBytes",
+      "verdict": "fail",
+      "baseMedian": 42574900,
+      "candidateMedian": 69358920,
+      "delta": 26784020,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.012592395989186116,
+      "noiseC": 0.012154341503587426,
+      "agreement": 5,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/home-reef/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 114553563,
+      "candidateMedian": 46060331,
+      "delta": -68493232,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.05889381197161017,
+      "noiseC": 4.993450872074714e-7,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/home-reef/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1670578176,
+      "candidateMedian": 1474248704,
+      "delta": -196329472,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.005501941861833589,
+      "noiseC": 0.0012002533868261077,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/sheltered-cove/heapBytes",
+      "verdict": "inconclusive",
+      "baseMedian": 103537016,
+      "candidateMedian": 95373424,
+      "delta": -8163592,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.015610996554121282,
+      "noiseC": 0.008250390590988954,
+      "agreement": 2,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/sheltered-cove/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 273969798,
+      "candidateMedian": 98656563,
+      "delta": -175313235,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0.0012928486065341643,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/sheltered-cove/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1784889344,
+      "candidateMedian": 1526693888,
+      "delta": -258195456,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0057003332078831665,
+      "noiseC": 0.0027580433989397093,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/salvage:home-pearls/heapBytes",
+      "verdict": "inconclusive",
+      "baseMedian": 83037560,
+      "candidateMedian": 61133544,
+      "delta": -21904016,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0014850629040641368,
+      "noiseC": 0.2438918312996871,
+      "agreement": 1,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/salvage:home-pearls/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 273969569,
+      "candidateMedian": 87433454,
+      "delta": -186536115,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0.0014585835760302917,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/salvage:home-pearls/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1862844416,
+      "candidateMedian": 1530970112,
+      "delta": -331874304,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0043096245349563325,
+      "noiseC": 0.0035101612747878387,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/salvage:horizon-wreck/heapBytes",
+      "verdict": "pass",
+      "baseMedian": 77373600,
+      "candidateMedian": 65850512,
+      "delta": -11523088,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0011237424651302252,
+      "noiseC": 0.05138195432709772,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/salvage:horizon-wreck/backingStorageBytes",
+      "verdict": "pass",
+      "baseMedian": 250859654,
+      "candidateMedian": 92747314,
+      "delta": -158112340,
+      "absoluteAllowance": 8388608,
+      "relativeAllowance": 0.15,
+      "noiseB": 0,
+      "noiseC": 0.07355561800959541,
+      "agreement": 0,
+      "repetitions": 5
+    },
+    {
+      "name": "memory-peak/entry/salvage:horizon-wreck/processRssBytes",
+      "verdict": "pass",
+      "baseMedian": 1857454080,
+      "candidateMedian": 1538392064,
+      "delta": -319062016,
+      "absoluteAllowance": 33554432,
+      "relativeAllowance": 0.15,
+      "noiseB": 0.0013407427008908883,
+      "noiseC": 0.007007753258924768,
+      "agreement": 0,
+      "repetitions": 5
+    }
+  ],
+  "errors": [],
+  "policySha256": "2093d943829bf9926d77784293da22396f1dd948639fb44d6c69d30427bdcf18",
+  "base": {
+    "commit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+    "sourceHash": "03da6b4709db3f6326e1917d2b68849b3ed44d1a4bea43a3e0f3805a321eb742",
+    "buildHash": "17c974dc30535f00582c4d26e725137f8711fa65c7f960869584a3f982153e0a"
+  },
+  "candidate": {
+    "commit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+    "sourceHash": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf",
+    "buildHash": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b"
+  },
+  "localDirtyHeadAllowed": false
+}

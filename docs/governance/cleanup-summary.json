@@ -367,6 +367,144 @@
       "skips": [],
       "evidence": "docs/governance/qa-capture-retirement-proposal.json",
       "preserved": "Seven byte-identical canonical game captures, fixed rubric, scoped independent assessment, final QA summary and all29 compact original outcomes. Human references/assets/public/performance outside scope."
+    },
+    {
+      "kind": "superseded Candidate13 verification build copies",
+      "appliedAt": "2026-10-10T05:17:06.498Z",
+      "authorization": "User authorized temporary verification disposal; coordinator releases exact13 build roots after owned browsers/servers closed and fresh committed final builds and final QA completed; old preview sessions closed. Performance owner confirms no active dependency.",
+      "ledgerSha256": "f990ff288ad57034589496587450fdfaa49aca676dbaed926f643de517014d81",
+      "roots": [
+        ".scratch/current-candidate13-dist",
+        ".scratch/current-candidate13-published"
+      ],
+      "deleted": {
+        "files": 26,
+        "bytes": 29086980,
+        "emptyDirectories": 8
+      },
+      "skips": [],
+      "preserved": [
+        "dist/",
+        "/private/tmp/tidekin-performance-baseline.qav8rw/",
+        ".scratch/final-dist/",
+        ".scratch/final-published/",
+        "assets/",
+        "public/",
+        "captures/",
+        "benchmarks/"
+      ],
+      "evidence": "Frozen inventories, scoped QA reviews and numerical pilot/profile outcomes remain; full build copies no longer have an active measurement purpose."
+    },
+    {
+      "kind": "completed QA temporary Low helper",
+      "appliedAt": "2026-10-10T05:19:53.899Z",
+      "authorization": "Parent explicitly released unchanged single QA-owned helper after maintained coverage and durable proof closed its purpose",
+      "deleted": {
+        "files": 1,
+        "bytes": 21623
+      },
+      "skips": [],
+      "evidence": "qa-capture-retirement-proposal.json followupTemporaryCleanup retains exact type/size/hash and no-follow verification"
+    },
+    {
+      "kind": "completed coordinator verification helpers and metadata",
+      "appliedAt": "2026-10-10T05:22:19.471578+00:00",
+      "authority": "User requested completed-cycle cleanup; coordinator closes these exact temporary purposes. Final clean build provenance and display restoration are durably retained; older scopes/outcomes are retained in current reviews and Git. No operational consumers found in docs/scripts/tests.",
+      "ledgerSha256": "dffc5ca2855f6711034ca3a0ab2de8dba70c4c80b09c36c8211f67dcf584ca8e",
+      "deleted": {
+        "files": 23,
+        "bytes": 448169
+      },
+      "skips": [],
+      "preserved": [
+        ".scratch/current-pr-body.md",
+        ".scratch/current-baseline.mjs",
+        ".scratch/baseline-cpu-fairness.mjs",
+        ".scratch/reef-before-sphere-reuse.mjs",
+        "all directories and unlisted files"
+      ],
+      "verification": "Exact regular files opened O_NOFOLLOW through scratch O_DIRECTORY|O_NOFOLLOW; fstat/hash/size/named inode immediately verified before dir_fd unlink. No directories removed."
+    },
+    {
+      "kind": "lossless failed formal evidence compaction",
+      "appliedAt": "2026-10-10T05:21:15.863Z",
+      "deleted": {
+        "files": 12,
+        "bytes": 163913091
+      },
+      "skips": [],
+      "evidence": "../performance/formal-retention.json preserves exact raw/gzip hashes, all retired entries and independently reproduced comparison; status remains FAIL. Two canonical gzip records retain all original raw bytes.",
+      "scope": "Only the twelve listed regular aggregate/duplicate-repeat JSON files in this completed formal invocation. All raw samples remain in two verified canonical gzip records. Prior pilots and failed setup diagnostics remain pending named-purpose audit; no previews/builds/source/helpers/captures touched."
+    },
+    {
+      "kind": "completed technical reviewer ledger and software probe",
+      "appliedAt": null,
+      "timeLimit": "Reviewer retained no separate application timestamp; completed handoff received2026-10-10 after formal settlement.",
+      "ledgerSha256": "3ab295997d1ab15a21ebb942ae4d94c440bcebb473b87abd24c013e45c64f85f",
+      "deleted": {
+        "files": 2,
+        "bytes": 9995
+      },
+      "skips": [],
+      "evidence": "../reviews/current-improvement/technical-review.md retains both exact file identities and no-follow application outcome; earlier5-file45647-byte batch is separate."
+    },
+    {
+      "kind": "completed measured builds/source snapshot and coordinator verification",
+      "appliedAt": "2026-10-10T05:39:02.817237+00:00",
+      "authority": "User requested final-cycle cleanup; performance owner released all local source/build/preview dependencies. Parent preview sessions27119/21949 exited130. Exact measured source/build inventories remain in Git and canonical compressed records. Four redundant baseline stills are superseded by selected unchanged canonical art evidence; human screenshots remain outside scope. Old CPU buffer/helper/fixture purposes are closed by current exact tests and compact reviews. No new runtime/source changes.",
+      "ledgerSha256": "13366cb484d22797fca7eeb48999428947b1b66da44b0fa3e01cd4d324397b64",
+      "roots": [
+        "/Users/jacobusbrink/Jaxs/projects/tidekin/.scratch/final-dist",
+        "/Users/jacobusbrink/Jaxs/projects/tidekin/.scratch/final-published",
+        "/Users/jacobusbrink/Jaxs/projects/tidekin/dist",
+        "/private/tmp/tidekin-performance-baseline.qav8rw",
+        "/Users/jacobusbrink/Jaxs/projects/tidekin/captures/current-improvement/baseline",
+        "/Users/jacobusbrink/Jaxs/projects/tidekin/.scratch/reef-memory",
+        "/Users/jacobusbrink/Jaxs/projects/tidekin/.scratch/performance-entry-baseline-01",
+        "/Users/jacobusbrink/Jaxs/projects/tidekin/.scratch/current-baseline.mjs",
+        "/Users/jacobusbrink/Jaxs/projects/tidekin/.scratch/reef-before-sphere-reuse.mjs",
+        "/private/tmp/tidekin-final-build.log",
+        "/private/tmp/tidekin-wrapup-tests.log"
+      ],
+      "deleted": {
+        "files": 271,
+        "symlinks": 1,
+        "bytes": 194904084,
+        "emptyDirectories": 43
+      },
+      "skips": [],
+      "preserved": [
+        "Current repo node_modules and .agents original",
+        "Git79da/6acc source history",
+        "All assets/public editable sources and named references",
+        "Canonical art and compressed failed formal raw",
+        "Human screenshots outside exact baseline scope",
+        "Performance owners two historical CPU directories and current PR body"
+      ],
+      "verification": "Every ancestor O_DIRECTORY|O_NOFOLLOW; fileO_NOFOLLOW/fstat/SHA/size/name identity immediately verified; link target checked and link itself unlinked; only listed empty directories removed."
+    },
+    {
+      "kind": "superseded performance pilots and failed setup diagnostics",
+      "appliedAt": "2026-10-10T05:32:00.830Z",
+      "ledgerSha256": "d21c151c89da3f709179bbeb7573722c5686798371532f816158d21982e82dee",
+      "deleted": {
+        "files": 43,
+        "bytes": 114784522
+      },
+      "skips": [],
+      "evidence": "../performance/pilot-retirement.json retains13 original status/hash/outcome groups; final matched failed evidence supersedes raw exploratory diagnostics."
+    },
+    {
+      "kind": "closed historical CPU profiles/fairness proof and helper",
+      "appliedAt": "2026-10-10T05:37:21.269Z",
+      "ledgerSha256": "00f17f9254a632ea0d28121bed29c7ab7794bee1757489f80b5bb21239d25bed",
+      "deleted": {
+        "files": 24,
+        "bytes": 6108098,
+        "emptyDirectories": 4
+      },
+      "skips": [],
+      "evidence": "../performance/pilot-retirement.json closedCpuPurposes retains exact24-file identities, numerical outcomes/source/control scope, profiler perturbation and noncausal limitations."
     }
   ]
 }

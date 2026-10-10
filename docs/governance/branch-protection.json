@@ -22,7 +22,7 @@
   "allowDeletions": false,
   "requiredPullRequestReviews": null,
   "limits": [
-    "Protection settings are verified; the new performance workflow has not completed an end-to-end PR run.",
+    "First hosted build passed; performance collection failed on a baseline small-viewport fixture. Required protection correctly reports the draft blocked; a valid full hosted performance comparison is not established by that failed run.",
     "Requiring a check name does not prevent candidate workflow edits from changing what that check executes. Review enforcement-control changes explicitly; this records accidental-regression gates, not tamper-proof CI certification."
   ],
   "bootstrap": {
@@ -31,5 +31,17 @@
     "verifiedAt": "2026-10-09T21:19:29.418Z",
     "scope": "Only the initial exact legacy base lacking maintained controls; candidate tooling measures both trees under the workflow explicit bootstrap warning.",
     "retire": "Remove after the first harness-bearing main merge; subsequent bases use base-owned tooling."
+  },
+  "lastVerification": {
+    "recordedAt": "2026-10-10T05:20:50.856Z",
+    "source": "GET /repos/Jaxsbr/tidekin/branches/main/protection",
+    "strict": true,
+    "requiredChecks": [
+      "build",
+      "Performance regression gate"
+    ],
+    "enforceAdmins": true,
+    "allowForcePushes": false,
+    "allowDeletions": false
   }
 }

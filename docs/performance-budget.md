@@ -13,7 +13,7 @@ Before implementation, the coordinator measured commit `79da54bdbd029090d4ed9d6f
 
 Cold click-to-play observations were 1.28–1.46 seconds on a local unthrottled server. These include UI click and observation overhead and do not establish network/device-independent loading. Cold resource timing showed two separate URLs downloading the same 2,961,160-byte atlas. Removing that duplication requires candidate verification rather than a source-only claim.
 
-Raw environment, exact build inventory/fingerprint, intervals, coverage, resource timings and JS heap checkpoints: [baseline record](../benchmarks/records/baseline-79da54b.json). Captures in `captures/current-improvement/baseline/` are selected visual evidence collected separately. This baseline is narrower than the maintained full-scenario protocol; it cannot replace broader paired measurements.
+This narrow diagnostic is retired after the stronger full paired comparison. Its original status, raw hash and scope remain in [pilot retirement](performance/pilot-retirement.json). Redundant baseline captures are retired; selected unchanged before/after images remain in `docs/art/evidence/`. These early observations cannot replace broader paired measurements.
 
 ## Maintained protocol
 
@@ -25,4 +25,4 @@ Run one owned test browser at a time. Use isolated test storage, with fixture st
 
 Keep an optimization only with matched evidence of its stated benefit and no failed gameplay/art/memory gate; otherwise revert that change. New finite relative/absolute PR thresholds are provisional until paired runs establish their practical noise behavior. Software-rendered CI comparisons are a distinct profile and cannot pass hardware certification.
 
-Legacy measurements and retired raw-capture links are summarized in [historical outcomes](reviews/historical-summary.md). They are not current candidate evidence. Final acceptance needs a complete integrated record, independent review and verified CI enforcement; these remain underway.
+Legacy measurements and retired raw-capture links are summarized in [historical outcomes](reviews/historical-summary.md). They are not current candidate evidence. The final clean five-pair comparison is **FAIL**:319 gates pass,one home-entry peak-heap gate fails, six are inconclusive. [Retained raw evidence](performance/formal-retention.json) reproduces exact bytes and unchanged comparator results. The candidate remains an unapproved draft; passing size/resource checks do not approve its runtime optimizations for release. Main requires build/performance checks. The bounded software fixture correction has passed focused review and308 CPU tests; final hosted coverage is separate. See [final status](performance/implementation-status.md).
