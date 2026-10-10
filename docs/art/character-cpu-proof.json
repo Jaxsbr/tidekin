@@ -1,0 +1,2213 @@
+{
+  "schema": 3,
+  "candidate": "character-candidate13",
+  "scope": "CPU source-bound three-quarter waist/chest/leading shoulder/face relationship; existing cheek/jaw, crown and gathered waist reshaped. No browser/GPU; actual13 native, temporal, memory and timing acceptance pending.",
+  "sources": {
+    "src/character-art.js": {
+      "bytes": 28175,
+      "sha256": "bf0f46dde85b9754a42c1b662580ac430084e3e03da73dda3bdc3a0adcc5450e"
+    },
+    "src/character/geometry.js": {
+      "bytes": 11173,
+      "sha256": "6cd5b1f67d4b47640732872f342a5d6cdd291a78135c4edecbaad1cb0049c179"
+    },
+    "public/assets/workshop.glb": {
+      "bytes": 1427024,
+      "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+    },
+    "src/geometry/solid-silhouette.js": {
+      "bytes": 1633,
+      "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+    }
+  },
+  "resources": {
+    "meshes": 22,
+    "triangles": 15340,
+    "materials": 8,
+    "geometries": 22,
+    "attachedBufferBytes": 441924,
+    "materialDrawGroups": 37
+  },
+  "geometry": {
+    "normalMin": 0.9999999625639574,
+    "normalMax": 1.0000000395564255,
+    "degenerateTriangles": 0,
+    "invalidValues": 0,
+    "colorEvidence": "All current attributes finite; source paints bounded. Exact13 color extrema not collected. Five Canvas and three paired-goggle blocks match12; face/hair and Upper_Body Olive/Leather/Brass intentionally reshaped."
+  },
+  "lifecycle": {
+    "constructedGeometries": 238,
+    "intermediateDisposed": 216,
+    "retainedGeometries": 22,
+    "constructedMaterials": 8,
+    "hostRelease": {
+      "geometries": 22,
+      "materials": 8,
+      "textures": 0,
+      "instances": 0,
+      "shadows": 0
+    },
+    "repeatedHostRelease": {
+      "geometries": 0,
+      "materials": 0,
+      "textures": 0,
+      "instances": 0,
+      "shadows": 0
+    },
+    "finalAllDisposedExactlyOnce": true,
+    "instrumentation": "Generic BufferGeometry copy targets registered before populated copy; helper unchanged from12, no primitive clone construction returned."
+  },
+  "animation": {
+    "checkedTransforms": 576000,
+    "jointsRemainAttached": true,
+    "rootPositionPreserved": true,
+    "reducedMotionStable": true,
+    "capabilities": [
+      "BufferGeometry",
+      "CatmullRomCurve3",
+      "Color",
+      "Float32BufferAttribute",
+      "Group",
+      "MathUtils",
+      "Mesh",
+      "MeshStandardMaterial",
+      "Shape",
+      "SphereGeometry",
+      "TorusGeometry",
+      "TubeGeometry",
+      "Vector3"
+    ],
+    "deckWaistLeanDegrees": 9.740282517223994,
+    "deckGazeYawDegrees": -9.167324722093172,
+    "upperPivotOutsideHipChains": true,
+    "runtimeCostScope": "One internal Pose_Pelvis Group keeps waist translation within host-owned body heading. Existing scratch subtracts translation then inverts pelvis attitude before fixed ankle solve. No per-frame allocation/projection/matrix traversal; one additional transform node per actor, actual cost pending. In water pelvis/chest transforms neutral; existing nodes including paired gaze match12 exactly.",
+    "deckPelvisRollDegrees": -3.724225668350351,
+    "deckUpperPivotRelativeRollDegrees": 13.464508185574346,
+    "deckWaistOffsetX": -0.045,
+    "sourceSha256": "bf0f46dde85b9754a42c1b662580ac430084e3e03da73dda3bdc3a0adcc5450e",
+    "deckChestOffsetX": -0.035,
+    "deckWaistOffsetZ": 0.015,
+    "deckChestOffsetZ": 0.01,
+    "deckChestYawDegrees": -16.04281826366305
+  },
+  "bounds": {
+    "staticWaistLocal": {
+      "deck": {
+        "min": [
+          -1.1037,
+          -0.98,
+          -0.3819
+        ],
+        "max": [
+          0.4928,
+          1.3987,
+          0.5348
+        ]
+      },
+      "waterRest": {
+        "min": [
+          -0.438,
+          -0.9792,
+          -0.4769
+        ],
+        "max": [
+          0.8082,
+          1.4176,
+          0.6723
+        ]
+      },
+      "horizontalRight": {
+        "min": [
+          -1.0011,
+          -0.7918,
+          -0.3315
+        ],
+        "max": [
+          1.2922,
+          0.6712,
+          0.76
+        ]
+      },
+      "horizontalLeft": {
+        "min": [
+          -1.2546,
+          -0.7918,
+          -0.3315
+        ],
+        "max": [
+          1.0011,
+          0.6893,
+          0.76
+        ]
+      },
+      "descentRight": {
+        "min": [
+          -0.9274,
+          -0.7707,
+          -0.3358
+        ],
+        "max": [
+          1.2316,
+          0.7551,
+          0.76
+        ]
+      },
+      "ascentLeft": {
+        "min": [
+          -0.9928,
+          -0.7656,
+          -0.3315
+        ],
+        "max": [
+          0.9034,
+          1.1327,
+          0.76
+        ]
+      },
+      "workingRight": {
+        "min": [
+          -1.0011,
+          -0.8435,
+          -0.3378
+        ],
+        "max": [
+          1.2922,
+          0.6712,
+          0.7907
+        ]
+      }
+    },
+    "sampledAnimatedWaistLocal": {
+      "deck": {
+        "min": [
+          -1.1038,
+          -0.98,
+          -0.382
+        ],
+        "max": [
+          0.5284,
+          1.4016,
+          0.5348
+        ]
+      },
+      "waterRest": {
+        "min": [
+          -0.4496,
+          -0.9964,
+          -0.5955
+        ],
+        "max": [
+          0.8285,
+          1.4207,
+          0.6927
+        ]
+      },
+      "horizontalRight": {
+        "min": [
+          -1.008,
+          -0.828,
+          -0.3686
+        ],
+        "max": [
+          1.2923,
+          0.6734,
+          0.785
+        ]
+      },
+      "horizontalLeft": {
+        "min": [
+          -1.2567,
+          -0.828,
+          -0.399
+        ],
+        "max": [
+          1.008,
+          0.6894,
+          0.785
+        ]
+      },
+      "descentRight": {
+        "min": [
+          -0.9496,
+          -1.0568,
+          -0.3686
+        ],
+        "max": [
+          1.2333,
+          0.8265,
+          0.785
+        ]
+      },
+      "ascentLeft": {
+        "min": [
+          -1.0084,
+          -0.7763,
+          -0.399
+        ],
+        "max": [
+          0.9528,
+          1.1346,
+          0.785
+        ]
+      },
+      "workingRight": {
+        "min": [
+          -1.008,
+          -0.8479,
+          -0.3686
+        ],
+        "max": [
+          1.2923,
+          0.6734,
+          0.7911
+        ]
+      },
+      "surfaceRight": {
+        "min": [
+          -1.008,
+          -0.8284,
+          -0.3828
+        ],
+        "max": [
+          1.2923,
+          0.6734,
+          0.7854
+        ]
+      }
+    },
+    "sampling": {
+      "perPoseFrames": 720,
+      "dt": 0.016666666666666666,
+      "seconds": 12,
+      "notes": "Sampled finite envelopes, not analytic collision bounds; add .03 padding for culling. Surface parameter sampled separately below."
+    },
+    "deckWorld720Frames": {
+      "kind": "CPU focused-pass placement; actual GLB triangle positions, no renderer or visual/motion acceptance",
+      "sourceSha256": {
+        "src/character-art.js": "bf0f46dde85b9754a42c1b662580ac430084e3e03da73dda3bdc3a0adcc5450e",
+        "src/character/geometry.js": "6cd5b1f67d4b47640732872f342a5d6cdd291a78135c4edecbaad1cb0049c179",
+        "public/assets/workshop.glb": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+      },
+      "hostRoot": [
+        2.6,
+        1.725,
+        -4.02
+      ],
+      "hostBodyYaw": 3.391592653589793,
+      "frames": 720,
+      "parent": "Workshop",
+      "envelope": {
+        "min": [
+          1.9842884745579943,
+          0.7449999912977219,
+          -4.498651388282587
+        ],
+        "max": [
+          3.6305965146302315,
+          3.1266307058649048,
+          -3.7064892642316005
+        ]
+      },
+      "boots": {
+        "1": {
+          "min": [
+            2.3258966944110786,
+            0.7449999912977219,
+            -4.217070327610705
+          ],
+          "max": [
+            2.559935010303622,
+            0.9600000023245812,
+            -3.9242065185693025
+          ]
+        },
+        "-1": {
+          "min": [
+            2.6432940251533212,
+            0.7449999912977219,
+            -4.220802119720951
+          ],
+          "max": [
+            2.8540574735044135,
+            0.9600000023245812,
+            -3.9334924619733456
+          ]
+        }
+      },
+      "maxSoleError": 8.702278120331641e-09,
+      "cabinBackface": {
+        "triangles": 0,
+        "z": null,
+        "conservativeGap": null,
+        "allBackFaceBounds": {
+          "min": [
+            -2.7415000218926733,
+            0.820141872946882,
+            -3.3600001565491198
+          ],
+          "max": [
+            0.24649972032642609,
+            3.5236225565748347,
+            -3.3599996585277436
+          ]
+        },
+        "boxDistanceToAllBackFaces": 1.7719944853402638
+      },
+      "nearestBehindObstacle": {
+        "triangles": 516,
+        "minZ": -4.0500000311292865,
+        "conservativeGap": -0.343510766897686
+      },
+      "nearestElevatedStaticTriangleBox": {
+        "distance": 0,
+        "box": {
+          "min": [
+            2.9418454003468124,
+            0.7700000165157114,
+            -3.7401071556335577
+          ],
+          "max": [
+            3.0355586629617832,
+            0.9400000747679851,
+            -3.58599999516309
+          ]
+        }
+      },
+      "staticTriangleAABBOverlaps": 453,
+      "deckNominal": {
+        "x": [
+          -3.5,
+          3.5
+        ],
+        "z": [
+          -4.5,
+          4.5
+        ],
+        "actorAftMargin": 0.001348611717412851,
+        "bootsAftMargin": 0.2791978802790487
+      },
+      "floorSamples": [
+        {
+          "side": -1,
+          "soleSamples": 17,
+          "supportedSamples": 11,
+          "seamSamples": 6,
+          "minTopY": 0.7376418352624838,
+          "maxTopY": 0.749474646045722,
+          "minGap": -0.004474654748000129,
+          "maxGap": 0.007358156035238039
+        },
+        {
+          "side": 1,
+          "soleSamples": 17,
+          "supportedSamples": 13,
+          "seamSamples": 4,
+          "minTopY": 0.737641835913667,
+          "maxTopY": 0.7494746493440938,
+          "minGap": -0.0044746580463719265,
+          "maxGap": 0.007358155384054821
+        }
+      ],
+      "limits": [
+        "Envelopes sampled for 12 seconds at raft heading zero, including GLB parent transform; tide/bob excluded.",
+        "Cabin clearance uses disjoint triangle-box Z planes and the complete actor envelope; not camera projection.",
+        "Floor samples cover indexed sole perimeter vertices, not a rigid-body support/physics solution. Misses are gaps in upward deck surfaces, not proof the whole foot lacks support.",
+        "No character source edits; motion acceptance depends on correctly aligned actual clips."
+      ]
+    }
+  },
+  "presentation": {
+    "candidate13Comparison": {
+      "kind": "Bounded12/13 ordered attribute and pose comparison; deliberate deck depth relationship and face/hair/waist shaping. Mathematical projection only, no native score.",
+      "unchangedOrderedTriangleAttributeBlocks": [
+        "Knee_Left/Skin",
+        "Ankle_Left/Canvas",
+        "Ankle_Left/Leather",
+        "Hip_Left/Skin",
+        "Hip_Left/Olive",
+        "Knee_Right/Skin",
+        "Ankle_Right/Canvas",
+        "Ankle_Right/Leather",
+        "Hip_Right/Skin",
+        "Hip_Right/Olive",
+        "Eye_Look/Face",
+        "Eye_Left/Face",
+        "Eye_Right/Face",
+        "Explorer_Goggles/Leather",
+        "Explorer_Goggles/Brass",
+        "Explorer_Goggles/Face",
+        "Goggle_Band/Leather",
+        "Scarf_Base/CoralCloth",
+        "Scarf_Tip/CoralCloth",
+        "Scarf_Second/CoralCloth",
+        "Elbow_Left/Skin",
+        "Hand_Left/Skin",
+        "Shoulder_Left/Skin",
+        "Shoulder_Left/Canvas",
+        "Elbow_Right/Skin",
+        "Hand_Right/Skin",
+        "Shoulder_Right/Skin",
+        "Shoulder_Right/Canvas",
+        "Upper_Body/Skin",
+        "Upper_Body/Canvas",
+        "Upper_Body/CoralCloth"
+      ],
+      "changedBlocks": [
+        "Head_Visual/Skin",
+        "Head_Visual/Chestnut",
+        "Head_Visual/Face",
+        "Upper_Body/Olive",
+        "Upper_Body/Leather",
+        "Upper_Body/Brass"
+      ],
+      "addedBlocks": [],
+      "unchangedCanvasBlocks": 5,
+      "unchangedGoggleBlocks": 3,
+      "water": {
+        "poses": 7,
+        "framesPerPose": 240,
+        "commonNodeWorldMatrixValues": 1263360,
+        "maxDifference": 0,
+        "newGazePivotExcluded": false,
+        "newPelvisPivotExcluded": true,
+        "limit": "All existing12 nodes including Eye_Look compared; added identity pelvis node excluded. Static shapes deliberately differ."
+      },
+      "deck": {
+        "before": [
+          {
+            "side": -1,
+            "knee": [
+              -0.16153348485134625,
+              -0.5541655572034141,
+              0.007948880538682847
+            ],
+            "ankle": [
+              -0.15299999999999997,
+              -0.8360000000000001,
+              -0.025999999999999995
+            ],
+            "lateralKneeToAnkle": -0.008533484851346279,
+            "shinLateralAngleDegrees": -1.7342924072245307
+          },
+          {
+            "side": 1,
+            "knee": [
+              0.21702545192815498,
+              -0.5649881225294525,
+              0.06691774408717488
+            ],
+            "ankle": [
+              0.13499999999999995,
+              -0.836,
+              0.045
+            ],
+            "lateralKneeToAnkle": 0.08202545192815502,
+            "shinLateralAngleDegrees": 16.83915750427301
+          }
+        ],
+        "after": [
+          {
+            "side": -1,
+            "knee": [
+              -0.16153348485134628,
+              -0.5541655572034141,
+              0.00794888053868285
+            ],
+            "ankle": [
+              -0.153,
+              -0.8360000000000001,
+              -0.025999999999999992
+            ],
+            "lateralKneeToAnkle": -0.008533484851346279,
+            "shinLateralAngleDegrees": -1.7342924072245307
+          },
+          {
+            "side": 1,
+            "knee": [
+              0.21702545192815498,
+              -0.5649881225294526,
+              0.06691774408717488
+            ],
+            "ankle": [
+              0.13499999999999995,
+              -0.8360000000000001,
+              0.045
+            ],
+            "lateralKneeToAnkle": 0.08202545192815502,
+            "shinLateralAngleDegrees": 16.83915750427301
+          }
+        ],
+        "mathematicalNativeCameraProjection": [
+          {
+            "aspect": 1.6,
+            "before": [
+              {
+                "side": -1,
+                "kneeToAnkleXPixels": -1.9990193883599838,
+                "shinLengthPixels": 11.265563660354116
+              },
+              {
+                "side": 1,
+                "kneeToAnkleXPixels": 2.7613573782327094,
+                "shinLengthPixels": 11.299132972585758
+              }
+            ],
+            "after": [
+              {
+                "side": -1,
+                "kneeToAnkleXPixels": -1.9990193883600238,
+                "shinLengthPixels": 11.265563660354147
+              },
+              {
+                "side": 1,
+                "kneeToAnkleXPixels": 2.7613573782327094,
+                "shinLengthPixels": 11.299132972585708
+              }
+            ]
+          },
+          {
+            "aspect": 1,
+            "before": [
+              {
+                "side": -1,
+                "kneeToAnkleXPixels": -1.5380980342025896,
+                "shinLengthPixels": 10.37569713778188
+              },
+              {
+                "side": 1,
+                "kneeToAnkleXPixels": 2.6247373855203984,
+                "shinLengthPixels": 10.422688610529411
+              }
+            ],
+            "after": [
+              {
+                "side": -1,
+                "kneeToAnkleXPixels": -1.5380980342024397,
+                "shinLengthPixels": 10.375697137781907
+              },
+              {
+                "side": 1,
+                "kneeToAnkleXPixels": 2.6247373855203984,
+                "shinLengthPixels": 10.422688610529386
+              }
+            ]
+          }
+        ],
+        "maxAnkleMatrixDifference": 1.7763568394002505e-15
+      },
+      "gaze": {
+        "pairedPivot": true,
+        "rows": [
+          {
+            "name": "deck",
+            "settledOffset": -0.028,
+            "maxFrameStep": 0
+          },
+          {
+            "name": "neutral",
+            "settledOffset": -3.150984892139266e-09,
+            "maxFrameStep": 0.003495147066797471
+          },
+          {
+            "name": "workRight",
+            "settledOffset": 0.021999997524225802,
+            "maxFrameStep": 0.002746187374382141
+          },
+          {
+            "name": "workLeft",
+            "settledOffset": -0.02199999504845259,
+            "maxFrameStep": 0.0054923736530676365
+          },
+          {
+            "name": "return",
+            "settledOffset": -2.4757732866004585e-09,
+            "maxFrameStep": 0.002746186362969926
+          }
+        ],
+        "maxBlinkPlaneScaleMismatch": 0,
+        "returnNeutral": true,
+        "limits": "Point samples and geometric projection do not certify visible iris containment/expression or temporal appeal; native views and clips remain required."
+      }
+    },
+    "wholeChainCameraAttitude": {
+      "kind": "Reduced deck12/13 whole chain positions and actual camera-to-face normal angles. Directional math only, no native expression score.",
+      "rows": [
+        {
+          "candidate": "12",
+          "faceAngles": [
+            {
+              "degreesFromActualCamera": 41.0185759916928,
+              "horizontalDegrees": 29.00695656835314
+            },
+            {
+              "degreesFromActualCamera": 37.5410795911524,
+              "horizontalDegrees": 27.355447859132266
+            }
+          ],
+          "hipCentres": [
+            [
+              2.769852814877503,
+              1.5541214135394275,
+              -4.0853512517787305
+            ],
+            [
+              2.5147038459388638,
+              1.5169753237759263,
+              -4.031320938361367
+            ]
+          ],
+          "shoulders": [
+            [
+              2.9597778798991854,
+              2.1316877755633,
+              -4.096385099706523
+            ],
+            [
+              2.4706960201465704,
+              2.20519386626206,
+              -3.9715019980029327
+            ]
+          ],
+          "facePosition": [
+            2.7499007976223457,
+            2.575578162268903,
+            -4.315016638919556
+          ]
+        },
+        {
+          "candidate": "13",
+          "faceAngles": [
+            {
+              "degreesFromActualCamera": 44.908030999259466,
+              "horizontalDegrees": 42.06761684797783
+            },
+            {
+              "degreesFromActualCamera": 42.36048195361051,
+              "horizontalDegrees": 40.39291840070516
+            }
+          ],
+          "hipCentres": [
+            [
+              2.769852814877503,
+              1.5541214135394272,
+              -4.085351251778731
+            ],
+            [
+              2.5147038459388638,
+              1.5169753237759263,
+              -4.031320938361368
+            ]
+          ],
+          "shoulders": [
+            [
+              3.0018152934509157,
+              2.1370513905415836,
+              -4.071917473768555
+            ],
+            [
+              2.4923655837382857,
+              2.1937826266758904,
+              -4.0158589318646625
+            ]
+          ],
+          "facePosition": [
+            2.8619331541778044,
+            2.6051249959213,
+            -4.267325359808686
+          ]
+        }
+      ]
+    },
+    "readability": {
+      "kind": "CPU face-point/lens-centre rays only, not full-scene or native pixel acceptance",
+      "framesPerPose": 240,
+      "poses": [
+        {
+          "name": "deckWide",
+          "handFace": 0,
+          "clothFace": 0,
+          "lensHair": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "deckSquare",
+          "handFace": 0,
+          "clothFace": 0,
+          "lensHair": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rest",
+          "handFace": 0,
+          "clothFace": 0,
+          "lensHair": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "right",
+          "handFace": 0,
+          "clothFace": 0,
+          "lensHair": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "left",
+          "handFace": 0,
+          "clothFace": 0,
+          "lensHair": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "reachRight",
+          "handFace": 0,
+          "clothFace": 0,
+          "lensHair": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "reachLeft",
+          "handFace": 0,
+          "clothFace": 0,
+          "lensHair": [
+            0,
+            0
+          ]
+        }
+      ],
+      "deckCameras": {
+        "deckWide": [
+          -7.235030894170702,
+          13.5,
+          -21.83241461589614
+        ],
+        "deckSquare": [
+          -8.320285528296306,
+          13.5,
+          -25.107276808280563
+        ]
+      },
+      "waterCamera": [
+        0,
+        0,
+        12.24
+      ]
+    },
+    "raySelection": "Material-array selection resolves hit.face.materialIndex; near brow sample updated to .185. Face-point/lens-centre rays do not prove full outlines or iris containment.",
+    "preserved": "All five Canvas and three paired-goggle material blocks, scarf and lower-limb geometry match12. Existing12 gaze/eye marks, knee/ankle placement and10 smooth cloth retained.",
+    "faceHairChanges": "Existing jaw sections taper with mild near-side offset; near cheek fuller/raised and embedded, far cheek quieter; near brow/mouth/teeth corner supports the turn. Cap leans into existing dominant crest, two lock paths reshaped. Gathered waist/belt/kit shifted .04 opposite upper chest mass without extra vertices. Shapes affect water; all10 native views must judge identity.",
+    "shortsSeam": {
+      "kind": "Quiet deck proximal thigh-cap probes against actual indexed waist-short volume; overlap screen, not manifold clothing union or native seam approval",
+      "rows": [
+        {
+          "candidate": "12",
+          "caps": [
+            {
+              "side": -1,
+              "proximalCapCentreInsideWaistShorts": true,
+              "capVertices": 17,
+              "containedCapVertices": 11
+            },
+            {
+              "side": 1,
+              "proximalCapCentreInsideWaistShorts": true,
+              "capVertices": 17,
+              "containedCapVertices": 9
+            }
+          ]
+        },
+        {
+          "candidate": "13",
+          "caps": [
+            {
+              "side": -1,
+              "proximalCapCentreInsideWaistShorts": true,
+              "capVertices": 17,
+              "containedCapVertices": 10
+            },
+            {
+              "side": 1,
+              "proximalCapCentreInsideWaistShorts": true,
+              "capVertices": 17,
+              "containedCapVertices": 7
+            }
+          ]
+        }
+      ],
+      "limits": "Caps connect through the waist volume. Some perimeter vertices intentionally emerge below/along the waist hem; projection, shading and clothing union continuity remain native-review concerns."
+    },
+    "limits": "Geometric depth, directional angle and overlap do not certify visible whole-body intent, facial expression, goggles, clothing continuity or points."
+  },
+  "worldContact": {
+    "parentRoot": [
+      2.6,
+      1.725,
+      -4.02
+    ],
+    "hostBodyYaw": 3.391592653589793,
+    "contactScreen": {
+      "kind": "CPU sampled deck contact screening; triangle edge crossings exclude coplanar containment and are not physics or projection acceptance",
+      "barrelRegion": {
+        "min": [
+          2.438749683069667,
+          0.7699999840581345,
+          -3.8112495344728163
+        ],
+        "max": [
+          3.16124995785873,
+          1.5413750567513442,
+          -3.0887497117907996
+        ]
+      },
+      "railRegion": {
+        "min": [
+          3.1329993230472235,
+          0.6689220108876406,
+          -4.216999801082318
+        ],
+        "max": [
+          3.4669994210765136,
+          1.8499999491310335,
+          -3.8830001534700624
+        ]
+      },
+      "rows": [
+        {
+          "armEnvelopes": [
+            {
+              "side": -1,
+              "min": [
+                2.9337258827617325,
+                2.0148434485775266,
+                -4.4835190185551905
+              ],
+              "max": [
+                3.6305963637881487,
+                2.3077050512198847,
+                -3.9667458573614023
+              ],
+              "barrelBoxGap": 0.49834869769102713,
+              "railBoxGap": 0.16484349944649312,
+              "minYAboveRailTop": 0.16484349944649312
+            },
+            {
+              "side": 1,
+              "min": [
+                2.228683907219762,
+                1.8082069057604495,
+                -4.498651388282587
+              ],
+              "max": [
+                2.5996886387461258,
+                2.2610260877450608,
+                -3.906635009190908
+              ],
+              "barrelBoxGap": 0.28336835467781807,
+              "railBoxGap": 0.5333106843010977,
+              "minYAboveRailTop": -0.04179304337058398
+            }
+          ],
+          "root": [
+            2.6,
+            1.725,
+            -4.02
+          ],
+          "frames": 120,
+          "envelope": {
+            "min": [
+              1.9842936721653035,
+              0.7449999912977219,
+              -4.498651388282587
+            ],
+            "max": [
+              3.6305963637881487,
+              3.1266305926465634,
+              -3.7064892668441853
+            ]
+          },
+          "barrelRegionBoxGap": 0,
+          "railRegionBoxGap": 0,
+          "nearMeshEnvelopes": [],
+          "segmentTriangleCrossings": {},
+          "testedPairs": 0,
+          "minTriangleBoxGap": 0.08636350054995061,
+          "maxAnkleTargetMatrixError": 1.7763568394002505e-15,
+          "maxSoleHeightError": 8.702278120331641e-09,
+          "stance": {
+            "min": [
+              2.3258966944110786,
+              0.7449999912977219,
+              -4.220802119720951
+            ],
+            "max": [
+              2.8540574735044135,
+              0.9600000023245812,
+              -3.9242065185693025
+            ]
+          }
+        }
+      ]
+    },
+    "floorSamples": [
+      {
+        "side": -1,
+        "soleSamples": 17,
+        "supportedSamples": 11,
+        "seamSamples": 6,
+        "minTopY": 0.7376418352624838,
+        "maxTopY": 0.749474646045722,
+        "minGap": -0.004474654748000129,
+        "maxGap": 0.007358156035238039
+      },
+      {
+        "side": 1,
+        "soleSamples": 17,
+        "supportedSamples": 13,
+        "seamSamples": 4,
+        "minTopY": 0.737641835913667,
+        "maxTopY": 0.7494746493440938,
+        "minGap": -0.0044746580463719265,
+        "maxGap": 0.007358155384054821
+      }
+    ],
+    "limits": [
+      "Envelopes sampled for 12 seconds at raft heading zero, including GLB parent transform; tide/bob excluded.",
+      "Cabin clearance uses disjoint triangle-box Z planes and the complete actor envelope; not camera projection.",
+      "Floor samples cover indexed sole perimeter vertices, not a rigid-body support/physics solution. Misses are gaps in upward deck surfaces, not proof the whole foot lacks support.",
+      "No character source edits; motion acceptance depends on correctly aligned actual clips.",
+      "Whole-actor aft margin .00135 belongs to elevated arm/body outline; boot margin .27920 unchanged. Actual camera/props/motion remain native checks.",
+      "Zero elevated triangle-box overlaps; no candidate edge pairs. Low deck/coplanar/continuous physics excluded."
+    ]
+  },
+  "javascript": {
+    "baseline": {
+      "raw": 774327,
+      "gzip": 215814
+    },
+    "finiteMaximum": {
+      "raw": 789813.54,
+      "gzip": 220130.28
+    },
+    "policy": "Baseline + max(relative 2%, absolute 8KiB raw/2KiB gzip); allowances are not additive.",
+    "actualSourceLevel9WriteFalse": {
+      "kind": "Live integrated-source Vite write:false preflight; explicit root/public bases, gzipSync(code,{level:9}) matching policy, no substitutions or dist/GPU. Parent artifact equivalence/acceptance not inferred.",
+      "compression": {
+        "method": "Sum per-JS-chunk gzipSync(code,{level:9}).length",
+        "level": 9
+      },
+      "rows": [
+        {
+          "variant": "root",
+          "base": "/",
+          "raw": 784278,
+          "gzip": 219674,
+          "rawPass": true,
+          "gzipPass": true,
+          "gzipHeadroom": 456.27999999999884,
+          "outputs": [
+            {
+              "file": "assets/index-CdjYE9Z1.js",
+              "sha256": "08af30207b28a98d0174bce0a915179adced7bb3a82cc75de7448c89e6902dac"
+            },
+            {
+              "file": "assets/scene-3RrrFS3Q.js",
+              "sha256": "7e33c05659eaa3db0cadffa09eaf5530460d63c82c5ac4d93137aa44bd910fe9"
+            }
+          ]
+        },
+        {
+          "variant": "published",
+          "base": "/tidekin/",
+          "raw": 784302,
+          "gzip": 219686,
+          "rawPass": true,
+          "gzipPass": true,
+          "gzipHeadroom": 444.27999999999884,
+          "outputs": [
+            {
+              "file": "assets/index-CaGbAwpC.js",
+              "sha256": "0e722d0b64c7a2b935530d57e8d11b756824650ca238c832d4c19e0dbf4e1f7b"
+            },
+            {
+              "file": "assets/scene-BsFjW98V.js",
+              "sha256": "8d149a78dfb281b4182e590c614825bbbe5d470e68e2fff7c96b224523049495"
+            }
+          ]
+        }
+      ],
+      "sources": {
+        "src/character-art.js": "bf0f46dde85b9754a42c1b662580ac430084e3e03da73dda3bdc3a0adcc5450e",
+        "src/character/geometry.js": "6cd5b1f67d4b47640732872f342a5d6cdd291a78135c4edecbaad1cb0049c179",
+        "src/geometry/solid-silhouette.js": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738",
+        "assets/cleanup/underwater-fish.js": "769f5b5638fbfd74831c92892a130925546d7ca899132a9fdc174485c4a0ddaf",
+        "assets/cleanup/underwater-models.js": "9ee70b8598cd0f5a837104c6faa2d1f98f94bb4a733e3dad191db2f6269b5cc2",
+        "src/scene.js": "f1fa28b9839ce8f06ef059e082854a8d243487be2b446f45080f80ece821a226",
+        "src/cleanup-scene.js": "dff1fd2cb18b5ff43e5728316fc9bd6dab56faa89f7f7bc255bd730fa7f84221",
+        "src/main.js": "ba1b2cd96e1c918bd3a694ff6d9f349af658a229a9422c6ecab980509836f180"
+      },
+      "inputsUnchanged": true
+    },
+    "parentIntegratedBuild": {
+      "state": "Current13 parent written root/published artifacts pending; historical builds retained under historicalOutcomes."
+    },
+    "parentIntegrationHold": "Eight exact live inputs unchanged through both preflights and handback; latest unitSphere reef9ee70b85 included, not old5a1bd004. Rebind on parent source change.",
+    "comparisonLimit": "Current13 versus12 includes independently changed parent unitSphere reuse; not an isolated art delta. In-memory policy-codec outputs do not certify written artifact equality."
+  },
+  "optimization": {
+    "method": "Shared createSolidSilhouette(THREE,outline,depth,curveSegments=12) preserves closed solid contour ordering, triangulation and flat normals. Character wrapper passes8; fish uses depth.016/default12. Parent converts fish before removing both ExtrudeGeometry capability entries; no new injected engine member.",
+    "equivalence": {
+      "kind": "CPU semantics-preserving solid-silhouette comparison before any intentional next-art changes",
+      "beforeSources": {
+        "character": "0c487ab404a8b84cc1dfa57e412556363d15d801480aceed20740fe6eade1aea",
+        "helper": "fa7af5994a45d345d0af6e06884e5620f8527c3ef63df02f0f7bd1192839506b"
+      },
+      "optimizedSources": {
+        "character": "2b1d24305038b0b4c449c7e8813b0ba6a04bf35d88ce4cd9d46e1a45fbc48966",
+        "helper": "d97364277284d9afe14336c6612699fee5be2e3717349cdc57fa5711d11584ed"
+      },
+      "geometry": {
+        "sha256": "b1cf3b1749f08eacdd2afc3dc303bc3c6fb207effe287aec2a7a24c8832f2d36",
+        "meshes": 35,
+        "triangles": 14764,
+        "bytes": 425004,
+        "arraysAndMetadataBitwiseIdentical": true
+      },
+      "animation": {
+        "frames": 1200,
+        "protocolSha256": "9588d70ead5d3c4f867051be88f58118f08f1b0fc490797e6bad21ff80501de7",
+        "comparedValues": 1113600,
+        "matricesBitwiseIdentical": true,
+        "beforeSha256": "5847a65fe1a50104301f17f93cabebe9518898cbf44f2c7964a3218085da4b6d",
+        "afterSha256": "5847a65fe1a50104301f17f93cabebe9518898cbf44f2c7964a3218085da4b6d"
+      },
+      "releaseBefore": {
+        "geometries": 35,
+        "materials": 8,
+        "textures": 0,
+        "instances": 0,
+        "shadows": 0
+      },
+      "releaseAfter": {
+        "geometries": 35,
+        "materials": 8,
+        "textures": 0,
+        "instances": 0,
+        "shadows": 0
+      },
+      "repeatBefore": {
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "instances": 0,
+        "shadows": 0
+      },
+      "repeatAfter": {
+        "geometries": 0,
+        "materials": 0,
+        "textures": 0,
+        "instances": 0,
+        "shadows": 0
+      },
+      "limit": "Attribute arrays/index, layout metadata and transforms compare exactly; renderer screenshots/performance remain separately owned.",
+      "recipe": "Original07 art with only factory helper destructuring and ExtrudeGeometry constructor replaced; helper omits the later intentional Canvas flank-wash refinement. Intentional08 form/pose/material changes are audited separately."
+    },
+    "earlierMatchedProfile": {
+      "control": {
+        "raw": 786465,
+        "gzip": 220574
+      },
+      "optimized": {
+        "raw": 780805,
+        "gzip": 218485
+      },
+      "saving": {
+        "raw": 5660,
+        "gzip": 2089
+      },
+      "limit": "Superseded: virtual removal of cleanup extrusion omitted its transitive fish consumer. Geometry equivalence remains valid; that bundle does not validate runtime integration.",
+      "validRuntimeIntegration": false
+    },
+    "rejectedMerger": {
+      "sourceSha256": "df2bf210ed47608ac155e0151c77a54ffb787e8e933d0d654c400451274f7d5c",
+      "matchedGzipRegressionBytes": 290,
+      "outcome": "Reverted; GLTFLoader already retained utility dependencies, while bespoke merging added code."
+    },
+    "sharedExtraction": {
+      "kind": "CPU shared-builder extraction and actual fish-factory virtual substitution; no art/pose edits, GPU or native acceptance",
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 24594,
+          "sha256": "9aad3f503f24bc9529dff060e2c99f2653c54d7c4cede2bd42fbd45d3d55ec27"
+        },
+        "src/character/geometry.js": {
+          "bytes": 8889,
+          "sha256": "a45607365e0ad45a62404d977b75a6b93162f28cd35b0946cbf97998e3a0b0f2"
+        },
+        "src/geometry/solid-silhouette.js": {
+          "bytes": 1633,
+          "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+        },
+        "assets/cleanup/underwater-fish.js": {
+          "bytes": 4550,
+          "sha256": "21cca3e0a75f12bececae461af30d86241dead9afe7cbd09abc321323429bf98"
+        }
+      },
+      "helperBeforeSha256": "ae4bd3db8c19b29c205ee3160ead347ef720803318dc4f4f4124069b845d9320",
+      "character": {
+        "geometry": {
+          "sha256": "48267ceeaacc084e29ace04bb3e705bd8974f7aed5e7ad1668c135115308d9d0",
+          "meshes": 36,
+          "triangles": 15340,
+          "bytes": 441924,
+          "uniqueGeometries": 36
+        },
+        "motion": {
+          "frames": 1200,
+          "comparedValues": 1132800,
+          "sha256": "d760552ddbc5e776c2e1818ed9615bf5ff24b30f09f1e2be347844e49d727b9f",
+          "bitwiseIdentical": true
+        },
+        "releaseBefore": {
+          "geometries": 36,
+          "materials": 8,
+          "textures": 0,
+          "instances": 0,
+          "shadows": 0
+        },
+        "releaseAfter": {
+          "geometries": 36,
+          "materials": 8,
+          "textures": 0,
+          "instances": 0,
+          "shadows": 0
+        }
+      },
+      "fish": {
+        "sourceConstraint": "Actual fin has a closed simple contour with no holes, quadratic curve, depth .016 and default12 segments; no bevel/path/customUV/texture. Body/eyes unchanged.",
+        "geometryAndMaterialDigest": {
+          "sha256": "a74dbaec16135d6479e3c6f25d33db325e6aa35858e256c367734172f3e01f41",
+          "meshes": 63,
+          "triangles": 6496,
+          "bytes": 9552,
+          "uniqueGeometries": 3
+        },
+        "fin": {
+          "curveSegments": 12,
+          "depth": 0.016,
+          "triangles": 52,
+          "positionSha256": "22154f54f7edf916e8757562ff46b0804ba8357cae8d00c922aad30b027c1a9c",
+          "normalSha256": "3a95ec2ae7bd0b7fd0dc5e0209221748f2024302241a47d004f171cd845e08f8",
+          "groups": [
+            {
+              "start": 0,
+              "count": 72,
+              "materialIndex": 0
+            },
+            {
+              "start": 72,
+              "count": 84,
+              "materialIndex": 1
+            }
+          ],
+          "colorAttributeBefore": false,
+          "colorAttributeAfter": false,
+          "uvBefore": true,
+          "uvAfter": false
+        },
+        "motion": {
+          "frames": 600,
+          "comparedValues": 681600,
+          "sha256": "a67aff1f9e2561ede9a8140e1fecddd7dda13adccbe9bbe0a904ae0f426e2c29",
+          "bitwiseIdentical": true
+        },
+        "releaseBefore": {
+          "geometries": 3,
+          "materials": 5,
+          "textures": 0,
+          "instances": 0,
+          "shadows": 0
+        },
+        "releaseAfter": {
+          "geometries": 3,
+          "materials": 5,
+          "textures": 0,
+          "instances": 0,
+          "shadows": 0
+        }
+      },
+      "limit": "Fish comparison intentionally excludes UV arrays: shared geometry omits unused UVs; fish materials have no texture maps. Position/normal ordering, topology/groups, material colors and matrices compare bitwise. Parent must apply fish import/call and then validate actual capability objects before removing cleanup extrusion.",
+      "temporaryVerificationCleanup": {
+        "directory": "/private/tmp/tidekin-solid-silhouette-check",
+        "removedFiles": 7,
+        "removedBytes": 26744,
+        "skips": [],
+        "directoryRemoved": true,
+        "exactTypeSizeShaLedgerReverified": true,
+        "ledgerRetired": true,
+        "outcomesRetainedInCurrentProof": true
+      }
+    },
+    "constructorReferenceTests": {
+      "command": "node --test tests/character-grouping.test.js tests/cleanup-character-materials.test.js tests/startup-lifecycle.test.js tests/performance-entry.test.js tests/render-resources.test.js tests/fifth-fish.test.js tests/reef-batching.test.js tests/solid-silhouette.test.js",
+      "passed": 54,
+      "failed": 0,
+      "state": "Final bounded eight-file run against latest parent unitSphere reef: three new parent reef cases grow50\u219253, and one new owned host-heading/neutral-water planted-ankle test gives54. Grouping/arrays/tint/failures/constructor/disposal/capabilities/fish continue passing.",
+      "integratedInputs": {
+        "src/character-art.js": "bf0f46dde85b9754a42c1b662580ac430084e3e03da73dda3bdc3a0adcc5450e",
+        "src/character/geometry.js": "6cd5b1f67d4b47640732872f342a5d6cdd291a78135c4edecbaad1cb0049c179",
+        "src/geometry/solid-silhouette.js": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738",
+        "assets/cleanup/underwater-fish.js": "769f5b5638fbfd74831c92892a130925546d7ca899132a9fdc174485c4a0ddaf",
+        "assets/cleanup/underwater-models.js": "9ee70b8598cd0f5a837104c6faa2d1f98f94bb4a733e3dad191db2f6269b5cc2",
+        "src/scene.js": "f1fa28b9839ce8f06ef059e082854a8d243487be2b446f45080f80ece821a226",
+        "src/cleanup-scene.js": "dff1fd2cb18b5ff43e5728316fc9bd6dab56faa89f7f7bc255bd730fa7f84221",
+        "src/main.js": "ba1b2cd96e1c918bd3a694ff6d9f349af658a229a9422c6ecab980509836f180"
+      },
+      "testSources": {
+        "tests/character-grouping.test.js": {
+          "bytes": 11698,
+          "sha256": "c40f5ceb87280ac8412e8e871cb656dfe808ecced16b591352a84bf802624bb3"
+        },
+        "tests/cleanup-character-materials.test.js": {
+          "bytes": 1623,
+          "sha256": "62d36a3c48b552cdb86b67e22b31fd659b827723d4f52c7aebf99886a56c8e9f"
+        },
+        "tests/startup-lifecycle.test.js": {
+          "bytes": 20681,
+          "sha256": "352eb6abeae54acb7ad043dd20b4c1075b344b65ad1cc7d2e3aa5abdbd7e4197"
+        },
+        "tests/performance-entry.test.js": {
+          "bytes": 9566,
+          "sha256": "0b55b828d178edc9a8befbc6076e542f66bbf725bcce8c9df5c1442c01637c0c"
+        },
+        "tests/render-resources.test.js": {
+          "bytes": 1850,
+          "sha256": "3197c0602c6b689fa67fb1b5605289ae7a01b95a84c5e02621faf7767f9c33f5"
+        },
+        "tests/fifth-fish.test.js": {
+          "bytes": 1736,
+          "sha256": "513178b2a423a5f23848d021bfcaa15906264abb82bacddd66da8f005562924d"
+        },
+        "tests/reef-batching.test.js": {
+          "bytes": 14199,
+          "sha256": "f499ae53bd52021c486eb790f80a2a7f5a2da3729747cdacf7e743e88eadc1ad"
+        },
+        "tests/solid-silhouette.test.js": {
+          "bytes": 2789,
+          "sha256": "6c90c0ad101aba98a27e5bed3c0812de0803850770168f061a3eebb897bb013b"
+        }
+      }
+    }
+  },
+  "historicalOutcomes": {
+    "namespaceRetention": {
+      "cause": "New parent construction try scope caused Rollup to retain passed Three.js namespaces.",
+      "fix": "Explicit characterThree/cleanupThree capability objects retain exception-safe cleanup and factory injection.",
+      "affected": {
+        "raw": 914735,
+        "gzip": 252813
+      },
+      "appliedHistorical": {
+        "raw": 781509,
+        "gzip": 218600
+      },
+      "equivalence": "Historical bounded/full namespace geometry arrays and 600-frame transforms matched; this was CPU equivalence, not GPU pixels.",
+      "currentRequirement": "New injected engine members require capability coverage; current character uses existing capabilities."
+    },
+    "candidate04": {
+      "sourceSha256": "29de0fb46065d652734875e9324622983186ab988b47c0c37b2f16fadd9b8e28",
+      "meshes": 35,
+      "triangles": 15160,
+      "materials": 8,
+      "attachedBufferBytes": 434724,
+      "limit": "Historical CPU comparison; current visual ratings do not inherit its assessment."
+    },
+    "candidate05": {
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 22670,
+          "sha256": "af932e45de4f5685dbeb2939e0b5cbbb528da3200083c5b61c01323412a23dfe"
+        },
+        "src/character/geometry.js": {
+          "bytes": 6021,
+          "sha256": "16b2f59ce3443a6932c6c6a044ae0d41b379e366ef28193309358831d230f638"
+        }
+      },
+      "resources": {
+        "meshes": 35,
+        "triangles": 15160,
+        "materials": 8,
+        "geometries": 35,
+        "attachedBufferBytes": 434724
+      },
+      "partialNativeReview": {
+        "assessedWeight": 75,
+        "points": 58.5,
+        "bestPossibleTotal": 83.5,
+        "ratings": {
+          "silhouette": 4,
+          "face": 4,
+          "hair": 4,
+          "clothes": 3.5,
+          "composition": 4
+        },
+        "evidence": "docs/art/independent-review.md; independent provisional native still assessment, not full motion or human approval."
+      },
+      "combinedRootBuild": {
+        "raw": 784548,
+        "gzip": 219825,
+        "pass": true,
+        "attribution": "Parent-reported actual combined root build after indexed-reef change, supplied in conversation; this specialist did not rebuild/re-read its files or inspect a matching integrated build fingerprint.",
+        "differenceFromSpecialistWriteFalse": {
+          "raw": -24,
+          "gzip": -14
+        },
+        "limit": "Bundle byte counts do not establish GPU/runtime or visual acceptance."
+      }
+    },
+    "candidate06": {
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 23115,
+          "sha256": "e225af967ca11ef8643b27bb6bb0e34d94892ee16faf002dab5117574cbf3e8d"
+        },
+        "src/character/geometry.js": {
+          "bytes": 7702,
+          "sha256": "17334e2bd646a7b77d702a601ec6047f9d4c16d854c0bfd9ec488f5f58de97df"
+        }
+      },
+      "resources": {
+        "meshes": 35,
+        "triangles": 15160,
+        "materials": 8,
+        "geometries": 35,
+        "attachedBufferBytes": 434724
+      },
+      "partialNativeReview": {
+        "assessedWeight": 75,
+        "points": 62.5,
+        "bestPossibleTotal": 87.5,
+        "ratings": {
+          "silhouette": 4,
+          "face": 4.5,
+          "hair": 4,
+          "clothes": 4,
+          "composition": 4.5
+        },
+        "evidence": "docs/art/independent-review.md; six-still diagnostic and settled rest review, not full motion or human approval."
+      },
+      "parentPlacement": [
+        2.6,
+        1.725,
+        -4.02
+      ]
+    },
+    "candidate07": {
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 24122,
+          "sha256": "0c487ab404a8b84cc1dfa57e412556363d15d801480aceed20740fe6eade1aea"
+        },
+        "src/character/geometry.js": {
+          "bytes": 8517,
+          "sha256": "fa7af5994a45d345d0af6e06884e5620f8527c3ef63df02f0f7bd1192839506b"
+        },
+        "public/assets/workshop.glb": {
+          "bytes": 1427024,
+          "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+        }
+      },
+      "resources": {
+        "meshes": 35,
+        "triangles": 14764,
+        "materials": 8,
+        "geometries": 35,
+        "attachedBufferBytes": 425004
+      },
+      "parentIntegratedBuild": {
+        "raw": 786465,
+        "gzip": 220576,
+        "totalDistributionBytes": 14545629,
+        "pass": false,
+        "attribution": "Parent-reported fresh root07 build and catalogue35/full268-test pass. Actual deterministic gzip gate fails by445.72 bytes; original additive-gate interpretation was incorrect. Author did not rebuild or inspect integrated fingerprint.",
+        "rawPass": true,
+        "gzipPass": false,
+        "gzipExcessBytes": 445.72000000000116
+      },
+      "partialNativeReview": {
+        "assessedWeight": 75,
+        "points": 61,
+        "bestPossibleTotal": 86,
+        "ratings": {
+          "silhouette": 4,
+          "face": 4.5,
+          "hair": 3.5,
+          "clothes": 4,
+          "composition": 4.5
+        },
+        "evidence": "docs/art/independent-review.md",
+        "outcome": "Paired crown identity regressed behind hair; deck/rest gesture remained restrained. Softer parent tint retained as qualitative warmth improvement within material rating4."
+      }
+    },
+    "candidate08": {
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 24594,
+          "sha256": "9aad3f503f24bc9529dff060e2c99f2653c54d7c4cede2bd42fbd45d3d55ec27"
+        },
+        "src/character/geometry.js": {
+          "bytes": 8889,
+          "sha256": "a45607365e0ad45a62404d977b75a6b93162f28cd35b0946cbf97998e3a0b0f2"
+        },
+        "src/geometry/solid-silhouette.js": {
+          "bytes": 1633,
+          "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+        }
+      },
+      "resources": {
+        "meshes": 36,
+        "triangles": 15340,
+        "materials": 8,
+        "geometries": 36,
+        "attachedBufferBytes": 441924
+      },
+      "parentActualRootBuild": {
+        "raw": 780924,
+        "gzip": 218542
+      },
+      "independentNativeStillSubtotal": 66,
+      "assessedMaximum": 75,
+      "maximumWithPerfectUnassessedMotionResources": 91,
+      "outcome": "Paired crown goggles and outward gesture improved; Canvas/skin remained smooth. No95 acceptance. Author geometry and fish equivalence records remain historical."
+    },
+    "candidate09": {
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 25420,
+          "sha256": "e54ecb660c8d49d0369ba741ef1f62f3fd33e85ddc3d1d14c41da090db30a33a"
+        },
+        "src/character/geometry.js": {
+          "bytes": 8889,
+          "sha256": "a45607365e0ad45a62404d977b75a6b93162f28cd35b0946cbf97998e3a0b0f2"
+        },
+        "public/assets/workshop.glb": {
+          "bytes": 1427024,
+          "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+        },
+        "src/geometry/solid-silhouette.js": {
+          "bytes": 1633,
+          "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+        }
+      },
+      "resources": {
+        "meshes": 36,
+        "triangles": 15340,
+        "materials": 8,
+        "geometries": 36,
+        "attachedBufferBytes": 441924
+      },
+      "parentActualPolicyBuilds": {
+        "attribution": "Coordinator-reported fresh actual root/public builds; source unchanged. Full artifact fingerprint/provenance remains parent-owned.",
+        "compression": {
+          "method": "gzipSync(code,{level:9})",
+          "level": 9,
+          "matchesBaselinePolicy": true
+        },
+        "root": {
+          "raw": 782117,
+          "gzip": 218965,
+          "rawPass": true,
+          "gzipPass": true,
+          "gzipHeadroom": 1165.2799999999988
+        },
+        "published": {
+          "raw": 782141,
+          "gzip": 218980,
+          "rawPass": true,
+          "gzipPass": true,
+          "gzipHeadroom": 1150.2799999999988
+        },
+        "preflightIsSameRootBytes": false,
+        "limit": "Different base/compression settings; no output bitidentity is inferred from matching source or raw byte counts."
+      },
+      "independentNativeStillSubtotal": 64.5,
+      "assessedMaximum": 75,
+      "maximumWithPerfectUnassessedMotionResources": 89.5,
+      "outcome": "Canvas flat shading rejected: native triangular patches/horizontal bands; materials3.5. Waist lean/gaze, goggles, face/scarf successes retained.",
+      "artScope": "Only Canvas shade/paint and static garment form change in10; no new animation or articulation optimization implemented."
+    },
+    "candidate10BeforeGrouping": {
+      "kind": "Completed pregroup10 broad smooth-cloth art CPU proof; no native acceptance. Retained compactly when current rigid grouping replaced it.",
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 25917,
+          "sha256": "7aa122f4cbb1ca20ff1fef71daccc8fa2d4f125f89b21f8a7fad1b89a539f42f"
+        },
+        "src/character/geometry.js": {
+          "bytes": 8889,
+          "sha256": "51c9924ac961e576d3b0f30ba45f496ece8e37e1142e7144a77f86231b83af51"
+        },
+        "public/assets/workshop.glb": {
+          "bytes": 1427024,
+          "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+        },
+        "src/geometry/solid-silhouette.js": {
+          "bytes": 1633,
+          "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+        }
+      },
+      "resources": {
+        "meshes": 36,
+        "triangles": 15340,
+        "materials": 8,
+        "geometries": 36,
+        "attachedBufferBytes": 441924
+      },
+      "actualSourceLevel9WriteFalse": {
+        "rows": [
+          {
+            "variant": "root",
+            "base": "/",
+            "raw": 782337,
+            "gzip": 219040
+          },
+          {
+            "variant": "published",
+            "base": "/tidekin/",
+            "raw": 782361,
+            "gzip": 219054
+          }
+        ],
+        "compression": {
+          "method": "Sum per-JS-chunk gzipSync(code,{level:9}).length",
+          "level": 9
+        },
+        "inputs": {
+          "src/character-art.js": "7aa122f4cbb1ca20ff1fef71daccc8fa2d4f125f89b21f8a7fad1b89a539f42f",
+          "src/character/geometry.js": "51c9924ac961e576d3b0f30ba45f496ece8e37e1142e7144a77f86231b83af51",
+          "src/geometry/solid-silhouette.js": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738",
+          "assets/cleanup/underwater-fish.js": "769f5b5638fbfd74831c92892a130925546d7ca899132a9fdc174485c4a0ddaf",
+          "assets/cleanup/underwater-models.js": "d059baf9f5100f0c728ebcdd9f81191ab2f2e4393372bc24af11ad420d4ae898",
+          "src/scene.js": "f1fa28b9839ce8f06ef059e082854a8d243487be2b446f45080f80ece821a226",
+          "src/cleanup-scene.js": "d773f42613cc79a04177d38bb37b577fea9647b4476a524d186f9ea80beb8439",
+          "src/main.js": "ba1b2cd96e1c918bd3a694ff6d9f349af658a229a9422c6ecab980509836f180"
+        }
+      },
+      "contactScreenBinding": "120-frame elevated GLB and17-point sole support checks were performed before grouping, with these source hashes."
+    },
+    "candidate10": {
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 25917,
+          "sha256": "7aa122f4cbb1ca20ff1fef71daccc8fa2d4f125f89b21f8a7fad1b89a539f42f"
+        },
+        "src/character/geometry.js": {
+          "bytes": 10966,
+          "sha256": "21be93c3f4896b18236578dd56ff75c4880939b0f1f7bfa2a994a3b60f5fd684"
+        },
+        "public/assets/workshop.glb": {
+          "bytes": 1427024,
+          "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+        },
+        "src/geometry/solid-silhouette.js": {
+          "bytes": 1633,
+          "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+        }
+      },
+      "resources": {
+        "meshes": 21,
+        "triangles": 15340,
+        "materials": 8,
+        "geometries": 21,
+        "attachedBufferBytes": 441924,
+        "materialDrawGroups": 36
+      },
+      "nativeOutcome": {
+        "stillPoints": 67.5,
+        "assessedWeight": 75,
+        "maximumWithPerfectRemaining": 92.5,
+        "allFiveStillRows": 4.5,
+        "owner": "Independent review; current11 does not inherit these ratings."
+      },
+      "writtenParentLevel9": {
+        "root": {
+          "raw": 783355,
+          "gzip": 219358
+        },
+        "published": {
+          "raw": 783379,
+          "gzip": 219372
+        },
+        "sourceInventorySha256": "23c9d035137416b777f055f93f84b3cdc7d682d09948eefd69e805ebdf8e724f",
+        "rootBuildSha256": "a0265ed56a651799cf8027ead8213134ef394bc28c9987374d9c3ca75802f1d8",
+        "provenance": "Parent candidate10-build-provenance.json; sizes matched guarded preflight."
+      },
+      "boundedTests": 46,
+      "parentFullTests": 289,
+      "groupingFidelity": {
+        "kind": "Actual10 before/after grouping CPU canonical ordered parent-basis material-block attributes/topology (singleton translations bake position only), render flags, response and1200 pose articulation-parent world matrices; no rendered pixel/performance inference",
+        "materialBlocks": 36,
+        "attributeArrays": 108,
+        "indexValues": 46020,
+        "allGroupRangesCoverIndicesExactly": true,
+        "oldCanonicalSha256": "33ac240cf189af3141d5c8c5fc5e643e3ec45530a470a2016c882a34f0a85a1b",
+        "newCanonicalSha256": "33ac240cf189af3141d5c8c5fc5e643e3ec45530a470a2016c882a34f0a85a1b",
+        "allMaterialResponsesAndFlagsPreserved": true,
+        "checkedParentMatrixValues": 691200,
+        "maxParentMatrixDifference": 0,
+        "worldMatrixSha256": "81395af36d7a5e9fa17609963172cc1fbcdd81f62afb32437a164128d3b05183",
+        "artCharacterSourceUnchanged": true,
+        "sharedSilhouetteUnchanged": true
+      },
+      "formMaterialOutcome": "Smooth Canvas and three broad masses retained; native material row4.5. All grouping attributes/material responses matched pregroup10.",
+      "contactOutcome": "Historical120-frame elevated screen gap.04510426; fresh grouped720-frame sole/world bounds matched. Current11 replaces this with its own contact/sole checks.",
+      "parentPilotReported": {
+        "windows": 35,
+        "elapsedSeconds": 485.989,
+        "browserClosed": "2026-10-10T01:35:09.430Z",
+        "sceneGeometries": {
+          "baseline": 296,
+          "candidate": 317,
+          "countGatePass": true
+        },
+        "resourceRetention": "Zero remaining/double plateaus reported valid",
+        "limits": "Parent reports peak-heap26/35 and CPU warnings remain. Reported exploratory observations, not formal full-resource/performance or visual acceptance."
+      }
+    },
+    "candidate11": {
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 26476,
+          "sha256": "0c7a955c0c7d2c37f4ef886e0a5c156720ea67b64cf3ab3e1157ed97bac5a969"
+        },
+        "src/character/geometry.js": {
+          "bytes": 10966,
+          "sha256": "21be93c3f4896b18236578dd56ff75c4880939b0f1f7bfa2a994a3b60f5fd684"
+        },
+        "public/assets/workshop.glb": {
+          "bytes": 1427024,
+          "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+        },
+        "src/geometry/solid-silhouette.js": {
+          "bytes": 1633,
+          "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+        }
+      },
+      "resources": {
+        "meshes": 21,
+        "triangles": 15340,
+        "materials": 8,
+        "geometries": 21,
+        "attachedBufferBytes": 441924,
+        "materialDrawGroups": 36
+      },
+      "nativeReview": {
+        "points": 67.5,
+        "assessedWeight": 75,
+        "bestPossibleTotal": 92.5,
+        "allFiveStillRows": 4.5,
+        "evidence": "docs/art/independent-review.md; no human approval"
+      },
+      "integratedPreflight": {
+        "kind": "Live integrated-source Vite write:false preflight; explicit root/public bases, gzipSync(code,{level:9}) matching policy, no substitutions or dist/GPU. Parent artifact equivalence/acceptance not inferred.",
+        "compression": {
+          "method": "Sum per-JS-chunk gzipSync(code,{level:9}).length",
+          "level": 9
+        },
+        "rows": [
+          {
+            "variant": "root",
+            "base": "/",
+            "raw": 783553,
+            "gzip": 219413,
+            "rawPass": true,
+            "gzipPass": true,
+            "gzipHeadroom": 717.2799999999988,
+            "outputs": [
+              {
+                "file": "assets/index-CTavVmi9.js",
+                "sha256": "5201f9a7181f3b4730e34e378328b0e98a1037e0afff88e3419cc23952493d1d"
+              },
+              {
+                "file": "assets/scene-uPsBYp2H.js",
+                "sha256": "4a1566cdb7a6af9c5c48e1e636065b212501d731b2ca0ebfeeab1c3d416920de"
+              }
+            ]
+          },
+          {
+            "variant": "published",
+            "base": "/tidekin/",
+            "raw": 783577,
+            "gzip": 219425,
+            "rawPass": true,
+            "gzipPass": true,
+            "gzipHeadroom": 705.2799999999988,
+            "outputs": [
+              {
+                "file": "assets/index-BYo7nCAP.js",
+                "sha256": "9511e29d7531611771b3b1d25226298781cad2e4b319f61091d10573bcf73c30"
+              },
+              {
+                "file": "assets/scene-CpwAsMks.js",
+                "sha256": "d000b3d44eeac39f28353a0bf9011c94aee6f37086434ee75785f70c3937aba2"
+              }
+            ]
+          }
+        ],
+        "sources": {
+          "src/character-art.js": "0c7a955c0c7d2c37f4ef886e0a5c156720ea67b64cf3ab3e1157ed97bac5a969",
+          "src/character/geometry.js": "21be93c3f4896b18236578dd56ff75c4880939b0f1f7bfa2a994a3b60f5fd684",
+          "src/geometry/solid-silhouette.js": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738",
+          "assets/cleanup/underwater-fish.js": "769f5b5638fbfd74831c92892a130925546d7ca899132a9fdc174485c4a0ddaf",
+          "assets/cleanup/underwater-models.js": "03cda1186c62c6cec04a84e0e99401510f2513c19ec9cad3518cf94075e8e2d5",
+          "src/scene.js": "f1fa28b9839ce8f06ef059e082854a8d243487be2b446f45080f80ece821a226",
+          "src/cleanup-scene.js": "dff1fd2cb18b5ff43e5728316fc9bd6dab56faa89f7f7bc255bd730fa7f84221",
+          "src/main.js": "ba1b2cd96e1c918bd3a694ff6d9f349af658a229a9422c6ecab980509836f180"
+        },
+        "inputsUnchanged": true
+      },
+      "parentReportedExploratoryPilot": {
+        "start": "02:04:37.559",
+        "end": "02:12:23.150",
+        "windows": 35,
+        "scenes": 7,
+        "transitions": 24,
+        "menus": 4,
+        "errors": 0,
+        "browsersClosed": true,
+        "sourceBuildHarnessUnchanged": true,
+        "retainedAndDoublePlateaus": 0,
+        "limit": "Coordinator-reported exploratory record; not a formal performance or quality pass."
+      }
+    },
+    "candidate12": {
+      "sources": {
+        "src/character-art.js": {
+          "bytes": 27057,
+          "sha256": "28f8d23dc385d9d8e811f4008ae7d0a0f38360f9e4afd7a53aa512def5a7b7d9"
+        },
+        "src/character/geometry.js": {
+          "bytes": 11173,
+          "sha256": "6cd5b1f67d4b47640732872f342a5d6cdd291a78135c4edecbaad1cb0049c179"
+        },
+        "public/assets/workshop.glb": {
+          "bytes": 1427024,
+          "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+        },
+        "src/geometry/solid-silhouette.js": {
+          "bytes": 1633,
+          "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+        }
+      },
+      "resources": {
+        "meshes": 22,
+        "triangles": 15340,
+        "materials": 8,
+        "geometries": 22,
+        "attachedBufferBytes": 441924,
+        "materialDrawGroups": 37
+      },
+      "nativeReview": {
+        "points": 67.5,
+        "assessedWeight": 75,
+        "bestPossibleTotal": 92.5,
+        "allFiveStillRows": 4.5,
+        "evidence": "docs/art/independent-review.md; improved projected knee and gaze, whole-chain relationship still modest; no human approval"
+      },
+      "integratedPreflight": {
+        "kind": "Live integrated-source Vite write:false preflight; explicit root/public bases, gzipSync(code,{level:9}) matching policy, no substitutions or dist/GPU. Parent artifact equivalence/acceptance not inferred.",
+        "compression": {
+          "method": "Sum per-JS-chunk gzipSync(code,{level:9}).length",
+          "level": 9
+        },
+        "rows": [
+          {
+            "variant": "root",
+            "base": "/",
+            "raw": 783896,
+            "gzip": 219501,
+            "rawPass": true,
+            "gzipPass": true,
+            "gzipHeadroom": 629.2799999999988,
+            "outputs": [
+              {
+                "file": "assets/index-BOzVq23g.js",
+                "sha256": "cd2ae103b99c94f51163d633f527f4cf103317f579f574305b5a633afa1f6b12"
+              },
+              {
+                "file": "assets/scene-CPluGx_s.js",
+                "sha256": "2113742e9f3bcedaf994a71f644b90feef2fdf8b5b3a0304c3ed44d4e273a359"
+              }
+            ]
+          },
+          {
+            "variant": "published",
+            "base": "/tidekin/",
+            "raw": 783920,
+            "gzip": 219514,
+            "rawPass": true,
+            "gzipPass": true,
+            "gzipHeadroom": 616.2799999999988,
+            "outputs": [
+              {
+                "file": "assets/index-DkqMSXZc.js",
+                "sha256": "c6266ced16367319bfc878fd0eb3b4272816514ea44039fee307622eec3d75b2"
+              },
+              {
+                "file": "assets/scene-Cf-ShwWM.js",
+                "sha256": "0b689203f289ba77ffff81b1ce067b1eb51b15b9afa779d255d1ed8c91b1988f"
+              }
+            ]
+          }
+        ],
+        "sources": {
+          "src/character-art.js": "28f8d23dc385d9d8e811f4008ae7d0a0f38360f9e4afd7a53aa512def5a7b7d9",
+          "src/character/geometry.js": "6cd5b1f67d4b47640732872f342a5d6cdd291a78135c4edecbaad1cb0049c179",
+          "src/geometry/solid-silhouette.js": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738",
+          "assets/cleanup/underwater-fish.js": "769f5b5638fbfd74831c92892a130925546d7ca899132a9fdc174485c4a0ddaf",
+          "assets/cleanup/underwater-models.js": "5a1bd004bddc2f1dd36dce5e740aa70b36b1fa38b1bfb1d71735f4bfb03331d4",
+          "src/scene.js": "f1fa28b9839ce8f06ef059e082854a8d243487be2b446f45080f80ece821a226",
+          "src/cleanup-scene.js": "dff1fd2cb18b5ff43e5728316fc9bd6dab56faa89f7f7bc255bd730fa7f84221",
+          "src/main.js": "ba1b2cd96e1c918bd3a694ff6d9f349af658a229a9422c6ecab980509836f180"
+        },
+        "inputsUnchanged": true
+      },
+      "genericGeometryCopy": {
+        "kind": "Same Candidate12 art/animation with legacy primitive.clone helper versus staged generic BufferGeometry.copy; exact CPU attributes/index/groups/bounds/material/render flags, no GPU pixels/peak heap claim",
+        "meshes": 22,
+        "attributeArrays": 66,
+        "indexValues": 46020,
+        "oldSha256": "426869476f10957b58fdc9b1a6e7c149a14fd20488874b522b742231a67c0c87",
+        "newSha256": "426869476f10957b58fdc9b1a6e7c149a14fd20488874b522b742231a67c0c87",
+        "allOrderedArraysAndMetadataIdentical": true,
+        "checkedWorldMatrixValues": 902400,
+        "maxWorldMatrixDifference": 0,
+        "sphereConstruction": {
+          "legacy": {
+            "explicit": 22,
+            "default": 22
+          },
+          "genericCopy": {
+            "explicit": 22,
+            "default": 0
+          }
+        },
+        "limits": "Constructor counts demonstrate avoided work. Intermediate primitive parameters/type are unused; actual cold peak heap and timing acceptance require parent sampling."
+      },
+      "parentReportedPilot": {
+        "browsersClosed": "02:43:40.226",
+        "guardsUnchanged": true,
+        "actualSceneGeometries": 319,
+        "countPass": true,
+        "peakHeapWarnings": 6,
+        "remainingAndPostGcWarnings": 0,
+        "limit": "Coordinator-reported12 exploratory findings, not formal performance or current13 acceptance."
+      }
+    }
+  },
+  "acceptance": {
+    "candidate13NativeReview": "Independent13 ten native stills:67.5/75, all five still rows4.5, maximum92.5 with perfect remaining rows. Connected three-quarter chest/shoulder/head turn retained; facial form and crown shading limits remain.95 not met. Source: docs/art/independent-review.md; capture report45a989a2bcdcd11d5625c755b608466b36a843fbd987e1047446e8a0144a5149.",
+    "strictTarget": 95,
+    "humanApprovalClaimed": false,
+    "performance": "22 geometries/37 groups peractor unchanged from actual12 scene319 pass. One extra internal transform node; current13 heap/time/Low/reduced motion require actual checks.12 had six peakheap warnings under parent diagnosis.",
+    "sourceFreeze": "Characterbf0f46dd\u2026/helper6cd5b1f6\u2026/shared4477775c\u2026/owned testc40f5ceb\u2026 retained unchanged. No further art implementation.",
+    "limit": "CPU source/form/pose/contact/lifecycle/bytes do not establish native70+/95, motion appeal, WebGL counts or performance.",
+    "artPursuitStoppedByUser": true,
+    "finalizationScope": "User ended further art iterations. Keep Candidate13 exact source; finish current final QA/benchmarks/cleanup/PR through coordinator.14 design is not implementation and will not be pursued.",
+    "pilotClosure": "Coordinator reports13 pilot settled with all browsers closed and all guards unchanged. Detailed formal resource/timing/heap acceptance and final QA remain coordinator-owned; no new performance pass inferred."
+  },
+  "temporaryVerificationCleanup": {
+    "directory": "/private/tmp/tidekin-character-gzip07",
+    "authorizedScope": "Only files created for this bounded before/after character verification; exact regular-file size/hash ledger reverified immediately before each unlink. Other scratch, captures, builds and parent files untouched.",
+    "removedFiles": 21,
+    "removedBytes": 95615,
+    "skippedFiles": [],
+    "directoryRemoved": true,
+    "verificationOutcomesRetained": true,
+    "ledgerRetired": true
+  },
+  "groupedGeometryImplementation": {
+    "state": "Unchanged12 generic-copy indexed rigid grouping and paired gaze. Added empty internal pose parent carries translation/roll, not geometry/material batches. Current counts unchanged22/37.",
+    "before": {
+      "meshes": 36,
+      "geometries": 36,
+      "materials": 8,
+      "materialDrawGroups": 36
+    },
+    "after": {
+      "meshes": 22,
+      "geometries": 22,
+      "materials": 8,
+      "materialDrawGroups": 37
+    },
+    "method": "Keep legacy by-material batch order, then mergeGeometries(buffers,true) per compatible rigid parent. Preserve exact groups/material mapping, normals/colors, pivots, cast/receiveShadow, visible, renderOrder, frustumCulled and layer masks. No cross-pivot merging or normal recomputation.",
+    "beforeHelper": {
+      "bytes": 8889,
+      "sha256": "51c9924ac961e576d3b0f30ba45f496ece8e37e1142e7144a77f86231b83af51"
+    },
+    "canonicalBasisLimit": "Standalone translated bootlaces are rebased to Float32 parent-basis positions. Identity/translation blocks retain original normal bits. Canonical equality does not assert all old raw mesh-local positions/matrices or GPU pixels are identical.",
+    "failureOwnership": "Push generic BufferGeometry into staged ownership before populated copy/transform; dispose staged buffers and merged geometry once on failure; detach originals only after successful replacement Mesh construction. Prior successful groups remain valid; no full-root transaction promised.",
+    "hostDependency": "Parent scene prepare and cleanup shader traversal flatten material arrays. Actual tint test patches/disposes all8 materials once.",
+    "parentReportedSceneGate": {
+      "baselineGeometries": 296,
+      "headGeometries": 317,
+      "excess": 21,
+      "allowedExcess": 32,
+      "countPass": true,
+      "source": "Parent exploratory10 pilot report; actual11 resource/performance acceptance pending."
+    },
+    "predictedBothActorSavings": 28,
+    "predictedSceneExcess": 23,
+    "predictionLimit": "Parent reports actual12 scene319 count pass; same retained geometry count expected13, current GPU proof pending.",
+    "historicalFidelity": "historicalOutcomes.candidate10.groupingFidelity",
+    "currentCharacterComparison": {
+      "kind": "Bounded12/13 ordered attribute and pose comparison; deliberate deck depth relationship and face/hair/waist shaping. Mathematical projection only, no native score.",
+      "unchangedOrderedTriangleAttributeBlocks": [
+        "Knee_Left/Skin",
+        "Ankle_Left/Canvas",
+        "Ankle_Left/Leather",
+        "Hip_Left/Skin",
+        "Hip_Left/Olive",
+        "Knee_Right/Skin",
+        "Ankle_Right/Canvas",
+        "Ankle_Right/Leather",
+        "Hip_Right/Skin",
+        "Hip_Right/Olive",
+        "Eye_Look/Face",
+        "Eye_Left/Face",
+        "Eye_Right/Face",
+        "Explorer_Goggles/Leather",
+        "Explorer_Goggles/Brass",
+        "Explorer_Goggles/Face",
+        "Goggle_Band/Leather",
+        "Scarf_Base/CoralCloth",
+        "Scarf_Tip/CoralCloth",
+        "Scarf_Second/CoralCloth",
+        "Elbow_Left/Skin",
+        "Hand_Left/Skin",
+        "Shoulder_Left/Skin",
+        "Shoulder_Left/Canvas",
+        "Elbow_Right/Skin",
+        "Hand_Right/Skin",
+        "Shoulder_Right/Skin",
+        "Shoulder_Right/Canvas",
+        "Upper_Body/Skin",
+        "Upper_Body/Canvas",
+        "Upper_Body/CoralCloth"
+      ],
+      "changedBlocks": [
+        "Head_Visual/Skin",
+        "Head_Visual/Chestnut",
+        "Head_Visual/Face",
+        "Upper_Body/Olive",
+        "Upper_Body/Leather",
+        "Upper_Body/Brass"
+      ],
+      "addedBlocks": [],
+      "unchangedCanvasBlocks": 5,
+      "unchangedGoggleBlocks": 3,
+      "water": {
+        "poses": 7,
+        "framesPerPose": 240,
+        "commonNodeWorldMatrixValues": 1263360,
+        "maxDifference": 0,
+        "newGazePivotExcluded": false,
+        "newPelvisPivotExcluded": true,
+        "limit": "All existing12 nodes including Eye_Look compared; added identity pelvis node excluded. Static shapes deliberately differ."
+      },
+      "deck": {
+        "before": [
+          {
+            "side": -1,
+            "knee": [
+              -0.16153348485134625,
+              -0.5541655572034141,
+              0.007948880538682847
+            ],
+            "ankle": [
+              -0.15299999999999997,
+              -0.8360000000000001,
+              -0.025999999999999995
+            ],
+            "lateralKneeToAnkle": -0.008533484851346279,
+            "shinLateralAngleDegrees": -1.7342924072245307
+          },
+          {
+            "side": 1,
+            "knee": [
+              0.21702545192815498,
+              -0.5649881225294525,
+              0.06691774408717488
+            ],
+            "ankle": [
+              0.13499999999999995,
+              -0.836,
+              0.045
+            ],
+            "lateralKneeToAnkle": 0.08202545192815502,
+            "shinLateralAngleDegrees": 16.83915750427301
+          }
+        ],
+        "after": [
+          {
+            "side": -1,
+            "knee": [
+              -0.16153348485134628,
+              -0.5541655572034141,
+              0.00794888053868285
+            ],
+            "ankle": [
+              -0.153,
+              -0.8360000000000001,
+              -0.025999999999999992
+            ],
+            "lateralKneeToAnkle": -0.008533484851346279,
+            "shinLateralAngleDegrees": -1.7342924072245307
+          },
+          {
+            "side": 1,
+            "knee": [
+              0.21702545192815498,
+              -0.5649881225294526,
+              0.06691774408717488
+            ],
+            "ankle": [
+              0.13499999999999995,
+              -0.8360000000000001,
+              0.045
+            ],
+            "lateralKneeToAnkle": 0.08202545192815502,
+            "shinLateralAngleDegrees": 16.83915750427301
+          }
+        ],
+        "mathematicalNativeCameraProjection": [
+          {
+            "aspect": 1.6,
+            "before": [
+              {
+                "side": -1,
+                "kneeToAnkleXPixels": -1.9990193883599838,
+                "shinLengthPixels": 11.265563660354116
+              },
+              {
+                "side": 1,
+                "kneeToAnkleXPixels": 2.7613573782327094,
+                "shinLengthPixels": 11.299132972585758
+              }
+            ],
+            "after": [
+              {
+                "side": -1,
+                "kneeToAnkleXPixels": -1.9990193883600238,
+                "shinLengthPixels": 11.265563660354147
+              },
+              {
+                "side": 1,
+                "kneeToAnkleXPixels": 2.7613573782327094,
+                "shinLengthPixels": 11.299132972585708
+              }
+            ]
+          },
+          {
+            "aspect": 1,
+            "before": [
+              {
+                "side": -1,
+                "kneeToAnkleXPixels": -1.5380980342025896,
+                "shinLengthPixels": 10.37569713778188
+              },
+              {
+                "side": 1,
+                "kneeToAnkleXPixels": 2.6247373855203984,
+                "shinLengthPixels": 10.422688610529411
+              }
+            ],
+            "after": [
+              {
+                "side": -1,
+                "kneeToAnkleXPixels": -1.5380980342024397,
+                "shinLengthPixels": 10.375697137781907
+              },
+              {
+                "side": 1,
+                "kneeToAnkleXPixels": 2.6247373855203984,
+                "shinLengthPixels": 10.422688610529386
+              }
+            ]
+          }
+        ],
+        "maxAnkleMatrixDifference": 1.7763568394002505e-15
+      },
+      "gaze": {
+        "pairedPivot": true,
+        "rows": [
+          {
+            "name": "deck",
+            "settledOffset": -0.028,
+            "maxFrameStep": 0
+          },
+          {
+            "name": "neutral",
+            "settledOffset": -3.150984892139266e-09,
+            "maxFrameStep": 0.003495147066797471
+          },
+          {
+            "name": "workRight",
+            "settledOffset": 0.021999997524225802,
+            "maxFrameStep": 0.002746187374382141
+          },
+          {
+            "name": "workLeft",
+            "settledOffset": -0.02199999504845259,
+            "maxFrameStep": 0.0054923736530676365
+          },
+          {
+            "name": "return",
+            "settledOffset": -2.4757732866004585e-09,
+            "maxFrameStep": 0.002746186362969926
+          }
+        ],
+        "maxBlinkPlaneScaleMismatch": 0,
+        "returnNeutral": true,
+        "limits": "Point samples and geometric projection do not certify visible iris containment/expression or temporal appeal; native views and clips remain required."
+      }
+    }
+  },
+  "temporaryVerificationCleanupFinal": {
+    "state": "Applied; exact ledger retired",
+    "ledgerSha256": "050a134b585ddc5f5087b94847c31c3a78e40011b32959523f66b0f6ac448af3",
+    "startedUtc": "2026-10-10T03:23:11.044802+00:00",
+    "finishedUtc": "2026-10-10T03:23:11.122876+00:00",
+    "removedFiles": 214,
+    "removedBytes": 4456729,
+    "removedRoots": [
+      "/private/tmp/tidekin-character10-grouping",
+      "/private/tmp/tidekin-character-next-pass",
+      "/private/tmp/tidekin-character09-proof",
+      "/private/tmp/tidekin-character10-proof",
+      "/private/tmp/tidekin-character11-proof",
+      "/private/tmp/tidekin-character12-proof",
+      "/private/tmp/tidekin-character13-proof"
+    ],
+    "skippedFiles": [],
+    "protectedHashesUnchanged": true,
+    "retainedPurposes": [
+      "Current13 editable character/helper/shared geometry and grouping tests; exact identities retained in this proof.",
+      "Stable handoff/CPU proof, independent review and fixed rubric retain current evidence and compact historical outcomes.",
+      "Liked original splash, original ocean-workshop art reference, reef-panorama reference and named human screenshots retain their documented purposes.",
+      "Parent source/assets, builds, baseline, captures, raw benchmarks and harnesses untouched; unowned loose temporary files excluded."
+    ],
+    "verification": "Exact authorized entries rechecked for ancestor/type/size/SHA/identity before unlink; seven listed roots removed only when empty. Parent released reviewer dependency holds. No new or changed entries removed.",
+    "ledgerRetired": true
+  }
+}

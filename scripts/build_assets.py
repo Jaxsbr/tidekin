@@ -957,7 +957,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--only',choices=['workshop','island'])
     parser.add_argument('--no-render',action='store_true')
-    parser.add_argument('--no-manifest',action='store_true',help='Do not rewrite the shared workshop/island manifest during a narrowly scoped asset revision.')
+    parser.add_argument('--no-manifest',action='store_true',help='Do not write the temporary build report during a narrowly scoped asset revision.')
     args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
     for folder in ('assets/previews','public/assets'): (ROOT/folder).mkdir(parents=True,exist_ok=True)
     reports=[]
@@ -974,14 +974,19 @@ def main():
         stage(name)
         bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'assets'/f'{name}.blend'))
         if not args.no_render: bpy.ops.render.render(write_still=True)
-    report_path=ROOT/'assets'/'asset-manifest.json'
-    if args.only and report_path.exists():
-        previous=json.loads(report_path.read_text())
-        reports += [r for r in previous['assets'] if not r['file'].endswith(args.only+'.glb')]
+    report_path=ROOT/'output'/'assets'/'build-report.json'
+    # Inspect current exports rather than merging stale metadata from a prior run.
+    # The catalogue owns durable asset identities and transformed model bounds.
+    if args.only:
+        for name in ('workshop','island'):
+            existing=ROOT/'public'/'assets'/f'{name}.glb'
+            if name!=args.only and existing.exists():
+                reports.append(inspect_glb(existing))
     reports.sort(key=lambda r:r['file'])
     total=sum(r['triangles'] for r in reports)
     assert total<100000, f'Triangle hard cap exceeded: {total}'
     if not args.no_manifest:
+        report_path.parent.mkdir(parents=True,exist_ok=True)
         report_path.write_text(json.dumps({'generator':'scripts/build_assets.py','seed':47,'total_triangles':total,'assets':reports},indent=2)+'\n')
     print(f'COMPLETE: {total:,} triangles. Editable .blend files, GLBs and previews in {ROOT}',flush=True)
 

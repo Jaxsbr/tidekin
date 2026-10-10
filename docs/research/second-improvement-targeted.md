@@ -4,7 +4,7 @@ Prepared 9 October 2026 (Pacific/Auckland). Research-only handoff; no source cha
 
 ## Evidence boundary and audit
 
-Read the workspace instructions, [second-improvement goal](../second-improvement-goal.md), [brief](../second-improvement-brief.md), [player interview](../reviews/player-interview.md), and existing [cozy-systems](cozy-systems.md) and [cross-genre](cross-genre.md) research. The goal document describes the larger execution team's task; this specialist owns only this research file. Primary sources below were browsed for this targeted investigation. No comparison game was played, no new human participants were recruited, and no current Tidekin build was tested here.
+Read the workspace instructions, second-improvement goal (historical source: `git show 79da54b:docs/second-improvement-goal.md`), brief (historical source: `git show 79da54b:docs/second-improvement-brief.md`), [player interview](../reviews/player-interview.md), and existing [cozy-systems](cozy-systems.md) and [cross-genre](cross-genre.md) research. The goal document describes the larger execution team's task; this specialist owns only this research file. Primary sources below were browsed for this targeted investigation. No comparison game was played, no new human participants were recruited, and no current Tidekin build was tested here.
 
 Evidence labels used below:
 

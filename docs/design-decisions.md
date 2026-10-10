@@ -1,4 +1,4 @@
-> Current contract (fourth improvement, 9 October 2026): always-controllable third-person sailing; directional swimming + pointer pull at 2.2 m/s; no comparison, practice, helm or trailing basket. Painted UI and wider/deeper reef replace the earlier presentation. Earlier dated sections below are historical. See `reviews/fourth-improvement/plan.md` and README for current behavior.
+> Historical design rationale, not current gameplay instructions. Read [current contract](governance/current-contract.md) and coordinator-owned architecture for current behavior and ownership. Retired iteration sources are recoverable from Git baseline `79da54b`.
 
 # From research to Tidekin
 
@@ -93,7 +93,7 @@ Before widening access, require no lost progress in the observed sessions; a cle
 
 ## Second improvement — quiet opening and restoration (9 October 2026)
 
-Current authority is the [human-approved brief](second-improvement-brief.md); older rescue/checkpoint recommendations apply only to historical legacy modes, not cleanup. This iteration preserves the original title artwork and Blender workshop/island/landmarks.
+Current authority is the human-approved brief (historical source: `git show 79da54b:docs/second-improvement-brief.md`); older rescue/checkpoint recommendations apply only to historical legacy modes, not cleanup. This iteration preserves the original title artwork and Blender workshop/island/landmarks.
 
 - **Opening:** directly enter a stationary raft with one helm prompt. Map, journal and workbench details are on demand. The buoy offers a concrete nearby cleanup activity; existing upgrades give gathered wood/scrap a practical purpose.
 - **Stations:** the visible workbench uses the existing upgrade chain; the cabin provides a bounded illustrated planning/storage view. No free walking, farming/food catalogue or survival economy was added.
@@ -114,7 +114,7 @@ Novice/expert sessions then prompted a single nearby-reef purpose hint and cardi
 
 ## Third improvement: player-grounded comparisons
 
-The complete [third brief](third-improvement-goal.md) supersedes home-only building, the cleanup-without-material-reward exclusion, and the retained public world-swimming route. Two small restoration patches and starter timber teach a purposeful wheel arc. The wheel increases speed and defeats a visible sheltered departure current; chart passage requires actual first departure. Existing resources and onward upgrades remain through side-view salvage adapters.
+The complete third brief (historical source: `git show 79da54b:docs/third-improvement-goal.md`) supersedes home-only building, the cleanup-without-material-reward exclusion, and the retained public world-swimming route. Two small restoration patches and starter timber teach a purposeful wheel arc. The wheel increases speed and defeats a visible sheltered departure current; chart passage requires actual first departure. Existing resources and onward upgrades remain through side-view salvage adapters.
 
 Keep all four directional/pointer × pull/spatial-clean combinations plus two swim paces and two sailing cameras. Default directional/pull/quick/follow is provisional. Pull uses sustained reach/resistance; cleaning requires actual three-section coverage rather than the same timer under another label. Air remains 24 seconds across variants; faster movement naturally changes travel time, not hidden air rules. Normal breathing retains cleanup progress; whole-attempt failure resets everything; final success commits reward once. Completion permits immediate return; early departure or reload loses unfinished work.
 

@@ -1,0 +1,101 @@
+{
+  "kind": "CPU-only reef component storage proof; no renderer/heap/VRAM or whole-product speedup claim",
+  "method": "Same actual habitat parameters and seeded production factory, preserved every ordered triangle attribute across all meshes. Index bytes included; source UV removal unchanged.",
+  "beforeSources": [
+    {
+      "path": "assets/cleanup/underwater-models.js",
+      "sha256": "948d9cc61f85f83627b20f891a42d3329ea2ddcd712838a947ffdb45ab29e190"
+    },
+    {
+      "path": "assets/cleanup/reef-art.js",
+      "sha256": "79dc1c0dc686b639ae667aea5c98c29740a24a8f43f374270d7785d9d8ae00be"
+    }
+  ],
+  "afterSources": [
+    {
+      "path": "assets/cleanup/underwater-models.js",
+      "sha256": "265a0ac3e00b2fd1b3d631cc8ef464f43573bd4a0ffd724bd27d1c78cdd953c6"
+    },
+    {
+      "path": "assets/cleanup/reef-art.js",
+      "sha256": "79dc1c0dc686b639ae667aea5c98c29740a24a8f43f374270d7785d9d8ae00be"
+    }
+  ],
+  "rows": [
+    {
+      "id": "home-reef",
+      "siteSha256": "426657ba71a63d3521f895971c27bf43fdfd2b2f1076e1195b99539a838776c3",
+      "meshes": 341,
+      "geometries": 47,
+      "materials": 40,
+      "triangles": 839224,
+      "attachedBufferBytes": 26172268,
+      "orderedTriangleAttributesSha256": "bfe060e9bc38c52d8bb3665876eaadcb13194a70550b9adbdbb9349c7bf2ee88",
+      "beforeBufferBytes": 86615236,
+      "reductionPercent": 69.78329770988559
+    },
+    {
+      "id": "sheltered-cove",
+      "siteSha256": "767eeea01d3856ba83600c332273b9b1ece6b35f7e8def4bedf2fec32e7eb851",
+      "meshes": 349,
+      "geometries": 55,
+      "materials": 48,
+      "triangles": 930152,
+      "attachedBufferBytes": 28929892,
+      "orderedTriangleAttributesSha256": "0370e9703b02cd52d5338b1c42c24ee6309c2ae66011e3b7072fae7c46ad9b84",
+      "beforeBufferBytes": 96435460,
+      "reductionPercent": 70.00077357436777
+    },
+    {
+      "id": "salvage:home-pearls",
+      "siteSha256": "d6a8c5c52355ce7c96709cde885a08e0d3b919eccf7aca1efa833574f29287ad",
+      "meshes": 264,
+      "geometries": 42,
+      "materials": 35,
+      "triangles": 875528,
+      "attachedBufferBytes": 24675712,
+      "orderedTriangleAttributesSha256": "c0ee34caa15c9c613ebe86bcd71fd9a5ef4daecabe2705503b777b86823432ca",
+      "beforeBufferBytes": 91555588,
+      "reductionPercent": 73.04838236634994
+    },
+    {
+      "id": "salvage:horizon-wreck",
+      "siteSha256": "33488a31f03a5d672d71c117394222777fa04e186cad4b3d2f216bb730636e5b",
+      "meshes": 278,
+      "geometries": 56,
+      "materials": 49,
+      "triangles": 795754,
+      "attachedBufferBytes": 23194468,
+      "orderedTriangleAttributesSha256": "05de2ce062b257dccdd51513f3c0e5600e0843500d6b25215bd6cd8931169632",
+      "beforeBufferBytes": 82939996,
+      "reductionPercent": 72.03464056111119
+    }
+  ],
+  "status": "pass",
+  "cullingBounds": {
+    "method": "Same actual habitat inputs; immutable source component verified against before hashes; every mesh local bounding box and sphere compared.",
+    "tolerance": 0.000001,
+    "rows": [
+      {
+        "id": "home-reef",
+        "meshBounds": 341,
+        "maxAbsoluteBoundingBoxOrSphereDelta": 0
+      },
+      {
+        "id": "sheltered-cove",
+        "meshBounds": 349,
+        "maxAbsoluteBoundingBoxOrSphereDelta": 0
+      },
+      {
+        "id": "salvage:home-pearls",
+        "meshBounds": 264,
+        "maxAbsoluteBoundingBoxOrSphereDelta": 0
+      },
+      {
+        "id": "salvage:horizon-wreck",
+        "meshBounds": 278,
+        "maxAbsoluteBoundingBoxOrSphereDelta": 0
+      }
+    ]
+  }
+}

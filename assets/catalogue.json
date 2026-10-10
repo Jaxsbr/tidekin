@@ -1,0 +1,1154 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+  "observedAt": "2026-10-09T20:00:23.094Z",
+  "state": "Initial current source inventory after packaging cleanup and art-owner source handoff; final integrated-art hash refresh remains deferred to coordinator.",
+  "approvalPolicy": "Baseline inclusion, generation, agent review and human preference are distinct. Approved requires a human record tied to these exact bytes and purpose.",
+  "assets": [
+    {
+      "id": "asset.cleanup.preview.html",
+      "path": "assets/cleanup/preview.html",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 1301,
+      "sha256": "0303c97a1f0cd716349a53abf099f091eaae19db9b3edae8e4f295f83e13f33b"
+    },
+    {
+      "id": "asset.cleanup.reef-art.js",
+      "path": "assets/cleanup/reef-art.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.cleanup.underwater-models.js",
+        "asset.cleanup.underwater-landmarks.js",
+        "asset.cleanup.underwater-fish.js"
+      ],
+      "consumers": [
+        {
+          "path": "src/cleanup-scene.js",
+          "locator": "../assets/cleanup/reef-art.js"
+        }
+      ],
+      "bytes": 19037,
+      "sha256": "79dc1c0dc686b639ae667aea5c98c29740a24a8f43f374270d7785d9d8ae00be"
+    },
+    {
+      "id": "asset.cleanup.underwater-fish.js",
+      "path": "assets/cleanup/underwater-fish.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "code.geometry.solid-silhouette.js"
+      ],
+      "consumers": [
+        {
+          "path": "assets/cleanup/reef-art.js",
+          "locator": "./underwater-fish.js"
+        }
+      ],
+      "bytes": 4609,
+      "sha256": "769f5b5638fbfd74831c92892a130925546d7ca899132a9fdc174485c4a0ddaf"
+    },
+    {
+      "id": "asset.cleanup.underwater-landmarks.js",
+      "path": "assets/cleanup/underwater-landmarks.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [
+        {
+          "path": "assets/cleanup/reef-art.js",
+          "locator": "./underwater-landmarks.js"
+        }
+      ],
+      "bytes": 2937,
+      "sha256": "898b3841ab068bed7ece30a2afdc06d972a0d95c5efc4232c46ae356a49f3269"
+    },
+    {
+      "id": "asset.cleanup.underwater-models.js",
+      "path": "assets/cleanup/underwater-models.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [
+        {
+          "path": "assets/cleanup/reef-art.js",
+          "locator": "./underwater-models.js"
+        }
+      ],
+      "bytes": 13366,
+      "sha256": "9ee70b8598cd0f5a837104c6faa2d1f98f94bb4a733e3dad191db2f6269b5cc2"
+    },
+    {
+      "id": "asset.island.blend",
+      "path": "assets/island.blend",
+      "kind": "editable-model",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "source.build-assets.py"
+      ],
+      "consumers": [],
+      "bytes": 541099,
+      "sha256": "3ae5c2bf0940fe8f60eddb45aee7ee7d68bdb7020638216cfb31b679fbfedae5"
+    },
+    {
+      "id": "asset.landmarks.blend",
+      "path": "assets/landmarks.blend",
+      "kind": "editable-model",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "source.build-landmarks.py"
+      ],
+      "consumers": [],
+      "bytes": 324958,
+      "sha256": "2e25f4e34eaf018a46005b6a5cf5796093494f8a8527dd83e16eb52b0a4367c5"
+    },
+    {
+      "id": "asset.reference.ocean-workshop.png",
+      "path": "assets/reference/ocean-workshop.png",
+      "kind": "reference",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Original user-supplied ocean workshop art direction reference only; preserve unchanged and use only to guide visual style/materials.",
+      "retention": "reference-only",
+      "origin": {
+        "method": "user-supplied",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 3064832,
+      "sha256": "ef7abb9e86b52f219e1013e723c16ae707680a1e108d34f39a481683ff024e77",
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "unit": "px"
+      }
+    },
+    {
+      "id": "asset.ui-fifth.keepsakes.provenance.json",
+      "path": "assets/ui-fifth/keepsakes.provenance.json",
+      "kind": "provenance",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 5817,
+      "sha256": "225cc2a2161237924f01bd6fe208d625779133a3f7884f32afc2e38160028476"
+    },
+    {
+      "id": "asset.ui-fourth.atlas-layout.svg",
+      "path": "assets/ui-fourth/atlas-layout.svg",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.ui-fourth.package-kit.mjs",
+        "runtime.ui-fourth.ocean-kit-atlas.png"
+      ],
+      "consumers": [],
+      "bytes": 1039,
+      "sha256": "b7308d0e08d575029662e0050ef2feb68ead209a507fd2726486aa2ec838d0f2",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "unit": "px"
+      }
+    },
+    {
+      "id": "asset.ui-fourth.atlas-prompt.txt",
+      "path": "assets/ui-fourth/atlas-prompt.txt",
+      "kind": "generation-prompt",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 3349,
+      "sha256": "578e435ea657943ae39c4feaa2d77cba5056dec35091309c9bc08de813bf8fd2"
+    },
+    {
+      "id": "asset.ui-fourth.cabin-prompt.txt",
+      "path": "assets/ui-fourth/cabin-prompt.txt",
+      "kind": "generation-prompt",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 2226,
+      "sha256": "3355275ec9c4dd481a800f20b575c3cfb38509a639db6506b4bd50855d58b48b"
+    },
+    {
+      "id": "asset.ui-fourth.cabin-provenance.json",
+      "path": "assets/ui-fourth/cabin-provenance.json",
+      "kind": "provenance",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 571,
+      "sha256": "ab9c66e044155ab44986810b02c762f7015182e2c541b0dd592ead21acbf1681"
+    },
+    {
+      "id": "asset.ui-fourth.package-kit.mjs",
+      "path": "assets/ui-fourth/package-kit.mjs",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 3883,
+      "sha256": "116b390b1470650f3b2984579c0b5ad0d69ff6760274eaab2f0baca0793a6abe"
+    },
+    {
+      "id": "asset.ui-fourth.preview.html",
+      "path": "assets/ui-fourth/preview.html",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.ui-fourth.package-kit.mjs",
+        "runtime.ui-fourth.ocean-kit-atlas.png"
+      ],
+      "consumers": [],
+      "bytes": 3140,
+      "sha256": "6639f8b055a2d60d7bb2e512b109df69a1ac01155577cbfde0fed9067e8a1645"
+    },
+    {
+      "id": "asset.ui-fourth.provenance.json",
+      "path": "assets/ui-fourth/provenance.json",
+      "kind": "provenance",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 973,
+      "sha256": "f23e7be7aa2fa75a084fd4cb37ce36177b63484a3def8867bee8c65822b60a9a",
+      "auditNotes": [
+        "svgCount:12 and embeddedPngByteEquality describe removed packaging outputs, not current asset count. Original ImageGen hash/prompt evidence remains valid."
+      ]
+    },
+    {
+      "id": "asset.ui-fourth.reef-prompt.txt",
+      "path": "assets/ui-fourth/reef-prompt.txt",
+      "kind": "generation-prompt",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 2519,
+      "sha256": "d202aa7795a202e67869fb45670462cc22e57dbfa7b453935b9ef38b46038218"
+    },
+    {
+      "id": "asset.ui-fourth.reef-provenance.json",
+      "path": "assets/ui-fourth/reef-provenance.json",
+      "kind": "provenance",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 1125,
+      "sha256": "0c813cd7c759670081517beec8d6e490d1016cfa86ed1c81dae8f3027c25397d"
+    },
+    {
+      "id": "asset.workshop.blend",
+      "path": "assets/workshop.blend",
+      "kind": "editable-model",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "source.build-assets.py"
+      ],
+      "consumers": [],
+      "bytes": 537591,
+      "sha256": "7c90202aa68ed7da310efea2b3f023381fbc48fffd01bf37cd068e35bd525b71"
+    },
+    {
+      "id": "runtime.island.glb",
+      "path": "public/assets/island.glb",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Baseline visual asset; consumer list records current source use.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.island.blend",
+        "source.build-assets.py"
+      ],
+      "consumers": [
+        {
+          "path": "src/scene.js",
+          "locator": "bounded GLB loader template"
+        }
+      ],
+      "bytes": 782572,
+      "sha256": "8715786f8500b90514d4fce6e747d1103b26c9bc4fbbdc368190040ba8d131bc",
+      "model": {
+        "meshes": 1,
+        "materials": 13,
+        "nodes": [
+          "Beach",
+          "Beach_Details",
+          "Island_Static_Geometry",
+          "Island_Static",
+          "Landing_Dock",
+          "Limestone_Cliffs",
+          "Palms",
+          "Undergrowth",
+          "Island"
+        ],
+        "restBounds": {
+          "min": [
+            -8.92233943939209,
+            -0.4000000059604645,
+            -6.789278984069824
+          ],
+          "max": [
+            9.532706260681152,
+            9.277002334594727,
+            7.5817413330078125
+          ],
+          "dimensions": [
+            18.455045700073242,
+            9.677002340555191,
+            14.371020317077637
+          ],
+          "unit": "gltf-world-unit",
+          "method": "Transformed POSITION accessor boxes in default scene; conservative rest-pose bounds."
+        }
+      }
+    },
+    {
+      "id": "runtime.landmarks.glb",
+      "path": "public/assets/landmarks.glb",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Baseline visual asset; consumer list records current source use.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.landmarks.blend",
+        "source.build-landmarks.py"
+      ],
+      "consumers": [
+        {
+          "path": "src/scene.js",
+          "locator": "bounded GLB loader template"
+        }
+      ],
+      "bytes": 848304,
+      "sha256": "cf211aa82042686a9966e84029c7bf045f5342f247a6be4a175a406015cb5d67",
+      "model": {
+        "meshes": 3,
+        "materials": 6,
+        "nodes": [
+          "Landmark_Arch_Geometry",
+          "Landmark_Arch",
+          "Landmark_Ridge_Geometry",
+          "Landmark_Ridge",
+          "Landmark_Stacks_Geometry",
+          "Landmark_Stacks",
+          "Landmarks"
+        ],
+        "restBounds": {
+          "min": [
+            -15.003973007202148,
+            -0.6499999761581421,
+            -4.185396194458008
+          ],
+          "max": [
+            15.003973007202148,
+            23.0752010345459,
+            4.185396194458008
+          ],
+          "dimensions": [
+            30.007946014404297,
+            23.72520101070404,
+            8.370792388916016
+          ],
+          "unit": "gltf-world-unit",
+          "method": "Transformed POSITION accessor boxes in default scene; conservative rest-pose bounds."
+        }
+      }
+    },
+    {
+      "id": "runtime.menu-art.png",
+      "path": "public/assets/menu-art.png",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Original generated splash/main-menu painting liked by Jaco; preserve visual appeal and original bytes.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "native-imagegen-recorded",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.reference.ocean-workshop.png"
+      ],
+      "consumers": [
+        {
+          "path": "index.html",
+          "locator": "/assets/menu-art.png"
+        },
+        {
+          "path": "src/style.css",
+          "locator": "/assets/menu-art.png"
+        }
+      ],
+      "bytes": 2855110,
+      "sha256": "74125146d18e8b798bfe984148472c927b51f31ca25aabe3b93ec91e2a147d1a",
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "unit": "px"
+      },
+      "humanAssessment": {
+        "record": "docs/reviews/player-interview.md",
+        "section": "Title / Confirmed preferences",
+        "scope": "Human liked the title painting and requested preserving its appeal.",
+        "exactByteApproval": false
+      }
+    },
+    {
+      "id": "runtime.ui-fifth.keepsakes.png",
+      "path": "public/assets/ui-fifth/keepsakes.png",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Baseline visual asset; consumer list records current source use.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "native-imagegen-recorded",
+        "evidence": [
+          {
+            "path": "assets/ui-fifth/keepsakes.provenance.json",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.ui-fifth.keepsakes.provenance.json"
+      ],
+      "consumers": [
+        {
+          "path": "src/style.css",
+          "locator": "/assets/ui-fifth/keepsakes.png"
+        }
+      ],
+      "bytes": 2100716,
+      "sha256": "b1a3bdc25bcdd146f6f5697917da1625f9ec0757b8cde0fa55983f693ae6202e",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "unit": "px"
+      },
+      "auditNotes": [
+        "Flattened generated raster; prompts and edit lineage are preserved. Provenance acknowledges low-alpha residual padding; do not claim mathematically zero padding."
+      ]
+    },
+    {
+      "id": "runtime.ui-fourth.atlas.css",
+      "path": "public/assets/ui-fourth/atlas.css",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Baseline visual asset; consumer list records current source use.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.ui-fourth.package-kit.mjs",
+        "runtime.ui-fourth.ocean-kit-atlas.png"
+      ],
+      "consumers": [
+        {
+          "path": "src/style.css",
+          "locator": "/assets/ui-fourth/atlas.css"
+        }
+      ],
+      "bytes": 2519,
+      "sha256": "395b70a909865405f39e0e268a1c86cc665cdd16c3ca9cef7ebb3aa05e7cda5a"
+    },
+    {
+      "id": "runtime.ui-fourth.cabin-interior.png",
+      "path": "public/assets/ui-fourth/cabin-interior.png",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Baseline visual asset; consumer list records current source use.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "native-imagegen-recorded",
+        "evidence": [
+          {
+            "path": "assets/ui-fourth/cabin-provenance.json",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.ui-fourth.cabin-prompt.txt"
+      ],
+      "consumers": [
+        {
+          "path": "src/style.css",
+          "locator": "/assets/ui-fourth/cabin-interior.png"
+        }
+      ],
+      "bytes": 2738499,
+      "sha256": "fb38821b1a22ddaba0df881209c37f67e5a6007c264782a850fdda124923776d",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "unit": "px"
+      }
+    },
+    {
+      "id": "runtime.ui-fourth.manifest.json",
+      "path": "public/assets/ui-fourth/manifest.json",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Baseline visual asset; consumer list records current source use.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.ui-fourth.package-kit.mjs",
+        "runtime.ui-fourth.ocean-kit-atlas.png"
+      ],
+      "consumers": [
+        {
+          "path": "src/scene.js",
+          "locator": "BASE_URLassets/ui-fourth/manifest.json"
+        }
+      ],
+      "bytes": 2193,
+      "sha256": "d54c1e725eaa0785a26ce8c30eb53e9ee77d48bf1f7b1fa2c381a7fd2cf925c3"
+    },
+    {
+      "id": "runtime.ui-fourth.ocean-kit-atlas.png",
+      "path": "public/assets/ui-fourth/ocean-kit-atlas.png",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Baseline visual asset; consumer list records current source use.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "native-imagegen-recorded",
+        "evidence": [
+          {
+            "path": "assets/ui-fourth/provenance.json",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.ui-fourth.atlas-prompt.txt"
+      ],
+      "consumers": [
+        {
+          "path": "public/assets/ui-fourth/atlas.css",
+          "locator": "/assets/ui-fourth/ocean-kit-atlas.png"
+        },
+        {
+          "path": "public/assets/ui-fourth/manifest.json",
+          "locator": "atlas.url"
+        },
+        {
+          "path": "src/style.css",
+          "locator": "/assets/ui-fourth/ocean-kit-atlas.png"
+        }
+      ],
+      "bytes": 2961160,
+      "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "unit": "px"
+      }
+    },
+    {
+      "id": "runtime.ui-fourth.reef-panorama.png",
+      "path": "assets/reference/reef-panorama.png",
+      "kind": "reference",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Original generated reference for underwater depth, limestone silhouettes, coral-fan placement, kelp and caustic lighting; no runtime consumer or current backdrop-plane claim",
+      "retention": "reference-only",
+      "origin": {
+        "method": "native-imagegen-recorded",
+        "evidence": [
+          {
+            "path": "assets/ui-fourth/reef-provenance.json",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.ui-fourth.reef-prompt.txt"
+      ],
+      "consumers": [],
+      "bytes": 3293910,
+      "sha256": "f3a73a6818e596f4d58ed04275dd80f03b83b5eb9a8f43529327569efc727943",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "unit": "px"
+      },
+      "auditNotes": [
+        "Historical provenance describes a loaded panorama plane; 79da54b source has no PNG loader/consumer. Retain generated original; do not present as current runtime imagery.",
+        "Moved unchanged out of public shipping assets after current QA closure; stable ID records historical origin rather than present runtime use."
+      ]
+    },
+    {
+      "id": "runtime.workshop.glb",
+      "path": "public/assets/workshop.glb",
+      "kind": "runtime-derivative",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Baseline visual asset; consumer list records current source use.",
+      "retention": "retain-original-or-runtime",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "asset.workshop.blend",
+        "source.build-assets.py"
+      ],
+      "consumers": [
+        {
+          "path": "src/scene.js",
+          "locator": "bounded GLB loader template"
+        }
+      ],
+      "bytes": 1427024,
+      "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561",
+      "model": {
+        "meshes": 16,
+        "materials": 19,
+        "nodes": [
+          "Cabin",
+          "Deck_Details",
+          "Dog",
+          "Dog_Tail_Geometry",
+          "Dog_Tail",
+          "Engine",
+          "Engine_Flywheel_Geometry",
+          "Engine_Flywheel",
+          "Explorer_Arm_L_Geometry",
+          "Explorer_Arm_L",
+          "Explorer_Arm_R_Geometry",
+          "Explorer_Arm_R",
+          "Explorer_Geometry",
+          "Explorer_Leg_L_Geometry",
+          "Explorer_Leg_L",
+          "Explorer_Leg_R_Geometry",
+          "Explorer_Leg_R",
+          "Explorer",
+          "Hull",
+          "Upgrade_beacon_Geometry",
+          "Upgrade_beacon",
+          "Crane_Boom_Geometry",
+          "Crane_Boom",
+          "Crane_Hook_Geometry",
+          "Crane_Hook",
+          "Upgrade_crane_Geometry",
+          "Upgrade_crane",
+          "Upgrade_greenhouse_Geometry",
+          "Upgrade_greenhouse",
+          "Bunting",
+          "Pennant_Main_Geometry",
+          "Pennant_Main",
+          "Rigging",
+          "Sail",
+          "Upgrade_sail_Geometry",
+          "Upgrade_sail",
+          "Wheel_Geometry",
+          "Wheel",
+          "Upgrade_waterwheel",
+          "Workshop_Static_Geometry",
+          "Workshop_Static",
+          "Workshop"
+        ],
+        "restBounds": {
+          "min": [
+            -4.747552871704102,
+            -0.8999999761581421,
+            -4.615002552773323
+          ],
+          "max": [
+            4.346328258514404,
+            7.549999952316284,
+            4.615001274934808
+          ],
+          "dimensions": [
+            9.093881130218506,
+            8.449999928474426,
+            9.230003827708131
+          ],
+          "unit": "gltf-world-unit",
+          "method": "Transformed POSITION accessor boxes in default scene; conservative rest-pose bounds."
+        }
+      },
+      "auditNotes": []
+    },
+    {
+      "id": "source.build-assets.py",
+      "path": "scripts/build_assets.py",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 48916,
+      "sha256": "b3a4ba4115d8a907fd6c644a9372d5acf2f5e3d26c7fdc41e766243eacbf8a07"
+    },
+    {
+      "id": "source.build-landmarks.py",
+      "path": "scripts/build_landmarks.py",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [
+        "source.build-assets.py"
+      ],
+      "consumers": [],
+      "bytes": 17611,
+      "sha256": "fab13917fb70ac68057628585059a0060e5d6d10a7dfefaaaa7deecdcc874527"
+    },
+    {
+      "id": "code.character-art.js",
+      "path": "src/character-art.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          },
+          {
+            "path": "docs/art/character-handoff.md",
+            "scope": "Current source-bound author handoff and ownership; not independent visual acceptance or human production approval."
+          }
+        ]
+      },
+      "sources": [
+        "code.character.geometry.js"
+      ],
+      "consumers": [
+        {
+          "path": "src/cleanup-scene.js",
+          "locator": "./character-art.js"
+        },
+        {
+          "path": "src/scene.js",
+          "locator": "./character-art.js"
+        }
+      ],
+      "bytes": 28175,
+      "sha256": "bf0f46dde85b9754a42c1b662580ac430084e3e03da73dda3bdc3a0adcc5450e"
+    },
+    {
+      "id": "code.chart-art.js",
+      "path": "src/chart-art.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [
+        {
+          "path": "src/main.js",
+          "locator": "./chart-art.js"
+        }
+      ],
+      "bytes": 5191,
+      "sha256": "15e8bc9066ec196327755eec70767e169116294b1573abb855aaf7572d936bf2"
+    },
+    {
+      "id": "code.dive-icons.js",
+      "path": "src/dive-icons.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Retained editable asset source or provenance supporting baseline reproducibility.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/asset-provenance.md",
+            "scope": "Recorded origin; does not establish human approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [
+        {
+          "path": "src/main.js",
+          "locator": "./dive-icons.js"
+        }
+      ],
+      "bytes": 2170,
+      "sha256": "420604ddba0d2399683d1d6aa4ad0bfdd5055897a49baee7475eb76312ccaf03"
+    },
+    {
+      "id": "code.character.geometry.js",
+      "path": "src/character/geometry.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Current character source candidate: loft/sweep/paint/batching geometry used through the shared articulated character interface; pending rendered review.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-project-source",
+        "evidence": [
+          {
+            "path": "docs/art/character-handoff.md",
+            "scope": "Current source-bound author handoff and ownership; not independent visual acceptance or human production approval."
+          }
+        ]
+      },
+      "sources": [
+        "code.geometry.solid-silhouette.js"
+      ],
+      "consumers": [
+        {
+          "path": "src/character-art.js",
+          "locator": "./character/geometry.js"
+        }
+      ],
+      "bytes": 11173,
+      "sha256": "6cd5b1f67d4b47640732872f342a5d6cdd291a78135c4edecbaad1cb0049c179"
+    },
+    {
+      "id": "code.geometry.solid-silhouette.js",
+      "path": "src/geometry/solid-silhouette.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Shared closed-contour, one-step flat silhouette builder used by character costume and untextured resident-fish fins; preserves sampled positions/normals and draw groups while avoiding the general extrusion engine.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "project-procedural-source",
+        "evidence": [
+          {
+            "path": "docs/art/character-handoff.md",
+            "scope": "Current extraction and source-bound CPU fidelity proof; not independent visual acceptance or human approval."
+          },
+          {
+            "path": "tests/solid-silhouette.test.js",
+            "scope": "Actual production fin and curve-sampling comparison with legacy Three extrusion; unused UV removal and shared disposal proof."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [
+        {
+          "path": "assets/cleanup/underwater-fish.js",
+          "locator": "../../src/geometry/solid-silhouette.js"
+        },
+        {
+          "path": "src/character/geometry.js",
+          "locator": "../geometry/solid-silhouette.js"
+        }
+      ],
+      "bytes": 1633,
+      "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738"
+    }
+  ],
+  "refreshedAt": "2026-10-10T02:57:11.121Z"
+}

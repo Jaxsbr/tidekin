@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "authority": "User cleanup goal; coordinator exact four-file authorization after generator migration",
+  "baselineRevision": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+  "files": [
+    {
+      "path": "assets/asset-manifest.json",
+      "bytes": 1753,
+      "sha256": "b59b0e52c74732b673c6e6394181a112a41719802d23847a14eb3d3c607341b8"
+    },
+    {
+      "path": "assets/export-validation.json",
+      "bytes": 1332,
+      "sha256": "5b8dc5bbbdd0592434924a16785508bf45aff821b41b410944a0fbc328021e42"
+    },
+    {
+      "path": "assets/ui/chart-waves.svg",
+      "bytes": 388,
+      "sha256": "74102e59f3f551700405079e48f0090918c61ef88919de4b73562e9ab7ef33cb"
+    },
+    {
+      "path": "assets/ui/compass-rose.svg",
+      "bytes": 515,
+      "sha256": "b8c2c4d6bca44e9539e9d198d1a4e24bad745558a9b938d6840d01232b3ef5ce"
+    }
+  ],
+  "removedBytes": 3988,
+  "reason": "Unused standalone vectors had no named reference purpose; stale metadata replaced by fresh exported GLB inspection and durable catalogue.",
+  "preserved": "Original user reference, splash, painted sources, editable BLEND models and procedural generators remain.",
+  "referenceMoves": [
+    {
+      "from": "public/assets/ui-fourth/reef-panorama.png",
+      "to": "assets/reference/reef-panorama.png",
+      "bytes": 3293910,
+      "sha256": "f3a73a6818e596f4d58ed04275dd80f03b83b5eb9a8f43529327569efc727943",
+      "catalogueId": "runtime.ui-fourth.reef-panorama.png",
+      "purpose": "Original generated reference for underwater depth, limestone silhouettes, coral-fan placement, kelp and caustic lighting; no runtime consumer or current backdrop-plane claim",
+      "appliedAt": "2026-10-09T22:11:04.210Z",
+      "unchangedOriginal": true,
+      "deletedBytes": 0,
+      "authorization": "User accepted project organization, asset catalogue and performance goals",
+      "runtimeConsumers": []
+    }
+  ]
+}

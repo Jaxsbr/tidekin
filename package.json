@@ -7,6 +7,9 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "test": "node --test tests/*.test.js",
+    "assets:check": "node scripts/assets/catalogue.mjs",
+    "perf:collect": "node scripts/performance/collect.mjs",
+    "perf:compare": "node scripts/performance/compare.mjs",
     "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {

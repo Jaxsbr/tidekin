@@ -1,3 +1,5 @@
+import { createSolidSilhouette } from '../../src/geometry/solid-silhouette.js';
+
 /** Small resident fish: bounded home ranges, threat response and timed curiosity. */
 export function createReefFish(THREE,anchors,random) {
   const root=new THREE.Group();root.name='Resident_Fish';
@@ -6,7 +8,7 @@ export function createReefFish(THREE,anchors,random) {
   const silver=new THREE.MeshStandardMaterial({color:0xf4efce,roughness:.5});
   const colors=[0xf2b756,0x69c9c3,0xb5c8ed],mats=colors.map(color=>new THREE.MeshStandardMaterial({color,roughness:.5,metalness:.06}));
   const finShape=new THREE.Shape();finShape.moveTo(0,0);finShape.lineTo(-.17,.14);finShape.quadraticCurveTo(-.1,0,-.17,-.14);finShape.closePath();
-  const finGeo=new THREE.ExtrudeGeometry(finShape,{depth:.016,bevelEnabled:false});
+  const finGeo=createSolidSilhouette(THREE,finShape,.016,12);
   const fish=[];
   function mesh(parent,geo,mat,pos,scale){const m=new THREE.Mesh(geo,mat);m.position.set(...pos);m.scale.set(...scale);parent.add(m);return m;}
   anchors.forEach((anchor,index)=>{

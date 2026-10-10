@@ -1,0 +1,666 @@
+{
+  "schema": 1,
+  "recordedAt": "2026-10-10T05:32:00.671Z",
+  "status": "superseded-pilots-retired",
+  "authorization": "Coordinator assigned prior-pilot compact cleanup after independent final raw audit; complete stronger matched canonical evidence and exact hashes/outcomes supersede these temporary diagnostics",
+  "formalStatus": "fail",
+  "independentReplacement": "Gibbs independently validated319pass/1fail/6inconclusive and complete coverage/identities/closure; parent independently verified canonical gzip/decompression/comparator before promotion",
+  "canonicalReplacement": "benchmarks/accepted/formal-hardware-base79da-final-01",
+  "groups": [
+    {
+      "name": "baseline-79da54b.json",
+      "rawSha256": "1fe747c563a77511c3c7f7ff8d5d24175dca7aec67a33d71c083a8b0a44e749b",
+      "reportedStatus": "pass",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Original three-repeat follow/dive-only historical report; its reported pass is narrow and is not the final formal verdict. Fresh matched full raw supersedes it.",
+      "retiredFiles": [
+        "baseline-79da54b.json"
+      ],
+      "logicalBytes": 2079363
+    },
+    {
+      "name": "baseline-79da54b-extended.json",
+      "rawSha256": "ddf53fac842ec73d6cc371b234e103c751ffcc7d8032af8a3cd545b6a485e99d",
+      "reportedStatus": "failed",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Local socket fetch preparation failed; zero runs; not measured success.",
+      "retiredFiles": [
+        "baseline-79da54b-extended.json"
+      ],
+      "logicalBytes": 56129
+    },
+    {
+      "name": "baseline-79da54b-extended-02.json",
+      "rawSha256": "e6737a6ceed46023224f97762761ab688ac7b722d93c6b7d3d804e54dec7f704",
+      "reportedStatus": "failed",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Bundled Chromium absent; zero runs; not measured success.",
+      "retiredFiles": [
+        "baseline-79da54b-extended-02.json"
+      ],
+      "logicalBytes": 56940
+    },
+    {
+      "name": "baseline-79da54b-extended-03.json",
+      "rawSha256": "4acbcf1a9e9a6a192febc56cd0196dbf4c9fa1128e8b0fa405793a7368c28a85",
+      "reportedStatus": "failed",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Invalid discovery/unlock fixture rejected after four scenes; partial failed attempt, owned browser closed.",
+      "retiredFiles": [
+        "baseline-79da54b-extended-03.json"
+      ],
+      "logicalBytes": 672927
+    },
+    {
+      "name": "baseline-79da54b-extended-04.json",
+      "rawSha256": "6f5b0da96b1c3995e573b12065680f3825dff9f1a5db4e6729c0b34824fad11a",
+      "reportedStatus": "complete",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "One seven-scenario exploratory repeat before current CPU/peak/turnaround contracts; incompatible with final acceptance.",
+      "retiredFiles": [
+        "baseline-79da54b-extended-04.json"
+      ],
+      "logicalBytes": 2125894
+    },
+    {
+      "name": "baseline-79da54b-memory-pilot-01.json",
+      "rawSha256": "7ed1f51e13ba34d9cd5fe380635347a09d96fdc1ee3e3cae8f2715698646c7f2",
+      "reportedStatus": "failed",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Partial memory pilot failed on RSS PID turnover reader; browsers closed; replacement validated recovery.",
+      "retiredFiles": [
+        "baseline-79da54b-memory-pilot-01.json",
+        "baseline-79da54b-memory-pilot-01.json.manifest-start.json",
+        "baseline-79da54b-memory-pilot-01.json.manifest.json",
+        "baseline-79da54b-memory-pilot-01.json.repeat-1.json"
+      ],
+      "logicalBytes": 9379487
+    },
+    {
+      "name": "baseline-79da54b-memory-pilot-02.json",
+      "rawSha256": "4e3e3d532dae3b29efb89911ba7f3d4f83eba9f6553521542e120e53f6762e79",
+      "reportedStatus": "complete",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Complete one-repeat35-window dynamic-cadence diagnostic; never pooled with fixed60 formal.",
+      "retiredFiles": [
+        "baseline-79da54b-memory-pilot-02.json",
+        "baseline-79da54b-memory-pilot-02.json.manifest-start.json",
+        "baseline-79da54b-memory-pilot-02.json.manifest.json",
+        "baseline-79da54b-memory-pilot-02.json.repeat-1.json"
+      ],
+      "logicalBytes": 16761649
+    },
+    {
+      "name": "candidate03-preflight-01.json",
+      "rawSha256": "e365ec88030b8c3baf7ff027dc72df225dc0b6784765d81abc9947670189cb35",
+      "reportedStatus": "failed",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Home buoy entry timeout after two timed scenarios; partial failure; resolved input procedure validated later.",
+      "retiredFiles": [
+        "candidate03-preflight-01.audit.json",
+        "candidate03-preflight-01.audit.md",
+        "candidate03-preflight-01.json",
+        "candidate03-preflight-01.json.manifest-start.json",
+        "candidate03-preflight-01.json.manifest.json",
+        "candidate03-preflight-01.json.repeat-1.json"
+      ],
+      "logicalBytes": 745860
+    },
+    {
+      "name": "candidate08-memory-pilot-01.json",
+      "rawSha256": "8f79743c763283a8b0ec967092a24f7ce62e7294ab2090cfe110e98879c86867",
+      "reportedStatus": "complete",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Complete one-repeat35-window exploratory;28 heap warnings vs variable baseline02, no formal pass.",
+      "retiredFiles": [
+        "candidate08-memory-pilot-01.json",
+        "candidate08-memory-pilot-01.json.manifest-start.json",
+        "candidate08-memory-pilot-01.json.manifest.json",
+        "candidate08-memory-pilot-01.json.repeat-1.json"
+      ],
+      "logicalBytes": 16751926
+    },
+    {
+      "name": "candidate10-memory-pilot-01.json",
+      "rawSha256": "ed7795c3592c4b077d781b73a76c11491e2f70770eaae235e103d03a7d6f9b29",
+      "reportedStatus": "complete",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Complete one-repeat35-window exploratory;26 diagnostic heap warnings, no formal pass.",
+      "retiredFiles": [
+        "candidate10-memory-pilot-01.json",
+        "candidate10-memory-pilot-01.json.audit.json",
+        "candidate10-memory-pilot-01.json.manifest-start.json",
+        "candidate10-memory-pilot-01.json.manifest.json",
+        "candidate10-memory-pilot-01.json.repeat-1.json"
+      ],
+      "logicalBytes": 16833833
+    },
+    {
+      "name": "candidate11-memory-pilot-01.json",
+      "rawSha256": "e56c0728880a43cff72d7b03747d6022f8e4feca4916d453340818d875339bc1",
+      "reportedStatus": "complete",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Complete one-repeat35-window exploratory;9 diagnostic heap warnings and one validated RSS turnover, no formal pass.",
+      "retiredFiles": [
+        "candidate11-memory-pilot-01.json",
+        "candidate11-memory-pilot-01.json.audit.json",
+        "candidate11-memory-pilot-01.json.manifest-start.json",
+        "candidate11-memory-pilot-01.json.manifest.json",
+        "candidate11-memory-pilot-01.json.repeat-1.json"
+      ],
+      "logicalBytes": 16433352
+    },
+    {
+      "name": "candidate12-memory-pilot-01.json",
+      "rawSha256": "06450c91227ba04180dfb9128af70c583d36383b88a26788813addcf3e65485a",
+      "reportedStatus": "complete",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Complete one-repeat35-window exploratory;6 diagnostic heap warnings, no formal pass.",
+      "retiredFiles": [
+        "candidate12-memory-pilot-01.json",
+        "candidate12-memory-pilot-01.json.audit.json",
+        "candidate12-memory-pilot-01.json.manifest-start.json",
+        "candidate12-memory-pilot-01.json.manifest.json",
+        "candidate12-memory-pilot-01.json.repeat-1.json"
+      ],
+      "logicalBytes": 16400894
+    },
+    {
+      "name": "candidate13-memory-pilot-01.json",
+      "rawSha256": "5e8c60be16aa069285b76176c28358616a03f6f859dd0a5aeaf137632519c237",
+      "reportedStatus": "complete",
+      "scope": "Superseded diagnostic; never final acceptance",
+      "outcome": "Complete one-repeat35-window exploratory;5 diagnostic heap warnings. Superseded by independently audited failed five-pair canonical evidence.",
+      "retiredFiles": [
+        "candidate13-memory-pilot-01.json",
+        "candidate13-memory-pilot-01.json.audit.json",
+        "candidate13-memory-pilot-01.json.manifest-start.json",
+        "candidate13-memory-pilot-01.json.manifest.json",
+        "candidate13-memory-pilot-01.json.repeat-1.json"
+      ],
+      "logicalBytes": 16486268
+    }
+  ],
+  "exactInventorySha256": "d21c151c89da3f709179bbeb7573722c5686798371532f816158d21982e82dee",
+  "removedFiles": [
+    "benchmarks/records/baseline-79da54b.json",
+    "benchmarks/records/baseline-79da54b-extended.json",
+    "benchmarks/records/baseline-79da54b-extended-02.json",
+    "benchmarks/records/baseline-79da54b-extended-03.json",
+    "benchmarks/records/baseline-79da54b-extended-04.json",
+    "benchmarks/records/baseline-79da54b-memory-pilot-01.json",
+    "benchmarks/records/baseline-79da54b-memory-pilot-01.json.manifest-start.json",
+    "benchmarks/records/baseline-79da54b-memory-pilot-01.json.manifest.json",
+    "benchmarks/records/baseline-79da54b-memory-pilot-01.json.repeat-1.json",
+    "benchmarks/records/baseline-79da54b-memory-pilot-02.json",
+    "benchmarks/records/baseline-79da54b-memory-pilot-02.json.manifest-start.json",
+    "benchmarks/records/baseline-79da54b-memory-pilot-02.json.manifest.json",
+    "benchmarks/records/baseline-79da54b-memory-pilot-02.json.repeat-1.json",
+    "benchmarks/records/candidate03-preflight-01.audit.json",
+    "benchmarks/records/candidate03-preflight-01.audit.md",
+    "benchmarks/records/candidate03-preflight-01.json",
+    "benchmarks/records/candidate03-preflight-01.json.manifest-start.json",
+    "benchmarks/records/candidate03-preflight-01.json.manifest.json",
+    "benchmarks/records/candidate03-preflight-01.json.repeat-1.json",
+    "benchmarks/records/candidate08-memory-pilot-01.json",
+    "benchmarks/records/candidate08-memory-pilot-01.json.manifest-start.json",
+    "benchmarks/records/candidate08-memory-pilot-01.json.manifest.json",
+    "benchmarks/records/candidate08-memory-pilot-01.json.repeat-1.json",
+    "benchmarks/records/candidate10-memory-pilot-01.json",
+    "benchmarks/records/candidate10-memory-pilot-01.json.audit.json",
+    "benchmarks/records/candidate10-memory-pilot-01.json.manifest-start.json",
+    "benchmarks/records/candidate10-memory-pilot-01.json.manifest.json",
+    "benchmarks/records/candidate10-memory-pilot-01.json.repeat-1.json",
+    "benchmarks/records/candidate11-memory-pilot-01.json",
+    "benchmarks/records/candidate11-memory-pilot-01.json.audit.json",
+    "benchmarks/records/candidate11-memory-pilot-01.json.manifest-start.json",
+    "benchmarks/records/candidate11-memory-pilot-01.json.manifest.json",
+    "benchmarks/records/candidate11-memory-pilot-01.json.repeat-1.json",
+    "benchmarks/records/candidate12-memory-pilot-01.json",
+    "benchmarks/records/candidate12-memory-pilot-01.json.audit.json",
+    "benchmarks/records/candidate12-memory-pilot-01.json.manifest-start.json",
+    "benchmarks/records/candidate12-memory-pilot-01.json.manifest.json",
+    "benchmarks/records/candidate12-memory-pilot-01.json.repeat-1.json",
+    "benchmarks/records/candidate13-memory-pilot-01.json",
+    "benchmarks/records/candidate13-memory-pilot-01.json.audit.json",
+    "benchmarks/records/candidate13-memory-pilot-01.json.manifest-start.json",
+    "benchmarks/records/candidate13-memory-pilot-01.json.manifest.json",
+    "benchmarks/records/candidate13-memory-pilot-01.json.repeat-1.json"
+  ],
+  "removedLogicalBytes": 114784522,
+  "skipped": [],
+  "protected": [
+    "Promoted canonical formal evidence and parent verification",
+    "baseline-first-three-60hz-01/ CPU fairness proof",
+    "cpu-profile-base-head09-01/ function profiles plus executed chunks",
+    "All previews/builds/source snapshots/helpers/captures",
+    "Parent cleanup-summary.json"
+  ],
+  "limits": "Historical raw is deliberately retired, not restated as current measurements. Outcome/hash entries remain; no heap causal attribution inferred. This batch does not change runtime/controls or passing/failing gates.",
+  "disposedAt": "2026-10-10T05:32:00.830Z",
+  "closedCpuPurposes": {
+    "authorization": "Parent explicitly closed both historical CPU proof purposes after stronger formal data/independent audit, and authorized this exact two-directory plus fairness-helper retirement",
+    "status": "closed-cpu-purposes-retired",
+    "formalAcceptance": false,
+    "recordedAt": "2026-10-10T05:37:21.251Z",
+    "ledgerSha256": "00f17f9254a632ea0d28121bed29c7ab7794bee1757489f80b5bb21239d25bed",
+    "inventoryColumns": [
+      "path",
+      "bytes",
+      "sha256"
+    ],
+    "fileInventory": [
+      [
+        "benchmarks/records/baseline-first-three-60hz-01/executed-adapter.js",
+        31081,
+        "8102c6f8d7f97d4f9bb1fe9540340441a7d58569cf2cc400bd3bad0e77c878ac"
+      ],
+      [
+        "benchmarks/records/baseline-first-three-60hz-01/result.json",
+        286109,
+        "0570d49476a34023793e3e02d0a184d7cd41eb785b524e77a896e0bb43305f73"
+      ],
+      [
+        "benchmarks/records/baseline-first-three-60hz-01/start.json",
+        1143,
+        "716fe652bceadea6607c79baee1b2cc8727d02e22926534f7327cf30aae32385"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/base.json",
+        735666,
+        "0d9c5c900478252b19d7ee26ec4e17f2f60f4e1d975ec39e27430d71952fe144"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/classification.json",
+        11451,
+        "a073211522fc3c9b84ebe5c5a4186a6eddbb50c4acb95fb037c71a239a9d2d79"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/head09.json",
+        720706,
+        "cc6230954897ef2810d6dc220a7b9f096affa1416a69343337f472eba779e7c7"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/manifest.json",
+        1554688,
+        "f0b4e90765a6ee3a186bcffc5710325ab3ec9323129429c4a6fc4f97aa607051"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/profiles/base-follow-stationary.cpuprofile",
+        209155,
+        "df07d58ba0d6465572ff5b7fa4e46fbe4d855c27ca8e8104da882d7d6d235140"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/profiles/base-moving-dive-home-reef.cpuprofile",
+        192841,
+        "ccd49f522387be3b664fda7d03af3295655de1039fb8afd1df63d96c7baba444"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/profiles/base-sailing-circuit.cpuprofile",
+        195695,
+        "891affdc2b080c606293347fce183889c721393226108f6fb9d28a0cc7d7013c"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/profiles/head09-follow-stationary.cpuprofile",
+        210079,
+        "1bea989a6e17396d7f64f60eade86ecd0193fb3e5266dde4e10aa0f141ffbe8b"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/profiles/head09-moving-dive-home-reef.cpuprofile",
+        179608,
+        "dc4d151de4f2579c1bd421ab60cc8f22d3387ee5f0f2e62f48dfdf0b906a9d24"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/profiles/head09-sailing-circuit.cpuprofile",
+        200536,
+        "57134dd95062af24fd94956f972d05f03427ae617c3fff0515236b5728bbec50"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/2c6e5e41956d985f15c3f636c2a7f6d13d76dca666ca82060f4df702d30c0837.js",
+        694318,
+        "2c6e5e41956d985f15c3f636c2a7f6d13d76dca666ca82060f4df702d30c0837"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/49808cd2daa7293e7e6f0d289d58d36047232f7bd830c8e488d73d52a99c91eb.js",
+        87799,
+        "49808cd2daa7293e7e6f0d289d58d36047232f7bd830c8e488d73d52a99c91eb"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/57af0608d68fd49619b997a210347a2ae7a8912a9484a6ebcb69b14ad7e87bb5.js",
+        33,
+        "57af0608d68fd49619b997a210347a2ae7a8912a9484a6ebcb69b14ad7e87bb5"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/5f0777b8432ac3c74a5ae13847df64b8241eb6b25fbebeb9a45f2e9915ea76fc.js",
+        1445,
+        "5f0777b8432ac3c74a5ae13847df64b8241eb6b25fbebeb9a45f2e9915ea76fc"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/6d520361d610874ce61670a346063075070572c5b22684d507f6084789b5ad8e.js",
+        83753,
+        "6d520361d610874ce61670a346063075070572c5b22684d507f6084789b5ad8e"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/7547c0afc262936d8a948e35e443267d3e02cc49cc51edfe999a450c3d0da2eb.js",
+        12997,
+        "7547c0afc262936d8a948e35e443267d3e02cc49cc51edfe999a450c3d0da2eb"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/9e037e94baa75c68a760a3b139223c44e5b2e153dde09b6759607421fa1eafbf.js",
+        690574,
+        "9e037e94baa75c68a760a3b139223c44e5b2e153dde09b6759607421fa1eafbf"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/a3c74b2aecbdd0b615e6a2eed4788a374366e25d5fdcd45dca45d55fbb119046.js",
+        61,
+        "a3c74b2aecbdd0b615e6a2eed4788a374366e25d5fdcd45dca45d55fbb119046"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/script-sources/e439aa47736ef91892e470a8e6649a8f579401d366ece41f9ed04d6985446c10.js",
+        452,
+        "e439aa47736ef91892e470a8e6649a8f579401d366ece41f9ed04d6985446c10"
+      ],
+      [
+        "benchmarks/records/cpu-profile-base-head09-01/start.json",
+        1155,
+        "577478db6fbda76a082ef6bb7b788fc078ee840a69a9014f29103116d0c84635"
+      ],
+      [
+        ".scratch/baseline-cpu-fairness.mjs",
+        6753,
+        "679996dc918aa9fb2e0610b1d3c682a9c32674ecef44971bd987f17d4c40963b"
+      ]
+    ],
+    "directoryInventory": [
+      "benchmarks/records/baseline-first-three-60hz-01",
+      "benchmarks/records/cpu-profile-base-head09-01",
+      "benchmarks/records/cpu-profile-base-head09-01/profiles",
+      "benchmarks/records/cpu-profile-base-head09-01/script-sources"
+    ],
+    "purposes": [
+      {
+        "name": "Unprofiled fixed60 baseline first-three fairness",
+        "status": "complete diagnostic; purpose closed",
+        "startedAt": "2026-10-10T01:52:02.263Z",
+        "finishedAt": "2026-10-10T01:53:34.256Z",
+        "elapsedSeconds": 91.993,
+        "rawResultSha256": "0570d49476a34023793e3e02d0a184d7cd41eb785b524e77a896e0bb43305f73",
+        "source": {
+          "commit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+          "inputHash": "03da6b4709db3f6326e1917d2b68849b3ed44d1a4bea43a3e0f3805a321eb742",
+          "buildHash": "17c974dc30535f00582c4d26e725137f8711fa65c7f960869584a3f982153e0a"
+        },
+        "harnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5",
+        "browserExecutableSha256": "ccffd5c5fe77ba3212e07c2c69091f8048b73c396b4647ecaa150e1e01a04954",
+        "helperSha256": "679996dc918aa9fb2e0610b1d3c682a9c32674ecef44971bd987f17d4c40963b",
+        "adapterSha256": "8102c6f8d7f97d4f9bb1fe9540340441a7d58569cf2cc400bd3bad0e77c878ac",
+        "allOwnedBrowsersClosed": true,
+        "identitiesUnchanged": true,
+        "summary": [
+          {
+            "id": "follow-stationary",
+            "frameMedianMs": 16.699999999999818,
+            "frameP95Ms": 18.30000000000109,
+            "rendererThreadCpuMsPerSecond": 140.68724097999126,
+            "frameOver50Ratio": 0,
+            "geometries": 151,
+            "textures": 2,
+            "drawCalls": 202,
+            "triangles": 167880
+          },
+          {
+            "id": "sailing-circuit",
+            "frameMedianMs": 16.69999999999709,
+            "frameP95Ms": 18.5,
+            "rendererThreadCpuMsPerSecond": 139.40161615457245,
+            "frameOver50Ratio": 0,
+            "geometries": 216,
+            "textures": 3,
+            "drawCalls": 249,
+            "triangles": 192936
+          },
+          {
+            "id": "moving-dive-home-reef",
+            "frameMedianMs": 16.69999999999709,
+            "frameP95Ms": 18.5,
+            "rendererThreadCpuMsPerSecond": 136.87651321210916,
+            "frameOver50Ratio": 0,
+            "geometries": 296,
+            "textures": 5,
+            "drawCalls": 329,
+            "triangles": 874572
+          }
+        ],
+        "limits": "One unprofiled repetition; original5s warmup/20s sample for three scenes only. No requestedGC, memory/menu/resource-cycle round or profiler. Fixed60 coordinator/UI verified, other apps open/nonexclusive; not a formal matched pool or causal benefit claim."
+      },
+      {
+        "name": "Fixed60 base/head09 function sampling",
+        "status": "complete diagnostic; purpose closed",
+        "startedAt": "2026-10-10T00:57:43.662Z",
+        "finishedAt": "2026-10-10T01:00:44.265Z",
+        "elapsedSeconds": 180.603,
+        "rawManifestSha256": "f0b4e90765a6ee3a186bcffc5710325ab3ec9323129429c4a6fc4f97aa607051",
+        "classificationSha256": "a073211522fc3c9b84ebe5c5a4186a6eddbb50c4acb95fb037c71a239a9d2d79",
+        "sources": [
+          {
+            "name": "base",
+            "commit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+            "dirty": false,
+            "inputHash": "03da6b4709db3f6326e1917d2b68849b3ed44d1a4bea43a3e0f3805a321eb742",
+            "buildHash": "17c974dc30535f00582c4d26e725137f8711fa65c7f960869584a3f982153e0a"
+          },
+          {
+            "name": "head09",
+            "commit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+            "dirty": true,
+            "inputHash": "cc64c6bff03956a37e4a3d9337ccf8c112f7ffc8b1d18901eb4f6ac419682775",
+            "buildHash": "78ecd422ec0a83d0a49718a742eb2997ce46e5961aaebab2388befdfdfd06ee5"
+          }
+        ],
+        "harnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5",
+        "helperSha256": "a20480477be0251ac74ebb7e79bf2986fe1ed8af47bd9729fe4c7a578defced1",
+        "adapterSha256": "9ee85c4036f3d13f5cbcfb1844ccdf2483dce7293bd3459617006093123ced75",
+        "browserExecutable": {
+          "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "sha256": "ccffd5c5fe77ba3212e07c2c69091f8048b73c396b4647ecaa150e1e01a04954"
+        },
+        "samplingIntervalUs": 1000,
+        "allOwnedBrowsersClosed": true,
+        "identitiesUnchanged": true,
+        "profileCount": 6,
+        "groupColumns": [
+          "self sampled ms",
+          "union inclusive sampled ms"
+        ],
+        "method": "Group self=sum of sampled timeDeltas at matching frames; inclusive=union of samples whose ancestry matches a group, counting recursion once. Groups overlap; do not add inclusive columns. ms over each ~20s profile, weighted wall-time samples, not exact CPU. Classification verified against retained chunk snippets; zero-based locations, no source maps.",
+        "limits": "Profiler perturbs execution; one base-then-head09 repetition at fixed60, other apps open/nonexclusive. Inclusive groups overlap and must not be added. Minified executed chunks had no source maps. Actual snapshot draw/triangle counts differ from window maxima/camera culling. These CPU profiles are not causal heap evidence, exact GPU time, a current-source profile, or formal acceptance. Mixed Follow program/uniform and scene-specific costs did not establish a consistent structural CPU regression.",
+        "summaryColumns": [
+          "side",
+          "scenario",
+          "rendererThreadCpuMsPerSecond",
+          "frameMedianMs",
+          "frameP95Ms",
+          "postWindowRenderCpuMedianMs",
+          "postWindowDrawCalls",
+          "postWindowTriangles",
+          "windowMaximumDrawCalls",
+          "windowMaximumTriangles",
+          "rawProfileSha256"
+        ],
+        "summaryRows": [
+          [
+            "base",
+            "follow-stationary",
+            111.78003793698612,
+            16.69999999999891,
+            17.5,
+            1.1,
+            199,
+            167850,
+            203,
+            167890,
+            "df07d58ba0d6465572ff5b7fa4e46fbe4d855c27ca8e8104da882d7d6d235140"
+          ],
+          [
+            "base",
+            "sailing-circuit",
+            112.85971427166257,
+            16.69999999999709,
+            17.5,
+            1.1,
+            198,
+            168098,
+            246,
+            194018,
+            "891affdc2b080c606293347fce183889c721393226108f6fb9d28a0cc7d7013c"
+          ],
+          [
+            "base",
+            "moving-dive-home-reef",
+            119.71604844678528,
+            16.69999999999709,
+            17.5,
+            1.1,
+            184,
+            837468,
+            330,
+            874652,
+            "ccd49f522387be3b664fda7d03af3295655de1039fb8afd1df63d96c7baba444"
+          ],
+          [
+            "head09",
+            "follow-stationary",
+            126.21149957154387,
+            16.69999999999891,
+            17.599999999998545,
+            1.4,
+            196,
+            143810,
+            199,
+            143840,
+            "1bea989a6e17396d7f64f60eade86ecd0193fb3e5266dde4e10aa0f141ffbe8b"
+          ],
+          [
+            "head09",
+            "sailing-circuit",
+            114.6065711863599,
+            16.69999999999709,
+            17.599999999998545,
+            1.1,
+            191.5,
+            143835,
+            245,
+            170830,
+            "57134dd95062af24fd94956f972d05f03427ae617c3fff0515236b5728bbec50"
+          ],
+          [
+            "head09",
+            "moving-dive-home-reef",
+            113.54128736382684,
+            16.69999999999709,
+            17.59999999999127,
+            0.9,
+            138.5,
+            812656,
+            284,
+            849840,
+            "dc4d151de4f2579c1bd421ab60cc8f22d3387ee5f0f2e62f48dfdf0b906a9d24"
+          ]
+        ],
+        "selectedHotspotColumns": [
+          "scenario",
+          "group",
+          "baseSelfMs",
+          "headSelfMs",
+          "baseUnionInclusiveMs",
+          "headUnionInclusiveMs"
+        ],
+        "selectedHotspotRows": [
+          [
+            "follow-stationary",
+            "setProgram",
+            44.41,
+            52.67,
+            482.37,
+            618.37
+          ],
+          [
+            "follow-stationary",
+            "uniformRoutines",
+            245.82,
+            358.03,
+            253.44,
+            368.84
+          ],
+          [
+            "follow-stationary",
+            "bindingSetupOrVAO",
+            95.55,
+            92.38,
+            133.74,
+            130.85
+          ],
+          [
+            "sailing-circuit",
+            "setProgram",
+            52.08,
+            31.41,
+            449.71,
+            457.77
+          ],
+          [
+            "sailing-circuit",
+            "uniformRoutines",
+            238.05,
+            241.04,
+            249.94,
+            252.47
+          ],
+          [
+            "sailing-circuit",
+            "bindingSetupOrVAO",
+            52.98,
+            73.24,
+            89.78,
+            111.6
+          ],
+          [
+            "moving-dive-home-reef",
+            "setProgram",
+            55.3,
+            29.95,
+            383.45,
+            278.31
+          ],
+          [
+            "moving-dive-home-reef",
+            "uniformRoutines",
+            282.7,
+            217.49,
+            290.37,
+            224.77
+          ],
+          [
+            "moving-dive-home-reef",
+            "bindingSetupOrVAO",
+            20.57,
+            34.47,
+            57.41,
+            58.5
+          ]
+        ]
+      }
+    ],
+    "helper": {
+      "path": ".scratch/baseline-cpu-fairness.mjs",
+      "bytes": 6753,
+      "sha256": "679996dc918aa9fb2e0610b1d3c682a9c32674ecef44971bd987f17d4c40963b"
+    },
+    "removedFiles": 24,
+    "removedDirectories": 4,
+    "removedLogicalBytes": 6108098,
+    "skipped": [],
+    "protected": "Only the two named directories and the exact679996 fairness helper. No canonical evidence, build/source/baselinePNG/other scratch/previews or parent cleanup-summary touched.",
+    "disposedAt": "2026-10-10T05:37:21.269Z"
+  }
+}

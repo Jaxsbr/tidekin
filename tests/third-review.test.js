@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 import * as G from '../src/game.js';
+import { releaseScene } from '../src/render-resources.js';
+import { createPersistence } from '../src/persistence.js';
+import { createLoadProfile } from '../src/load-profile.js';
 
 function enterSurvey() {
   const s=G.createGame();s.inventory={...G.RECIPES.waterwheel.cost};
@@ -31,6 +34,7 @@ test('review: confirmed new voyage saves a fresh always-controllable raft',async
   const node={hidden:false,open:false,focus:noop,querySelector:()=>null};
   const renderer={resize:noop,update:noop,setView:noop};
   const context=vm.createContext({loading:false,createGame:G.createGame,deserializeGame:G.deserializeGame,
+    persistence:createPersistence({storage:{getItem:()=>null,setItem:noop}}),loadProfile:createLoadProfile(),
     state:null,scene:null,scenePromise:Promise.resolve(renderer),
     resetInput:noop,panelDialog:node,closePanel:noop,showModal:noop,modalDialog:node,
     menu:{},gameView:{},applySettings:noop,closeModal:noop,refreshHud:noop,canvas:node,
@@ -184,13 +188,11 @@ test('review: current permits inward escape, stationary turning and wheel-enable
 
 test('TR-4 world scene teardown disposes instanced object buffers as well as shared geometry',async()=>{
   const THREE=await import('three');
-  const source=readFileSync(new URL('../src/scene.js',import.meta.url),'utf8');
-  const release=source.slice(source.indexOf('function releaseScene('),source.indexOf('\nexport async function createScene('));
   const scene=new THREE.Scene(),geo=new THREE.BoxGeometry(),mat=new THREE.MeshBasicMaterial();
   const instances=new THREE.InstancedMesh(geo,mat,96);scene.add(instances);
   const released={object:0,geometry:0,material:0,renderer:0};
   instances.addEventListener('dispose',()=>released.object++);geo.addEventListener('dispose',()=>released.geometry++);mat.addEventListener('dispose',()=>released.material++);
-  vm.runInNewContext(release+'\nreleaseScene(scene,renderer)',{scene,renderer:{dispose(){released.renderer++;}}});
+  releaseScene(scene,{dispose(){released.renderer++;}});
   assert.equal(released.object,1,'Three.js WebGLObjects releases instanceMatrix on the object dispose event');
   assert.equal(released.geometry,1);assert.equal(released.material,1);assert.equal(released.renderer,1);
 });

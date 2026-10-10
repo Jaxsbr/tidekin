@@ -1,0 +1,106 @@
+name: Performance
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  merge_group:
+    types: [checks_requested]
+permissions:
+  contents: read
+concurrency:
+  group: performance-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  performance:
+    name: Performance regression gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      # Bootstrapping is an explicit admin decision for this one legacy base.
+      LEGACY_BASE: 79da54bdbd029090d4ed9d6fd3dd2caea1a4847c
+      BOOTSTRAP_ALLOWED: ${{ vars.PERFORMANCE_BOOTSTRAP_BASE }}
+    steps:
+      - name: Checkout actual base branch snapshot
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.base.ref || github.event.merge_group.base_sha }}
+          path: base
+          persist-credentials: false
+      - name: Checkout exact PR head or merge group
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.event.merge_group.head_sha }}
+          path: head
+          persist-credentials: false
+      - name: Resolve identities and trusted tooling
+        id: refs
+        shell: bash
+        run: |
+          set -euo pipefail
+          base_sha=$(git -C base rev-parse HEAD)
+          head_sha=$(git -C head rev-parse HEAD)
+          echo "base=$base_sha" >> "$GITHUB_OUTPUT"
+          echo "head=$head_sha" >> "$GITHUB_OUTPUT"
+          if test -f base/scripts/performance/pair.mjs; then
+            echo 'tools=base' >> "$GITHUB_OUTPUT"
+            echo "Trusted performance policy comes from base $base_sha" >> "$GITHUB_STEP_SUMMARY"
+          elif test "$base_sha" = "$LEGACY_BASE" && test "$BOOTSTRAP_ALLOWED" = "$LEGACY_BASE"; then
+            echo 'tools=head' >> "$GITHUB_OUTPUT"
+            echo '::warning::EXPLICIT BOOTSTRAP: legacy base lacks harness; candidate tooling requires maintainer review before merge.'
+            echo "**EXPLICIT BOOTSTRAP** for $base_sha: admin enabled PERFORMANCE_BOOTSTRAP_BASE. Candidate tooling is used for both commits. Review the entire harness/workflow/policy; this is not a protected-base-policy validation." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo '::error::Base has no maintained harness. Bootstrap requires admin authorization for exact legacy SHA; no silent fallback.'
+            exit 1
+          fi
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+      - name: Install both locked dependency trees
+        run: |
+          npm ci --prefix base
+          npm ci --prefix head
+      - name: Test trusted enforcement and record control changes
+        env:
+          TOOLS: ${{ steps.refs.outputs.tools }}
+        run: |
+          (cd "$TOOLS" && node --test tests/performance*.test.js)
+          mkdir -p "$RUNNER_TEMP/performance-empty-controls"
+          : > performance-control.diff
+          for control in scripts/performance tests docs/performance .github/workflows/performance.yml; do
+            before="base/$control"
+            after="head/$control"
+            if test ! -e "$before"; then
+              if test -d "$after"; then before="$RUNNER_TEMP/performance-empty-controls"; else before=/dev/null; fi
+            fi
+            if test ! -e "$after"; then
+              if test -d "$before"; then after="$RUNNER_TEMP/performance-empty-controls"; else after=/dev/null; fi
+            fi
+            git diff --no-index -- "$before" "$after" >> performance-control.diff || test "$?" = 1
+          done
+      - name: Build both exact commits without touching deployment builds
+        run: |
+          (cd base && npm exec vite -- build --base=/ --outDir=output/performance-build)
+          (cd head && npm exec vite -- build --base=/ --outDir=output/performance-build)
+      - name: Install one pinned Playwright Chromium for both measurements
+        run: base/node_modules/.bin/playwright install --with-deps chromium
+      - name: Measure and compare alternating pairs on this runner
+        env:
+          TOOLS: ${{ steps.refs.outputs.tools }}
+          BASE_SHA: ${{ steps.refs.outputs.base }}
+          HEAD_SHA: ${{ steps.refs.outputs.head }}
+        run: |
+          node "$TOOLS/scripts/performance/pair.mjs" --run --browser-released --base-root="$PWD/base" --head-root="$PWD/head" --out-dir="$PWD/performance-evidence" --expected-base="$BASE_SHA" --expected-head="$HEAD_SHA" --session="$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+      - name: Publish comparison summary
+        if: always()
+        run: |
+          if test -f performance-evidence/summary.md; then cat performance-evidence/summary.md >> "$GITHUB_STEP_SUMMARY"; fi
+      - name: Retain exact raw evidence, failures and control diff
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: performance-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            performance-evidence/
+            performance-control.diff
+          if-no-files-found: warn
+          retention-days: 30

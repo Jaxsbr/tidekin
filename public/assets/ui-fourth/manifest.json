@@ -7,7 +7,6 @@
   "assets": {
     "module-waterwheel": {
       "label": "Waterwheel",
-      "url": "./module-waterwheel.svg",
       "rect": [
         0,
         0,
@@ -19,7 +18,6 @@
     },
     "module-crane": {
       "label": "Salvage crane",
-      "url": "./module-crane.svg",
       "rect": [
         384,
         0,
@@ -31,7 +29,6 @@
     },
     "module-greenhouse": {
       "label": "Greenhouse",
-      "url": "./module-greenhouse.svg",
       "rect": [
         768,
         0,
@@ -43,7 +40,6 @@
     },
     "module-sail": {
       "label": "Sail",
-      "url": "./module-sail.svg",
       "rect": [
         1152,
         0,
@@ -55,7 +51,6 @@
     },
     "module-beacon": {
       "label": "Beacon",
-      "url": "./module-beacon.svg",
       "rect": [
         0,
         337,
@@ -67,7 +62,6 @@
     },
     "resource-wood": {
       "label": "Driftwood",
-      "url": "./resource-wood.svg",
       "rect": [
         384,
         345,
@@ -79,7 +73,6 @@
     },
     "resource-scrap": {
       "label": "Salvaged metal",
-      "url": "./resource-scrap.svg",
       "rect": [
         768,
         342,
@@ -91,7 +84,6 @@
     },
     "resource-pearl": {
       "label": "Pearl",
-      "url": "./resource-pearl.svg",
       "rect": [
         1152,
         347,
@@ -103,7 +95,6 @@
     },
     "stamp-voyage": {
       "label": "Voyage",
-      "url": "./stamp-voyage.svg",
       "rect": [
         0,
         664,
@@ -115,7 +106,6 @@
     },
     "stamp-map": {
       "label": "Ocean chart",
-      "url": "./stamp-map.svg",
       "rect": [
         384,
         658,
@@ -127,7 +117,6 @@
     },
     "stamp-journal": {
       "label": "Tide journal",
-      "url": "./stamp-journal.svg",
       "rect": [
         768,
         658,
@@ -139,7 +128,6 @@
     },
     "stamp-settings": {
       "label": "Settings",
-      "url": "./stamp-settings.svg",
       "rect": [
         1152,
         661,

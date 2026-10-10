@@ -1,0 +1,283 @@
+{
+  "schema": 2,
+  "purpose": "Current final disposition plus one compact historical diagnostic ledger; original filename retained for existing links",
+  "formal": {
+    "status": "fail",
+    "accepted": false,
+    "collectorExitCode": 1,
+    "session": "formal-hardware-base79da-final-01",
+    "startedAt": "2026-10-10T03:57:52.671Z",
+    "finishedAt": "2026-10-10T05:13:42.268Z",
+    "elapsedSeconds": 4549.597,
+    "baseCommit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+    "headCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+    "measuredHarnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5",
+    "repetitionsPerSide": 5,
+    "order": "AB/BA/AB/BA/AB",
+    "counts": {
+      "pass": 319,
+      "fail": 1,
+      "inconclusive": 6
+    },
+    "collectionErrors": 0,
+    "all20OwnedBrowserSessionsClosed": true,
+    "sourceBuildControlsUnchanged": true,
+    "independentAudit": "Gibbs validated raw coverage/identity/closure/RSS/resource plateaus and reproduced all326 gate outcomes",
+    "nonpassingGates": [
+      {
+        "name": "cold/menuReadyMs",
+        "verdict": "inconclusive",
+        "baseMedian": 54.09999990463257,
+        "candidateMedian": 58.89999961853027,
+        "delta": 4.799999713897705,
+        "absoluteAllowance": 75,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.15600000381469725,
+        "noiseC": 0.050666669209798176,
+        "agreement": 0,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/transition/1/home-reef/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 41404192,
+        "candidateMedian": 62362856,
+        "delta": 20958664,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.038730281223698315,
+        "noiseC": 0.03629628508354396,
+        "agreement": 3,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/transition/8/salvage:horizon-wreck/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 65427744,
+        "candidateMedian": 66176456,
+        "delta": 748712,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.12002700261222518,
+        "noiseC": 0.02043911206124426,
+        "agreement": 1,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/transition/20/salvage:horizon-wreck/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 61250940,
+        "candidateMedian": 68813628,
+        "delta": 7562688,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.1811340038210026,
+        "noiseC": 0.013509707699178424,
+        "agreement": 1,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/entry/home-reef/heapBytes",
+        "verdict": "fail",
+        "baseMedian": 42574900,
+        "candidateMedian": 69358920,
+        "delta": 26784020,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.012592395989186116,
+        "noiseC": 0.012154341503587426,
+        "agreement": 5,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/entry/sheltered-cove/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 103537016,
+        "candidateMedian": 95373424,
+        "delta": -8163592,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.015610996554121282,
+        "noiseC": 0.008250390590988954,
+        "agreement": 2,
+        "repetitions": 5
+      },
+      {
+        "name": "memory-peak/entry/salvage:home-pearls/heapBytes",
+        "verdict": "inconclusive",
+        "baseMedian": 83037560,
+        "candidateMedian": 61133544,
+        "delta": -21904016,
+        "absoluteAllowance": 8388608,
+        "relativeAllowance": 0.15,
+        "noiseB": 0.0014850629040641368,
+        "noiseC": 0.2438918312996871,
+        "agreement": 1,
+        "repetitions": 5
+      }
+    ],
+    "interpretation": "Home-entry heap regression exceeds both finite allowances in5/5 pairs with low variance. Combined-source comparison has no allocation-stack/GC-reason attribution or demonstrated selective revert. No passing overall-improvement claim. No additional hardware/art/optimization cycles authorized."
+  },
+  "retention": {
+    "status": "compacted-failed-evidence",
+    "ledger": "docs/performance/formal-retention.json",
+    "canonical": [
+      {
+        "side": "base",
+        "canonicalPath": "benchmarks/accepted/formal-hardware-base79da-final-01/base.json.gz",
+        "rawBytes": 43542163,
+        "rawSha256": "211a4c320a765eed0ee66a73b5443e9a4b8aaacb9316ef885005ff278ff52a24",
+        "gzipBytes": 2157074,
+        "gzipSha256": "c2a1b2ae5ca2bca46bc4c71427e500c9cc8e24bb72f1db1cbb2c92c9b4e9d432",
+        "decompressionVerified": true,
+        "sourceCommit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+        "sourceHash": "03da6b4709db3f6326e1917d2b68849b3ed44d1a4bea43a3e0f3805a321eb742",
+        "buildHash": "17c974dc30535f00582c4d26e725137f8711fa65c7f960869584a3f982153e0a",
+        "harnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5"
+      },
+      {
+        "side": "head",
+        "canonicalPath": "benchmarks/accepted/formal-hardware-base79da-final-01/head.json.gz",
+        "rawBytes": 43365482,
+        "rawSha256": "eb82085a8356c29199261a79121a0a72a6c822d35d8cb2ad0a336c79abf67bda",
+        "gzipBytes": 2155840,
+        "gzipSha256": "73c9c90f9f38734eda3fd94ae6129f57b22215e705fe7b57d3cc3eb0da3dc7dc",
+        "decompressionVerified": true,
+        "sourceCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+        "sourceHash": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf",
+        "buildHash": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "harnessSha256": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5"
+      }
+    ],
+    "totalGzipBytes": 4312914,
+    "allRawSamplesLosslesslyRetained": true,
+    "unchangedComparatorReproduced": true,
+    "retiredFiles": 12,
+    "removedLogicalBytes": 163913091,
+    "skips": 0,
+    "priorPilots": {
+      "status": "13 superseded groups retired",
+      "ledger": "docs/performance/pilot-retirement.json",
+      "removedFiles": 43,
+      "removedLogicalBytes": 114784522,
+      "skips": 0,
+      "retainedCpuDirectories": 0
+    },
+    "coordinatorPromotion": "Parent independently verified and promoted seven final artifacts; accepted storage is failed evidence, not a passing result"
+  },
+  "softwareFixture": {
+    "status": "P2 accepted by Gibbs; CPU validation complete; one actual hosted software-browser cycle pending",
+    "harnessSha256": "367ba2b5386a8dc9c4c29ebbf1f8eb7e79e27540c3d1671c64441fdd2951d590",
+    "targetedTests": {
+      "passed": 14,
+      "total": 14
+    },
+    "mechanism": "ci-software only: normal bounded A/D steering at rest to face the buoy, then fresh metrics and unchanged actual DOM/raycast/click checks. Both down and wait guarded by finally up. Hardware path/policies/comparator unchanged.",
+    "legacyCpuValidation": {
+      "scope": "CPU-only immutable legacy domain, scene camera/projection/raycaster and main pointer handlers; software-facing tests plus unchanged hardware entry control. Rendering/network/DOM delivery adapted; no browser launched.",
+      "passed": 7,
+      "sourceHash": "03da6b4709db3f6326e1917d2b68849b3ed44d1a4bea43a3e0f3805a321eb742",
+      "sourceUnchanged": true,
+      "adapterSha256": "725542b5ef062a8f92ba5bf22fc78b5d713149cc70814ff4526d882542748709",
+      "harnessSha256": "367ba2b5386a8dc9c4c29ebbf1f8eb7e79e27540c3d1671c64441fdd2951d590",
+      "temporaryAdapterRemoved": true,
+      "limitation": "Hosted browser validation remains pending. Earlier broad adapter run passed12/13; the current-scene centre/cabin assertion differs on legacy geometry and is not a legacy input contract. Initial adapter preparation lacked legacy mergeGeometries injection; corrected before targeted validation."
+    },
+    "hosted": {
+      "firstRun": "38022325442",
+      "job": "114125781631",
+      "status": "failed before complete coverage: Low960x600 home buoy behind camera projected under gather-button",
+      "artifact": {
+        "id": "11658478991",
+        "name": "performance-38022325442-1",
+        "bytes": 179795,
+        "sha256": "5079fc83e86478da184c1ee5cd3f1b5253994d31c1fa27984b8f06337fde99a3",
+        "expiresAt": "2026-11-09T04:01:09Z",
+        "source": "Parent GH API verification; not downloaded or duplicated"
+      },
+      "next": "One final hosted cycle after coordinator clean commit/push; a software pass cannot erase formal hardware failure",
+      "timeoutMinutes": 90,
+      "completeSwiftShaderCostMeasured": false
+    }
+  },
+  "wrapup": {
+    "draftBlocked": true,
+    "art": {
+      "score": 88.5,
+      "maximum": 100,
+      "target": 95,
+      "targetMet": false,
+      "historicalVisualMotionAssessment": "84.5/95; final resource assessment4/5"
+    },
+    "finalQa": {
+      "character": 4,
+      "gameplay": 6,
+      "low": 4,
+      "errors": 0,
+      "browsersClosed": true
+    },
+    "display": {
+      "recordedAt": "2026-10-10T02:35:09.877Z",
+      "observedAt": null,
+      "method": "CUA System Settings Displays full accessibility state",
+      "display": "Built-in Display",
+      "refreshRate": "60 Hertz",
+      "selectedDisplay": true,
+      "original": "ProMotion",
+      "restoration": {
+        "status": "restored",
+        "value": "ProMotion",
+        "observedAt": null,
+        "recordedAt": "2026-10-10T05:15:45.428Z",
+        "method": "CUA fresh System Settings accessibility tree showed Refresh rate Value ProMotion; observation tool supplies no timestamp"
+      },
+      "secondaryDisplay": "DELL U3415W; untouched"
+    },
+    "buildProvenance": "docs/reviews/current-improvement/committed-build-provenance.json",
+    "closureRecord": "docs/governance/final-session-closure.json",
+    "ownRetirementLedgerSeparate": true,
+    "parentFinalVerification": {
+      "fullSuitePassed": 308,
+      "fullSuiteTotal": 308,
+      "elapsedSeconds": 10.752,
+      "catalogueValidated": 36,
+      "GibbsTargetedTestsPassed": 14,
+      "openReviewerFindings": 0,
+      "sourceInputsMatchMeasuredProductionCommit": true,
+      "sourceHash": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf"
+    },
+    "cleanupLogicalBytesBeforeFinalCpuRetirement": 6760734160,
+    "finalCpuRetirementLogicalBytes": 6108098,
+    "combinedReportedCleanupLogicalBytes": 6766842258
+  },
+  "remainingDependencies": {
+    "activeMeasurement": "none; no owned Chrome/process/session remains",
+    "heldByCoordinator": [],
+    "requirement": "All local work/dependencies ended. Final hosted software cycle uses independent checkouts/builds after coordinator commit/push; no local preview or temporary source is required.",
+    "retainedProof": "Parent-promoted failed canonical raw, saved comparison/manifest/summary, durable build inventories and Git79da54b/6acc82a are self-contained. CPU raw directories/helper retired; compact diagnostic outcomes/hashes retained.",
+    "coordinatorFinalDisposal": {
+      "source": "Coordinator report; no new scan/measurement",
+      "finishedAt": "2026-10-10T05:39:02.817Z",
+      "regularFiles": 271,
+      "logicalBytes": 194904084,
+      "symlinksUnlinkedWithoutTraversal": 1,
+      "emptyDirectoriesRemoved": 43,
+      "skips": 0,
+      "previewSessionsClosed": [
+        27119,
+        21949
+      ],
+      "scope": "Final root/published builds, baseline dist/source snapshot and parent-owned temporaries retired; current dependencies never traversed"
+    }
+  },
+  "historicalDiagnosticLedger": "docs/performance/pilot-retirement.json",
+  "closedCpuDiagnosticPurposes": {
+    "ledger": "docs/performance/pilot-retirement.json",
+    "removedFiles": 24,
+    "removedDirectories": 4,
+    "removedLogicalBytes": 6108098,
+    "skips": 0,
+    "inventorySha256": "00f17f9254a632ea0d28121bed29c7ab7794bee1757489f80b5bb21239d25bed",
+    "scope": "Both historical CPU proof directories and exact679996 fairness helper retired after explicit purpose closure. Numerical diagnostics/raw hashes remain; perturbed CPU profiles are not causal heap evidence."
+  }
+}

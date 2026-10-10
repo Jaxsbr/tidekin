@@ -1,0 +1,311 @@
+{
+  "schema": 1,
+  "kind": "final-candidate13-QA",
+  "recordedAt": "2026-10-10T03:38:26.430Z",
+  "status": "complete",
+  "locationSemantics": "originalLocation values identify transient evidence at capture time, not guaranteed live files or GitHub links; no large evidence is retired by this summary.",
+  "production": {
+    "sourceSha256": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+    "rootInventorySha256": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+    "publishedInventorySha256": "5d42418649c64c362b3e7ea1466b644e4562b0d13861ca78712c977abd1e871e",
+    "root": {
+      "entry": "index-CdjYE9Z1.js",
+      "scene": "scene-3RrrFS3Q.js",
+      "css": "index-1DdwmcFP.css"
+    },
+    "published": {
+      "entry": "index-CaGbAwpC.js",
+      "scene": "scene-BsFjW98V.js",
+      "css": "index-6aZaE4Qu.css"
+    },
+    "provenanceSha256": "e40d7cdf910b8f56e73c27564bbe10398ae1c0e674cdfcba408726a8fe9d6080",
+    "commands": ["node node_modules/vite/bin/vite.js build --base / --outDir .scratch/current-candidate13-dist", "node node_modules/vite/bin/vite.js build --base /tidekin/ --outDir .scratch/current-candidate13-published"],
+    "display": {
+      "setting": "60 Hertz",
+      "original": "ProMotion",
+      "permission": "User explicitly approved temporary60Hz and restoration",
+      "observedAt": null,
+      "method": "macOS System Settings Displays built-in main display; secondary Dell unchanged",
+      "recordedAt": "2026-10-10T00:47:10.706Z",
+      "evidence": "CUA returned Refresh rate Value:60 Hertz after user-authorized selection; tool response provided no exact observation timestamp."
+    }
+  },
+  "capturedControllers": {
+    "qaInventorySha256": "f16cf7d874e379b40c00cca405e42ca2071aac56eda799363dba1ff9ffa9183a",
+    "files": [
+      {
+        "path": "scripts/qa/character-input.mjs",
+        "sha256": "4436d0a84f4826717f5137c2a66e6f5411167f15fa6cf4d3b2a26326f87c6bf7"
+      },
+      {
+        "path": "scripts/qa/character-timing.mjs",
+        "sha256": "6e79b6c0b32032bdb294bd34cc7dd890ee29771d207c593ee0dece4aad729254"
+      },
+      {
+        "path": "scripts/qa/character.mjs",
+        "sha256": "34a2fd1065bf7368c8457da5d44d82ce32a7b10ba6c44507d23ab6d3ed2d2090"
+      },
+      {
+        "path": "scripts/qa/gameplay.mjs",
+        "sha256": "20f4900dcf66ca7af018b57f74e8533cd1a2ed38bae8637266d4da7be9a2c239"
+      },
+      {
+        "path": "scripts/qa/input.mjs",
+        "sha256": "c61c1c37b40118cfe114496e0ad27e36a5467b443b7e1d34ac7dad1acc8ac054"
+      },
+      {
+        "path": "scripts/qa/runtime.mjs",
+        "sha256": "8e532ea6ef40b0766fc374a3b56dd402372b002d2ea9793a58c311c8018c0aad"
+      },
+      {
+        "path": "scripts/qa/video-anchor.mjs",
+        "sha256": "32f8fb2af6d47c3329077a01446537a4e1e87fccdeefdf09c9779733d1072fad"
+      },
+      {
+        "path": "scripts/performance/evidence.mjs",
+        "sha256": "fa1f68ed26c4c3b01fff8d5b7b4b67a278b78318cafd54bbf4006b6375bb91d8"
+      },
+      {
+        "path": "scripts/performance/fixtures.mjs",
+        "sha256": "6511f1a14c0cc2d2c92c7782a752969007f632497c50736eaa16056a69a50ae6"
+      }
+    ],
+    "temporaryLowHelperSha256": "4444046b91dd0ed829950a10f89fec824af39400d092283f4115140394358d41",
+    "note": "Character/gameplay/native and original Low accepted the earlier frozen controllers. Maintained Low then independently verified its new entry and updated QA inventory. Both report sets retain their exact hashes; production source/build identities are identical."
+  },
+  "scope": {
+    "nativeStills": 10,
+    "characterCases": 4,
+    "characterStills": 48,
+    "verifiedOrdinarySpeedClips": 36,
+    "gameplayCases": 6,
+    "lowRootPublishedCases": 4,
+    "lowStills": 12,
+    "errors": [],
+    "allBrowsersClosed": true,
+    "allIdentitiesUnchanged": true,
+    "spokenScreenReaderCertified": false,
+    "humanArtApproval": false,
+    "formalPerformanceBenefitClaim": false
+  },
+  "stages": {
+    "native": {
+      "status": "complete",
+      "report": {
+        "originalLocation": "captures/current-improvement/qa/art-stills-candidate13-01/results.json",
+        "bytes": 336921,
+        "sha256": "45a989a2bcdcd11d5625c755b608466b36a843fbd987e1047446e8a0144a5149"
+      },
+      "startedAt": "2026-10-10T02:59:15.427Z",
+      "finishedAt": "2026-10-10T02:59:57.680Z",
+      "browserClosedAt": "2026-10-10T02:59:56.838Z",
+      "errors": [],
+      "fingerprints": {
+        "build": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "sources": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+        "served": "52a8719c8eb6905b09a6bbad40a7cbacef53f08e7f9208751c02d50151d37a66",
+        "harness": "f16cf7d874e379b40c00cca405e42ca2071aac56eda799363dba1ff9ffa9183a"
+      },
+      "unchanged": true,
+      "cases": [
+        {"name":"root-1440x900-high","status":"pass","errors":[],"contextClosed":true,"checks":null,"stills":6,"rest":[{"label":"deep-rest","settleMs":703.3000001907349,"renderedFrames":42,"held":[],"observedVelocity":[{"x":0,"y":0},{"x":0,"y":0}],"airBefore":18.03239999999999,"airAfter":17.33029999999999},{"label":"waterline-rest","settleMs":704.6999998092651,"renderedFrames":42,"held":[],"observedVelocity":[{"x":0,"y":0},{"x":0,"y":0}],"airBefore":24,"airAfter":24}]},
+        {"name":"root-900x900-high","status":"pass","errors":[],"contextClosed":true,"checks":null,"stills":4,"rest":[{"label":"deep-rest","settleMs":703.9000000953674,"renderedFrames":42,"held":[],"observedVelocity":[{"x":0,"y":0},{"x":0,"y":0}],"airBefore":17.9983,"airAfter":17.296899999999997},{"label":"waterline-rest","settleMs":705.2999997138977,"renderedFrames":42,"held":[],"observedVelocity":[{"x":0,"y":0},{"x":0,"y":0}],"airBefore":23.999100000000052,"airAfter":24}]}
+      ],
+      "pathInventoryHashes": {
+        "root": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b"
+      }
+    },
+    "character": {
+      "status": "complete",
+      "report": {
+        "originalLocation": "captures/current-improvement/qa/character-candidate-13/results.json",
+        "bytes": 1604664,
+        "sha256": "b3c32a5b1e451c16af4b1a4deaa05b78a1a06fdce9cb34a3fc6e2706f9df1ead"
+      },
+      "startedAt": "2026-10-10T03:17:29.843Z",
+      "finishedAt": "2026-10-10T03:22:26.095Z",
+      "browserClosedAt": "2026-10-10T03:21:51.701Z",
+      "errors": [],
+      "fingerprints": {
+        "build": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "sources": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+        "served": "52a8719c8eb6905b09a6bbad40a7cbacef53f08e7f9208751c02d50151d37a66",
+        "harness": "f16cf7d874e379b40c00cca405e42ca2071aac56eda799363dba1ff9ffa9183a"
+      },
+      "unchanged": true,
+      "cases": [
+        {"name":"1440x900-ordinary-motion","status":"pass","errors":[],"contextClosed":true,"checks":17,"stills":12,"clipsVerified":true,"rawRecording":{"sha256":"0f7bd65b6ca0c49f3c68182d548c720ef5b8b3124988bbf26b2ad28a7393ee6a","discarded":true},"clipRowColumns":["label","sha256","sourceStartPTS_ms","sourceEndPTS_ms","retainedFrames","duration_ms"],"clips":[["deck","b28cdf6651e0ffe4a5457dc13062ea68f737fbfdce18e811b88b8a257602b558",2200,5200,75,3000],["surface","eebf9d489c4435d9633aef67371ac87a1241099bc596ce42b61c1ffd521528b2",7200,10240,75,3000],["deep","35c27daf6b51e4031282321926b9eb679a006c5274b88a629cb69c4bd19dfe02",16440,19440,75,3000],["descent","1ff549e2c26b46ff104f685244f26048b2ce6296e6c6b7379bedc3a141c7bce7",27000,30000,75,3000],["swim-right","32d00bccf213b3380aeff945261c715aae7170bbe03e5f8f3da4c957345c799e",30280,33280,75,3000],["swim-left","cce550f275d80c542397846076b5498a51679fccce49a8fee2854a95058c7778",33520,36520,75,3000],["swim-reversal","92b3d55fbd9259cf8137148446ec66fbf1f773e6f574bee46155c1d2f2433000",36760,39760,75,3000],["ascent","012da0e2a42366488906ecc80797b538409306dacb71ea7289b9990c502da326",40000,43000,75,3000],["reach","4689da32912fd9d762b74f5cf95f8d7cb53cafdad97c478bee8bdd8d2f512cde",54960,57960,75,3000]],"reachRetainedPhaseFrames":{"1":10,"2":12,"3":53},"reversal":{"releaseToPressMs":0.31362499999522697,"leftFacing":{"x":-1,"y":0},"rightFacing":{"x":1,"y":0}}},
+        {"name":"1440x900-reduced-motion","status":"pass","errors":[],"contextClosed":true,"checks":17,"stills":12,"clipsVerified":true,"rawRecording":{"sha256":"282456f31c9b3283a8ede0dbc4aa76d575cb127c5423dc6395fa49d478368f03","discarded":true},"clipRowColumns":["label","sha256","sourceStartPTS_ms","sourceEndPTS_ms","retainedFrames","duration_ms"],"clips":[["deck","c157acda729e6befcb265bdc4c8426d4b2449d51fd2ccee71aaf705d36efb3fa",1880,4880,75,3000],["surface","9b331ad332c3f3d62bc7e51707dbbf63b80e250cc4c6583504cf282e9e3d7f5a",6920,9920,75,3000],["deep","1333ee28b2a1321858cb816c90fd9e48e686c52bfbf9b0197eb6c009b5078805",16040,19040,75,3000],["descent","cf87e029e1e21041298f4c5a591ada8c8d8cde850adf7748261ee7950005a8b2",26520,29520,75,3000],["swim-right","2888e1d794034b46f4f78ba6f756140d5cc58aab63da1c270b2e3e71315bfb70",29760,32759.999999999996,75,3000],["swim-left","2602c748cabae3e22db4c7074852875fe5b9fc9a934b4d581d1f86e61be5e77a",33000,36000,75,3000],["swim-reversal","370e1fb21c81e8b15ebf052c97ed26a849c4ee88847532ff18e867960542be56",36240,39240,75,3000],["ascent","3f3a774e1d10393d3fc2e5ad6ed48fcf9f574b35b65377e1c12e4ffc9f9db3fb",39520,42520,75,3000],["reach","8dc22214104dfe99242187eb0a2e1e47e19cc4833caa34089a38ac2008607282",54480,57480,75,3000]],"reachRetainedPhaseFrames":{"1":10,"2":12,"3":53},"reversal":{"releaseToPressMs":0.3335829999996349,"leftFacing":{"x":-1,"y":0},"rightFacing":{"x":1,"y":0}}},
+        {"name":"900x900-ordinary-motion","status":"pass","errors":[],"contextClosed":true,"checks":17,"stills":12,"clipsVerified":true,"rawRecording":{"sha256":"9e14304b63a2c52c7b7bbc030cad2e0aae256f70237be6f217389f74821afed9","discarded":true},"clipRowColumns":["label","sha256","sourceStartPTS_ms","sourceEndPTS_ms","retainedFrames","duration_ms"],"clips":[["deck","1eadc98efd7a0a156e730a34fe5c024247c7d5b727ea1f32327561d7b017d7a7",2080,5080,75,3000],["surface","9bea2276ec4ca8718d04594aad5efa0ed9d45f8462d238d413757bdcc5bd6d89",7080,10120,75,3000],["deep","0e819fb49c363530515594f12c98dadf2e64507600a077b38a93dca4eb75d70a",16239.999999999998,19240,75,3000],["descent","15e54dad41b1319ffd17f967329303e907c37d696fbbc160df581adf53d95d5a",26760,29760,75,3000],["swim-right","6572f1cf00c8ccda25ba0558db639d851e9f703b1c9c69ae9512b41ed23099de",30000,33000,75,3000],["swim-left","511cb9a88b4cac3cc33a9ab42f60e7c5517e388fd41c0f576f3841511fa4673e",33240,36240,75,3000],["swim-reversal","dfa59dd673c9fab9d02ad2aa0a4176259b227435a339523c5203d8ecc4267771",36480,39520,75,3000],["ascent","77368422971c7a7c7bbbe87c4c1461fc8d9ab1b09804d16a526b0a42a2d41bc1",39760,42760,75,3000],["reach","8b5d571e59f937b451306b0c191848fbeec0f732060e5c5abb25dd2f59f9888e",54560,57560,75,3000]],"reachRetainedPhaseFrames":{"1":10,"2":13,"3":52},"reversal":{"releaseToPressMs":0.29866599998786114,"leftFacing":{"x":-1,"y":0},"rightFacing":{"x":1,"y":0}}},
+        {"name":"900x900-reduced-motion","status":"pass","errors":[],"contextClosed":true,"checks":17,"stills":12,"clipsVerified":true,"rawRecording":{"sha256":"388e78b385cb8d1cd8a077e8002344dac81137ccf0ea92685245a56b66ac3e03","discarded":true},"clipRowColumns":["label","sha256","sourceStartPTS_ms","sourceEndPTS_ms","retainedFrames","duration_ms"],"clips":[["deck","e0f9ad84b455241aeb05c5611bdaa8f45f7eb830cd280b621abb993b1a59e109",1840,4840,75,3000],["surface","0d1a020208e115439b2dd8e78e86c866c7c1f73c0460ad913c42d2d866a37dca",6840,9880,75,3000],["deep","9399fc6533e5fbf1ec77cd5dca2e233ef181195d6f80f8465eddfb7c724ddbdc",16079.999999999998,19080,75,3000],["descent","5e474058497ae1d25df4c32a7bd56492648788bcbf1746e93e6ee33a21e0c6c0",26520,29520,75,3000],["swim-right","05b3a02ba445ec233d019287263213000b54acd6d06c729c422b87e490804b26",29760,32759.999999999996,75,3000],["swim-left","21f6c539a2d9f333b44a7b56021d9efa7143ae97c458e6720861231fdd3a378c",33000,36000,75,3000],["swim-reversal","2c1276b31509572ff4f96e3a33b41f89512fd7ba6e51c5550a441da045923367",36240,39280,75,3000],["ascent","3552023489b7f2dbffdfac490ee99fb5df10abd1e0c708c82b08b2d95d8d341c",39520,42520,75,3000],["reach","6157d356fc476ce401eea8b343d20ebafa57d2a8776f8b3cb1dd412090e2ef46",54240,57240,75,3000]],"reachRetainedPhaseFrames":{"1":10,"2":13,"3":52},"reversal":{"releaseToPressMs":0.5251660000067204,"leftFacing":{"x":-1,"y":0},"rightFacing":{"x":1,"y":0}}}
+      ]
+    },
+    "gameplay": {
+      "status": "complete",
+      "report": {
+        "originalLocation": "captures/current-improvement/qa/gameplay-candidate-13/results.json",
+        "bytes": 1558077,
+        "sha256": "1fa9fdb67d6ef620a792e735a91fc78f3fefc876069439f1057c68eb7ae9a58f"
+      },
+      "startedAt": "2026-10-10T03:22:48.997Z",
+      "finishedAt": "2026-10-10T03:27:41.429Z",
+      "browserClosedAt": "2026-10-10T03:27:40.887Z",
+      "errors": [],
+      "fingerprints": {
+        "build": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "sources": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+        "served": "52a8719c8eb6905b09a6bbad40a7cbacef53f08e7f9208751c02d50151d37a66",
+        "harness": "f16cf7d874e379b40c00cca405e42ca2071aac56eda799363dba1ff9ffa9183a"
+      },
+      "unchanged": true,
+      "cases": [
+        {"name":"1440x900-panels","status":"pass","errors":[],"contextClosed":true,"checks":249,"stills":9,"coverage":"labelled synthetic fixture"},
+        {"name":"1440x900-dive-fixture","status":"pass","errors":[],"contextClosed":true,"checks":34,"stills":7,"coverage":"labelled synthetic fixture"},
+        {"name":"1440x900-actually-earned","status":"pass","errors":[],"contextClosed":true,"checks":92,"stills":14,"coverage":"fresh empty-storage actually-earned voyage","earned":{"initialStorage":[],"checksPassed":92,"inventory":{"wood":1,"scrap":1,"pearls":2},"trophies":["brass-compass","nautilus-shell"],"completedReefs":["home-reef"],"controls":"Ordinary sailing; contextual Space for salvage; actual reef buoy click at five-to-seven metre stand-off; pointer hold earns cleanup.","persistence":"10-second autosave before pause/reload/pagehide, moved position/materials/trophies and Continue verified","standOffMetres":6.149084734066323}},
+        {"name":"900x900-panels","status":"pass","errors":[],"contextClosed":true,"checks":249,"stills":9,"coverage":"labelled synthetic fixture"},
+        {"name":"900x900-dive-fixture","status":"pass","errors":[],"contextClosed":true,"checks":34,"stills":7,"coverage":"labelled synthetic fixture"},
+        {"name":"900x900-actually-earned","status":"pass","errors":[],"contextClosed":true,"checks":92,"stills":14,"coverage":"fresh empty-storage actually-earned voyage","earned":{"initialStorage":[],"checksPassed":92,"inventory":{"wood":1,"scrap":1,"pearls":2},"trophies":["brass-compass","nautilus-shell"],"completedReefs":["home-reef"],"controls":"Ordinary sailing; contextual Space for salvage; actual reef buoy click at five-to-seven metre stand-off; pointer hold earns cleanup.","persistence":"10-second autosave before pause/reload/pagehide, moved position/materials/trophies and Continue verified","standOffMetres":6.108823822713768}}
+      ]
+    },
+    "lowPath": {
+      "status": "complete",
+      "report": {
+        "originalLocation": "captures/current-improvement/qa/low-path-candidate13-maintained-01/results.json",
+        "bytes": 353289,
+        "sha256": "076d0d839a9d92af6a86ae0fca725ccdceefd714b0a25bfe56d998cc4f347421"
+      },
+      "startedAt": "2026-10-10T03:35:44.120Z",
+      "finishedAt": "2026-10-10T03:36:31.290Z",
+      "browserClosedAt": "2026-10-10T03:36:30.139Z",
+      "errors": [],
+      "fingerprints": {
+        "build": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "sources": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+        "served": "52a8719c8eb6905b09a6bbad40a7cbacef53f08e7f9208751c02d50151d37a66",
+        "harness": "cce2f278d846b760ab667af941fcf41756162de4a4d55a9b3bed643d9d157132"
+      },
+      "unchanged": true,
+      "pathInventoryHashes": {
+        "root": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "published": "5d42418649c64c362b3e7ea1466b644e4562b0d13861ca78712c977abd1e871e"
+      },
+      "cases": [
+        {"name":"root-1440x900-low","status":"pass","errors":[],"contextClosed":true,"stills":3,"atlas":{"url":"http://127.0.0.1:5182/assets/ui-fourth/ocean-kit-atlas.png","status":200}},
+        {"name":"root-900x900-low","status":"pass","errors":[],"contextClosed":true,"stills":3,"atlas":{"url":"http://127.0.0.1:5182/assets/ui-fourth/ocean-kit-atlas.png","status":200}},
+        {"name":"published-1440x900-low","status":"pass","errors":[],"contextClosed":true,"stills":3,"atlas":{"url":"http://127.0.0.1:5183/tidekin/assets/ui-fourth/ocean-kit-atlas.png","status":200}},
+        {"name":"published-900x900-low","status":"pass","errors":[],"contextClosed":true,"stills":3,"atlas":{"url":"http://127.0.0.1:5183/tidekin/assets/ui-fourth/ocean-kit-atlas.png","status":200}}
+      ]
+    },
+    "priorLowPath": {
+      "status": "complete",
+      "report": {
+        "originalLocation": "captures/current-improvement/qa/low-path-candidate13-01/results.json",
+        "bytes": 352491,
+        "sha256": "fc81d06bb9db4c9189d0a8243b22ee28c0eeba3ec8d83c881d5bb44b8d5fe724"
+      },
+      "startedAt": "2026-10-10T03:28:07.379Z",
+      "finishedAt": "2026-10-10T03:28:54.548Z",
+      "browserClosedAt": "2026-10-10T03:28:53.312Z",
+      "errors": [],
+      "fingerprints": {
+        "build": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "sources": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+        "served": "52a8719c8eb6905b09a6bbad40a7cbacef53f08e7f9208751c02d50151d37a66",
+        "harness": "f16cf7d874e379b40c00cca405e42ca2071aac56eda799363dba1ff9ffa9183a"
+      },
+      "unchanged": true,
+      "cases": [
+        {"name":"root-1440x900-low","status":"pass","errors":[],"contextClosed":true,"checks":null,"stills":3,"atlas":{"url":"http://127.0.0.1:5182/assets/ui-fourth/ocean-kit-atlas.png","status":200}},
+        {"name":"root-900x900-low","status":"pass","errors":[],"contextClosed":true,"checks":null,"stills":3,"atlas":{"url":"http://127.0.0.1:5182/assets/ui-fourth/ocean-kit-atlas.png","status":200}},
+        {"name":"published-1440x900-low","status":"pass","errors":[],"contextClosed":true,"checks":null,"stills":3,"atlas":{"url":"http://127.0.0.1:5183/tidekin/assets/ui-fourth/ocean-kit-atlas.png","status":200}},
+        {"name":"published-900x900-low","status":"pass","errors":[],"contextClosed":true,"checks":null,"stills":3,"atlas":{"url":"http://127.0.0.1:5183/tidekin/assets/ui-fourth/ocean-kit-atlas.png","status":200}}
+      ],
+      "pathInventoryHashes": {
+        "root": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+        "published": "5d42418649c64c362b3e7ea1466b644e4562b0d13861ca78712c977abd1e871e"
+      },
+      "disposition": "Truthful original temporary-helper acceptance; superseded operational entry by the separately verified maintained Low/path stage. Large proof remains held for canonical retention."
+    }
+  },
+  "reviewRetention": {
+    "status": "canonical-selection-complete; raw QA trials retired",
+    "largeEvidenceDeletionAuthorized": true,
+    "canonicalManifest": {
+      "path": "docs/art/evidence/manifest.json",
+      "sha256": "c73b3d419376e3686b382f9e018fa315dd6d6f863551f98ab637e2497bc8f4d5"
+    },
+    "selectedFiles": ["docs/art/evidence/baseline-deck.png", "docs/art/evidence/final-deck.png", "docs/art/evidence/baseline-underwater.png", "docs/art/evidence/final-underwater.png", "docs/art/evidence/final-swim-reversal.webm", "docs/art/evidence/final-ascent.webm", "docs/art/evidence/final-reach.webm"],
+    "reviewFinishedAt": "2026-10-10T03:45:51.112529Z",
+    "reviewerProcessesClosed": true,
+    "independentReview": {
+      "path": "docs/art/independent-review.md",
+      "assessedPoints": 84.5,
+      "assessedWeight": 95,
+      "maximumPossible": 89.5,
+      "resourceRating": null,
+      "targetMet": false
+    },
+    "cameraDisclosure": "Original follow defaults25/18 versus final23/13.5; matched domain views do not imply identical framing or animation phase. Representative motion is final-only, not a matched baseline pair.",
+    "retirement": {
+      "outcomePath": "docs/governance/qa-capture-retirement-proposal.json",
+      "releasedLedgerSha256": "e015525eed3bd4145d6c878089cb2116818f386d255af4037ece19be10621079",
+      "status": "COMPLETE",
+      "appliedAt": "2026-10-10T03:51:32.467Z",
+      "files": 875,
+      "bytes": 365886000,
+      "directories": 114,
+      "skips": []
+    },
+    "preserve": "Protected human references/originals, Git baseline source, selected canonical evidence, durable final QA/history and out-of-scope performance records."
+  },
+  "maintenance": {
+    "lowEntry": "scripts/qa/low-path.mjs",
+    "helperSha256": "0427ad315dadd547a9faa65b7edbae848205868dbff0c1fd7f742621b311d4e9",
+    "qaInventorySha256": "cce2f278d846b760ab667af941fcf41756162de4a4d55a9b3bed643d9d157132",
+    "CPUChecks": {
+      "relevantPassed": 21,
+      "fullSuitePassed": 301,
+      "failed": 0,
+      "CPUExited": true
+    },
+    "retiredLegacyLedger": "docs/governance/qa-retirement-proposal.json",
+    "productionSourceChanged": false,
+    "allBrowserAndDecodeProcessesExited": true,
+    "finalGPUReturnedAt": "2026-10-10T03:36:30.139Z"
+  },
+  "settlement": {
+    "recordedAt": "2026-10-10T05:17:59.170Z",
+    "cleanCandidateCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+    "captureScope": "Original Candidate13 character4/gameplay6/maintainedLow4 outcomes remain capture-time evidence; no later collection or performance acceptance inferred.",
+    "productionByteEquivalence": {
+      "rootInventorySha256": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b",
+      "publishedInventorySha256": "5d42418649c64c362b3e7ea1466b644e4562b0d13861ca78712c977abd1e871e",
+      "filesVerifiedPerBuild": 13,
+      "capturedSourceSha256": "4d246cda3a54fccc6e0375d848a73d05a37d3ef32f850478379978d68fa173cb",
+      "cleanSourceSha256": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf",
+      "sourceInventoryDifference": "32 already-missing tracked paths disappear from clean committed inventory; all remaining actual input file bytes agree. Do not assert equal source inventory digests.",
+      "historicalFinalProvenanceSha256": "86f5ffc77f0833f2c62837aa0891a3fdeb64c7f893e7682c82837bd81636d931"
+    },
+    "formalPerformance": {
+      "status": "fail",
+      "candidateCommit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+      "originalComparisonLocation": "benchmarks/records/formal-hardware-base79da-final-01/comparison.json",
+      "comparisonSha256": "c2abf9d138375dd7bbc03fe4953575dc9a6b9fe53e5e582a6ee1c420d62d91bc",
+      "checks": {
+        "pass": 319,
+        "inconclusive": 6,
+        "fail": 1
+      },
+      "failedCheck": "memory-peak/entry/home-reef/heapBytes",
+      "deltaBytes": 26784020,
+      "ownerDisposition": "docs/performance/README.md",
+      "scope": "Separate hardware outcome; QA pass does not imply formal benefit. Raw performance cleanup remains performance-owner scope."
+    },
+    "displayRestoration": {
+      "status": "ProMotion restored",
+      "authority": "Coordinator reports fresh accessibility verification after all ten hardware runs closed.",
+      "observedAt": null,
+      "captureDisplayUnchanged": "Original captured60Hz context/provenance remains historical; no restored observation timestamp invented."
+    }
+  }
+}

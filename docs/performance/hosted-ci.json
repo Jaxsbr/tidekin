@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "recordedAt": "2026-10-10T05:43:55.004343+00:00",
+  "repository": "Jaxsbr/tidekin",
+  "firstHostedRun": {
+    "head": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+    "base": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+    "build": {
+      "status": "success",
+      "runUrl": "https://github.com/Jaxsbr/tidekin/actions/runs/38022325386"
+    },
+    "performance": {
+      "status": "failure",
+      "runUrl": "https://github.com/Jaxsbr/tidekin/actions/runs/38022325442",
+      "disposition": "Invalid partial baseline collection; no complete comparison and no measured candidate regression verdict. Low960x600 home buoy was obscured by gather-button during hover; actual click not accepted."
+    },
+    "artifact": {
+      "id": 11658478991,
+      "name": "performance-38022325442-1",
+      "bytes": 179795,
+      "digest": "sha256:5079fc83e86478da184c1ee5cd3f1b5253994d31c1fa27984b8f06337fde99a3",
+      "createdAt": "2026-10-10T04:01:10Z",
+      "expiresAt": "2026-11-09T04:01:09Z",
+      "source": "GitHub Actions artifacts API; archive digest supplied by GitHub, not a local raw-record SHA"
+    }
+  },
+  "correctedFixture": {
+    "harnessHash": "367ba2b5386a8dc9c4c29ebbf1f8eb7e79e27540c3d1671c64441fdd2951d590",
+    "scope": "Software-only normal A/D heading preparation; domain/visible pointer/raycast/click checks and hardware control execution unchanged.",
+    "fullCpuTests": 308,
+    "independentFocusedTests": 14,
+    "legacyCpuAdapterTests": 7,
+    "actualSoftwareBrowserCertification": "Provided only by the exact-head hosted run; CPU adapters do not establish it."
+  },
+  "latestHostedAuthority": {
+    "url": "https://github.com/Jaxsbr/tidekin/pull/1/checks",
+    "scope": "Live exact-head GitHub check status and30-day raw/partial artifacts are authoritative. This committed record captures known pre-push results; it does not predict the check state of its own commit."
+  },
+  "hardwareMergeBlock": {
+    "status": "fail",
+    "evidence": "formal-retention.json",
+    "limit": "A software pass cannot override the independently failed home-entry hardware heap gate."
+  },
+  "localClosure": "All local browsers, previews, builds/source snapshots and completed verification helpers are closed/retired; ProMotion restored; no further hardware/art cycle planned."
+}

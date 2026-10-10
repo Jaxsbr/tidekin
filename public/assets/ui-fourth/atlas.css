@@ -1,5 +1,5 @@
 /* Asset helper: import this file from application CSS. */
-.ui-fourth-art, .game-art { display:inline-block; width:var(--art-size, 64px); flex-shrink:0; background-image:url("./ocean-kit-atlas.png"); background-repeat:no-repeat; }
+.ui-fourth-art, .game-art { display:inline-block; width:var(--art-size, 64px); flex-shrink:0; background-image:url("/assets/ui-fourth/ocean-kit-atlas.png"); background-repeat:no-repeat; }
 .ui-fourth-module-waterwheel, .game-art.art-module-waterwheel, .game-art.art-waterwheel { aspect-ratio:384/337; background-size:400% 303.85756676557867%; background-position:0% 0%; }
 .ui-fourth-module-crane, .game-art.art-module-crane, .game-art.art-crane { aspect-ratio:384/345; background-size:400% 296.81159420289856%; background-position:33.33333333333333% 0%; }
 .ui-fourth-module-greenhouse, .game-art.art-module-greenhouse, .game-art.art-greenhouse { aspect-ratio:384/342; background-size:400% 299.41520467836256%; background-position:66.66666666666666% 0%; }

@@ -1,0 +1,724 @@
+{
+  "kind": "final Candidate13 committed production builds",
+  "recordedAt": "2026-10-10T03:55:29.733Z",
+  "source": {
+    "commit": "6acc82a545a59d643b7649957bc39bf9cb02bb63",
+    "dirty": false,
+    "committedInputs": [
+      {
+        "path": "assets/catalogue.json",
+        "gitBlob": "80455d7d30f892c5b3251131ae7a7d6b93f777b4"
+      },
+      {
+        "path": "assets/cleanup/preview.html",
+        "gitBlob": "bcb880085125518a7ed02a912d1831728aea3766"
+      },
+      {
+        "path": "assets/cleanup/reef-art.js",
+        "gitBlob": "63eb414553ad2857e7b30b2cf9039a907b699663"
+      },
+      {
+        "path": "assets/cleanup/underwater-fish.js",
+        "gitBlob": "10aab6904d2c96ecd735e0a1a7dd2225f21d4e2e"
+      },
+      {
+        "path": "assets/cleanup/underwater-landmarks.js",
+        "gitBlob": "e55a34c41e9d7f566db4da059f20bc933e89d536"
+      },
+      {
+        "path": "assets/cleanup/underwater-models.js",
+        "gitBlob": "e8c6141d45f63c32ee22fd587bc6552df97cda35"
+      },
+      {
+        "path": "assets/island.blend",
+        "gitBlob": "754180c974f36ffa868e33f4757322719e11bb11"
+      },
+      {
+        "path": "assets/landmarks.blend",
+        "gitBlob": "22763023d7fc098bf21db5990fc3766b102cc665"
+      },
+      {
+        "path": "assets/reference/ocean-workshop.png",
+        "gitBlob": "3865f0bd3fc9ffe14f6b2569364a36b914fdce99"
+      },
+      {
+        "path": "assets/reference/reef-panorama.png",
+        "gitBlob": "a8450b22e38dd873593c02e20d111567577119d2"
+      },
+      {
+        "path": "assets/ui-fifth/keepsakes.provenance.json",
+        "gitBlob": "5123c98cd99690bd62585a4ab2f07835cf697a40"
+      },
+      {
+        "path": "assets/ui-fourth/atlas-layout.svg",
+        "gitBlob": "7cf20947af8253100d06d5e63b3ca6eeb57f5479"
+      },
+      {
+        "path": "assets/ui-fourth/atlas-prompt.txt",
+        "gitBlob": "284f3577c203552bb3111b1204b5c3c35b887f5d"
+      },
+      {
+        "path": "assets/ui-fourth/cabin-prompt.txt",
+        "gitBlob": "22c77bbc96592487d5d9977be9d1ebb930eef787"
+      },
+      {
+        "path": "assets/ui-fourth/cabin-provenance.json",
+        "gitBlob": "9d40cded4a3baf85c27422f85c526ab5711bf8e1"
+      },
+      {
+        "path": "assets/ui-fourth/package-kit.mjs",
+        "gitBlob": "27d396655d101a89e067332141a9150862bdee61"
+      },
+      {
+        "path": "assets/ui-fourth/preview.html",
+        "gitBlob": "f1f758e4fd13b66f7840a5107b6cf95fffceaf3c"
+      },
+      {
+        "path": "assets/ui-fourth/provenance.json",
+        "gitBlob": "d96fc99830d9faeaa0625be467907cc3c3becf03"
+      },
+      {
+        "path": "assets/ui-fourth/reef-prompt.txt",
+        "gitBlob": "83ab40dfb1fda20db2b1ed04108ec00a30b88767"
+      },
+      {
+        "path": "assets/ui-fourth/reef-provenance.json",
+        "gitBlob": "5f669dae8d2dd78099dc37fc9e4bd6803913de18"
+      },
+      {
+        "path": "assets/workshop.blend",
+        "gitBlob": "82cff5c7b308bd4b257ae5afffb85aa8698e350e"
+      },
+      {
+        "path": "index.html",
+        "gitBlob": "36e5baec1789b3f73d9518620907a83c96ab7e92"
+      },
+      {
+        "path": "package-lock.json",
+        "gitBlob": "a39a64e4d5eeeab264e0a33fb2c058d6da6e96f6"
+      },
+      {
+        "path": "package.json",
+        "gitBlob": "7f904d719a2bac768e00a6310b573435e99655f5"
+      },
+      {
+        "path": "public/assets/island.glb",
+        "gitBlob": "c4a24cc193ee1668edddf25bdac3cb3ae24b370a"
+      },
+      {
+        "path": "public/assets/landmarks.glb",
+        "gitBlob": "95eb656d3276556817f99985bfd84a31d898947d"
+      },
+      {
+        "path": "public/assets/menu-art.png",
+        "gitBlob": "a70fc588ee37d273198c7d6a1220cc938115f90a"
+      },
+      {
+        "path": "public/assets/ui-fifth/keepsakes.png",
+        "gitBlob": "1ed480d02b8e75151b319e44ece455800e242b47"
+      },
+      {
+        "path": "public/assets/ui-fourth/atlas.css",
+        "gitBlob": "a8c42dae6c1e174d2d09bcc06fbea058e13c8ad1"
+      },
+      {
+        "path": "public/assets/ui-fourth/cabin-interior.png",
+        "gitBlob": "217586f0d4702c2a85fa2d3fd23d13fd06b83458"
+      },
+      {
+        "path": "public/assets/ui-fourth/manifest.json",
+        "gitBlob": "3539e7b6c50c863237f8ddaaeb23d4e3f2781e52"
+      },
+      {
+        "path": "public/assets/ui-fourth/ocean-kit-atlas.png",
+        "gitBlob": "02680b373da91b78b893e35a7dc0a8184ca6aa2e"
+      },
+      {
+        "path": "public/assets/workshop.glb",
+        "gitBlob": "7117ab6241d04912c697d347a1b49de68eaf99c2"
+      },
+      {
+        "path": "src/build-cinematic.js",
+        "gitBlob": "c31478cf77dc7a9be97684db14dbd1562f564b86"
+      },
+      {
+        "path": "src/character-art.js",
+        "gitBlob": "6ccfc7ac0f35d3bfcde08bcc7414e558a6591d78"
+      },
+      {
+        "path": "src/character/geometry.js",
+        "gitBlob": "cc8935210145a3814eb66a13c48d659f10ae1751"
+      },
+      {
+        "path": "src/chart-art.js",
+        "gitBlob": "e30c845f8b7e880d1e3833927c226ac37c6e41c9"
+      },
+      {
+        "path": "src/cleanup-scene.js",
+        "gitBlob": "805c514c95fc2ebcfb9b719df01a64bf0f173f22"
+      },
+      {
+        "path": "src/cleanup.js",
+        "gitBlob": "bbe76a3172e73127d9daf2f587da5b14eee31ae1"
+      },
+      {
+        "path": "src/dive-icons.js",
+        "gitBlob": "192e2b28da08fd7e3596391459a63b85404853af"
+      },
+      {
+        "path": "src/dive-world.js",
+        "gitBlob": "825b9cc24a782a1bbb81ea73faec48128f658d22"
+      },
+      {
+        "path": "src/game.js",
+        "gitBlob": "13eadb1286aa4c7e5ff379a42750816d81e79ad4"
+      },
+      {
+        "path": "src/geometry/solid-silhouette.js",
+        "gitBlob": "3a96b41a7b4cc48eef1176cc595c9c66e4f95ce1"
+      },
+      {
+        "path": "src/load-profile.js",
+        "gitBlob": "af7dd869d53609971e2d12034784f0e6e0aa8d8a"
+      },
+      {
+        "path": "src/main.js",
+        "gitBlob": "f73ca08588a9c8fadb329bd7f79044336bce98e4"
+      },
+      {
+        "path": "src/navigation.js",
+        "gitBlob": "46afb1330a3c4e354e32129a76e790771b863ef8"
+      },
+      {
+        "path": "src/persistence.js",
+        "gitBlob": "a8ea5a522438fb95c2cc585098961b400236ba42"
+      },
+      {
+        "path": "src/render-resources.js",
+        "gitBlob": "cf70890dc900aff4cdffb0313aa47a2531bf5617"
+      },
+      {
+        "path": "src/scene.js",
+        "gitBlob": "7ba5886a0996be64d0cdef4c259e1f44721140cd"
+      },
+      {
+        "path": "src/style.css",
+        "gitBlob": "4daa18274eb0c5e736646d8d57b93127d83c3110"
+      },
+      {
+        "path": "vite.config.js",
+        "gitBlob": "a30982a66e26fab98d6fce54ce0703ec35deb008"
+      }
+    ],
+    "matchesCommit": true,
+    "scope": "Tracked and untracked nonignored src/**, assets/**, public/**, index.html, package manifests, Vite config; excludes evidence and tooling",
+    "files": [
+      {
+        "path": "assets/catalogue.json",
+        "bytes": 37086,
+        "sha256": "c6120c98c36b4f7adf3a2d9c0ac766af419be4f1ed920ba9e58072b0a6bdb76a",
+        "gitBlob": "80455d7d30f892c5b3251131ae7a7d6b93f777b4"
+      },
+      {
+        "path": "assets/cleanup/preview.html",
+        "bytes": 1301,
+        "sha256": "0303c97a1f0cd716349a53abf099f091eaae19db9b3edae8e4f295f83e13f33b",
+        "gitBlob": "bcb880085125518a7ed02a912d1831728aea3766"
+      },
+      {
+        "path": "assets/cleanup/reef-art.js",
+        "bytes": 19037,
+        "sha256": "79dc1c0dc686b639ae667aea5c98c29740a24a8f43f374270d7785d9d8ae00be",
+        "gitBlob": "63eb414553ad2857e7b30b2cf9039a907b699663"
+      },
+      {
+        "path": "assets/cleanup/underwater-fish.js",
+        "bytes": 4609,
+        "sha256": "769f5b5638fbfd74831c92892a130925546d7ca899132a9fdc174485c4a0ddaf",
+        "gitBlob": "10aab6904d2c96ecd735e0a1a7dd2225f21d4e2e"
+      },
+      {
+        "path": "assets/cleanup/underwater-landmarks.js",
+        "bytes": 2937,
+        "sha256": "898b3841ab068bed7ece30a2afdc06d972a0d95c5efc4232c46ae356a49f3269",
+        "gitBlob": "e55a34c41e9d7f566db4da059f20bc933e89d536"
+      },
+      {
+        "path": "assets/cleanup/underwater-models.js",
+        "bytes": 13366,
+        "sha256": "9ee70b8598cd0f5a837104c6faa2d1f98f94bb4a733e3dad191db2f6269b5cc2",
+        "gitBlob": "e8c6141d45f63c32ee22fd587bc6552df97cda35"
+      },
+      {
+        "path": "assets/island.blend",
+        "bytes": 541099,
+        "sha256": "3ae5c2bf0940fe8f60eddb45aee7ee7d68bdb7020638216cfb31b679fbfedae5",
+        "gitBlob": "754180c974f36ffa868e33f4757322719e11bb11"
+      },
+      {
+        "path": "assets/landmarks.blend",
+        "bytes": 324958,
+        "sha256": "2e25f4e34eaf018a46005b6a5cf5796093494f8a8527dd83e16eb52b0a4367c5",
+        "gitBlob": "22763023d7fc098bf21db5990fc3766b102cc665"
+      },
+      {
+        "path": "assets/reference/ocean-workshop.png",
+        "bytes": 3064832,
+        "sha256": "ef7abb9e86b52f219e1013e723c16ae707680a1e108d34f39a481683ff024e77",
+        "gitBlob": "3865f0bd3fc9ffe14f6b2569364a36b914fdce99"
+      },
+      {
+        "path": "assets/reference/reef-panorama.png",
+        "bytes": 3293910,
+        "sha256": "f3a73a6818e596f4d58ed04275dd80f03b83b5eb9a8f43529327569efc727943",
+        "gitBlob": "a8450b22e38dd873593c02e20d111567577119d2"
+      },
+      {
+        "path": "assets/ui-fifth/keepsakes.provenance.json",
+        "bytes": 5817,
+        "sha256": "225cc2a2161237924f01bd6fe208d625779133a3f7884f32afc2e38160028476",
+        "gitBlob": "5123c98cd99690bd62585a4ab2f07835cf697a40"
+      },
+      {
+        "path": "assets/ui-fourth/atlas-layout.svg",
+        "bytes": 1039,
+        "sha256": "b7308d0e08d575029662e0050ef2feb68ead209a507fd2726486aa2ec838d0f2",
+        "gitBlob": "7cf20947af8253100d06d5e63b3ca6eeb57f5479"
+      },
+      {
+        "path": "assets/ui-fourth/atlas-prompt.txt",
+        "bytes": 3349,
+        "sha256": "578e435ea657943ae39c4feaa2d77cba5056dec35091309c9bc08de813bf8fd2",
+        "gitBlob": "284f3577c203552bb3111b1204b5c3c35b887f5d"
+      },
+      {
+        "path": "assets/ui-fourth/cabin-prompt.txt",
+        "bytes": 2226,
+        "sha256": "3355275ec9c4dd481a800f20b575c3cfb38509a639db6506b4bd50855d58b48b",
+        "gitBlob": "22c77bbc96592487d5d9977be9d1ebb930eef787"
+      },
+      {
+        "path": "assets/ui-fourth/cabin-provenance.json",
+        "bytes": 571,
+        "sha256": "ab9c66e044155ab44986810b02c762f7015182e2c541b0dd592ead21acbf1681",
+        "gitBlob": "9d40cded4a3baf85c27422f85c526ab5711bf8e1"
+      },
+      {
+        "path": "assets/ui-fourth/package-kit.mjs",
+        "bytes": 3883,
+        "sha256": "116b390b1470650f3b2984579c0b5ad0d69ff6760274eaab2f0baca0793a6abe",
+        "gitBlob": "27d396655d101a89e067332141a9150862bdee61"
+      },
+      {
+        "path": "assets/ui-fourth/preview.html",
+        "bytes": 3140,
+        "sha256": "6639f8b055a2d60d7bb2e512b109df69a1ac01155577cbfde0fed9067e8a1645",
+        "gitBlob": "f1f758e4fd13b66f7840a5107b6cf95fffceaf3c"
+      },
+      {
+        "path": "assets/ui-fourth/provenance.json",
+        "bytes": 973,
+        "sha256": "f23e7be7aa2fa75a084fd4cb37ce36177b63484a3def8867bee8c65822b60a9a",
+        "gitBlob": "d96fc99830d9faeaa0625be467907cc3c3becf03"
+      },
+      {
+        "path": "assets/ui-fourth/reef-prompt.txt",
+        "bytes": 2519,
+        "sha256": "d202aa7795a202e67869fb45670462cc22e57dbfa7b453935b9ef38b46038218",
+        "gitBlob": "83ab40dfb1fda20db2b1ed04108ec00a30b88767"
+      },
+      {
+        "path": "assets/ui-fourth/reef-provenance.json",
+        "bytes": 1125,
+        "sha256": "0c813cd7c759670081517beec8d6e490d1016cfa86ed1c81dae8f3027c25397d",
+        "gitBlob": "5f669dae8d2dd78099dc37fc9e4bd6803913de18"
+      },
+      {
+        "path": "assets/workshop.blend",
+        "bytes": 537591,
+        "sha256": "7c90202aa68ed7da310efea2b3f023381fbc48fffd01bf37cd068e35bd525b71",
+        "gitBlob": "82cff5c7b308bd4b257ae5afffb85aa8698e350e"
+      },
+      {
+        "path": "index.html",
+        "bytes": 10759,
+        "sha256": "8abcd85c1d19b5d2165cb78a10845539ff23bf1e30d18494b3c8b3902babed61",
+        "gitBlob": "36e5baec1789b3f73d9518620907a83c96ab7e92"
+      },
+      {
+        "path": "package-lock.json",
+        "bytes": 36588,
+        "sha256": "33e93333851d843fef8e755f073b56df979561a59abfa0321321ebfd38d7090b",
+        "gitBlob": "a39a64e4d5eeeab264e0a33fb2c058d6da6e96f6"
+      },
+      {
+        "path": "package.json",
+        "bytes": 575,
+        "sha256": "d9324d69d723ba1b4343a4fb9589f7215e5439f9fba3d0f2665fc9c83519c29d",
+        "gitBlob": "7f904d719a2bac768e00a6310b573435e99655f5"
+      },
+      {
+        "path": "public/assets/island.glb",
+        "bytes": 782572,
+        "sha256": "8715786f8500b90514d4fce6e747d1103b26c9bc4fbbdc368190040ba8d131bc",
+        "gitBlob": "c4a24cc193ee1668edddf25bdac3cb3ae24b370a"
+      },
+      {
+        "path": "public/assets/landmarks.glb",
+        "bytes": 848304,
+        "sha256": "cf211aa82042686a9966e84029c7bf045f5342f247a6be4a175a406015cb5d67",
+        "gitBlob": "95eb656d3276556817f99985bfd84a31d898947d"
+      },
+      {
+        "path": "public/assets/menu-art.png",
+        "bytes": 2855110,
+        "sha256": "74125146d18e8b798bfe984148472c927b51f31ca25aabe3b93ec91e2a147d1a",
+        "gitBlob": "a70fc588ee37d273198c7d6a1220cc938115f90a"
+      },
+      {
+        "path": "public/assets/ui-fifth/keepsakes.png",
+        "bytes": 2100716,
+        "sha256": "b1a3bdc25bcdd146f6f5697917da1625f9ec0757b8cde0fa55983f693ae6202e",
+        "gitBlob": "1ed480d02b8e75151b319e44ece455800e242b47"
+      },
+      {
+        "path": "public/assets/ui-fourth/atlas.css",
+        "bytes": 2519,
+        "sha256": "395b70a909865405f39e0e268a1c86cc665cdd16c3ca9cef7ebb3aa05e7cda5a",
+        "gitBlob": "a8c42dae6c1e174d2d09bcc06fbea058e13c8ad1"
+      },
+      {
+        "path": "public/assets/ui-fourth/cabin-interior.png",
+        "bytes": 2738499,
+        "sha256": "fb38821b1a22ddaba0df881209c37f67e5a6007c264782a850fdda124923776d",
+        "gitBlob": "217586f0d4702c2a85fa2d3fd23d13fd06b83458"
+      },
+      {
+        "path": "public/assets/ui-fourth/manifest.json",
+        "bytes": 2193,
+        "sha256": "d54c1e725eaa0785a26ce8c30eb53e9ee77d48bf1f7b1fa2c381a7fd2cf925c3",
+        "gitBlob": "3539e7b6c50c863237f8ddaaeb23d4e3f2781e52"
+      },
+      {
+        "path": "public/assets/ui-fourth/ocean-kit-atlas.png",
+        "bytes": 2961160,
+        "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33",
+        "gitBlob": "02680b373da91b78b893e35a7dc0a8184ca6aa2e"
+      },
+      {
+        "path": "public/assets/workshop.glb",
+        "bytes": 1427024,
+        "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561",
+        "gitBlob": "7117ab6241d04912c697d347a1b49de68eaf99c2"
+      },
+      {
+        "path": "src/build-cinematic.js",
+        "bytes": 3410,
+        "sha256": "dfc550bb228405b8b20f54af2e585bc36d3936163553c0fb6f6225a6540d109d",
+        "gitBlob": "c31478cf77dc7a9be97684db14dbd1562f564b86"
+      },
+      {
+        "path": "src/character-art.js",
+        "bytes": 28175,
+        "sha256": "bf0f46dde85b9754a42c1b662580ac430084e3e03da73dda3bdc3a0adcc5450e",
+        "gitBlob": "6ccfc7ac0f35d3bfcde08bcc7414e558a6591d78"
+      },
+      {
+        "path": "src/character/geometry.js",
+        "bytes": 11173,
+        "sha256": "6cd5b1f67d4b47640732872f342a5d6cdd291a78135c4edecbaad1cb0049c179",
+        "gitBlob": "cc8935210145a3814eb66a13c48d659f10ae1751"
+      },
+      {
+        "path": "src/chart-art.js",
+        "bytes": 5191,
+        "sha256": "15e8bc9066ec196327755eec70767e169116294b1573abb855aaf7572d936bf2",
+        "gitBlob": "e30c845f8b7e880d1e3833927c226ac37c6e41c9"
+      },
+      {
+        "path": "src/cleanup-scene.js",
+        "bytes": 11353,
+        "sha256": "dff1fd2cb18b5ff43e5728316fc9bd6dab56faa89f7f7bc255bd730fa7f84221",
+        "gitBlob": "805c514c95fc2ebcfb9b719df01a64bf0f173f22"
+      },
+      {
+        "path": "src/cleanup.js",
+        "bytes": 11437,
+        "sha256": "9aeaef15e89e8dc03d3b96c37b14a41615b71d835ac305dbe30465a427723543",
+        "gitBlob": "bbe76a3172e73127d9daf2f587da5b14eee31ae1"
+      },
+      {
+        "path": "src/dive-icons.js",
+        "bytes": 2170,
+        "sha256": "420604ddba0d2399683d1d6aa4ad0bfdd5055897a49baee7475eb76312ccaf03",
+        "gitBlob": "192e2b28da08fd7e3596391459a63b85404853af"
+      },
+      {
+        "path": "src/dive-world.js",
+        "bytes": 3402,
+        "sha256": "d5df7b4098f9e05bf58bdaee9ba3e67f9e9b07f3d742c85c4a8f628e06b53938",
+        "gitBlob": "825b9cc24a782a1bbb81ea73faec48128f658d22"
+      },
+      {
+        "path": "src/game.js",
+        "bytes": 49078,
+        "sha256": "e7aa344059dcfa0b3c02fad04af6793282037a586b0c37d3af49bd604099e667",
+        "gitBlob": "13eadb1286aa4c7e5ff379a42750816d81e79ad4"
+      },
+      {
+        "path": "src/geometry/solid-silhouette.js",
+        "bytes": 1633,
+        "sha256": "4477775c47e8c575447e6d970ec8ceefda53f598a9329dc21aee50609a4b5738",
+        "gitBlob": "3a96b41a7b4cc48eef1176cc595c9c66e4f95ce1"
+      },
+      {
+        "path": "src/load-profile.js",
+        "bytes": 576,
+        "sha256": "4c4917d112da7e02e69e095df332b514e2c699f79a4a3b041a5f15f0a06c8c4c",
+        "gitBlob": "af7dd869d53609971e2d12034784f0e6e0aa8d8a"
+      },
+      {
+        "path": "src/main.js",
+        "bytes": 53482,
+        "sha256": "ba1b2cd96e1c918bd3a694ff6d9f349af658a229a9422c6ecab980509836f180",
+        "gitBlob": "f73ca08588a9c8fadb329bd7f79044336bce98e4"
+      },
+      {
+        "path": "src/navigation.js",
+        "bytes": 4380,
+        "sha256": "433199fd483970c1bf2f7fbbaac65903dc8f433f2d43740770b58764f6dd4e37",
+        "gitBlob": "46afb1330a3c4e354e32129a76e790771b863ef8"
+      },
+      {
+        "path": "src/persistence.js",
+        "bytes": 7645,
+        "sha256": "17591a345cb40e8dc236123d5eda594b5a50ccbe0fe652379e6613255a143bec",
+        "gitBlob": "a8ea5a522438fb95c2cc585098961b400236ba42"
+      },
+      {
+        "path": "src/render-resources.js",
+        "bytes": 1817,
+        "sha256": "ec1135aa664a77e31063aacf75f818d459ea74a3f16fafa305aa34e3ce6ca1cd",
+        "gitBlob": "cf70890dc900aff4cdffb0313aa47a2531bf5617"
+      },
+      {
+        "path": "src/scene.js",
+        "bytes": 44743,
+        "sha256": "f1fa28b9839ce8f06ef059e082854a8d243487be2b446f45080f80ece821a226",
+        "gitBlob": "7ba5886a0996be64d0cdef4c259e1f44721140cd"
+      },
+      {
+        "path": "src/style.css",
+        "bytes": 28135,
+        "sha256": "db72254e7a96d4068cd6fdc34d698d12e56f51ffa0306c7f01d4d6480d250767",
+        "gitBlob": "4daa18274eb0c5e736646d8d57b93127d83c3110"
+      },
+      {
+        "path": "vite.config.js",
+        "bytes": 90,
+        "sha256": "09e63cc7356d2dd3505e56a59411aedf39557b53f6333e8505759624012800ee",
+        "gitBlob": "a30982a66e26fab98d6fce54ce0703ec35deb008"
+      }
+    ],
+    "hash": "d5c0192adc04f9d034d300f7997709c5b4bb99c9c953ba0e2090b1c0276a2acf"
+  },
+  "harness": "becefdd0d422c01ae8b01c1d6c5320898571ae05b5937c16e802a9b8f81d9fc5",
+  "commands": [
+    "node node_modules/vite/bin/vite.js build --base / --outDir .scratch/final-dist",
+    "node node_modules/vite/bin/vite.js build --base /tidekin/ --outDir .scratch/final-published"
+  ],
+  "root": {
+    "files": [
+      {
+        "path": "assets/index-1DdwmcFP.css",
+        "bytes": 30261,
+        "gzipBytes": 7936,
+        "sha256": "4b85ae1a9a4840bfad4659b5067710f80d3e579016a820582035be75d6378656"
+      },
+      {
+        "path": "assets/index-CdjYE9Z1.js",
+        "bytes": 87799,
+        "gzipBytes": 30055,
+        "sha256": "08af30207b28a98d0174bce0a915179adced7bb3a82cc75de7448c89e6902dac"
+      },
+      {
+        "path": "assets/island.glb",
+        "bytes": 782572,
+        "gzipBytes": 302754,
+        "sha256": "8715786f8500b90514d4fce6e747d1103b26c9bc4fbbdc368190040ba8d131bc"
+      },
+      {
+        "path": "assets/landmarks.glb",
+        "bytes": 848304,
+        "gzipBytes": 274446,
+        "sha256": "cf211aa82042686a9966e84029c7bf045f5342f247a6be4a175a406015cb5d67"
+      },
+      {
+        "path": "assets/menu-art.png",
+        "bytes": 2855110,
+        "gzipBytes": 2827359,
+        "sha256": "74125146d18e8b798bfe984148472c927b51f31ca25aabe3b93ec91e2a147d1a"
+      },
+      {
+        "path": "assets/scene-3RrrFS3Q.js",
+        "bytes": 696479,
+        "gzipBytes": 189619,
+        "sha256": "7e33c05659eaa3db0cadffa09eaf5530460d63c82c5ac4d93137aa44bd910fe9"
+      },
+      {
+        "path": "assets/ui-fifth/keepsakes.png",
+        "bytes": 2100716,
+        "gzipBytes": 2087752,
+        "sha256": "b1a3bdc25bcdd146f6f5697917da1625f9ec0757b8cde0fa55983f693ae6202e"
+      },
+      {
+        "path": "assets/ui-fourth/atlas.css",
+        "bytes": 2519,
+        "gzipBytes": 675,
+        "sha256": "395b70a909865405f39e0e268a1c86cc665cdd16c3ca9cef7ebb3aa05e7cda5a"
+      },
+      {
+        "path": "assets/ui-fourth/cabin-interior.png",
+        "bytes": 2738499,
+        "gzipBytes": 2688942,
+        "sha256": "fb38821b1a22ddaba0df881209c37f67e5a6007c264782a850fdda124923776d"
+      },
+      {
+        "path": "assets/ui-fourth/manifest.json",
+        "bytes": 2193,
+        "gzipBytes": 441,
+        "sha256": "d54c1e725eaa0785a26ce8c30eb53e9ee77d48bf1f7b1fa2c381a7fd2cf925c3"
+      },
+      {
+        "path": "assets/ui-fourth/ocean-kit-atlas.png",
+        "bytes": 2961160,
+        "gzipBytes": 2948519,
+        "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33"
+      },
+      {
+        "path": "assets/workshop.glb",
+        "bytes": 1427024,
+        "gzipBytes": 392724,
+        "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+      },
+      {
+        "path": "index.html",
+        "bytes": 10806,
+        "gzipBytes": 3258,
+        "sha256": "9027a966743fd2859051ea9e5a9bac27abf960b1343a43a720f50d07197d536d"
+      }
+    ],
+    "totals": {
+      "totalBytes": 14543442,
+      "jsBytes": 784278,
+      "jsGzipBytes": 219674,
+      "cssBytes": 32780,
+      "cssGzipBytes": 8611,
+      "assetBytes": 13715578
+    },
+    "hash": "b3a27de3c4570a35df65e4b30df94d0ca12855a0710ca3ea68f87a3a8e971e8b"
+  },
+  "published": {
+    "files": [
+      {
+        "path": "assets/index-6aZaE4Qu.css",
+        "bytes": 30309,
+        "gzipBytes": 7943,
+        "sha256": "1f1e525518b6a0875b14889532bf1af1d8a1fa25c835f222e0d80e2c54f5ed78"
+      },
+      {
+        "path": "assets/index-CaGbAwpC.js",
+        "bytes": 87807,
+        "gzipBytes": 30062,
+        "sha256": "0e722d0b64c7a2b935530d57e8d11b756824650ca238c832d4c19e0dbf4e1f7b"
+      },
+      {
+        "path": "assets/island.glb",
+        "bytes": 782572,
+        "gzipBytes": 302754,
+        "sha256": "8715786f8500b90514d4fce6e747d1103b26c9bc4fbbdc368190040ba8d131bc"
+      },
+      {
+        "path": "assets/landmarks.glb",
+        "bytes": 848304,
+        "gzipBytes": 274446,
+        "sha256": "cf211aa82042686a9966e84029c7bf045f5342f247a6be4a175a406015cb5d67"
+      },
+      {
+        "path": "assets/menu-art.png",
+        "bytes": 2855110,
+        "gzipBytes": 2827359,
+        "sha256": "74125146d18e8b798bfe984148472c927b51f31ca25aabe3b93ec91e2a147d1a"
+      },
+      {
+        "path": "assets/scene-BsFjW98V.js",
+        "bytes": 696495,
+        "gzipBytes": 189624,
+        "sha256": "8d149a78dfb281b4182e590c614825bbbe5d470e68e2fff7c96b224523049495"
+      },
+      {
+        "path": "assets/ui-fifth/keepsakes.png",
+        "bytes": 2100716,
+        "gzipBytes": 2087752,
+        "sha256": "b1a3bdc25bcdd146f6f5697917da1625f9ec0757b8cde0fa55983f693ae6202e"
+      },
+      {
+        "path": "assets/ui-fourth/atlas.css",
+        "bytes": 2519,
+        "gzipBytes": 675,
+        "sha256": "395b70a909865405f39e0e268a1c86cc665cdd16c3ca9cef7ebb3aa05e7cda5a"
+      },
+      {
+        "path": "assets/ui-fourth/cabin-interior.png",
+        "bytes": 2738499,
+        "gzipBytes": 2688942,
+        "sha256": "fb38821b1a22ddaba0df881209c37f67e5a6007c264782a850fdda124923776d"
+      },
+      {
+        "path": "assets/ui-fourth/manifest.json",
+        "bytes": 2193,
+        "gzipBytes": 441,
+        "sha256": "d54c1e725eaa0785a26ce8c30eb53e9ee77d48bf1f7b1fa2c381a7fd2cf925c3"
+      },
+      {
+        "path": "assets/ui-fourth/ocean-kit-atlas.png",
+        "bytes": 2961160,
+        "gzipBytes": 2948519,
+        "sha256": "4f5d56be41e95499135a341e1265a1e1a1d99718d9ef33e16c077d3e485cbd33"
+      },
+      {
+        "path": "assets/workshop.glb",
+        "bytes": 1427024,
+        "gzipBytes": 392724,
+        "sha256": "20b2323fc211c83c4a7cd053238fe2f193b7fec9e1c62b39f170cd203564e561"
+      },
+      {
+        "path": "index.html",
+        "bytes": 10830,
+        "gzipBytes": 3262,
+        "sha256": "e02e9dd65b19d7eccf21ec36189edd78c3dfbb37790447c8f7c93bb16bb6960f"
+      }
+    ],
+    "totals": {
+      "totalBytes": 14543538,
+      "jsBytes": 784302,
+      "jsGzipBytes": 219686,
+      "cssBytes": 32828,
+      "cssGzipBytes": 8618,
+      "assetBytes": 13715578
+    },
+    "hash": "5d42418649c64c362b3e7ea1466b644e4562b0d13861ca78712c977abd1e871e"
+  },
+  "display": {
+    "recordedAt": "2026-10-10T02:35:09.877Z",
+    "observedAt": null,
+    "method": "CUA System Settings Displays full accessibility state",
+    "display": "Built-in Display",
+    "refreshRate": "60 Hertz",
+    "selectedDisplay": true,
+    "original": "ProMotion",
+    "restoration": "pending after physical work",
+    "secondaryDisplay": "DELL U3415W; untouched"
+  },
+  "sourceUnchangedDuringBuild": true
+}

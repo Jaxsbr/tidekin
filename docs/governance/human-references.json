@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "scope": "Named local human references; separate from shipped production assets and agent acceptance captures.",
+  "distribution": "Images stay in their existing ignored local capture paths. This metadata records exact identity without silently publishing human annotations.",
+  "approval": "Reference purpose and preferences do not establish exact-byte production approval.",
+  "files": [
+    {
+      "path": "captures/player-interview-2026-10-09/jaco-title-annotations.png",
+      "purpose": "Human title-copy and clutter feedback; liked splash evidence.",
+      "bytes": 6521199,
+      "sha256": "4ece234b00806da1a8ede3791bd6e41b7775a354852b69a7bf3cdd0c565e13f8",
+      "dimensions": {
+        "width": 2222,
+        "height": 1880,
+        "unit": "px"
+      }
+    },
+    {
+      "path": "captures/player-interview-2026-10-09/jaco-gameplay-annotations.png",
+      "purpose": "Human HUD/world competition and square-window feedback.",
+      "bytes": 1543863,
+      "sha256": "f689a9daa8b20db12eeb83264c72c4811c5c21f07916800615d4c5650ec03086",
+      "dimensions": {
+        "width": 2228,
+        "height": 1896,
+        "unit": "px"
+      }
+    },
+    {
+      "path": "captures/current-beta-player-interview-2026-10-09/jaco-log-before-overlap.png",
+      "purpose": "Human gathering incident before overlap; uncontrolled observation.",
+      "bytes": 1103405,
+      "sha256": "2fc94e673a412df47113ea6f3120ea6d5b68a48e33ec09e3c5244dcdc13a35c9",
+      "dimensions": {
+        "width": 1536,
+        "height": 1338,
+        "unit": "px"
+      }
+    },
+    {
+      "path": "captures/current-beta-player-interview-2026-10-09/jaco-log-high-tide-inactive-gather.png",
+      "purpose": "Human high-tide/overlap/inactive-Gather report; cause unverified.",
+      "bytes": 730116,
+      "sha256": "76ecde858bd37d97f851484d33b8d159f02a2b7ae6234fadad897cb430430910",
+      "dimensions": {
+        "width": 1412,
+        "height": 1162,
+        "unit": "px"
+      }
+    }
+  ]
+}
