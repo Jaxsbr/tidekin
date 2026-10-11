@@ -1,0 +1,17 @@
+{
+  "version": "surface-biomes-v1",
+  "date": "2026-10-11",
+  "type": "generated concept sheet, not running gameplay",
+  "generator": "native ImageGen",
+  "original": "/Users/jacobusbrink/.codex/generated_images/01a128e3-a01b-7043-bee9-6b9da6508166/exec-b2121322-ffb2-4f0d-a483-8738b35bca10.png",
+  "references": [
+    "public/assets/menu-art.png",
+    "assets/reference/ocean-workshop.png"
+  ],
+  "intent": "Compare arch lagoon, waterfall inlet and mangrove crescent from approach and landing viewpoints; luminous turquoise water, sculpted limestone, timber raft; gathering timber or clearing stream/net debris.",
+  "limitations": "Painted proposals; geometry, pacing, controls and production appearance unverified.",
+  "image": {
+    "path": "concepts.png",
+    "sha256": "6300b91c782ad657f6f79388047558bd82c312e476cc2da54a860447c856c5eb"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "pass": "p4",
+  "url": "http://127.0.0.1:5188/tidekin/tools/island-lab/",
+  "browser": "154.0.8037.98",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "clock": 12,
+  "sourceHashes": {
+    "generator.js": "3712e9f44dba287d13d267951b1769491a13b35b71c8bbe28085b05137dd8eb4",
+    "scene.js": "a142031d45b0cbd9e40795bbeb9a13533c3a48b5f897ae410831c428ae5f3c1b",
+    "lab.js": "834c52dfc541b4aeb650a5e6734670c7a9f3304635bda349f4c7e0962334a619",
+    "presets.js": "0dd7f95a90607f9855f54e2488cf729013516710a2841b21498a729288dd7cc9",
+    "index.html": "7fdc23a44990ff3d7b6974358ee56c86c2bd91c77e3e93a450d0039e0511c994"
+  },
+  "commit": "79da54bdbd029090d4ed9d6fd3dd2caea1a4847c",
+  "dirty": " M .github/workflows/pages.yml\n M README.md\n M package.json\n?? AGENTS.md\n?? assets/biome-study-catalogue.json\n?? docs/decisions/\n?? docs/studies/\n?? scripts/island-lab/\n?? tests/island-lab.test.js\n?? tools/\n",
+  "errors": [],
+  "humanApproval": null
+}

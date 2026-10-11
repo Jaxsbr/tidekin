@@ -1,0 +1,15 @@
+{
+  "commit": "3b0cf583a75e237939b3296dfe2df38f21f1c651",
+  "dirty": " M .agents/skills/team-goal/SKILL.md\n M AGENTS.md\n M README.md\n M assets/catalogue.json\n M docs/PROJECT.md\n M docs/architecture.md\n M docs/art-direction.md\n M docs/design-decisions.md\n M docs/governance/README.md\n M docs/governance/asset-contract.md\n M docs/governance/current-contract.md\n M docs/governance/human-references.json\n M docs/governance/retention-policy.md\n?? .github/pull_request_template.md\n?? docs/decisions/\n?? docs/governance/ways-of-working.md\n?? docs/roadmap.md\n",
+  "baseline": "Frozen copy of island-lab-v1 with camera-only inspection hook and fixed water/fall clock; geometry unchanged.",
+  "viewport": [
+    1280,
+    800
+  ],
+  "angles": "N/E/S/W at radius260, elevation23, looking at (0,17,0)",
+  "seeds": [
+    "waterfall-01",
+    "island-mqbxgd",
+    "study-03"
+  ]
+}

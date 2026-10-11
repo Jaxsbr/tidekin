@@ -1,0 +1,18 @@
+{
+  "browser": "154.0.8037.98",
+  "checks": "Three biomes cross-engine deterministic; regen; URL; flight; typing; guides; v3 upgrade; invalid import; export/import; eight regenerations; storage isolation; 18 gallery combinations and five final angles",
+  "stats": {
+    "geometries": 88,
+    "textures": 1,
+    "drawCalls": 96,
+    "triangles": 453840
+  },
+  "finalStats": {
+    "geometries": 88,
+    "textures": 1,
+    "drawCalls": 96,
+    "triangles": 453840
+  },
+  "errors": [],
+  "limitations": "No gameplay, collision or performance certification."
+}

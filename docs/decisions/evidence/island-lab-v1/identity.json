@@ -1,0 +1,29 @@
+{
+  "version": "island-lab-v1",
+  "date": "2026-10-11",
+  "status": "awaiting human review",
+  "files": {
+    "index.html": {
+      "bytes": 4471,
+      "sha256": "254e4617fe5a1ba6cc3cabca7aee492db0861bb577c4aee3e53abc6512932820"
+    },
+    "generator.js": {
+      "bytes": 4449,
+      "sha256": "7328c7bfa0860e26c070d858122ff60644bb94964d1fa25178256051f2b76be8"
+    },
+    "lab.js": {
+      "bytes": 14899,
+      "sha256": "eef907f86209af85f8dc5be72ce3380409cf5808416dc0ff87be6d7c375c8405"
+    }
+  },
+  "defaultRecipe": {
+    "biome": "B",
+    "seed": "waterfall-01",
+    "height": 64,
+    "skerries": 16,
+    "width": 26
+  },
+  "run": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5187 --strictPort",
+  "url": "http://127.0.0.1:5187/tidekin/output/prototypes/island-lab-v1/",
+  "sourcePolicy": "Keep this version while review is pending; preserve reviewed source before further iterations."
+}

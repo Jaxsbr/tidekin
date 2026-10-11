@@ -1,0 +1,64 @@
+{
+  "scope": "Maintained v4 verification; original v3 subjective scores are unchanged, not newly awarded. No production performance claim.",
+  "sources": [
+    {
+      "path": "tools/island-lab/presets.js",
+      "sha256": "0dd7f95a90607f9855f54e2488cf729013516710a2841b21498a729288dd7cc9"
+    },
+    {
+      "path": "tools/island-lab/scene.js",
+      "sha256": "a142031d45b0cbd9e40795bbeb9a13533c3a48b5f897ae410831c428ae5f3c1b"
+    },
+    {
+      "path": "tools/island-lab/lab.js",
+      "sha256": "834c52dfc541b4aeb650a5e6734670c7a9f3304635bda349f4c7e0962334a619"
+    },
+    {
+      "path": "tools/island-lab/generator.js",
+      "sha256": "3712e9f44dba287d13d267951b1769491a13b35b71c8bbe28085b05137dd8eb4"
+    },
+    {
+      "path": "tools/island-lab/index.html",
+      "sha256": "7fdc23a44990ff3d7b6974358ee56c86c2bd91c77e3e93a450d0039e0511c994"
+    },
+    {
+      "path": "scripts/island-lab/capture.mjs",
+      "sha256": "6b491b2ba1ece40aba6edb5daa035c2ba062b3c3ccababacef97e598e7714f37"
+    },
+    {
+      "path": "scripts/island-lab/verify-browser.mjs",
+      "sha256": "cd414473b76066b30759ef985c664fd41e319569f8ae6c102f7407fc40bab74e"
+    },
+    {
+      "path": "scripts/island-lab/check-evidence.mjs",
+      "sha256": "49d0eaff03c345c307ae47299617aa20bf2e9b983e3f8482ebc49a653bcb1b05"
+    }
+  ],
+  "checks": {
+    "node": "124 tests passed",
+    "build": "Production Vite build passed; src/public/lockfile/config unchanged from origin/main",
+    "capture": "Nine presets, 45 matched captures; generated records retained. Raw views remain in ignored output."
+  },
+  "files": [
+    {
+      "path": "browser-verification.json",
+      "bytes": 556,
+      "sha256": "b515a27f57f739e34aa84355993d96fed793679e83712d0fc2ecb5826a900351"
+    },
+    {
+      "path": "capture-run.json",
+      "bytes": 961,
+      "sha256": "064be2e396c03339c4dcb169d9c093a065d5add0958fd72db1c9a6ecfa4bd711"
+    },
+    {
+      "path": "lab.png",
+      "bytes": 391471,
+      "sha256": "41115e6da099291dd584ce62570f7f562cebf93bbe5be17732bbb942cb7133db"
+    },
+    {
+      "path": "recipes.json",
+      "bytes": 214708,
+      "sha256": "652f16a92564efb3762496b4ff80f7474fb019ab9ef7fcd1f5cd3409390c2706"
+    }
+  ]
+}

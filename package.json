@@ -7,7 +7,11 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "test": "node --test tests/*.test.js",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "islands:dev": "vite --host 127.0.0.1 --port 5188 --strictPort --open /tidekin/tools/island-lab/",
+    "islands:capture": "node scripts/island-lab/capture.mjs",
+    "islands:verify": "node scripts/island-lab/verify-browser.mjs",
+    "islands:check": "node scripts/island-lab/check-evidence.mjs"
   },
   "dependencies": {
     "three": "^0.180.0"

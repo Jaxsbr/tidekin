@@ -56,3 +56,7 @@ Browser checks use isolated storage; fixtures are explicitly distinguished from 
 ## Prototype limits
 
 Five authored workshop modules, two repeatable expedition routes and a small archipelago form a bounded vertical slice. Construction is predetermined. The underwater area is wider and deeper, but remains a modest exploration space. Illustrated menus accompany a real-time procedural underwater world. Agent review does not establish human enjoyment or approval.
+
+## Island authoring lab
+
+Run `npm run islands:dev` for the maintained seeded biome tool on port 5188. See the [tool guide](tools/island-lab/README.md), [reference-to-biome procedure](docs/studies/biome-generation-procedure.md) and [visual study review](docs/studies/biome-review.html). Jaco retained these as a decent starting point. They are development tooling and evidence, separate from the shipped game. [Game integration proposal](docs/studies/island-game-integration.md).
