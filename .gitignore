@@ -12,3 +12,7 @@ captures/
 output/
 
 .scratch/
+
+# Reviewed study captures are durable evidence, unlike scratch captures/ folders.
+!docs/decisions/evidence/**/captures/
+!docs/decisions/evidence/**/captures/**
