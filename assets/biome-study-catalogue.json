@@ -1,0 +1,1982 @@
+{
+  "schemaVersion": 1,
+  "scope": "Study-only subset; merge these stable IDs into the broader catalogue when its separate branch lands. External source IDs refer to the historical source inventory, not dependencies of this tool.",
+  "assets": [
+    {
+      "id": "study.surface-biomes-v1.concepts",
+      "path": "docs/decisions/evidence/surface-biomes-v1/concepts.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained human-reviewed biome direction reference; no production asset approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "native-imagegen",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 3108016,
+      "sha256": "6300b91c782ad657f6f79388047558bd82c312e476cc2da54a860447c856c5eb",
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "unit": "px"
+      },
+      "externalSources": [
+        "runtime.menu-art.png",
+        "asset.reference.ocean-workshop.png"
+      ]
+    },
+    {
+      "id": "study.surface-biomes-v1.provenance",
+      "path": "docs/decisions/evidence/surface-biomes-v1/provenance.json",
+      "kind": "provenance",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained human-reviewed biome direction reference; no production asset approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "study-provenance",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 847,
+      "sha256": "6ef06872def24aae9b07ba53433a9535a358d46443406dd65b0b41951b5e3ccb",
+      "externalSources": []
+    },
+    {
+      "id": "study.waterfall-inlet-v1.index.html",
+      "path": "docs/decisions/evidence/waterfall-inlet-v1/index.html",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Selected reproducible source of the first playable study associated with human scale and approach feedback; not production art approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 1206,
+      "sha256": "b3740db16c84622621bcf1bfa967e06877167f5c7e55087bbe2e51e24977262f",
+      "externalSources": []
+    },
+    {
+      "id": "study.waterfall-inlet-v1.study.js",
+      "path": "docs/decisions/evidence/waterfall-inlet-v1/study.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Selected reproducible source of the first playable study associated with human scale and approach feedback; not production art approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 7166,
+      "sha256": "77d8ce647fa368dd80c4c7ee3a19f24cd0b6e51a97bbead1d238c5faa83b6e0c",
+      "externalSources": []
+    },
+    {
+      "id": "study.waterfall-inlet-v1.identity.json",
+      "path": "docs/decisions/evidence/waterfall-inlet-v1/identity.json",
+      "kind": "provenance",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Selected reproducible source of the first playable study associated with human scale and approach feedback; not production art approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 390,
+      "sha256": "b63b46cc077f4eb6749596bce2910b7fd8e8858d3aea1c8779bdf26d34eea8ac",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.baseline-a.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/baseline-A.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 161478,
+      "sha256": "5e8ee7cd4197ff3281dee4c5895b8a2c8c39168a42e6e9ec2c57dc4092c5d195",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.baseline-b.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/baseline-B.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 167782,
+      "sha256": "4fcd634897bf84a85e86dd435dfc8690ec1ac938441622ac5ee7f4aa88aaef75",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.baseline-c.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/baseline-C.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 190782,
+      "sha256": "38880993d60a2b549b89bd54e60ccb96defa8bffb0424ee95268a5cafe674249",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-baseline-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-baseline-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 364559,
+      "sha256": "ec786448c82f7a7c03dc5b9547a012f244dad4b27fb94b570c6596eaadc45481",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p0-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p0-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 367569,
+      "sha256": "0db513f21cc1a4072fa1a72927ed654353ed21749b008d7b7b5db45e594cdcaf",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p0-4.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p0-4.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 771960,
+      "sha256": "12736dea385e8bc7e47d87ac86e88c9f52889913c9f87febd3b265ed54a088eb",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p1-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p1-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 445521,
+      "sha256": "320e237f76e4bf27164804408c553356aac0c97e41c98ebe69c5280c8995d01e",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p1-4.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p1-4.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 987782,
+      "sha256": "a80aa682170b73df5b5a9f907459a5220ec1528e419da0acd9aa6e81f73c5d9d",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p2-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p2-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 461436,
+      "sha256": "59d86dc0f4e8c1eea01c44b8699cfbfcc603a7bb734dc23acf6e33594196b75e",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p2-4.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p2-4.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 1016651,
+      "sha256": "4df615cac02d2b06ba80ccc919191fc38809b4484bb8cf84975d09c10120e988",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p3-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p3-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 684373,
+      "sha256": "444de71b45a28b685483262a2ebe402ad7119f1da7f38098f3685fb88ead6a5a",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p3-4.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p3-4.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 1428782,
+      "sha256": "1ca2c987b4c96f5ae8772fa55628da93871790a50b8808c4cc2e73116059d379",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p4-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p4-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 637405,
+      "sha256": "1530fd55a0ce77f65c587562732aaea28710825bfbb434e651d963454069826f",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p4-a.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p4-A.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 679548,
+      "sha256": "62927a9d4dadfaba635dc4e5323242840d37438cef65a403ea2b38f2dcf51989",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p4-b.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p4-B.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 726883,
+      "sha256": "527b5dc8325986d3e3eb5f9e1c2a213dacb0a6005f0a1da60a8eef9e4b119825",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.contact-p4-c.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/contact-p4-C.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 655271,
+      "sha256": "c679af9fb56f06ae43dbe5c3f9071065b87d3d8815620b5c75f57b950e5e0cd1",
+      "dimensions": {
+        "width": 1500,
+        "height": 1100,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-a-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-A-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 337747,
+      "sha256": "0bee74d3a6e308b2626017be7f83740dd24519239a272ca4c298382a7b7fb498",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-a-1.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-A-1.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 340560,
+      "sha256": "41875481f08176ba5bfc47c11eb89ea713190b0c21a23649cfb5aaa382aa61b1",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-a-2.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-A-2.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 323263,
+      "sha256": "976370a941caeeb7f6bf7017725efde99568d725e3a2ae30acfafb9cf3af9a5e",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-a-3.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-A-3.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 331108,
+      "sha256": "fc9b7c37b78e0175d25fa59d92199cf81e49edd763c4bc5d427e4771170697b7",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-a-4.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-A-4.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 787819,
+      "sha256": "1d360d98566a2b8008455c69b3eaf66f525e352810ea5d50f92d74d5bc62b4a1",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-b-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-B-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 359630,
+      "sha256": "b96f5a90c5146f87a572dba18015fdaadbec9d5814f993fb29fd84805d5ba39a",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-b-1.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-B-1.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 363935,
+      "sha256": "de1f7200f14b07fc1ee416daf1e8946d845e6dd0af1b249239ae3a7007b16b90",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-b-2.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-B-2.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 342137,
+      "sha256": "61d60cfc111c2f92d155c9a39672c3f0cf367f52dc6d6b89869af45c457feff7",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-b-3.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-B-3.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 385070,
+      "sha256": "dbad85826dc8528e2348874d37f156b709feeb0b75c81045ab7a75fe2662e627",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-b-4.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-B-4.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 801578,
+      "sha256": "7e13a8815e024c6c3da3ecefd8099dd79ab74214d8f75d41aa6080288bb48b2e",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-c-0.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-C-0.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 299411,
+      "sha256": "84c4602d07a529410312ccbcb322919cf91f45244a5451824f4349cced8ab653",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-c-1.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-C-1.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 332259,
+      "sha256": "d624989223fae5798123a024aaf4a64eb9f5390acc131673753ec21caa651d29",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-c-2.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-C-2.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 291337,
+      "sha256": "4075ce6f4f1f6dc3f3d4344ee0b61d77f61881ea02072aa0203128b0c5ecf4d8",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-c-3.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-C-3.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 316489,
+      "sha256": "f305e3ce29cefb145d8bb370da5b33e1d3ac27fe1db56f70bf47a1c21585e50f",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.final-c-4.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/final-C-4.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 789065,
+      "sha256": "0eaffa38b33b91aa442c0888a577d2bc8526415cdf2a58f24ecbdc66832b02d4",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.lab-ui.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/lab-ui.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 409891,
+      "sha256": "9b833d7d6c6b60a817846f08b38e49c000a3ecd567e2fbaac91b3b3752cea01b",
+      "dimensions": {
+        "width": 1100,
+        "height": 900,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p0-a.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p0-A.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 155735,
+      "sha256": "e5df5f67fce3b0e055e5140dfd58a8a66aaf948bf098525e7d4846a8e96a2e81",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p0-b.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p0-B.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 166475,
+      "sha256": "44ab51105ce5406118d1736142bf8e861b13a365e596ec7b1e5ffa8b24a092cb",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p0-c.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p0-C.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 159631,
+      "sha256": "ee6c92d418d72e9a11ef95decf5e60be1c9a737138f1941675c94ccd75ed5f26",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p1-a.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p1-A.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 196604,
+      "sha256": "c4f625e88fc2ba31f50f2376e002d5bcc10f80aa8d0441b32c0ac95c587eec4a",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p1-b.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p1-B.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 213398,
+      "sha256": "834344a1955dc483f360a9b3972ba4fc5b2ed2ae5d9a26d6c5636dd9f168ff1b",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p1-c.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p1-C.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 203851,
+      "sha256": "09a69aa786d8b52ac0b2923907684747b6e64e405dbe3335fbc237db97a4c252",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p2-a.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p2-A.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 204025,
+      "sha256": "98acc9258b5884cb67ac59977e02877801273eca9edbc4a5538b91fd01ba9eab",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p2-b.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p2-B.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 218017,
+      "sha256": "add387a6fe63106394c9010c82c9a588ecdd697a5ccc74e1aff2a2b91497c8be",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p2-c.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p2-C.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 212456,
+      "sha256": "af458145dbc5c03b60b704750106c6da2802d98d1c57e3a8fbd90053fe883763",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p3-a.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p3-A.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 348702,
+      "sha256": "0f5ae9340391afe564f1e5e3166c1ed8a1efe6d631661667a840464a188a3541",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p3-b.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p3-B.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 377440,
+      "sha256": "3ff5cb1b80dbbf0978ce8a228fb846fe7238d481e54a2e4484bffa37bb761fe6",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.captures.p3-c.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/captures/p3-C.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-code-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 319205,
+      "sha256": "9abe4dce6f53ef1dc9fcad9429aaf35f90eed840b1aa58e7070e875141f505a2",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.references.a-lagoon.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/references/A-lagoon.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "native-imagegen",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [
+        "study.surface-biomes-v1.concepts"
+      ],
+      "consumers": [],
+      "bytes": 3231042,
+      "sha256": "15a79dfb4ac2fe8dd325a31631d90860c08d5f5bdf8a92bd56e0f66838f97731",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.references.b-waterfall.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/references/B-waterfall.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "native-imagegen",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [
+        "study.surface-biomes-v1.concepts"
+      ],
+      "consumers": [],
+      "bytes": 3156104,
+      "sha256": "a4d02ba29b8da18910a52daaf68113956270fc150b751fda1d08c5138f964f4c",
+      "dimensions": {
+        "width": 1672,
+        "height": 941,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.references.c-mangrove.png",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/references/C-mangrove.png",
+      "kind": "reference",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "native-imagegen",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [
+        "study.surface-biomes-v1.concepts"
+      ],
+      "consumers": [],
+      "bytes": 3512538,
+      "sha256": "d643dc2dbe1603a8bb10e34a1e6e93218145dfbecc821a9b19c44e496a01c8c0",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024,
+        "unit": "px"
+      },
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.references.prompts.json",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/references/prompts.json",
+      "kind": "generation-prompt",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 5164,
+      "sha256": "c0588d19e0704c5309e2de2783b1e5c1d43360809c7afd3df652b9b0d392d70f",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-baseline.generator.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-baseline/generator.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 4449,
+      "sha256": "7328c7bfa0860e26c070d858122ff60644bb94964d1fa25178256051f2b76be8",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-baseline.index.html",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-baseline/index.html",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 4471,
+      "sha256": "254e4617fe5a1ba6cc3cabca7aee492db0861bb577c4aee3e53abc6512932820",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-baseline.lab.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-baseline/lab.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 14996,
+      "sha256": "b1fb7a7889460d163b21a4dbec84d4bdc7b2fec53c0743f110d7926b24b0b35d",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v2.generator.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v2/generator.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 5660,
+      "sha256": "5ce056a2b7299f33b24ecaf67d9f618431d076cd47823f76992d35ad311f95f4",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v2.index.html",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v2/index.html",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 4367,
+      "sha256": "902bcc5d211e59219f75f57d4589343b600e2d5c27e2961e6f43143d35e1c244",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v2.lab.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v2/lab.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 5875,
+      "sha256": "7b891d195a2f092a8e39937f74a15afc9a0a5a64ec478a740b58c1587632c4c2",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v2.presets.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v2/presets.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 944,
+      "sha256": "ac4da3d3d4f981be1b6c8eb26da3145ccb4b2134e1b57c6be5fc517614aa2696",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v2.scene.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v2/scene.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 11213,
+      "sha256": "4befa57d79da200153b1b2a566707d696f7dfc8026b5e012bad198010c924b3c",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v3.generator.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v3/generator.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 5856,
+      "sha256": "2460bd5a01f394b811d2e8ed0b9aa6cdc4ea8393bd744b660f6de51156f010ee",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v3.index.html",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v3/index.html",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 4322,
+      "sha256": "8a2708b43232d6aad71e753d7d1e92916f5758714cf1b2c745365f884b089321",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v3.lab.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v3/lab.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 5875,
+      "sha256": "ec526748d4445dde8beebd7a926b8e90263e672195dd60c8d17f5c36cc60dd12",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v3.presets.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v3/presets.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 1696,
+      "sha256": "98db348884103d1f8621b466d43e79f6d6dc0242d63372aef457ce890297d186",
+      "externalSources": []
+    },
+    {
+      "id": "study.biome-fidelity-v1.source.island-lab-v3.scene.js",
+      "path": "docs/decisions/evidence/biome-fidelity-v1/source/island-lab-v3/scene.js",
+      "kind": "editable-source",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Retained reference-tuning study evidence; distinguish generated paintings from running-code captures by directory and report. No runtime approval.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 12364,
+      "sha256": "13e64de2df689aadd88aa997a4b816af59eb04da79f0979ee5524a8549adf3b5",
+      "externalSources": []
+    },
+    {
+      "id": "study.island-lab-v1.index.html",
+      "path": "docs/decisions/evidence/island-lab-v1/index.html",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Preserve the reviewed generator version associated with arch rejection and all-angle feedback.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 4471,
+      "sha256": "254e4617fe5a1ba6cc3cabca7aee492db0861bb577c4aee3e53abc6512932820",
+      "duplicateOf": "study.biome-fidelity-v1.source.island-lab-baseline.index.html",
+      "externalSources": []
+    },
+    {
+      "id": "study.island-lab-v1.identity.json",
+      "path": "docs/decisions/evidence/island-lab-v1/identity.json",
+      "kind": "provenance",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Preserve the reviewed generator version associated with arch rejection and all-angle feedback.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 909,
+      "sha256": "40f2f79ba8bca0c993f345205e7e92b231ad26fc3b243110cf83ab98515df378",
+      "externalSources": []
+    },
+    {
+      "id": "study.island-lab-v1.lab.js",
+      "path": "docs/decisions/evidence/island-lab-v1/lab.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Preserve the reviewed generator version associated with arch rejection and all-angle feedback.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 14899,
+      "sha256": "eef907f86209af85f8dc5be72ce3380409cf5808416dc0ff87be6d7c375c8405",
+      "externalSources": []
+    },
+    {
+      "id": "study.island-lab-v1.generator.js",
+      "path": "docs/decisions/evidence/island-lab-v1/generator.js",
+      "kind": "editable-source",
+      "status": "baseline",
+      "approval": null,
+      "purpose": "Preserve the reviewed generator version associated with arch rejection and all-angle feedback.",
+      "retention": "retain-source",
+      "origin": {
+        "method": "original-study-source",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Study provenance and scoped human disposition; no production approval."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 4449,
+      "sha256": "7328c7bfa0860e26c070d858122ff60644bb94964d1fa25178256051f2b76be8",
+      "duplicateOf": "study.biome-fidelity-v1.source.island-lab-baseline.generator.js",
+      "externalSources": []
+    },
+    {
+      "id": "study.island-lab-maintained-v4.browser-verification",
+      "path": "docs/decisions/evidence/island-lab-maintained-v4/browser-verification.json",
+      "kind": "provenance",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Maintained tool verification; no production asset approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "verification",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Tool adoption and verification."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 556,
+      "sha256": "b515a27f57f739e34aa84355993d96fed793679e83712d0fc2ecb5826a900351"
+    },
+    {
+      "id": "study.island-lab-maintained-v4.capture-run",
+      "path": "docs/decisions/evidence/island-lab-maintained-v4/capture-run.json",
+      "kind": "provenance",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Maintained tool verification; no production asset approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "verification",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Tool adoption and verification."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 961,
+      "sha256": "064be2e396c03339c4dcb169d9c093a065d5add0958fd72db1c9a6ecfa4bd711"
+    },
+    {
+      "id": "study.island-lab-maintained-v4.lab",
+      "path": "docs/decisions/evidence/island-lab-maintained-v4/lab.png",
+      "kind": "capture",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Maintained tool verification; no production asset approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "browser-capture",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Tool adoption and verification."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 391471,
+      "sha256": "41115e6da099291dd584ce62570f7f562cebf93bbe5be17732bbb942cb7133db",
+      "dimensions": {
+        "width": 1280,
+        "height": 800,
+        "unit": "px"
+      }
+    },
+    {
+      "id": "study.island-lab-maintained-v4.recipes",
+      "path": "docs/decisions/evidence/island-lab-maintained-v4/recipes.json",
+      "kind": "provenance",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Maintained tool verification; no production asset approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "verification",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Tool adoption and verification."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 214708,
+      "sha256": "652f16a92564efb3762496b4ff80f7474fb019ab9ef7fcd1f5cd3409390c2706"
+    },
+    {
+      "id": "study.island-lab-maintained-v4.verification",
+      "path": "docs/decisions/evidence/island-lab-maintained-v4/verification.json",
+      "kind": "provenance",
+      "status": "generated-candidate",
+      "approval": null,
+      "purpose": "Maintained tool verification; no production asset approval.",
+      "retention": "retain-reference",
+      "origin": {
+        "method": "verification",
+        "evidence": [
+          {
+            "path": "docs/studies/island-lab-adoption.md",
+            "scope": "Tool adoption and verification."
+          }
+        ]
+      },
+      "sources": [],
+      "consumers": [],
+      "bytes": 2194,
+      "sha256": "5dce6671d467066f63ae35cc41a9df79c98637b008cbfabeae27d7b1f77f211d"
+    }
+  ]
+}

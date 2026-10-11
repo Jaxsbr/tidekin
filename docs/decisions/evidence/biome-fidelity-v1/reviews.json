@@ -1,0 +1,975 @@
+{
+  "authority": "Implementing agent assessment. Totals are weighted rubric points, not percentage visual accuracy or human approval.",
+  "aspects": [
+    "geometry",
+    "foliage",
+    "water",
+    "identity",
+    "allAngles",
+    "landing"
+  ],
+  "references": [
+    {
+      "id": "A1",
+      "scores": [
+        4.5,
+        4.5,
+        4.5,
+        4,
+        3.5,
+        4.5
+      ],
+      "disposition": "retain alternative",
+      "observation": "Strong shore layering; single dominant massif makes it less of a broken lagoon than A2.",
+      "confidence": "medium; only generated paired views",
+      "total": 85.0
+    },
+    {
+      "id": "A2",
+      "scores": [
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4,
+        4.5
+      ],
+      "disposition": "agent-selected target",
+      "observation": "Unequal separate limestone masses, open basin and sandy shelves better express the revised lagoon.",
+      "confidence": "medium; access is inferred from painted views",
+      "total": 88.5
+    },
+    {
+      "id": "B1",
+      "scores": [
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4,
+        4.5
+      ],
+      "disposition": "agent-selected target",
+      "observation": "One clear waterfall and a compact island can anchor the study; reverse coves carry visual interest.",
+      "confidence": "medium; no 3D consistency proof",
+      "total": 88.5
+    },
+    {
+      "id": "B2",
+      "scores": [
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        3.5,
+        4
+      ],
+      "disposition": "retain alternative",
+      "observation": "Terraces give richness but two cascades broaden this study and obscure some water passages.",
+      "confidence": "medium",
+      "total": 86.5
+    },
+    {
+      "id": "C1",
+      "scores": [
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4,
+        4
+      ],
+      "disposition": "agent-selected target",
+      "observation": "Rooted broadleaf edges dominate, with a clear wetland/rock hierarchy and multiple visible channels.",
+      "confidence": "medium; opposite view is generated",
+      "total": 88.0
+    },
+    {
+      "id": "C2",
+      "scores": [
+        4.5,
+        4.5,
+        4.5,
+        4,
+        4,
+        4.5
+      ],
+      "disposition": "retain alternative",
+      "observation": "Attractive sand shelves, but more exposed rock and dry vegetation dilute the rooted-channel identity.",
+      "confidence": "medium",
+      "total": 86.5
+    }
+  ],
+  "passes": [
+    {
+      "id": "legacy-v1",
+      "evidence": "contact-baseline-0.png",
+      "confidence": "medium; matched four-angle stills",
+      "candidates": [
+        {
+          "biome": "A",
+          "seed": "waterfall-01",
+          "scores": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "disposition": "revise; arch rejected by Jaco",
+          "observation": "Artificial arch, sparse identical palms, cylindrical cliffs and blank reverse views.",
+          "total": 21.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "waterfall-01",
+          "scores": [
+            1,
+            1,
+            1,
+            2,
+            1,
+            2
+          ],
+          "disposition": "revise",
+          "observation": "Tall scale remains useful, but a blank headwall dominates the reverse and shallow color barely differs.",
+          "total": 25.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "C",
+          "seed": "waterfall-01",
+          "scores": [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2
+          ],
+          "disposition": "revise",
+          "observation": "Roots are present but palm-like crowns and a cliff row dominate side/rear views.",
+          "total": 29.0,
+          "rankWithinBiome": 1
+        }
+      ]
+    },
+    {
+      "id": "p0",
+      "evidence": [
+        "contact-p0-0.png",
+        "contact-p0-4.png"
+      ],
+      "confidence": "medium for silhouette, low for fine material detail; front and overview inspected",
+      "changes": "Extended tool once: radial islands and access sectors, foliage species and water/mesh controls. Freeze code for subsequent settings-only passes.",
+      "candidates": [
+        {
+          "biome": "A",
+          "seed": "waterfall-01",
+          "scores": [
+            1.5,
+            1,
+            1.5,
+            2,
+            3,
+            2
+          ],
+          "observation": "Arch gone and open basin present; isolated cones and tiny foliage remain.",
+          "disposition": "revise",
+          "total": 35.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "A",
+          "seed": "island-mqbxgd",
+          "scores": [
+            1.5,
+            1,
+            1.5,
+            2,
+            3,
+            2
+          ],
+          "observation": "Unequal masses add some hierarchy but barren cones dominate.",
+          "disposition": "revise",
+          "total": 35.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "A",
+          "seed": "study-03",
+          "scores": [
+            1.5,
+            1,
+            1.5,
+            1.5,
+            3,
+            2
+          ],
+          "observation": "Similar-height stumps weaken the destination silhouette.",
+          "disposition": "revise",
+          "total": 33.0,
+          "rankWithinBiome": 3
+        },
+        {
+          "biome": "B",
+          "seed": "waterfall-01",
+          "scores": [
+            1.5,
+            1,
+            1.5,
+            2.5,
+            3,
+            2
+          ],
+          "observation": "Central waterfall is legible, yet cliffs are bare and sand is circular.",
+          "disposition": "revise",
+          "total": 37.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "island-mqbxgd",
+          "scores": [
+            1.5,
+            1,
+            1.5,
+            2.5,
+            3,
+            2
+          ],
+          "observation": "Central mass reads, but weak vegetation and blue-uniform water miss the target.",
+          "disposition": "revise",
+          "total": 37.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "study-03",
+          "scores": [
+            1.5,
+            1,
+            1.5,
+            2,
+            3,
+            2
+          ],
+          "observation": "Foreground stacks compete with the waterfall.",
+          "disposition": "revise",
+          "total": 35.0,
+          "rankWithinBiome": 3
+        },
+        {
+          "biome": "C",
+          "seed": "waterfall-01",
+          "scores": [
+            1.5,
+            2,
+            1.5,
+            2.5,
+            3,
+            2
+          ],
+          "observation": "Broadleaf/root silhouette is distinct but groves are sparse islands of spheres.",
+          "disposition": "revise",
+          "total": 41.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "C",
+          "seed": "island-mqbxgd",
+          "scores": [
+            1.5,
+            2,
+            1.5,
+            2,
+            3,
+            2
+          ],
+          "observation": "Large empty sand areas break the wetland feeling.",
+          "disposition": "revise",
+          "total": 39.0,
+          "rankWithinBiome": 3
+        },
+        {
+          "biome": "C",
+          "seed": "study-03",
+          "scores": [
+            1.5,
+            2,
+            1.5,
+            2.5,
+            3,
+            2
+          ],
+          "observation": "More visible rooted outer patches help, but shallows and canopy need density.",
+          "disposition": "revise",
+          "total": 41.0,
+          "rankWithinBiome": 1
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "evidence": [
+        "contact-p1-0.png",
+        "contact-p1-4.png",
+        "p1/B-0-0.png"
+      ],
+      "confidence": "medium; front/overhead views and full-size B examined",
+      "changes": "Settings only: smoother geometry, more foliage, wider shelves and higher shallow contrast.",
+      "finding": "Geometry smoothing alone does not create limestone structure. Density helps C but A/B need larger, better-grounded vegetation and less uniform water pattern.",
+      "candidates": [
+        {
+          "biome": "A",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2.5,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Smoother silhouettes and visible shallow halos, but still cone islands with sparse plants.",
+          "total": 47.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "A",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2.5,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Smoother silhouettes and visible shallow halos, but still cone islands with sparse plants.",
+          "total": 47.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "A",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Smoother silhouettes and visible shallow halos, but still cone islands with sparse plants.",
+          "total": 45.5,
+          "rankWithinBiome": 3
+        },
+        {
+          "biome": "B",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2.5,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Waterfall survives; geology remains smooth blank walls and foliage does not fill the lower slopes.",
+          "total": 47.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2.5,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Waterfall survives; geology remains smooth blank walls and foliage does not fill the lower slopes.",
+          "total": 47.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Waterfall survives; geology remains smooth blank walls and foliage does not fill the lower slopes.",
+          "total": 45.5,
+          "rankWithinBiome": 3
+        },
+        {
+          "biome": "C",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            3,
+            2.5,
+            3,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Rooted broadleaf groves now read, though isolated round crowns and regular sand islands remain.",
+          "total": 55.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "C",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            3,
+            2.5,
+            3,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Rooted broadleaf groves now read, though isolated round crowns and regular sand islands remain.",
+          "total": 55.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "C",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            3,
+            2.5,
+            3,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Rooted broadleaf groves now read, though isolated round crowns and regular sand islands remain.",
+          "total": 55.5,
+          "rankWithinBiome": 1
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "evidence": [
+        "contact-p2-0.png",
+        "contact-p2-4.png"
+      ],
+      "confidence": "medium; front and overview inspected for all nine recipes",
+      "changes": "Settings only: higher smoothing/density, wider sand shelves and shallow contrast.",
+      "finding": "A/B score unchanged; parameters have plateaued. Preserve these results and mark a tool-version boundary before extending missing controls.",
+      "candidates": [
+        {
+          "biome": "A",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2.5,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Settings plateau: denser caps and wider shallows do not resolve the underlying cone/palm scale mismatch.",
+          "total": 47.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "A",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2.5,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Settings plateau: denser caps and wider shallows do not resolve the underlying cone/palm scale mismatch.",
+          "total": 47.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "A",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Settings plateau: denser caps and wider shallows do not resolve the underlying cone/palm scale mismatch.",
+          "total": 45.5,
+          "rankWithinBiome": 3
+        },
+        {
+          "biome": "B",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2.5,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Settings plateau: denser caps and wider shallows do not resolve the underlying cone/palm scale mismatch.",
+          "total": 47.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2.5,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Settings plateau: denser caps and wider shallows do not resolve the underlying cone/palm scale mismatch.",
+          "total": 47.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            1.5,
+            2.5,
+            2,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Settings plateau: denser caps and wider shallows do not resolve the underlying cone/palm scale mismatch.",
+          "total": 45.5,
+          "rankWithinBiome": 3
+        },
+        {
+          "biome": "C",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            3.5,
+            2.5,
+            3,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Canopy thickens, but roots and foliage remain simplified and repeated.",
+          "total": 57.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "C",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            3.5,
+            2.5,
+            3,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Canopy thickens, but roots and foliage remain simplified and repeated.",
+          "total": 57.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "C",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            3.5,
+            2.5,
+            3,
+            3,
+            2.5
+          ],
+          "disposition": "revise",
+          "observation": "Canopy thickens, but roots and foliage remain simplified and repeated.",
+          "total": 57.5,
+          "rankWithinBiome": 1
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "tool": "island-lab-v3",
+      "evidence": [
+        "contact-p3-0.png",
+        "contact-p3-4.png"
+      ],
+      "confidence": "medium; all nine front/overhead views and full-size seed0 approaches inspected",
+      "changes": "Explicit tool extension: canopy scale, ledge relief, grounded perimeter vegetation and irregular-water detail. Same spatial RNG and cameras; not a settings-only v2 comparison.",
+      "finding": "Useful material/color/coverage improvement with overshoot. Next settings-only pass reduces canopy and relief, particularly C, to restore visible shores and rock faces.",
+      "candidates": [
+        {
+          "biome": "A",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3,
+            3.5,
+            2.5
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Clear improvement in green coverage and sea/shore contrast, but oversize rounded crowns conceal the limestone.",
+          "total": 61.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "A",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3.5,
+            3.5,
+            2.5
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Clear improvement in green coverage and sea/shore contrast, but oversize rounded crowns conceal the limestone.",
+          "total": 63.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "A",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3,
+            3.5,
+            2.5
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Clear improvement in green coverage and sea/shore contrast, but oversize rounded crowns conceal the limestone.",
+          "total": 61.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "B",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3,
+            3.5,
+            2.5
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Limestone relief, lower slope foliage and darker ocean help; crowns stack unnaturally and compete with the waterfall.",
+          "total": 61.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "B",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3.5,
+            3.5,
+            2.5
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Limestone relief, lower slope foliage and darker ocean help; crowns stack unnaturally and compete with the waterfall.",
+          "total": 63.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3,
+            3.5,
+            2.5
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Limestone relief, lower slope foliage and darker ocean help; crowns stack unnaturally and compete with the waterfall.",
+          "total": 61.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "C",
+          "seed": "waterfall-01",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3,
+            3.5,
+            1.5
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Mangroves dominate correctly; oversized canopy and root curtains obscure sand landings.",
+          "total": 60.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "C",
+          "seed": "island-mqbxgd",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3,
+            3.5,
+            2
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Mangroves dominate correctly; oversized canopy and root curtains obscure sand landings.",
+          "total": 60.5,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "C",
+          "seed": "study-03",
+          "scores": [
+            2.5,
+            3,
+            3.5,
+            3,
+            3.5,
+            1.5
+          ],
+          "disposition": "revise; retain water/vegetation controls",
+          "observation": "Mangroves dominate correctly; oversized canopy and root curtains obscure sand landings.",
+          "total": 60.0,
+          "rankWithinBiome": 2
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "tool": "island-lab-v3",
+      "evidence": [
+        "contact-p4-A.png",
+        "contact-p4-B.png",
+        "contact-p4-C.png"
+      ],
+      "confidence": "medium; all 45 cardinal/overhead final captures inspected as contact sheets, selected front views also inspected full size",
+      "changes": "Settings only after P3: reduced canopy scale/density and relief, wider access gaps, adjusted peak heights and shelf widths.",
+      "finding": "Better balance of foliage, exposed rock and beach. High fidelity to the painted target is still not achieved: foliage anatomy, shoreline topology, stone fracture detail and waterfall shape remain material gaps.",
+      "candidates": [
+        {
+          "biome": "A",
+          "seed": "waterfall-01",
+          "scores": [
+            3,
+            3,
+            3.5,
+            3,
+            4,
+            3
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-A.png",
+          "observation": "Smaller crowns restore visible limestone, three unequal lagoon masses and sandy passages; still simplified columns and rounded shrubs.",
+          "total": 65.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "A",
+          "seed": "island-mqbxgd",
+          "scores": [
+            3,
+            3,
+            3.5,
+            3.5,
+            4,
+            3
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-A.png",
+          "observation": "Smaller crowns restore visible limestone, three unequal lagoon masses and sandy passages; still simplified columns and rounded shrubs.",
+          "total": 67.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "A",
+          "seed": "study-03",
+          "scores": [
+            3,
+            3,
+            3.5,
+            3,
+            4,
+            3
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-A.png",
+          "observation": "Smaller crowns restore visible limestone, three unequal lagoon masses and sandy passages; still simplified columns and rounded shrubs.",
+          "total": 65.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "B",
+          "seed": "waterfall-01",
+          "scores": [
+            3,
+            3,
+            3.5,
+            3,
+            4,
+            3
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-B.png",
+          "observation": "Waterfall and tall central hierarchy are readable with shores around the reverse; cascade remains thin and strata too regular.",
+          "total": 65.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "B",
+          "seed": "island-mqbxgd",
+          "scores": [
+            3,
+            3,
+            3.5,
+            3.5,
+            4,
+            3
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-B.png",
+          "observation": "Waterfall and tall central hierarchy are readable with shores around the reverse; cascade remains thin and strata too regular.",
+          "total": 67.0,
+          "rankWithinBiome": 1
+        },
+        {
+          "biome": "B",
+          "seed": "study-03",
+          "scores": [
+            3,
+            3,
+            3.5,
+            3,
+            4,
+            3
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-B.png",
+          "observation": "Waterfall and tall central hierarchy are readable with shores around the reverse; cascade remains thin and strata too regular.",
+          "total": 65.0,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "C",
+          "seed": "waterfall-01",
+          "scores": [
+            3,
+            3.5,
+            3.5,
+            3,
+            4,
+            2.5
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-C.png",
+          "observation": "Reduced canopy reveals more sand between rooted stands; crowns and root curtains still repeat and close inspection is needed.",
+          "total": 66.5,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "C",
+          "seed": "island-mqbxgd",
+          "scores": [
+            3,
+            3.5,
+            3.5,
+            3,
+            4,
+            2.5
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-C.png",
+          "observation": "Reduced canopy reveals more sand between rooted stands; crowns and root curtains still repeat and close inspection is needed.",
+          "total": 66.5,
+          "rankWithinBiome": 2
+        },
+        {
+          "biome": "C",
+          "seed": "study-03",
+          "scores": [
+            3,
+            3.5,
+            3.5,
+            3.5,
+            4,
+            2.5
+          ],
+          "disposition": "agent-retained review candidate; human approval pending",
+          "evidence": "contact-p4-C.png",
+          "observation": "Reduced canopy reveals more sand between rooted stands; crowns and root curtains still repeat and close inspection is needed.",
+          "total": 68.5,
+          "rankWithinBiome": 1
+        }
+      ]
+    }
+  ],
+  "selected": [
+    {
+      "biome": "A",
+      "seed": "island-mqbxgd",
+      "pass": "p4",
+      "tool": "island-lab-v3",
+      "humanApproval": null
+    },
+    {
+      "biome": "B",
+      "seed": "island-mqbxgd",
+      "pass": "p4",
+      "tool": "island-lab-v3",
+      "humanApproval": null
+    },
+    {
+      "biome": "C",
+      "seed": "study-03",
+      "pass": "p4",
+      "tool": "island-lab-v3",
+      "humanApproval": null
+    }
+  ]
+}

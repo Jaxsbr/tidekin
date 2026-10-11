@@ -32,7 +32,7 @@ jobs:
           path: dist
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-    needs: build
+    needs: [build, island-lab]
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -44,3 +44,27 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+  island-lab:
+    name: Island lab browser checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify maintained tool and historical gallery
+        run: |
+          npm exec vite -- --host 127.0.0.1 --port 5188 --strictPort > /tmp/island-lab-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:5188/tidekin/tools/island-lab/ > /dev/null; then break; fi
+            sleep 1
+          done
+          npm run islands:verify

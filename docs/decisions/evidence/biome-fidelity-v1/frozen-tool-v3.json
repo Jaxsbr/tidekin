@@ -1,0 +1,10 @@
+{
+  "version": "island-lab-v3",
+  "files": {
+    "generator.js": "2460bd5a01f394b811d2e8ed0b9aa6cdc4ea8393bd744b660f6de51156f010ee",
+    "scene.js": "13e64de2df689aadd88aa997a4b816af59eb04da79f0979ee5524a8549adf3b5",
+    "lab.js": "ec526748d4445dde8beebd7a926b8e90263e672195dd60c8d17f5c36cc60dd12",
+    "index.html": "8a2708b43232d6aad71e753d7d1e92916f5758714cf1b2c745365f884b089321"
+  },
+  "note": "Final retained v3 source identities. Generator and scene.js are unchanged between P3/P4; only presets vary. UI default switched to P4 and obsolete v2 options were removed after captures."
+}

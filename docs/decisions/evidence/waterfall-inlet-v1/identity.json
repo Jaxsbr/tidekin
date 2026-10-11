@@ -1,0 +1,8 @@
+{
+  "version": "waterfall-inlet-v1",
+  "files": {
+    "index.html": "b3740db16c84622621bcf1bfa967e06877167f5c7e55087bbe2e51e24977262f",
+    "study.js": "77d8ce647fa368dd80c4c7ee3a19f24cd0b6e51a97bbead1d238c5faa83b6e0c"
+  },
+  "verification": "Installed Chrome headless: keyboard approach, landing, cleanup, return and boarding; zero page errors. Human appearance/control review pending."
+}

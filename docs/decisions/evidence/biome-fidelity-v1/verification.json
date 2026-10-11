@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-11",
+  "generator": "60 deterministic recipes across A/B/C; no arch; three intended routes; finite geometry; waterfall only in B",
+  "browser": "Rebuild repeatability, tuning, URL restore, WASD flight, typing focus, guides, 8 regenerations with stable geometry/texture counts, JSON export identity and no storage writes passed",
+  "initialStats": {
+    "geometries": 88,
+    "textures": 1,
+    "drawCalls": 96,
+    "triangles": 453840
+  },
+  "finalStats": {
+    "geometries": 88,
+    "textures": 1,
+    "drawCalls": 96,
+    "triangles": 453840
+  },
+  "errors": [],
+  "limitations": "No production performance acceptance, motion assessment, collision certification or human visual approval."
+}

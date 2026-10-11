@@ -1,0 +1,11 @@
+{
+  "version": "island-lab-v2",
+  "files": {
+    "generator.js": "5ce056a2b7299f33b24ecaf67d9f618431d076cd47823f76992d35ad311f95f4",
+    "scene.js": "4befa57d79da200153b1b2a566707d696f7dfc8026b5e012bad198010c924b3c",
+    "lab.js": "7b891d195a2f092a8e39937f74a15afc9a0a5a64ec478a740b58c1587632c4c2",
+    "index.html": "902bcc5d211e59219f75f57d4589343b600e2d5c27e2961e6f43143d35e1c244"
+  },
+  "settingsFile": "presets.js",
+  "policy": "Only presets/seed/settings vary between scored passes; structural code changes require an explicitly new tool revision and new comparable captures."
+}

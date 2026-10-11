@@ -1,0 +1,16 @@
+{
+  "version": "biome-fidelity-rubric-v1",
+  "authority": "Implementing agent's visual assessment; never human approval or a pixel-similarity percentage.",
+  "scale": {"0":"Missing or broken", "1":"Severe mismatch", "2":"Rough partial match", "3":"Recognizable but visibly simplified", "4":"Strong match with explicit remaining gaps", "5":"Close reference match across sampled views"},
+  "aspects": [
+    {"id":"geometry","weight":20,"question":"Do smooth organic silhouettes, rock strata and beach contours resemble the reference without faceted cones or artificial joins?"},
+    {"id":"foliage","weight":20,"question":"Are foliage types, density, scale and placement appropriate to this biome, with grounded roots and varied canopy?"},
+    {"id":"water","weight":20,"question":"Can deep ocean, shallows and sandy shore be distinguished through depth-responsive color, foam and lighting?"},
+    {"id":"identity","weight":20,"question":"Do silhouette, scale and defining features match the selected biome reference?"},
+    {"id":"allAngles","weight":15,"question":"Do all four approaches and overhead view present coherent islands with multiple distinct water accesses?"},
+    {"id":"landing","weight":5,"question":"Are plausible beach landings visually readable at raft scale? This is not collision or gameplay verification."}
+  ],
+  "formula":"Sum(weight * aspectScore / 5). Report aspect scores alongside total. A failed access/arch constraint disqualifies promotion regardless of total.",
+  "constraints":["No arch in lagoon", "At least three intended access gaps with multi-angle evidence", "No floating vegetation or opaque circular shallow-water discs", "No inference of fun, motion or production performance from still images"],
+  "procedure":"Capture legacy baseline; extend and freeze v2; run P0, P1 and P2 settings passes on the same 3 seeds per biome. Inspect a nine-view approach contact sheet plus multi-angle selected evidence each pass. Record observed weaknesses, changes, confidence and keep/revise decisions. Select candidates for Jaco, with unresolved fidelity gaps visible. Do not raise scores simply because another pass ran."
+}
